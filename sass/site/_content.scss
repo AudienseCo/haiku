@@ -1,0 +1,105 @@
+.st-content {
+    @extend .clearfix;
+    height: auto;
+    margin: 10px auto;
+    min-height: 100%;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.st-content-left {
+    display: none;
+}
+
+.st-content-left-item {
+    font-size: 1.2rem;
+    @include rem(margin-bottom, 0.5);
+
+    .st-a {
+        color: $blue-dark;
+        text-decoration: none;
+
+      &:hover {
+        color: #C60E32;
+        text-decoration: none;
+      }
+    }
+}
+
+.st-content-pills {
+    display: block;
+    border: 1px solid $gray;
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+    margin: auto;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.st-content-pills > p {
+    font-weight: 300;
+    color: $common-text;
+    margin: 0;
+}
+
+.st-content-pills > h2 {
+    margin: 0;
+}
+
+.st-content-pills > h2,
+.st-content-pills > p {
+    padding: 1.4rem 1.8rem;
+    background-color: $white;
+}
+
+.st-content-pills > h2,
+.st-content-pills > p,
+.container-component {
+    border-bottom: 1px solid $border;
+}
+
+.st-container-component {
+    background-color: $gray-light;
+    padding: 2rem;
+}
+
+.st-container-component > h4 {
+    margin-top: 0;
+}
+
+.st-component {
+    padding: 1rem 0;
+    border-radius: 5px;
+    width: 320px;
+    background-color: $blue-light;
+    text-align: center;
+    color: white;
+    margin: 2.8rem auto 1.4rem;
+}
+
+@media all and (min-width: 769px) {
+    .st-content-left {
+        display: block;
+        position: fixed;
+    }
+
+    .st-content-right {
+        float: right;
+        width: 70%;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.tipography-items {
+    color: #444;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.tipography-item {
+    margin-bottom: 1rem;
+}
+
