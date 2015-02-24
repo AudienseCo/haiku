@@ -50,18 +50,18 @@ module.exports = function(grunt) {
 
       sass: {
         files: ['sass/**/*.scss', 'views/**/*.html'],
-        tasks: ['sass:dev', 'autoprefixer'],
+        tasks: ['sass:dev'],
         options: {
           livereload: true,
         }
       },
 
-      // js: {
-      //   files: ['javascripts/**/*.js'],
-      //   options: {
-      //     livereload: true,
-      //   }
-      // }
+      js: {
+        files: ['javascripts/**/*.js'],
+        options: {
+          livereload: true,
+        }
+      }
 
     },
 
@@ -158,5 +158,5 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['sass:dist', 'autoprefixer']);
   grunt.registerTask('sprites', ['sprite']);
   grunt.registerTask('svg', ['clean', 'svgmin', 'svgstore', 'rename:svg']);
-  grunt.registerTask('server', ['sass:dev', 'autoprefixer', 'express', 'open:dev', 'watch']);
+  grunt.registerTask('server', ['sass:dev', 'express', 'open:dev', 'watch']);
 }
