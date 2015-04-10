@@ -60,11 +60,11 @@
 }
 
 .st-black {
-    background-color: $black;
+    background-color: black;
 }
 
 .st-titles {
-    background-color: $titles;
+    background-color: color("titles", $variant: "secondary", $hue: "dark");
 }
 
 .st-common-text {
