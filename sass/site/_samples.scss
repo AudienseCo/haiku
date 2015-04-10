@@ -76,13 +76,13 @@
 }
 
 .st-blackgrounds {
-    background-color: $black-grounds;
+    background-color: color("background", $hue: "dark");
 }
 
 .st-container-definition {
     width: 51.5rem;
     margin: auto;
-    background-color: $black-grounds;
+    background-color: color("background", $hue: "dark");
 }
 
 .st-container-definition > p {
