@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .st-header {
-    background-color: $socialbro;
+    background-color: color("socialbro");
 }
 
 .st-logo {
@@ -27,7 +27,7 @@
 
 .st-navigation {
     @extend .clearfix;
-    border-bottom: 1px solid darken($socialbro, 5%);
+    border-bottom: 1px solid color("socialbro", $hue: "dark");
 }
 
 .st-toggler__input {
@@ -56,7 +56,7 @@
 }
 
 .st-toggler__content {
-    background-color: $socialbro;
+    background-color: color("socialbro");
     max-height: 0;
     overflow: hidden;
     position: relative;
@@ -70,12 +70,12 @@
 
 .st-toggler__items {
     display: block;
-    border-bottom: 1px solid darken($socialbro, 5%);
+    border-bottom: 1px solid color("socialbro", $hue: "dark");
     line-height: 2.7rem;
     cursor: pointer;
 
     &:hover {
-        background-color: darken($socialbro, 5%);
+        background-color: color("socialbro", $hue: "dark");
     }
 
     a {

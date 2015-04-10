@@ -34,8 +34,8 @@ Pagination pattern.
     &:hover,
     &:focus,
     &.is-active {
-        background-color: #FC9046;
-        box-shadow: 0 0 0 1px darken(#FC9046, 3%);
+        background-color: color("primary");
+        box-shadow: 0 0 0 1px color("border", $hue: "dark");
         color: $white;
         position: relative;
         text-decoration: none;
@@ -45,15 +45,15 @@ Pagination pattern.
 
 .pagination-prev,
 .pagination-next {
-    background-color: $socialbro;
-    box-shadow: 0 0 0 1px $socialbro;
+    background-color: color("socialbro");
+    box-shadow: 0 0 0 1px color("socialbro");
     color: $white;
     text-transform: uppercase;
 
     &:hover,
     &:focus {
-        background-color: darken($socialbro, 3%);
-        box-shadow: 0 0 0 1px darken($socialbro, 3%);
+        background-color: color("socialbro", $hue: "dark");
+        box-shadow: 0 0 0 1px color("socialbro", $hue: "dark");
         text-decoration: none;
     }
 }
