@@ -21,7 +21,7 @@ html {
 
 html, body {
     height: 100%;
-    color: $base-color;
+    color: color("text", $hue: "dark");
 }
 
 body {

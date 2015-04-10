@@ -22,7 +22,7 @@ $space4: 3rem;
 // Main colors definition: primary, secondary and tertiary
 $colors:
   "background"   #f6f6f6,
-  "border"       #FC9046,
+  "border"       #CCD1D9 #D6D6D6,
   "error"        #d60f36 #cc8383 #ffe6e6,
   "noticeable"   #f24c7c #f89bb6 #fcdae4,
   "primary"      #f29556 #f0d2bE #f6f3dE,
@@ -43,6 +43,3 @@ $special-cases:
   "text"         "secondary" "light"  #d6d6d6,
   "titles"       "primary"   "dark"   #000000,
   "titles"       "primary"   "light"  #333333;
-
-$base-color: #555;
-$border: #edeff0;

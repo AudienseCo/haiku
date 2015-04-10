@@ -29,13 +29,13 @@ Pagination pattern.
 
 .pagination-link {
     background-color: white;
-    box-shadow: 0 0 0 1px $border;
+    box-shadow: 0 0 0 1px color("border");
 
     &:hover,
     &:focus,
     &.is-active {
         background-color: color("primary");
-        box-shadow: 0 0 0 1px color("border", $hue: "dark");
+        box-shadow: 0 0 0 1px color("primary");
         color: white;
         position: relative;
         text-decoration: none;
@@ -49,6 +49,8 @@ Pagination pattern.
     box-shadow: 0 0 0 1px color("socialbro");
     color: white;
     text-transform: uppercase;
+    position: relative;
+    z-index: 1;
 
     &:hover,
     &:focus {
