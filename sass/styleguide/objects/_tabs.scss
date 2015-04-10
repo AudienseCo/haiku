@@ -42,7 +42,7 @@ Navigation usually means list of links. And we have some flavours using distinct
     position: relative;
 
     a {
-        color: $common-text;
+        color: color("text", $hue: "dark");
     }
 }
 
@@ -91,7 +91,7 @@ Navigation usually means list of links. And we have some flavours using distinct
     padding: 1em;
     position: relative;
     z-index: 0;
-    color: $common-text;
+    color: color("text", $hue: "dark");
 }
 
 /* Tabs block bottom */

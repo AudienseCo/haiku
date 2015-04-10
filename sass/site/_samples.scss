@@ -68,11 +68,11 @@
 }
 
 .st-common-text {
-    background-color: $common-text;
+    background-color: color("text", $hue: "dark");
 }
 
 .st-support-tex {
-    background-color: $support-text;
+    background-color: color("text", $variant: "secondary", $hue: "dark");
 }
 
 .st-blackgrounds {

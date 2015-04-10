@@ -40,7 +40,7 @@
 
 .st-content-pills > p {
     font-weight: 300;
-    color: $common-text;
+    color: color("text", $hue: "dark");
     margin: 0;
 }
 
