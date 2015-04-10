@@ -60,7 +60,7 @@ put that code in `core/_mixins.scss`, this is only for functions.
 // Finds a color special case by name, variant and hue
 @function find-color-special-case($name, $variant, $hue) {
   @each $case in $special-cases {
-    @if index($case, $name) and index($case, $variant) and index($case, $hue) {
+    @if nth($case, 1) == $name and index($case, $variant) and index($case, $hue) {
       @return nth($case, 4);
     }
   }
