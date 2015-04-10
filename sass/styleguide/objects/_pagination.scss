@@ -28,7 +28,7 @@ Pagination pattern.
 }
 
 .pagination-link {
-    background-color: $white;
+    background-color: white;
     box-shadow: 0 0 0 1px $border;
 
     &:hover,
@@ -36,7 +36,7 @@ Pagination pattern.
     &.is-active {
         background-color: color("primary");
         box-shadow: 0 0 0 1px color("border", $hue: "dark");
-        color: $white;
+        color: white;
         position: relative;
         text-decoration: none;
         z-index: 1;
@@ -47,7 +47,7 @@ Pagination pattern.
 .pagination-next {
     background-color: color("socialbro");
     box-shadow: 0 0 0 1px color("socialbro");
-    color: $white;
+    color: white;
     text-transform: uppercase;
 
     &:hover,

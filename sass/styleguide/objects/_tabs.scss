@@ -47,13 +47,13 @@ Navigation usually means list of links. And we have some flavours using distinct
 }
 
 .sb-tab-active {
-    background-color: $white;
+    background-color: white;
     position: relative;
     z-index: 1;
 }
 
 .sb-tab-active:after {
-    background-color: $white;
+    background-color: white;
     content: '';
     display: block;
     height: 2px;
