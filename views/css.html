@@ -60,6 +60,7 @@
 
   <div class="st-content-pills">
     <h2 class="st-h2">Colors</h2>
+    <p class="st-p">The color palette is shown below. Right now we have a total of 10 base colors and everything else is a variation of a base color. There can be 3 variants: primary, secondary and tertiary color and, for each variant 3 hues which are regular, dark and light. You can use a color with a SCSS function named "color" that accepts 1 mandatory string parameter (base color name) and two optional string parameters (variant and hue). We encourage you to name the optional parameters always. At the bottom of this section there is an usage example.</p>
 
     <ul class="st-samples clearfix">
       <li class="st-sample">
@@ -287,6 +288,14 @@
         </span>
       </li>
     </ul>
+
+    <pre><code class="language-css">
+    .element-class {
+      background:   color("background", $hue: "light");
+      border-color: color("border", $variant: "secondary");
+      color:        color("socialbro", $variant: "primary", $hue: "dark");
+    }
+    </code></pre>
   </div>
 
   <div class="st-content-pills">
