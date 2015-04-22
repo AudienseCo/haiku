@@ -1,93 +1,55 @@
-.st-sample-details p {
-  margin: 0;
-}
-
-.st-sample-details h6 {
-    text-transform: uppercase;
-}
+// Create a list of 3 elements per row
+$list-elements: 3;
+$width: 30%;
 
 .st-samples {
-  padding: 3rem 1.8rem;
+  padding: 1.8rem;
 }
 
 .st-sample {
-  background-color: white;
-  padding-top: 15rem;
   border-radius: 4px;
-  overflow: hidden;
-  width: 18rem;
-  display: inline-block;
-  margin-bottom: 1.8rem;
   border: 1px solid $border;
+  color: $black-light;
+  display: block;
+  float: left;
+  font-size: 1.1rem;
+  margin: (100% - $list-elements * $width) / ($list-elements * 2);
+  width: $width;
 
-  &:last-child {
-    margin-right: 0;
+  &.dark-text > .st-sample-color {
+    color: $black-light;
   }
 }
 
-.st-sample-small {
-  padding-top: 8rem;
-  width: 11rem;
+.st-sample-description {
+  display: block;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.st-sample-details {
-    text-transform: uppercase;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    color: $gray-dark;
-    padding: 1rem;
-    text-align: center;
+.st-sample-color {
+  color: white;
+  display: block;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  text-align: center;
 }
 
-.st-socialbro {
-    background-color: $socialbro;
-}
-
-.st-service {
-    background-color: $service;
-}
-
-.st-error {
-    background-color: $error;
-}
-
-.st-succeed {
-    background-color: $succeed;
-}
-
-.st-primary {
-    background-color: $primary;
-}
-
-.st-black {
-    background-color: $black;
-}
-
-.st-titles {
-    background-color: $titles;
-}
-
-.st-common-text {
-    background-color: $common-text;
-}
-
-.st-support-tex {
-    background-color: $support-text;
-}
-
-.st-blackgrounds {
-    background-color: $black-grounds;
-}
-
-.st-container-definition {
-    width: 51.5rem;
-    margin: auto;
-    background-color: $black-grounds;
-}
-
-.st-container-definition > p {
-    margin: 130px 0 30px 0;
-    color: $gray;
-    font-size: 1.4rem;
-    text-align: center;
+// Generate all color classes to use as background
+$variants: "primary", "secondary", "tertiary";
+$hues: "regular", "light", "dark";
+@each $hue in $hues {
+  @each $variant in $variants {
+    @each $color in $colors {
+      $color-name:  nth($color, 1);
+      $color-value: color(nth($color, 1), $variant, $hue);
+      @if $color-value {
+        .st-#{$color-name}-#{$variant}-#{$hue} {
+            background-color: $color-value;
+        }
+      }
+    }
+  }
 }

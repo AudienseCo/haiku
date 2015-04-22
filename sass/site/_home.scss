@@ -3,7 +3,7 @@
     font-family: 'Open Sans';
     font-size: 1.4rem;
     line-height: 1.6;
-    color: darken($socialbro, 30%);
+    color: color("socialbro", $variant: "secondary", $hue: "dark");
 }
 
 .st-task-list {
@@ -30,8 +30,8 @@
 
 .st-code {
     padding: 0.2rem 0.4rem;
-    color: $error;
-    background-color: $black-grounds;
+    color: color("error");
+    background-color: color("background", $hue: "dark");
     border-radius: 4px;
 }
 

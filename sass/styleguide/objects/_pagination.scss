@@ -28,15 +28,15 @@ Pagination pattern.
 }
 
 .pagination-link {
-    background-color: $white;
-    box-shadow: 0 0 0 1px $border;
+    background-color: white;
+    box-shadow: 0 0 0 1px color("border");
 
     &:hover,
     &:focus,
     &.is-active {
-        background-color: #FC9046;
-        box-shadow: 0 0 0 1px darken(#FC9046, 3%);
-        color: $white;
+        background-color: color("primary");
+        box-shadow: 0 0 0 1px color("primary");
+        color: white;
         position: relative;
         text-decoration: none;
         z-index: 1;
@@ -45,15 +45,17 @@ Pagination pattern.
 
 .pagination-prev,
 .pagination-next {
-    background-color: $socialbro;
-    box-shadow: 0 0 0 1px $socialbro;
-    color: $white;
+    background-color: color("socialbro");
+    box-shadow: 0 0 0 1px color("socialbro");
+    color: white;
     text-transform: uppercase;
+    position: relative;
+    z-index: 1;
 
     &:hover,
     &:focus {
-        background-color: darken($socialbro, 3%);
-        box-shadow: 0 0 0 1px darken($socialbro, 3%);
+        background-color: color("socialbro", $hue: "dark");
+        box-shadow: 0 0 0 1px color("socialbro", $hue: "dark");
         text-decoration: none;
     }
 }
