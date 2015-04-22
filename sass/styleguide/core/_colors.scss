@@ -1,0 +1,24 @@
+// Main colors definition: primary, secondary and tertiary
+$colors:
+  "background"   #f6f6f6,
+  "border"       #CCD1D9 #D6D6D6,
+  "error"        #d60f36 #cc8383 #ffe6e6,
+  "noticeable"   #f24c7c #f89bb6 #fcdae4,
+  "primary"      #f29556 #f0d2bE #f6f3dE,
+  "service"      #00aaf2 #65b0cf #dfeffc,
+  "socialbro"    #29c4d0 #41787c #c1eff3,
+  "succeed"      #72c427 #9fb87d #e1f6de,
+  "text"         #5e5e5e #b9b9b9,
+  "titles"       #191919 #8a4fa2;
+
+// Colors with hues out of the general rule
+$color-exceptions:
+  "background"   "primary"   "dark"   #f2f2f2,
+  "background"   "primary"   "light"  #ffffff,
+  "error"        "tertiary"  "dark"   #ffd5d5,
+  "socialbro"    "tertiary"  "light"  #DDF7F8,
+  "text"         "primary"   "dark"   #565656,
+  "text"         "primary"   "light"  #676767,
+  "text"         "secondary" "light"  #d6d6d6,
+  "titles"       "primary"   "dark"   #000000,
+  "titles"       "primary"   "light"  #333333;
