@@ -113,10 +113,18 @@
   <div class="st-container-component" id="charts-pie">
     <h4 class="st-h4">Pie chart</h4>
     <div class="chart">
-      {% include "components/charts/pie.html" %}
+      {% include "components/charts/pie/pie.html" %}
     </div>
   </div>
-  <pre><code class="language-javascript">{% include "components/charts/pie.js" %}</code></pre>
+  <pre><code class="language-javascript">{% include "components/charts/pie/pie.js" %}</code></pre>
+
+  <div class="st-container-component" id="charts-column">
+    <h4 class="st-h4">Columns chart</h4>
+    <div class="chart">
+      {% include "components/charts/columns/columns.html" %}
+    </div>
+  </div>
+  <pre><code class="language-javascript">{% include "components/charts/columns/columns.js" %}</code></pre>
 </div>
 {% endblock %}
 
