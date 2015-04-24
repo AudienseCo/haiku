@@ -15,6 +15,9 @@
 
   <li class="st-content-left-item"><a class="st-a bold" href="#grid-panel">Grid panel</a></li>
   <li class="st-content-left-item"><a class="st-a" href="#grid-panel-default">Default</a></li>
+
+  <li class="st-content-left-item"><a class="st-a bold" href="#charts">Charts</a></li>
+  <li class="st-content-left-item"><a class="st-a" href="#charts-pie">Pie</a></li>
 </ul>
 
 {% endblock %}
@@ -98,6 +101,22 @@
     </div>
   </div>
   <pre><code class="language-markup">{% include "components/grid-panel/default.html" %}</code></pre>
+</div>
+
+<div class="st-content-pills" id="charts">
+  <script src="/javascript/components/charts/vendor/highcharts.js"></script>
+  <h2 class="st-h2">Charts</h2>
+  <p class="st-p">
+    Charts description
+  </p>
+
+  <div class="st-container-component" id="charts-pie">
+    <h4 class="st-h4">Pie chart</h4>
+    <div class="chart">
+      {% include "components/charts/pie.html" %}
+    </div>
+  </div>
+  <pre><code class="language-javascript">{% include "components/charts/pie.js" %}</code></pre>
 </div>
 {% endblock %}
 
