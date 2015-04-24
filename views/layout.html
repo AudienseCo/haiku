@@ -14,8 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/stylesheets/sandbox.css" />
     <link rel="stylesheet" href="/stylesheets/main.css" />
-    <script src='//localhost:35729/livereload.js'></script>
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/github.min.css">
   </head>
   <body>
 
@@ -42,6 +41,7 @@
           </div>
       </div>
     </div>
+
     <div class="st-container st-content">
         {% block content_left %}
         {% endblock %}
@@ -55,9 +55,9 @@
     <div class="st-footer">
       <span class="st-span">© Copyright 2014 SocialBro.</span>
     </div>
-
-    <script src="/javascript/prism.js" data-manual></script>
-    <script src="/javascript/main.js"></script>
-
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src='//localhost:35729/livereload.js'></script>
   </body>
 </html>
