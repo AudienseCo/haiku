@@ -25,13 +25,6 @@ module.exports = function(grunt) {
       }
     },
 
-    open : {
-      dev : {
-        path: 'http://localhost:3000/index',
-        app: 'Google Chrome'
-      }
-    },
-
     watch: {
       grunt: { files: ['Gruntfile.js'] },
 
@@ -144,7 +137,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-rename');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-svgmin');
@@ -152,8 +144,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-csscomb');
 
   grunt.registerTask('express', 'Start a custom web server', function() {
-      grunt.log.writeln('Started web server on port 3000');
-      require('./index.js').listen(3000);
+      var port = process.env.PORT || 3000;
+      process.env.CALLER = "grunt";
+      require('./app.js').listen(port);
+      grunt.log.writeln('Started web server on port ' + port);
   });
 
   grunt.registerTask('help', 'Log some stuff.', function() {
@@ -170,5 +164,5 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['sass', 'autoprefixer', 'csscomb', 'cssmin']);
   grunt.registerTask('sprites', ['sprite']);
   grunt.registerTask('svg', ['clean', 'svgmin', 'svgstore', 'rename:svg']);
-  grunt.registerTask('server', ['sass', 'express', 'open', 'watch']);
+  grunt.registerTask('server', ['sass', 'express', 'watch']);
 }
