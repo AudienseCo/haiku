@@ -1,0 +1,54 @@
+$header-height: 6rem;
+$header-items-height: 3.4rem;
+
+.header {
+    background-color: color($name: "socialbro");
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    padding: ($header-height - $header-items-height)/2 0;
+}
+
+.header-logo {
+    color: white;
+    display: inline-block;
+}
+
+.header-logo-icon {
+    fill: white;
+    height: $header-items-height;
+    vertical-align: middle;
+    width: $header-items-height;
+}
+
+.header-logo-text {
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: $header-items-height;
+    vertical-align: middle;
+}
+
+.header-navigation {
+    float: right;
+}
+
+.header-navigation-item {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    vertical-align: middle;
+
+    & > a {
+        color: color($name: "socialbro", $variant: "tertiary");
+        display: inline-block;
+        line-height: $header-items-height;
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    &.active > a {
+        color: white;
+    }
+}

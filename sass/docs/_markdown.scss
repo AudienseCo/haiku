@@ -1,0 +1,41 @@
+.markdown-content ul {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    list-style: initial;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+}
+
+.markdown-content > p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.markdown-content > h1 {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.markdown-content > h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: .2rem;
+}
+
+.markdown-content code {
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+  margin: 0;
+  padding: .3rem 0;
+}
+
+.markdown-content code:before,
+.markdown-content code:after {
+  content: "\00a0";
+  letter-spacing: -0.2em;
+}
+
+.markdown-content code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1.3rem;
+}
