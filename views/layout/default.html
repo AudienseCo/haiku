@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+      {% if title %}
+        {{ title }}
+      {% else %}
+        SocialBro Styleguide
+      {% endif %}
+    </title>
+    <meta name="description" content="SocialBro CSS styleguides">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/sandbox.css" />
+    <link rel="stylesheet" href="/stylesheets/docs.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/github.min.css">
+  </head>
+  <body>
+    {% include "partial/svg.html" %}
+
+    <header class="header">
+      <div class="container clearfix">
+        <a class="header-logo" href="/">
+          <svg viewBox="0 0 100 100" class="header-logo-icon">
+            <use xlink:href="#icon-socialbro"></use>
+          </svg>
+          <span class="header-logo-text">SocialBro Haiku</span>
+        </a>
+
+        <nav class="header-navigation">
+          <ul>
+            <li class="header-navigation-item active"><a href="">Overview</a></li>
+            <li class="header-navigation-item"><a href="">Components</a></li>
+            <li class="header-navigation-item"><a href="">Github</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        {% block side %}
+        {% endblock %}
+
+        {% block main %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src='//localhost:35729/livereload.js'></script>
+  </body>
+</html>
