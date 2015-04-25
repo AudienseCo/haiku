@@ -20,13 +20,16 @@ module.exports = function(grunt) {
         },
         files: {
           'public/stylesheets/sandbox.css': 'sass/styleguide/sandbox.scss',
-          'public/stylesheets/main.css': 'sass/site/main.scss'
+          'public/stylesheets/main.css':    'sass/site/main.scss',
+          'public/stylesheets/docs.css':    'sass/docs/docs.scss'
         }
       }
     },
 
     watch: {
-      grunt: { files: ['Gruntfile.js'] },
+      grunt: {
+        files: ['Gruntfile.js']
+      },
 
       options: {
         livereload: true
@@ -50,8 +53,8 @@ module.exports = function(grunt) {
     },
 
     server: {
-       port: 3000,
-       base: '.'
+      port: 3000,
+      base: '.'
     },
 
     autoprefixer: {
@@ -76,13 +79,13 @@ module.exports = function(grunt) {
 
     svgstore: {
       options: {
-        prefix : 'icon-',
-        cleanup: ['fill','stroke'],
+        prefix: 'icon-',
+        cleanup: ['fill', 'stroke'],
         svg: {
           style: "display: none;"
         }
       },
-      default : {
+      default: {
         files: {
           "assets/sandbox.svg": ["assets/svg/compressed/*.svg"]
         }
@@ -91,18 +94,20 @@ module.exports = function(grunt) {
 
     rename: {
       svg: {
-        files: [
-            {src: ['assets/sandbox.svg'], dest: 'views/partial/svg.html'}
-        ]
+        files: [{
+          src: ['assets/sandbox.svg'],
+          dest: 'views/partial/svg.html'
+        }]
       }
     },
 
     svgmin: {
       options: {
-        plugins: [
-          { removeViewBox: false },
-          { removeUselessStrokeAndFill: false }
-        ]
+        plugins: [{
+          removeViewBox: false
+        }, {
+          removeUselessStrokeAndFill: false
+        }]
       },
       dist: {
         expand: true,
@@ -124,7 +129,7 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      css:{
+      css: {
         files: {
           'public/stylesheets/sandbox.min.css': ['public/stylesheets/sandbox.css']
         }
@@ -144,10 +149,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-csscomb');
 
   grunt.registerTask('express', 'Start a custom web server', function() {
-      var port = process.env.PORT || 3000;
-      process.env.CALLER = "grunt";
-      require('./app.js').listen(port);
-      grunt.log.writeln('Started web server on port ' + port);
+    var port = process.env.PORT || 3000;
+    process.env.CALLER = "grunt";
+    require('./app.js').listen(port);
+    grunt.log.writeln('Started web server on port ' + port);
   });
 
   grunt.registerTask('help', 'Log some stuff.', function() {
