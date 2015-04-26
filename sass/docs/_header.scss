@@ -22,8 +22,10 @@ $header-items-height: 3.4rem;
 
 .header-logo-text {
     display: inline-block;
-    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
     line-height: $header-items-height;
+    padding-left: 0.5rem;
     vertical-align: middle;
 }
 

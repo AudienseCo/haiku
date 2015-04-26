@@ -1,4 +1,4 @@
-# Overview
+# Coding guidelines
 
 It's an almost impossible task to find a way to write consistent, future-proof and robust CSS. Our process has consisted of adding CSS rules to some sort of file organization.
 

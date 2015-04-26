@@ -1,11 +1,8 @@
-// Useful mixins from the styleguide
 @import "../styleguide/core/functions";
-
-// Styles used only for documentation
-@import "layout";
+@import "color-palette";
 @import "header";
+@import "icons";
+@import "landing";
+@import "layout";
 @import "markdown";
 @import "menu";
-
-// Specific documentation pages
-@import "color-palette";

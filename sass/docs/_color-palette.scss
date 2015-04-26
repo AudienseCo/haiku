@@ -1,57 +1,56 @@
-// Create a list of 3 elements per row
 $list-elements: 3;
 $width: 30%;
 $color-samples-margin: -(100% - $list-elements * $width) / ($list-elements * 2);
 
 .markdown-content > .color-samples {
-    margin: 0 $color-samples-margin 1rem $color-samples-margin;
+    margin: 0 $color-samples-margin 1rem;
     padding: 0;
 }
 
 .color-sample {
-  border-radius: 4px;
-  border: 1px solid #e5e5e5;
-  color: color($name: "text", $hue: "light");
-  display: block;
-  float: left;
-  font-size: 1.1rem;
-  margin: (100% - $list-elements * $width) / ($list-elements * 2);
-  width: $width;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    color: color($name: "text", $hue: "light");
+    display: block;
+    float: left;
+    font-size: 1.1rem;
+    margin: 0;
+    width: $width;
 
-  &.dark-text > .color-sample-color {
-      color: color($name: "text", $hue: "light");
-  }
+    &.dark-text > .color-sample-color {
+        color: color($name: "text", $hue: "light");
+    }
 }
 
 .color-sample-description {
-  display: block;
-  height: 3.6rem;
-  line-height: 3.6rem;
-  text-align: center;
-  text-transform: uppercase;
+    display: block;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .color-sample-color {
-  color: white;
-  display: block;
-  height: 3.6rem;
-  line-height: 3.6rem;
-  text-align: center;
+    color: white;
+    display: block;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    text-align: center;
 }
 
 // Generate all color classes to use as background
 $variants: "primary", "secondary", "tertiary";
 $hues: "regular", "light", "dark";
 @each $hue in $hues {
-  @each $variant in $variants {
-    @each $color in $colors {
-      $color-name:  nth($color, 1);
-      $color-value: color(nth($color, 1), $variant, $hue);
-      @if $color-value {
-        .color-#{$color-name}-#{$variant}-#{$hue} {
-            background-color: $color-value;
+    @each $variant in $variants {
+        @each $color in $colors {
+            $color-name: nth($color, 1);
+            $color-value: color(nth($color, 1), $variant, $hue);
+            @if $color-value {
+                .color-#{$color-name}-#{$variant}-#{$hue} {
+                    background-color: $color-value;
+                }
+            }
         }
-      }
     }
-  }
 }

@@ -18,8 +18,12 @@
 }
 
 .markdown-content > h2 {
+    border-bottom: 1px solid #eee;
     margin-bottom: 1.5rem;
-    padding-bottom: .2rem;
+}
+
+.markdown-content > h3 {
+    margin-bottom: 1.3rem;
 }
 
 .markdown-content pre {
@@ -28,24 +32,39 @@
     margin-top: -1px;
 }
 
-.markdown-content pre > code {
-    padding: 1.5rem 1.5rem 0 1.5rem;
-}
-
 .markdown-content code {
   background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1.3rem;
   margin: 0;
-  padding: .3rem 0;
+  padding: 0;
 }
 
 .markdown-content code:before,
 .markdown-content code:after {
-  content: "\00a0";
   letter-spacing: -0.2em;
+  content: normal;
 }
 
-.markdown-content code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 1.3rem;
+.markdown-content pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-content .highlight pre,
+.markdown-content pre {
+  background-color: #f7f7f7;
+  font-size: 85%;
+  line-height: 1.45;
+  margin-bottom: 1.5rem;
+  overflow: auto;
+  padding: 16px;
+  word-break: normal;
+  word-wrap: normal;
 }

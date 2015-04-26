@@ -1,7 +1,8 @@
 <div class="one-quarter column">
   <nav class="menu">
-    <a class="menu-item selected" href="/colors">
-      Colors
-    </a>
+    <a class="menu-item {% if section == 'colors' %}selected{% endif %}" href="/docs/colors">Colors</a>
+    <a class="menu-item {% if section == 'icons' %}selected{% endif %}" href="/docs/icons">Icons</a>
+    <a class="menu-item {% if section == 'navigation' %}selected{% endif %}" href="/docs/navigation">Navigation</a>
+    <a class="menu-item {% if section == 'typography' %}selected{% endif %}" href="/docs/typography">Typography</a>
   </nav>
 </div>

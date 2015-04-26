@@ -5,7 +5,6 @@ var express      = require('express'),
     nunjucks     = require("nunjucks"),
     markdown     = require("nunjucks-markdown")
     marked       = require("marked"),
-    component    = require("./lib/nunjucks-component-tag"),
     routes       = require("./routes");
 
 var app = express();
@@ -20,9 +19,7 @@ var nunjucksEnv = nunjucks.configure("views", {
   autoescape: true,
   express: app
 });
-
 markdown.register(nunjucksEnv, marked);
-component.register(nunjucksEnv);
 
 app.set('view engine', 'html');
 app.use(morgan('dev'));
