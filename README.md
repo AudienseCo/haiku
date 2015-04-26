@@ -27,9 +27,9 @@ And you're set!
   * `assets/`: Assets files like svgs or png for sprites.
   * `public/`: Public assets, linked from views. Includes stylesheets and javascripts folders.
   * `sass/`: Sass assets.
-  * `views/`: Html views flawored as nunjucks files. Include partials folder.
+  * `views/`: Html views flavored as nunjucks files. Include partials folder.
   * `routes/`: Add your routes here.
-  * `index.js`: Express file.
+  * `app.js`: Express file.
 
 ## Reference
 
