@@ -14,7 +14,7 @@ $color-samples-margin: -(100% - $list-elements * $width) / ($list-elements * 2);
     display: block;
     float: left;
     font-size: 1.1rem;
-    margin: 0;
+    margin: -$color-samples-margin;
     width: $width;
 
     &.dark-text > .color-sample-color {
