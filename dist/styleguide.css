@@ -1,0 +1,2459 @@
+/*
+
+Sandbox
+-------
+
+This library is divided in the following sections:
+
+1.  Reset removes all the default styles on the page to start building using
+    normalize.
+
+2.  Generic parts that load variables, functions and mixins. Use thisfolder for code that
+    is applied all over the app but it is not specific to a base element or an object.
+
+3.  Helpers and useful chunks of code that do not fit in an object and it is generic enough.
+    If possible, create objects.
+
+4.  Base elements are the building blocks of the page. Paragraphs, lists, images and so on.
+
+5.  Objects refer to each individual block that builds parts of the app.
+
+6.  Layout styles like background colors or images, usually they are refered as sections inside the dom html.
+
+7.  Vendor is code that other Javascript libraries use and do not tend to follow the OOCSS approach.
+
+*/
+/* 1. Reset */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+* 1. Set default font family to sans-serif.
+* 2. Prevent iOS text size adjust after orientation change, without disabling
+*    user zoom.
+*/
+html
+{
+    font-family: sans-serif;
+    /* 1 */
+
+        -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+/**
+* Remove default margin.
+*/
+body
+{
+    margin: 0;
+}
+
+/* HTML5 display definitions
+========================================================================== */
+/**
+* Correct `block` display not defined for any HTML5 element in IE 8/9.
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox.
+* Correct `block` display not defined for `main` in IE 11.
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary
+{
+    display: block;
+}
+
+/**
+* 1. Correct `inline-block` display not defined in IE 8/9.
+* 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+*/
+audio,
+canvas,
+progress,
+video
+{
+    display: inline-block;
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */
+}
+
+/**
+* Prevent modern browsers from displaying `audio` without controls.
+* Remove excess height in iOS 5 devices.
+*/
+audio:not([controls])
+{
+    display: none;
+    height: 0;
+}
+
+/**
+* Address `[hidden]` styling not present in IE 8/9/10.
+* Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+*/
+[hidden],
+template
+{
+    display: none;
+}
+
+/* Links
+========================================================================== */
+/**
+* Remove the gray background color from active links in IE 10.
+*/
+a
+{
+    background-color: transparent;
+}
+
+/**
+* Improve readability when focused and also mouse hovered in all browsers.
+*/
+a:active,
+a:hover
+{
+    outline: 0;
+}
+
+/* Text-level semantics
+========================================================================== */
+/**
+* Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+*/
+abbr[title]
+{
+    border-bottom: 1px dotted;
+}
+
+/**
+* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+*/
+b,
+strong
+{
+    font-weight: bold;
+}
+
+/**
+* Address styling not present in Safari and Chrome.
+*/
+dfn
+{
+    font-style: italic;
+}
+
+/**
+* Address variable `h1` font-size and margin within `section` and `article`
+* contexts in Firefox 4+, Safari, and Chrome.
+*/
+h1
+{
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+/**
+* Address styling not present in IE 8/9.
+*/
+mark
+{
+    color: #000; 
+    background: #ff0;
+}
+
+/**
+* Address inconsistent and variable font size in all browsers.
+*/
+small
+{
+    font-size: 80%;
+}
+
+/**
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
+sub,
+sup
+{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup
+{
+    top: -.5em;
+}
+
+sub
+{
+    bottom: -.25em;
+}
+
+/* Embedded content
+========================================================================== */
+/**
+* Remove border when inside `a` element in IE 8/9/10.
+*/
+img
+{
+    border: 0;
+}
+
+/**
+* Correct overflow not hidden in IE 9/10/11.
+*/
+svg:not(:root)
+{
+    overflow: hidden;
+}
+
+/* Grouping content
+========================================================================== */
+/**
+* Address margin not present in IE 8/9 and Safari.
+*/
+figure
+{
+    margin: 1em 40px;
+}
+
+/**
+* Address differences between Firefox and other browsers.
+*/
+hr
+{
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+* Contain overflow in all browsers.
+*/
+pre
+{
+    overflow: auto;
+}
+
+/**
+* Address odd `em`-unit font size rendering in all browsers.
+*/
+code,
+kbd,
+pre,
+samp
+{
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+/* Forms
+========================================================================== */
+/**
+* Known limitation: by default, Chrome and Safari on OS X allow very limited
+* styling of `select`, unless a `border` property is set.
+*/
+/**
+* 1. Correct color not being inherited.
+*    Known issue: affects color of disabled elements.
+* 2. Correct font properties not being inherited.
+* 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+*/
+button,
+input,
+optgroup,
+select,
+textarea
+{
+    /* 1 */
+    font: inherit;
+    /* 2 */
+    margin: 0;
+    color: inherit;
+    /* 3 */
+}
+
+/**
+* Address `overflow` set to `hidden` in IE 8/9/10/11.
+*/
+button
+{
+    overflow: visible;
+}
+
+/**
+* Address inconsistent `text-transform` inheritance for `button` and `select`.
+* All other form control elements do not inherit `text-transform` values.
+* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+* Correct `select` style inheritance in Firefox.
+*/
+button,
+select
+{
+    text-transform: none;
+}
+
+/**
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+*    and `video` controls.
+* 2. Correct inability to style clickable `input` types in iOS.
+* 3. Improve usability and consistency of cursor style between image-type
+*    `input` and others.
+*/
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit']
+{
+    /* 2 */
+    cursor: pointer;
+
+    -webkit-appearance: button;
+    /* 3 */
+}
+
+/**
+* Re-set default cursor for disabled elements.
+*/
+button[disabled],
+html input[disabled]
+{
+    cursor: default;
+}
+
+/**
+* Remove inner padding and border in Firefox 4+.
+*/
+button::-moz-focus-inner,
+input::-moz-focus-inner
+{
+    padding: 0; 
+    border: 0;
+}
+
+/**
+* Address Firefox 4+ setting `line-height` on `input` using `!important` in
+* the UA stylesheet.
+*/
+input
+{
+    line-height: normal;
+}
+
+/**
+* It's recommended that you don't attempt to style these elements.
+* Firefox's implementation doesn't respect box-sizing, padding, or width.
+*
+* 1. Address box sizing set to `content-box` in IE 8/9/10.
+* 2. Remove excess padding in IE 8/9/10.
+*/
+input[type='checkbox'],
+input[type='radio']
+{
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/**
+* Fix the cursor style for Chrome's increment/decrement buttons. For certain
+* `font-size` values of the `input`, it causes the cursor style of the
+* decrement button to change from `default` to `text`.
+*/
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button
+{
+    height: auto;
+}
+
+/**
+* 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+* 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+*    (include `-moz` to future-proof).
+*/
+input[type='search']
+{
+    /* 1 */
+    /* 2 */
+    box-sizing: content-box; 
+
+    -webkit-appearance: textfield;
+}
+
+/**
+* Remove inner padding and search cancel button in Safari and Chrome on OS X.
+* Safari (but not Chrome) clips the cancel button when the search input has
+* padding (and `textfield` appearance).
+*/
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration
+{
+    -webkit-appearance: none;
+}
+
+/**
+* Define consistent border, margin, and padding.
+*/
+fieldset
+{
+    margin: 0 2px;
+    padding: .35em .625em .75em; 
+    border: 1px solid #c0c0c0;
+}
+
+/**
+* 1. Correct `color` not being inherited in IE 8/9/10/11.
+* 2. Remove padding so people aren't caught out if they zero out fieldsets.
+*/
+legend
+{
+    /* 1 */
+    padding: 0;
+    border: 0;
+    /* 2 */
+}
+
+/**
+* Remove default vertical scrollbar in IE 8/9/10/11.
+*/
+textarea
+{
+    overflow: auto;
+}
+
+/**
+* Don't inherit the `font-weight` (applied by a rule above).
+* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+*/
+optgroup
+{
+    font-weight: bold;
+}
+
+/* Tables
+========================================================================== */
+/**
+* Remove most spacing between table cells.
+*/
+table
+{
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+
+td,
+th
+{
+    padding: 0;
+}
+
+/* 2. Core */
+/*
+
+Variables, colors and other stuff
+---------------------------------
+
+*/
+/*
+
+Functions
+---------
+
+Calculations used by other SCSS files. If you need to DRY-up some CSS properties
+put that code in `core/_mixins.scss`, this is only for functions.
+
+*/
+/*
+
+Disabled cursor
+---------------
+
+  div.disabled {
+    @include disable-select;
+  }
+
+*/
+/*
+
+Forbidden cursor
+----------------
+
+  div.forbidden {
+    @include forbidden-select;
+  }
+
+*/
+/*
+
+Center-align a block level element
+----------------------------------
+
+  .footer-wrap {
+    width: 450px;
+    @include center-block;
+  }
+
+ */
+/*
+
+Text overflow
+-------------
+
+  .text-truncate {
+    @include text-truncate;
+  }
+
+ */
+/*
+
+Absolute positioned
+-------------------
+
+  .abs {
+    @include abs-pos(10px, 10px, 5px, 15px);
+  }
+
+ */
+/*
+
+Font Size in rem with px fallback
+---------------------------------
+
+  body {
+    @include font-size(16);
+  }
+
+ */
+/*
+
+Line Height in rem with px fallback
+-----------------------------------
+
+  body {
+    @include line-height (16);
+  }
+
+ */
+/*
+
+Text replacement (instead of text-indent)
+-----------------------------------------
+
+  .header h1 {
+    @include text-replacement;
+  }
+
+ */
+/*
+
+Placeholder
+-----------
+
+  input{
+    @include placeholder-color(#FA4A4A)
+  }
+
+ */
+/*
+
+Responsive mixin
+----------------
+
+  @include screen(768, 1280) {
+    background: black;
+  }
+
+  @include min-screen(320) {
+    width: 300px;
+  }
+
+*/
+/* 3. Helpers */
+/*
+
+Align helper
+------------
+
+Utility class to align inline and inline-blocks elements.
+
+<div class="align-center">
+   I'm a centered text.
+</div>
+
+*/
+.align-center
+{
+    text-align: center;
+}
+
+.align-right
+{
+    text-align: right;
+}
+
+.align-left
+{
+    text-align: left;
+}
+
+.align-justify
+{
+    text-align: justify;
+}
+.align-justify:after
+{
+    display: inline-block;
+    width: 100%; 
+    content: '';
+}
+
+/*
+
+Clearfix
+--------
+
+Clear floats utility.
+
+<div class="clearfix">
+   ...
+</div>
+
+*/
+.row:before,
+.nav:before,
+.row:after,
+.nav:after,
+.clearfix:before,
+.breadcrumb:before,
+.clearfix:after,
+.breadcrumb:after
+{
+    display: table; 
+    content: '';
+}
+.row:after,
+.nav:after,
+.clearfix:after,
+.breadcrumb:after
+{
+    clear: both;
+}
+
+/*
+
+Percent
+-------
+Width in percents for all elements. Supported values are 5% to 100% in steps of 5%.
+
+    <div class="five percent">5% width</div>
+    <div class="thirty percent">30% width</div>
+
+*/
+.percent.five
+{
+    width: 5% !important;
+}
+.percent.ten
+{
+    width: 10% !important;
+}
+.percent.fifteen
+{
+    width: 15% !important;
+}
+.percent.twenty
+{
+    width: 20% !important;
+}
+.percent.twentyfive
+{
+    width: 25% !important;
+}
+.percent.thirty
+{
+    width: 30% !important;
+}
+.percent.thirtyfive
+{
+    width: 35% !important;
+}
+.percent.forty
+{
+    width: 40% !important;
+}
+.percent.fortyfive
+{
+    width: 45% !important;
+}
+.percent.fifty
+{
+    width: 50% !important;
+}
+.percent.fiftyfive
+{
+    width: 55% !important;
+}
+.percent.sixty
+{
+    width: 60% !important;
+}
+.percent.sixtyfive
+{
+    width: 65% !important;
+}
+.percent.seventy
+{
+    width: 70% !important;
+}
+.percent.seventyfive
+{
+    width: 75% !important;
+}
+.percent.eighty
+{
+    width: 80% !important;
+}
+.percent.eightyfive
+{
+    width: 85% !important;
+}
+.percent.ninety
+{
+    width: 90% !important;
+}
+.percent.ninetyfive
+{
+    width: 95% !important;
+}
+.percent.hundred
+{
+    width: 100% !important;
+}
+
+/*
+
+Float
+-----
+
+Float or clear a HTML element.
+
+    <div class="float-left">This is floated left</div>
+    <div class="float-right">This is floated right</div>
+
+*/
+.float-left
+{
+    float: left;
+}
+
+.float-right
+{
+    float: right;
+}
+
+.float-none
+{
+    float: none;
+}
+
+/*
+
+Is Hidden
+---------
+
+Hides an element, normally remove after some user interaction through javascript.
+
+    <div class="is-hidden">You can't see me!</div>
+
+*/
+.is-hidden
+{
+    display: none;
+}
+
+/*
+
+No scroll
+---------
+
+This helper is using when you want to force a no-scroll. In this app, we are using it to disable the page scroll,
+for instance, when the sidebar off canvas menu is open or a modal window with scroll.
+
+<div class="no-scroll">
+  I'm poor, I have no scroll
+</div>
+
+*/
+.no-scroll
+{
+    position: relative; 
+    overflow: hidden !important;
+}
+
+/*
+
+White-spacing
+-------------
+
+Margin and padding utilities. These utilities use a shorthand naming convention:
+
+Shorthand   Description
+---------   -----------
+
+m           Margin
+p           Padding
+t           Top
+r           Right
+b           Bottom
+l           Left
+x           X-axis (left and right)
+y           Y-axis (top and bottom)
+n           Negative (margin only)
+1           default 0.5rem;
+2           default 1rem;
+3           default 2rem;
+4           default 3rem;
+
+*/
+.m0
+{
+    margin: 0;
+}
+
+.mt0
+{
+    margin-top: 0;
+}
+
+.mr0
+{
+    margin-right: 0;
+}
+
+.mb0
+{
+    margin-bottom: 0;
+}
+
+.ml0
+{
+    margin-left: 0;
+}
+
+.m1
+{
+    margin: .5rem;
+}
+
+.mt1
+{
+    margin-top: .5rem;
+}
+
+.mr1
+{
+    margin-right: .5rem;
+}
+
+.mb1
+{
+    margin-bottom: .5rem;
+}
+
+.ml1
+{
+    margin-left: .5rem;
+}
+
+.m2
+{
+    margin: 1rem;
+}
+
+.mt2
+{
+    margin-top: 1rem;
+}
+
+.mr2
+{
+    margin-right: 1rem;
+}
+
+.mb2
+{
+    margin-bottom: 1rem;
+}
+
+.ml2
+{
+    margin-left: 1rem;
+}
+
+.m3
+{
+    margin: 2rem;
+}
+
+.mt3
+{
+    margin-top: 2rem;
+}
+
+.mr3
+{
+    margin-right: 2rem;
+}
+
+.mb3
+{
+    margin-bottom: 2rem;
+}
+
+.ml3
+{
+    margin-left: 2rem;
+}
+
+.m4
+{
+    margin: 3rem;
+}
+
+.mt4
+{
+    margin-top: 3rem;
+}
+
+.mr4
+{
+    margin-right: 3rem;
+}
+
+.mb4
+{
+    margin-bottom: 3rem;
+}
+
+.ml4
+{
+    margin-left: 3rem;
+}
+
+.mxn1
+{
+    margin-right: .5rem; 
+    margin-left: .5rem;
+}
+
+.mxn2
+{
+    margin-right: -1rem; 
+    margin-left: -1rem;
+}
+
+.mxn3
+{
+    margin-right: -2rem; 
+    margin-left: -2rem;
+}
+
+.mxn4
+{
+    margin-right: -3rem; 
+    margin-left: -3rem;
+}
+
+.mx-auto
+{
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.p1
+{
+    padding: .5rem;
+}
+
+.py1
+{
+    padding-top: .5rem; 
+    padding-bottom: .5rem;
+}
+
+.px1
+{
+    padding-right: .5rem; 
+    padding-left: .5rem;
+}
+
+.p2
+{
+    padding: 1rem;
+}
+
+.py2
+{
+    padding-top: 1rem; 
+    padding-bottom: 1rem;
+}
+
+.px2
+{
+    padding-right: 1rem; 
+    padding-left: 1rem;
+}
+
+.p3
+{
+    padding: 2rem;
+}
+
+.py3
+{
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+}
+
+.px3
+{
+    padding-right: 2rem; 
+    padding-left: 2rem;
+}
+
+.p4
+{
+    padding: 3rem;
+}
+
+.py4
+{
+    padding-top: 3rem; 
+    padding-bottom: 3rem;
+}
+
+.px4
+{
+    padding-right: 3rem; 
+    padding-left: 3rem;
+}
+
+/*
+
+Font size helpers
+-----------------
+
+Use this to modify the default font size of an element.
+
+*/
+.s10
+{
+    font-size: 1rem;
+}
+
+.s11
+{
+    font-size: 1.1rem;
+}
+
+.s12
+{
+    font-size: 1.2rem;
+}
+
+.s13
+{
+    font-size: 1.3rem;
+}
+
+.s14
+{
+    font-size: 1.4rem;
+}
+
+.s15
+{
+    font-size: 1.5rem;
+}
+
+.s16
+{
+    font-size: 1.6rem;
+}
+
+.s17
+{
+    font-size: 1.7rem;
+}
+
+.s18
+{
+    font-size: 1.8rem;
+}
+
+.s19
+{
+    font-size: 1.9rem;
+}
+
+.s20
+{
+    font-size: 2rem;
+}
+
+/*
+
+Avatar
+------
+
+Avatar helper to show rounded in a few sizes.
+
+    <img class="avatar-small" src="//gravatar.com/avatar/4aeb778e1a4f2afba6142d6eff73b8a6?s=80">
+
+*/
+.avatar-large,
+.avatar-medium,
+.avatar-small,
+.avatar-xsmall
+{
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px white;
+}
+
+.avatar-large
+{
+    width: 74px;
+    height: 74px;
+}
+
+.avatar-medium
+{
+    width: 48px;
+    height: 48px;
+}
+
+.avatar-small
+{
+    width: 35px;
+    height: 35px;
+}
+
+.avatar-xsmall
+{
+    width: 25px;
+    height: 25px;
+}
+
+/* 4. Base */
+/*
+
+Web fonts
+---------
+
+Drop the files in a folder, update the path and the name and go.
+
+*/
+/*
+
+Global
+------
+
+General fonts and other global styles of the page.
+
+*/
+*
+{
+    box-sizing: border-box; 
+    outline-width: 0;
+}
+
+html
+{
+    font-family: 'Arial', sans-serif;
+    font-size: 62.5%;
+    line-height: 1.5; 
+
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body
+{
+    height: 100%;
+    color: #565656;
+}
+
+body
+{
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+body:before
+{
+    display: none;
+    content: 'small';
+}
+@media screen and (min-width: 480px)
+{
+    body:before
+    {
+        display: none;
+        content: 'tablet';
+    }
+}
+@media screen and (min-width: 800px)
+{
+    body:before
+    {
+        display: none;
+        content: 'desktop';
+    }
+}
+
+/*
+
+List
+----
+
+Reset default styles on lists.
+
+*/
+ul
+{
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0; 
+    list-style: none;
+}
+
+/*
+
+Headings
+--------
+
+h1, h2, h3, h4, h5, h6 headings styles.
+
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+h2
+{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h3
+{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h4
+{
+    font-size: 1.6rem;
+}
+
+h5
+{
+    font-size: 1.3rem;
+}
+
+h6
+{
+    font-size: 1.3rem;
+    color: #676767;
+}
+
+/*
+
+Link
+----
+
+Links styles.
+
+*/
+a
+{
+    cursor: pointer;
+    text-decoration: none; 
+    color: #29c4d0;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+
+/*
+
+Label
+-----
+
+Label styles.
+
+*/
+label
+{
+    cursor: pointer;
+}
+
+/*
+
+Paragraph
+---------
+
+Reset default styles on paragraphs.
+
+*/
+p
+{
+    font-size: 1.4rem; 
+    margin: 0;
+}
+
+/* 5. Objects */
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+
+Grid
+----
+
+Surprise! A grid system with rows and columns. You can nest it the times you want.
+
+<div class="row">
+  <div class="column">
+    <p class="demo-block">I'm a column. Full by default</p>
+  </div>
+  <div class="column one-third">
+    <p class="demo-block">Boring one-third column</p>
+  </div>
+  <div class="column two-thirds">
+    <p class="demo-block">Funny column two-third of width</p>
+  </div>
+</div>
+
+*/
+.row
+{
+    margin: 0;
+    margin-left: -2rem;
+    padding: 0;
+}
+
+.column,
+.columns
+{
+    float: left;
+    width: 100%; 
+    padding-left: 2rem;
+}
+
+.row-reverse > .column,
+.row-reverse .columns
+{
+    float: right;
+}
+
+.row-full
+{
+    margin-left: 0;
+}
+.row-full > .column,
+.row-full .columns
+{
+    padding-left: 0;
+}
+
+.row-narrow
+{
+    margin-left: -1rem;
+}
+.row-narrow > .column,
+.row-narrow .columns
+{
+    padding-left: 1rem;
+}
+
+.row-wide
+{
+    margin-left: -4rem;
+}
+.row-wide > .column,
+.row-wide .columns
+{
+    padding-left: 4rem;
+}
+
+/* Widths */
+.one.column
+{
+    width: 12.5%;
+}
+
+.two.columns,
+.one-quarter
+{
+    width: 25%;
+}
+
+.three.columns
+{
+    width: 37.5%;
+}
+
+.one-third
+{
+    width: 33.33%;
+}
+
+.four.columns,
+.one-half
+{
+    width: 50%;
+}
+
+.five.columns
+{
+    width: 62.5%;
+}
+
+.two-thirds
+{
+    width: 66.66%;
+}
+
+.six.columns,
+.three-quarters
+{
+    width: 75%;
+}
+
+.seven.columns
+{
+    width: 87.5%;
+}
+
+.eight.columns,
+.one-whole
+{
+    width: 100%;
+}
+
+/*
+
+Navigation menu
+---------------
+
+Navigation usually means list of links. And we have some flavours using distinct styles.
+
+<ul class=nav>
+  <li><a href=#>Home</a></li>
+  <li><a href=#>About</a></li>
+  <li><a href=#>Portfolio</a></li>
+  <li><a href=#>Contact</a></li>
+</ul>
+
+*/
+.nav > li,
+.nav > li > a
+{
+    display: inline-block;
+}
+
+.nav-banner
+{
+    text-align: center;
+}
+
+.nav-fit
+{
+    display: table;
+    width: 100%;
+}
+.nav-fit > li
+{
+    display: table-cell;
+}
+.nav-fit > li > a
+{
+    display: block;
+}
+
+/*
+
+Base button
+-----------
+
+Base button to normalize behaviour. It renders the same for links, buttons or inputs type submit. Every other button style should extend this object.
+
+    <input type="submit" value="Submit" class="button">
+    <button type="submit" class="button">Submit</button>
+    <a href=# class="button">Submit</a>
+
+*/
+.button
+{
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none; 
+    color: #fff;
+    border: none;
+    background-color: transparent;
+}
+
+/*
+
+Icons
+-----
+
+Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilarious!
+
+    <i class="icon-arrow-left"></i>
+
+*/
+[class^='icon']
+{
+    font: 0/0 a;
+    display: inline-block; 
+    color: transparent;
+    border: 0;
+    text-shadow: none;
+}
+
+.icon-small
+{
+    width: 18px; 
+    height: 18px;
+}
+
+.icon-medium
+{
+    width: 32px; 
+    height: 32px;
+}
+
+.icon-large
+{
+    width: 48px; 
+    height: 48px;
+}
+
+/*
+
+Media object
+------------
+
+Use this object to show an image and some text rendered in two columns.
+
+<div class="media">
+  <a href="#" class="media-image">
+    <img src="https://en.gravatar.com/userimage/294649/ecfe4df3dba5f939710d657157924d28.jpeg" alt="Megaman" />
+  </a>
+  <div class="media-body">
+    <p><strong>This is a media object (vertical-align: middle)</strong></p>
+    <p>Bacon ipsum dolor sit amet shankle swine cow, shoulder brisket pork belly leberkas tail ham shank beef ribs. Shankle jowl brisket beef filet mignon ribeye frankfurter pork loin tongue short ribs corned beef venison tenderloin. Pork loin swine hamburger, turducken tail boudin shoulder doner pig flank meatloaf ham pancetta t-bone shank.</p>
+  </div>
+</div>
+
+*/
+.media
+{
+    display: table;
+    width: 100%;
+}
+.media.is-inline
+{
+    display: inline-table;
+    vertical-align: top;
+}
+
+.media-image,
+.media-body
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+.align-top .media-image,
+.align-top .media-body
+{
+    vertical-align: top;
+}
+.align-bottom .media-image,
+.align-bottom .media-body
+{
+    vertical-align: bottom;
+}
+
+.media-image
+{
+    padding-right: 1rem;
+}
+.media-image img
+{
+    display: block;
+    max-width: none;
+}
+.reversed .media-image
+{
+    padding-right: 0;
+    padding-left: 1rem;
+}
+
+.media-body
+{
+    width: 100%;
+}
+
+/*
+
+Justified columns
+-----------------
+
+Use this structure to justify columns inside a container.
+
+    <ul class="justify-columns">
+      <li class="column">Left</li>
+      <li class="column">Center</li>
+      <li class="column">Right</li>
+    </ul>
+
+*/
+.justify-columns
+{
+    width: 100%; 
+    text-align: justify;
+}
+.justify-columns:after
+{
+    display: inline-block;
+    width: 100%; 
+    content: '';
+}
+
+.justify-columns > .column
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*
+
+Navigation menu
+---------------
+
+Navigation usually means list of links. And we have some flavours using distinct styles.
+
+*/
+.sb-tabs-container
+{
+    padding: 3rem 1.8rem;
+}
+
+.sb-tabs-container h3
+{
+    margin-bottom: 2rem;
+}
+
+.sb-tabs
+{
+    margin-bottom: 2rem;
+}
+
+.sb-tabs:last-child
+{
+    margin-bottom: 0;
+}
+
+/* By default, tabs component is full width */
+.sb-tabs-group
+{
+    display: table;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    list-style-type: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.sb-tab
+{
+    position: relative; 
+    display: table-cell;
+    border-top: 1px solid #ccd1d9;
+    background-color: #f7f7f7;
+}
+.sb-tab a
+{
+    color: #565656;
+}
+
+.sb-tab-active
+{
+    position: relative;
+    z-index: 1; 
+    background-color: white;
+}
+
+.sb-tab-active:after
+{
+    position: absolute;
+    z-index: 2; 
+    top: -webkit-calc(100% - 1px);
+    top:         calc(100% - 1px);
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: white;
+}
+
+.sb-tab a
+{
+    display: block;
+    padding: 1em;
+}
+
+.sb-tab:first-child
+{
+    border-left: 1px solid #ccd1d9;
+    border-top-left-radius: 4px;
+}
+
+.sb-tab:last-child
+{
+    border-right: 1px solid #ccd1d9;
+    border-top-right-radius: 4px;
+}
+
+.sb-tab + .sb-tab
+{
+    border-left: 1px solid #ccd1d9;
+}
+
+.sb-tabs-content
+{
+    position: relative;
+    z-index: 0;
+    padding: 1em;
+    color: #565656; 
+    border: 1px solid #ccd1d9;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+}
+
+/* Tabs block bottom */
+.sb-tabs--block-bottom .sb-tabs-group
+{
+    border-radius: 0 0 4px 4px;
+}
+
+.sb-tabs--block-bottom .sb-tab
+{
+    border-top: 0;
+    border-bottom: 1px solid #ccd1d9;
+}
+
+.sb-tabs--block-bottom .sb-tab:first-child
+{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 4px;
+}
+
+.sb-tabs--block-bottom .sb-tab:last-child
+{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+}
+
+.sb-tabs--block-bottom .sb-tab-active:after
+{
+    top: auto; 
+    bottom: -webkit-calc(100% - 1px);
+    bottom:         calc(100% - 1px);
+}
+
+.sb-tabs--block-bottom .sb-tabs-content
+{
+    border-radius: 4px 4px 0 0;
+}
+
+/* Tabs block left */
+.sb-tabs--block-left .sb-tabs-group,
+.sb-tabs--block-right .sb-tabs-group
+{
+    display: block;
+    float: left;
+    width: auto;
+}
+
+.sb-tabs--block-left .sb-tabs-group:after,
+.sb-tabs--block-left .sb-tabs-group:before,
+.sb-tabs--block-right .sb-tabs-group:after,
+.sb-tabs--block-right .sb-tabs-group:before
+{
+    display: table; 
+    content: '';
+}
+
+.sb-tabs--block-left .sb-tabs-group:after,
+.sb-tabs--block-right .sb-tabs-group:after
+{
+    clear: both;
+}
+
+.sb-tabs--block-left .sb-tab,
+.sb-tabs--block-right .sb-tab
+{
+    display: block;
+    float: left;
+}
+
+.sb-tabs--block-left .sb-tabs-content
+{
+    clear: left; 
+    border-radius: 0 4px 4px 4px;
+}
+
+/* Tabs block right */
+.sb-tabs--block-right .sb-tabs-group
+{
+    float: right;
+}
+
+.sb-tabs--block-right .sb-tabs-content
+{
+    clear: right; 
+    border-radius: 4px 0 4px 4px;
+}
+
+/* Tabs left */
+.sb-tabs--left:after,
+.sb-tabs--left:before,
+.sb-tabs--right:after,
+.sb-tabs--right:before
+{
+    display: table; 
+    content: '';
+}
+
+.sb-tabs--left:after,
+.sb-tabs--right:after
+{
+    clear: both;
+}
+
+.sb-tabs--left .sb-tabs-group,
+.sb-tabs--right .sb-tabs-group
+{
+    display: block;
+    width: auto;
+}
+
+.sb-tabs--left .sb-tabs-group
+{
+    float: left; 
+    border-radius: 4px 0 0 4px;
+}
+
+.sb-tabs--left .sb-tabs-content,
+.sb-tabs--right .sb-tabs-content
+{
+    overflow: auto;
+}
+
+.sb-tabs--left .sb-tab,
+.sb-tabs--right .sb-tab
+{
+    display: block;
+}
+
+.sb-tabs--left .sb-tab
+{
+    border-left: 1px solid #ccd1d9;
+}
+
+.sb-tabs--left .sb-tab:last-child
+{
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+}
+
+.sb-tabs--left .sb-tab + .sb-tab
+{
+    border-top: 1px solid #ccd1d9;
+    border-right: 0;
+}
+
+.sb-tabs--left .sb-tab-active:after
+{
+    top: 0;
+    left: 100%;
+    width: 2px; 
+    height: 100%;
+}
+
+.sb-tabs--left .sb-tabs-content
+{
+    border-radius: 0 4px 4px 4px;
+}
+
+/* Tabs right */
+.sb-tabs--right .sb-tabs-group
+{
+    float: right; 
+    border-radius: 0 4px 4px 0;
+}
+
+.sb-tabs--right .sb-tab
+{
+    border-right: 1px solid #ccd1d9;
+}
+
+.sb-tabs--right .sb-tab-active:after
+{
+    top: 0;
+    left: -1px;
+    width: 2px; 
+    height: 100%;
+}
+
+.sb-tabs--right .sb-tab:first-child
+{
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 4px;
+}
+
+.sb-tabs--right .sb-tab:last-child
+{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+}
+
+.sb-tabs--right .sb-tabs-content
+{
+    border-radius: 4px 0 4px 4px;
+}
+
+.table
+{
+    display: table;
+    overflow: hidden; 
+    border-collapse: separate;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+}
+
+.table-heading
+{
+    font-weight: bold;
+    line-height: 1;
+    display: table-row;
+    height: 6rem;
+    text-transform: uppercase; 
+    color: #000;
+    background-color: #f6f6f6;
+}
+.table-heading .table-cell
+{
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.table-row
+{
+    display: table-row;
+    height: 6rem; 
+    background-color: #eff7fd;
+}
+.table-row:nth-child(2n+1)
+{
+    background-color: #fff;
+}
+
+.table-cell
+{
+    display: table-cell;
+    padding: 1.5rem;
+    vertical-align: middle;
+}
+.table-cell:not(:last-child)
+{
+    border-right: 1px solid #d6d6d6;
+}
+
+.table-cell-title,
+.table-cell-subtitle
+{
+    display: block;
+}
+
+.table-cell-subtitle
+{
+    font-weight: normal;
+    text-transform: none; 
+    color: #5e5e5e;
+}
+
+.first-highlight .table-heading .table-cell:nth-child(1)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.first-highlight .table-heading .table-cell:nth-child(1) .table-cell-subtitle
+{
+    color: #fff;
+}
+.first-highlight .table-cell:nth-child(1)
+{
+    background-color: #f6e3d6;
+}
+.first-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(1)
+{
+    background-color: #faf1eb;
+}
+
+.second-highlight .table-heading .table-cell:nth-child(2)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.second-highlight .table-heading .table-cell:nth-child(2) .table-cell-subtitle
+{
+    color: #fff;
+}
+.second-highlight .table-cell:nth-child(2)
+{
+    background-color: #f6e3d6;
+}
+.second-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(2)
+{
+    background-color: #faf1eb;
+}
+
+.third-highlight .table-heading .table-cell:nth-child(3)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.third-highlight .table-heading .table-cell:nth-child(3) .table-cell-subtitle
+{
+    color: #fff;
+}
+.third-highlight .table-cell:nth-child(3)
+{
+    background-color: #f6e3d6;
+}
+.third-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(3)
+{
+    background-color: #faf1eb;
+}
+
+.fourth-highlight .table-heading .table-cell:nth-child(4)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.fourth-highlight .table-heading .table-cell:nth-child(4) .table-cell-subtitle
+{
+    color: #fff;
+}
+.fourth-highlight .table-cell:nth-child(4)
+{
+    background-color: #f6e3d6;
+}
+.fourth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(4)
+{
+    background-color: #faf1eb;
+}
+
+.fifth-highlight .table-heading .table-cell:nth-child(5)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.fifth-highlight .table-heading .table-cell:nth-child(5) .table-cell-subtitle
+{
+    color: #fff;
+}
+.fifth-highlight .table-cell:nth-child(5)
+{
+    background-color: #f6e3d6;
+}
+.fifth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(5)
+{
+    background-color: #faf1eb;
+}
+
+.sixth-highlight .table-heading .table-cell:nth-child(6)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.sixth-highlight .table-heading .table-cell:nth-child(6) .table-cell-subtitle
+{
+    color: #fff;
+}
+.sixth-highlight .table-cell:nth-child(6)
+{
+    background-color: #f6e3d6;
+}
+.sixth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(6)
+{
+    background-color: #faf1eb;
+}
+
+.seventh-highlight .table-heading .table-cell:nth-child(7)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.seventh-highlight .table-heading .table-cell:nth-child(7) .table-cell-subtitle
+{
+    color: #fff;
+}
+.seventh-highlight .table-cell:nth-child(7)
+{
+    background-color: #f6e3d6;
+}
+.seventh-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(7)
+{
+    background-color: #faf1eb;
+}
+
+.eigth-highlight .table-heading .table-cell:nth-child(8)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.eigth-highlight .table-heading .table-cell:nth-child(8) .table-cell-subtitle
+{
+    color: #fff;
+}
+.eigth-highlight .table-cell:nth-child(8)
+{
+    background-color: #f6e3d6;
+}
+.eigth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(8)
+{
+    background-color: #faf1eb;
+}
+
+.ninth-highlight .table-heading .table-cell:nth-child(9)
+{
+    color: #fff; 
+    background-color: #f29556;
+}
+.ninth-highlight .table-heading .table-cell:nth-child(9) .table-cell-subtitle
+{
+    color: #fff;
+}
+.ninth-highlight .table-cell:nth-child(9)
+{
+    background-color: #f6e3d6;
+}
+.ninth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(9)
+{
+    background-color: #faf1eb;
+}
+
+/*
+
+Pagination
+----------
+
+Pagination pattern.
+
+*/
+.pagination
+{
+    font-size: 0;
+    text-align: center;
+}
+
+.pagination-item
+{
+    font-size: 1.4rem; 
+    display: inline-block;
+    margin-right: 0;
+    text-align: center;
+}
+
+.pagination-link,
+.pagination-prev,
+.pagination-next
+{
+    display: block;
+    padding: .7rem 1.35rem;
+    text-decoration: none;
+}
+
+.pagination-link
+{
+    background-color: white;
+    box-shadow: 0 0 0 1px #ccd1d9;
+}
+.pagination-link:hover,
+.pagination-link:focus,
+.pagination-link.is-active
+{
+    position: relative;
+    z-index: 1; 
+    text-decoration: none;
+    color: white;
+    background-color: #f29556;
+    box-shadow: 0 0 0 1px #f29556;
+}
+
+.pagination-prev,
+.pagination-next
+{
+    position: relative;
+    z-index: 1; 
+    text-transform: uppercase;
+    color: white;
+    background-color: #29c4d0;
+    box-shadow: 0 0 0 1px #29c4d0;
+}
+.pagination-prev:hover,
+.pagination-prev:focus,
+.pagination-next:hover,
+.pagination-next:focus
+{
+    text-decoration: none; 
+    background-color: #26b7c2;
+    box-shadow: 0 0 0 1px #26b7c2;
+}
+
+.pagination-prev
+{
+    border-radius: 4px 0 0 4px;
+}
+
+.pagination-next
+{
+    border-radius: 0 4px 4px 0;
+}
+
+/*
+
+Breadcrumb
+----------
+
+Breadcrumb in two flavours: normal with arrow shapes and simple.
+
+*/
+.breadcrumb
+{
+    overflow: hidden; 
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.breadcrumb-item
+{
+    position: relative;
+    display: table-cell;
+    margin-left: -.25rem;
+    padding: 1rem 1rem 1rem 2.5rem;
+    vertical-align: middle; 
+    background-color: #f6f6f6;
+}
+.breadcrumb-item:after,
+.breadcrumb-item:before
+{
+    position: absolute;
+    z-index: 1; 
+    left: 100%;
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.breadcrumb-item:before
+{
+    top: -.1rem; 
+    border-width: 2.1rem 2.1rem 2.1rem 1.3rem;
+    border-color: transparent transparent transparent #d6d6d6;
+}
+.breadcrumb-item:after
+{
+    top: 0; 
+    border-width: 2rem 2rem 2rem 1.2rem;
+    border-color: transparent transparent transparent #f6f6f6;
+}
+
+.breadcrumb-item:last-child
+{
+    background-color: #fff;
+}
+.breadcrumb-item:last-child:after,
+.breadcrumb-item:last-child:before
+{
+    content: normal;
+}
+
+.breadcrumb-item-large
+{
+    height: 80px;
+    padding: 1rem 1rem 1rem 4rem;
+}
+.breadcrumb-item-large:first-child
+{
+    padding-left: 2.5rem;
+}
+.breadcrumb-item-large:before
+{
+    top: -.1rem; 
+    border-width: 4.1rem 4.1rem 4.1rem 2.5rem;
+    border-color: transparent transparent transparent #d6d6d6;
+}
+.breadcrumb-item-large:after
+{
+    top: 0; 
+    border-width: 4rem 4rem 4rem 2.4rem;
+    border-color: transparent transparent transparent #f6f6f6;
+}
+
+.breadcrumb-item-simple
+{
+    display: inline-block;
+    padding: 1rem 0;
+    vertical-align: middle;
+}
+.breadcrumb-item-simple:after
+{
+    display: inline-block;
+    margin: 0 1rem; 
+    content: '/';
+    color: gray;
+}
+
+.breadcrumb-item-simple:first-child
+{
+    margin-left: 2.5rem;
+}
+
+.breadcrumb-item-simple:last-child:after
+{
+    content: normal;
+}
+
+/*
+
+Dropdown toggler
+----------------
+
+Base button to normalize behaviour. It renders the same for links, buttons or inputs type submit. Every other button style should extend this object.
+
+    <a href=# class="dropdown-toggler">Show settings options</a>
+
+*/
+.dropdown-toggler
+{
+    font: 0/0 a;
+    line-height: 1;
+    display: inline-block;
+    padding: .4rem .3rem;
+    cursor: pointer;
+    vertical-align: text-top; 
+    color: transparent;
+    border: 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    text-shadow: none;
+}
+
+.dropdown-toggler:before
+{
+    display: inline-block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-top: .4rem solid #444;
+    border-right: .4rem solid transparent;
+    border-left: .4rem solid transparent;
+}
+
+/* 6. Layout */
+/*
+
+Breadcrumb dashboard
+--------------------
+
+Breadcrumb styles for the dashboard.
+
+*/
+.breadcrumb-home .breadcrumb-item h2
+{
+    font-weight: normal;
+}
+.breadcrumb-home .breadcrumb-item span
+{
+    color: #999;
+}
+.breadcrumb-home .breadcrumb-item:last-child h2,
+.breadcrumb-home .breadcrumb-item:last-child a
+{
+    font-weight: bold;
+}
+
+/* 7. Vendor */
