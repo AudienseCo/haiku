@@ -1,0 +1,14 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    {% include "layout/head.html" %}
+  </head>
+  <body>
+    {% include "partial/svg.html" %}
+
+    {% block side %}{% endblock %}
+    {% block main %}{% endblock %}
+
+    <script src='//localhost:35729/livereload.js'></script>
+  </body>
+</html>

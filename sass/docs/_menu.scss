@@ -1,0 +1,44 @@
+.menu {
+    border-radius: 3px;
+    border: 1px solid #d8d8d8;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+.menu-item {
+    border-bottom: 1px solid #eee;
+    display: block;
+    padding: .6rem 1rem;
+    position: relative;
+    width: 100%;
+
+    &:hover {
+        background-color: color($name: "socialbro", $variant: "tertiary", $hue: "light");
+        text-decoration: none;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    &.selected {
+        color: color($name: "text");
+        cursor: default;
+        font-weight: bold;
+
+        &:hover {
+            background-color: white;
+        }
+
+        &:before {
+            background-color: color($name: "socialbro", $variant: "primary", $hue: "dark");
+            bottom: 0;
+            content: '';
+            display: block;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: .3rem;
+        }
+    }
+}
