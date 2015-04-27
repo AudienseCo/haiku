@@ -6,5 +6,4 @@ Here we will be grouping all elements directly related to typography. They are n
 
 We have style for the six different headings with different sizes each; except for the `h6` heading that has the same size as the `h5` but with lighter color.
 
-{% set component = "partial/headings.html" %}
-{% include "partial/example.html" %}
+{{ component('partial/headings.html') }}

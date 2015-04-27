@@ -16,9 +16,22 @@ if (process.env.NODE_ENV === 'development') {
 };
 
 var nunjucksEnv = nunjucks.configure("views", {
-  autoescape: true,
+  autoescape: false,
   express: app
 });
+
+/*
+ * Adds the function `component(partial)` to use globally in all templates
+ * Is an alias for:
+ * {% set component = partial %}
+ * {% include "partial/example.html" %}
+*/
+nunjucksEnv.addGlobal('component', function(component){
+  return nunjucks.render('partial/example.html', {
+    component: component
+  });
+});
+
 markdown.register(nunjucksEnv, marked);
 
 app.set('view engine', 'html');
