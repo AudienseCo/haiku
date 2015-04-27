@@ -20,11 +20,10 @@ new Highcharts.Chart({
         color: 'white',
         padding: 12,
         y : 38,
-        style : {
-          'stroke': 'white',
-          'stroke-width': '.5px'
+        style: {
+          textShadow: false,
+          fontWeight: 'bold'
         },
-        backgroundColor: 'rgba(255, 255, 255, .5)',
         formatter: function (){
           var label = this.y+'';
           if (label < 1000) {
