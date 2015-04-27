@@ -5,15 +5,26 @@ var express      = require('express'),
     nunjucks     = require("nunjucks"),
     markdown     = require("nunjucks-markdown")
     marked       = require("marked"),
+    auth         = require('http-auth'),
     routes       = require("./routes");
 
 var app = express();
 var port = process.env.PORT || 3000;
 
+var basic = auth.basic({
+    realm: "Sorry, this site is private :-/"
+  }, function (username, password, callback) { // Custom authentication method.
+    callback(username === "socialbro" && password === "isawesome");
+  }
+);
+
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 if (process.env.NODE_ENV === 'development') {
   app.use(errorhandler());
-};
+}
+else {
+  app.use(auth.connect(basic));
+}
 
 var nunjucksEnv = nunjucks.configure("views", {
   autoescape: false,
