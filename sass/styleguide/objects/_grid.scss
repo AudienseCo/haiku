@@ -19,7 +19,7 @@ Surprise! A grid system with rows and columns. You can nest it the times you wan
 
 */
 
-$gutter-width: 0 !default;
+$gutter-width: 2rem !default;
 
 .row {
     @extend %clearfix;
