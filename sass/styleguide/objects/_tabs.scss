@@ -26,7 +26,6 @@ Navigation usually means list of links. And we have some flavours using distinct
 /* By default, tabs component is full width */
 .sb-tabs-group {
     border-radius: 4px 4px 0 0;
-    box-shadow: 0 2px 4px color("border");
     display: table;
     list-style-type: none;
     margin: 0;
@@ -87,7 +86,6 @@ Navigation usually means list of links. And we have some flavours using distinct
     background-color: #fff;
     border-radius: 0 0 4px 4px;
     border: 1px solid color("border");
-    box-shadow: 0 2px 4px color("border");
     padding: 1em;
     position: relative;
     z-index: 0;
