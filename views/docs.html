@@ -1,0 +1,11 @@
+{% extends "layout/default.html" %}
+
+{% block side %}
+  {% include "partial/menu.html" %}
+{% endblock %}
+
+{% block main %}
+  <div class="three-quarters column markdown-content">
+    {% markdown "markdown/" + section + ".md" %}
+  </div>
+{% endblock %}
