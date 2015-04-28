@@ -4,7 +4,8 @@
   "description": "SocialBro styleguides.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/node-sass/bin/node-sass sass/styleguide/sandbox.scss public/stylesheets/sandbox.css;./node_modules/node-sass/bin/node-sass sass/docs/docs.scss public/stylesheets/docs.css;"
   },
   "author": "Buti",
   "license": "ISC",
@@ -14,7 +15,10 @@
     "express": "^4.10.6",
     "marked": "^0.3.3",
     "nunjucks": "^1.1.0",
-    "nunjucks-markdown": "^1.0.0"
+    "nunjucks-markdown": "^1.0.0",
+    "morgan": "^1.5.2",
+    "node-sass": "~2.1.1",
+    "http-auth": "~2.2.5"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -29,8 +33,6 @@
     "grunt-sass": "~0.16.1",
     "grunt-spritesmith": "^2.20.0",
     "grunt-svgmin": "~2.0.0",
-    "grunt-svgstore": "^0.5.0",
-    "morgan": "^1.5.2",
-    "node-sass": "~1.1.4"
+    "grunt-svgstore": "^0.5.0"
   }
 }
