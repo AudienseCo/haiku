@@ -1,0 +1,22 @@
+.grid-panel {
+    border: 1px solid #F6F6F6;
+    display: inline-block;
+    color: #444;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+.grid-panel-header {
+    padding: 12px 15px;
+    font-size: 12px;
+    background-color: #F6F6F6;
+
+    h1 {
+        font-size: 14px;
+    }
+}
+
+.grid-panel-body {
+    padding: 10px 15px;
+}
