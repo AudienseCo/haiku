@@ -1,14 +1,14 @@
 // Element general sizes
-$roi-border-width: 0.1rem;
-$roi-height: 12rem;
-$roi-width: 16rem;
-$roi-h-separation: 4.6rem;
-$roi-v-separation: .8rem;
+$acc-breadcrumb-border-width: 0.1rem;
+$acc-breadcrumb-height: 12rem;
+$acc-breadcrumb-width: 16rem;
+$acc-breadcrumb-h-separation: 4.6rem;
+$acc-breadcrumb-v-separation: .8rem;
 
 // Triangles sizes
-$back-triangle-height: $roi-height/2;
-$back-triangle-width: $roi-height/4;
-$front-triangle-height: $roi-height/2;
+$back-triangle-height: $acc-breadcrumb-height/2;
+$back-triangle-width: $acc-breadcrumb-height/4;
+$front-triangle-height: $acc-breadcrumb-height/2;
 $front-triangle-width: 2.8rem;
 
 // Accumulative symbol legend sizing
@@ -28,14 +28,14 @@ $amount-side-line-height: .4rem;
 $total-amount-height: 8.8rem;
 
 // Background layer
-.roi-item-wrapper {
+.acc-breadcrumb-item-wrapper {
     background-color: color($name: 'text', $variant: 'secondary', $hue: 'light');
     display: block;
     float: left;
-    height: $roi-height;
-    margin: $roi-v-separation ($roi-h-separation - $back-triangle-width) $roi-v-separation $back-triangle-width;
+    height: $acc-breadcrumb-height;
+    margin: $acc-breadcrumb-v-separation ($acc-breadcrumb-h-separation - $back-triangle-width) $acc-breadcrumb-v-separation $back-triangle-width;
     position: relative;
-    width: $roi-width;
+    width: $acc-breadcrumb-width;
 
     // Dark front triangle
     &:before {
@@ -46,7 +46,7 @@ $total-amount-height: 8.8rem;
         content: '';
         display: block;
         height: 0;
-        left: $roi-width;
+        left: $acc-breadcrumb-width;
         position: absolute;
         top: 0;
         width: 0;
@@ -54,23 +54,23 @@ $total-amount-height: 8.8rem;
 }
 
 // Content layer
-.roi-item {
+.acc-breadcrumb-item {
     background-color: color($name: 'background', $hue: 'light');
-    bottom: $roi-border-width;
-    left: $roi-border-width;
+    bottom: $acc-breadcrumb-border-width;
+    left: $acc-breadcrumb-border-width;
     position: absolute;
-    right: $roi-border-width;
-    top: $roi-border-width;
+    right: $acc-breadcrumb-border-width;
+    top: $acc-breadcrumb-border-width;
 
     // Light front triangle
     &:before {
         border-color: transparent transparent transparent color($name: 'background', $hue: 'light');
         border-style: solid;
-        border-width: ($roi-height - $roi-border-width*2)/2 ($front-triangle-width - $roi-border-width/2);
+        border-width: ($acc-breadcrumb-height - $acc-breadcrumb-border-width*2)/2 ($front-triangle-width - $acc-breadcrumb-border-width/2);
         content: '';
         display: block;
         height: 0;
-        left: $roi-width - $roi-border-width*2;
+        left: $acc-breadcrumb-width - $acc-breadcrumb-border-width*2;
         position: absolute;
         top: 0;
         width: 0;
@@ -97,7 +97,7 @@ $total-amount-height: 8.8rem;
 }
 
 // Back top triangles
-.roi-item-back-top {
+.acc-breadcrumb-item-back-top {
     height: $back-triangle-height;
     left: -$back-triangle-width;
     position: absolute;
@@ -122,13 +122,13 @@ $total-amount-height: 8.8rem;
 
     &:after {
         border-color: transparent white transparent transparent;
-        top: $roi-border-width;
-        right: -$roi-border-width*2;
+        top: $acc-breadcrumb-border-width;
+        right: -$acc-breadcrumb-border-width*2;
     }
 }
 
 // Back bottom triangles
-.roi-item-back-bottom {
+.acc-breadcrumb-item-back-bottom {
     bottom: 0;
     height: $back-triangle-height;
     left: -$back-triangle-width;
@@ -153,13 +153,13 @@ $total-amount-height: 8.8rem;
 
     &:after {
         border-color: transparent white transparent transparent;
-        bottom: $roi-border-width;
-        right: -$roi-border-width*2;
+        bottom: $acc-breadcrumb-border-width;
+        right: -$acc-breadcrumb-border-width*2;
     }
 }
 
 // Amount legend
-.roi-item-amount {
+.acc-breadcrumb-item-amount {
     background-color: color($name: 'succeed', $variant: 'tertiary', $hue: 'dark');
     border-radius: .4rem;
     bottom: $amount-legend-separation;
@@ -195,33 +195,33 @@ $total-amount-height: 8.8rem;
 
 
 // Item event legend
-.roi-item-event {
+.acc-breadcrumb-item-event {
     display: table;
-    height: $roi-height - $amount-legend-height - $amount-legend-separation;
+    height: $acc-breadcrumb-height - $amount-legend-height - $amount-legend-separation;
     line-height: 1;
     text-align: center;
     width: 100%;
 }
 
-.roi-item-event-wrapper {
+.acc-breadcrumb-item-event-wrapper {
     display: table-cell;
     vertical-align: middle;
 }
 
-.roi-item-event-amount {
+.acc-breadcrumb-item-event-amount {
     display: block;
     font-size: 2.2rem;
     font-weight: bold;
 }
 
-.roi-item-event-action {
+.acc-breadcrumb-item-event-action {
     display: block;
     font-size: 1.1rem;
     text-transform: uppercase;
 }
 
 // Total amount shown in the last item
-.roi-item-total {
+.acc-breadcrumb-item-total {
     background-color: color($name: 'succeed', $variant: 'tertiary', $hue: 'dark');
     border-radius: .4rem;
     display: table;
@@ -232,19 +232,19 @@ $total-amount-height: 8.8rem;
     width: 100%;
 }
 
-.roi-item-total-wrapper {
+.acc-breadcrumb-item-total-wrapper {
     display: table-cell;
     vertical-align: middle;
 }
 
-.roi-item-total-amount {
+.acc-breadcrumb-item-total-amount {
     display: inline-block;
     font-size: 2.4rem;
     font-weight: bold;
     text-align: right;
 }
 
-.roi-item-total-unit {
+.acc-breadcrumb-item-total-unit {
     display: block;
     font-size: 1.4rem;
     font-weight: normal;
@@ -252,35 +252,35 @@ $total-amount-height: 8.8rem;
 }
 
 // Hide back triangles, round left corners, hide left sideline
-.roi-item-wrapper:first-child {
+.acc-breadcrumb-item-wrapper:first-child {
     margin-left: 0;
 
-    .roi-item-back-bottom,.roi-item-back-top {
+    .acc-breadcrumb-item-back-bottom,.acc-breadcrumb-item-back-top {
         display: none;
     }
 
-    &, .roi-item {
+    &, .acc-breadcrumb-item {
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
 
-    .roi-item-amount:before {
+    .acc-breadcrumb-item-amount:before {
         display: none;
     }
 }
 
 // Show equal symbol for the accumulative legend in the 2 last child
-.roi-item-wrapper:nth-last-child(2) {
-    .roi-item:after {
+.acc-breadcrumb-item-wrapper:nth-last-child(2) {
+    .acc-breadcrumb-item:after {
         content: '=';
     }
 }
 
 // Hide front triangle and round right corners
-.roi-item-wrapper:last-child {
+.acc-breadcrumb-item-wrapper:last-child {
     margin-right: 0;
 
-    &, .roi-item {
+    &, .acc-breadcrumb-item {
         padding: 1.5rem;
 
         &:before, &:after {
@@ -288,7 +288,7 @@ $total-amount-height: 8.8rem;
         }
     }
 
-    &, .roi-item {
+    &, .acc-breadcrumb-item {
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
