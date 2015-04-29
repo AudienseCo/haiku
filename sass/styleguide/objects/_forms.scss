@@ -1,0 +1,67 @@
+// Input sizes
+$input-height: 3.6rem;
+$input-line-height: 2.4rem;
+$input-v-padding: ($input-height - $input-line-height)/2;
+$input-default-width: 20rem;
+
+.input-text {
+    background-color: color($name: "background", $hue: "light");
+    border-radius: 3px;
+    border: 1px solid color($name: "border", $variant: "secondary");
+    color: color($name: "text", $hue: "dark");
+    display: inline-block;
+    font-size: 1.4rem;
+    height: $input-height;
+    line-height: $input-line-height;
+    padding: $input-v-padding 1rem;
+    vertical-align: middle;
+    width: $input-default-width;
+}
+
+.input-group {
+    border-collapse: separate;
+    border-width: 0;
+    display: inline-table;
+    overflow: hidden;
+    width: $input-default-width;
+
+    // an input text next to an input label
+    .input-label + .input-text {
+        border-width: 1px 1px 1px 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .input-text {
+        border-radius: 3px 0 0 3px;
+        border-width: 1px 0 1px 1px;
+        display: table-cell;
+        height: $input-height;
+        padding: $input-v-padding 1rem;
+        width: 100%;
+    }
+
+    .input-group-button {
+        display: table-cell;
+        height: $input-height;
+        vertical-align: middle;
+
+        & > .btn {
+            height: $input-height;
+            border-radius: 0 3px 3px 0;
+            width: 100%;
+        }
+    }
+
+    .input-label {
+        background: color($name: "background");
+        border-radius: 3px 0 0 3px;
+        border: 1px solid color($name: "border", $variant: "secondary");
+        color: color($name: "text", $hue: "dark");
+        display: table-cell;
+        font-weight: bold;
+        height: $input-height - .2rem;
+        line-height: $input-line-height;
+        padding: ($input-v-padding - .1rem) 1rem;
+        vertical-align: middle;
+    }
+}
