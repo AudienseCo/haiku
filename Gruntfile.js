@@ -23,6 +23,12 @@ module.exports = function(grunt) {
           'public/stylesheets/main.css':    'sass/site/main.scss',
           'public/stylesheets/docs.css':    'sass/docs/docs.scss'
         }
+      },
+      build: {
+        files: [{
+          dest: 'dist/styleguide.css',
+          src: ['sass/styleguide/*.scss']
+        }]
       }
     },
 
@@ -61,8 +67,8 @@ module.exports = function(grunt) {
       options: {
         browsers: ['> 1%', 'last 5 versions', 'Firefox ESR', 'Opera 12.1']
       },
-      no_dest: {
-        src: 'public/stylesheets/*.css'
+      build: {
+        src: 'dist/**.css'
       }
     },
 
@@ -75,7 +81,7 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: ['assets/sandbox.svg', 'assets/svg/compressed', 'assets/svg/output'],
+    clean: ['dist/', 'assets/sandbox.svg', 'assets/svg/compressed', 'assets/svg/output'],
 
     svgstore: {
       options: {
@@ -125,13 +131,21 @@ module.exports = function(grunt) {
         files: {
           'public/stylesheets/sandbox.css': ['public/stylesheets/sandbox.css']
         }
+      },
+      build: {
+        options: {
+          config: 'csscomb.json'
+        },
+        files: {
+          'dist/styleguide.css': 'dist/styleguide.css'
+        }
       }
     },
 
     cssmin: {
-      css: {
+      build: {
         files: {
-          'public/stylesheets/sandbox.min.css': ['public/stylesheets/sandbox.css']
+          'dist/styleguide.min.css': ['dist/styleguide.css']
         }
       }
     }
@@ -147,6 +161,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-svgstore');
   grunt.loadNpmTasks('grunt-csscomb');
+  grunt.loadNpmTasks('grunt-version');
 
   grunt.registerTask('express', 'Start a custom web server', function() {
     var port = process.env.PORT || 3000;
@@ -166,7 +181,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['help']);
-  grunt.registerTask('build', ['sass', 'autoprefixer', 'csscomb', 'cssmin']);
+  grunt.registerTask('build', ['clean', 'sass:build', 'autoprefixer:build', 'csscomb:build', 'cssmin']);
   grunt.registerTask('sprites', ['sprite']);
   grunt.registerTask('svg', ['clean', 'svgmin', 'svgstore', 'rename:svg']);
   grunt.registerTask('server', ['sass', 'express', 'watch']);
