@@ -1,13 +1,23 @@
 # Icons
 
-Using SVG icons, an image format for vector graphics, to make our CSS more and more modular, structured and flexible. We have a `grunt` task to generate sprites of svg so you just need to include your svg in the proper folder and run `grunt svg`. Then, a partial already included already in the document will be updated and you can link your icon like so:
+Using SVG icons, an image format for vector graphics, we make our CSS more and more modular, structured and flexible. Instead of a icon font, we go for SVG sprite maps. To use an icon you just have to declare an `svg` node with a class `.icon` to inherit the base icon properties. Then, inside the node include a `use` tag with a reference to the sprite map and the shape you want to use. For example, to include *socialbro* icon you need to write:
 
 ```html
-<svg viewBox="0 0 100 100" class="icon-large st-icon">
-  <use xlink:href="#icon-bubble"></use>
+<svg viewBox="0 0 100 100" class="icon">
+  <use xlink:href="/svg-defs.svg#icon-socialbro"></use>
 </svg>
 ```
 
-In the previous case the SVG file would be named `bubble.svg`. The `icon-` prefix is added automatically and you can add custom classes to style the icon or to modify the size. Some icon examples:
+Here we have a list with all the icons we have so far so it's easy to identify and use anyone.
 
 {% include "partial/icons.html" %}
+
+## Icon Styling
+
+The best thing about using SVG is styling. As we saw, with `icon` class you inherit all icon base properties but actually it's enough having a class that starts with `icon`. Then, you can add as many properties as you want to give specific styles. To give specific properties for an icon type, please, use the name of the icon. For example, **twitter** icon has the corporative color if you use the class `.icon-twitter`.
+
+Consider using helpers to give a the size of an icon. By default `40px` is the square size of the icon but you have a group of classes named `.icon-size-<size>` where size can be 20, 30, 35, 40, 45, 50, 55 or 60 pixels.
+
+## Adding a new shape
+
+To add a new shape you just have to copy the svg source file at `/assets/svg` with the name you want, for example `bubble.svg`. Then run `grunt svg` from the command line to update the sprite map located at `/public` folder. Now you can reference the shape with `#icon-name` in the `use` tag. In the `bubble.svg` example it would be `#icon-bubble`.
