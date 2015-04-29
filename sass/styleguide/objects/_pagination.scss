@@ -1,0 +1,69 @@
+/*
+
+Pagination
+----------
+
+Pagination pattern.
+
+*/
+
+.pagination {
+    font-size: 0;
+    text-align: center;
+}
+
+.pagination-item {
+    display: inline-block;
+    text-align: center;
+    margin-right: 0;
+    font-size: 1.4rem;
+}
+
+.pagination-link,
+.pagination-prev,
+.pagination-next {
+    display: block;
+    padding: 0.7rem 1.35rem;
+    text-decoration: none;
+}
+
+.pagination-link {
+    background-color: white;
+    box-shadow: 0 0 0 1px color("border");
+
+    &:hover,
+    &:focus,
+    &.is-active {
+        background-color: color("primary");
+        box-shadow: 0 0 0 1px color("primary");
+        color: white;
+        position: relative;
+        text-decoration: none;
+        z-index: 1;
+    }
+}
+
+.pagination-prev,
+.pagination-next {
+    background-color: color("socialbro");
+    box-shadow: 0 0 0 1px color("socialbro");
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+        background-color: color("socialbro", $hue: "dark");
+        box-shadow: 0 0 0 1px color("socialbro", $hue: "dark");
+        text-decoration: none;
+    }
+}
+
+.pagination-prev {
+    border-radius: 4px 0 0 4px;
+}
+
+.pagination-next {
+    border-radius: 0 4px 4px 0;
+}

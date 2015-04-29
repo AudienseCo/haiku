@@ -1,0 +1,295 @@
+// Element general sizes
+$acc-breadcrumb-border-width: 0.1rem;
+$acc-breadcrumb-height: 12rem;
+$acc-breadcrumb-width: 16rem;
+$acc-breadcrumb-h-separation: 4.6rem;
+$acc-breadcrumb-v-separation: .8rem;
+
+// Triangles sizes
+$back-triangle-height: $acc-breadcrumb-height/2;
+$back-triangle-width: $acc-breadcrumb-height/4;
+$front-triangle-height: $acc-breadcrumb-height/2;
+$front-triangle-width: 2.8rem;
+
+// Accumulative symbol legend sizing
+$acc-legend-border: .3rem;
+$acc-legend-width: 4rem;
+
+// Amount legend sizing
+$amount-legend-height: 2.4rem;
+$amount-legend-separation: 1.5rem;
+
+// Amount side lines sizing
+$amount-left-side-line-width: 4.4rem;
+$amount-right-side-line-width: 8rem;
+$amount-side-line-height: .4rem;
+
+// Total amount legend sizing
+$total-amount-height: 8.8rem;
+
+// Background layer
+.acc-breadcrumb-item-wrapper {
+    background-color: color($name: 'text', $variant: 'secondary', $hue: 'light');
+    display: block;
+    float: left;
+    height: $acc-breadcrumb-height;
+    margin: $acc-breadcrumb-v-separation ($acc-breadcrumb-h-separation - $back-triangle-width) $acc-breadcrumb-v-separation $back-triangle-width;
+    position: relative;
+    width: $acc-breadcrumb-width;
+
+    // Dark front triangle
+    &:before {
+        -moz-transform: scale(.9999);
+        border-color: transparent transparent transparent color($name: 'text', $variant: 'secondary', $hue: 'light');
+        border-style: solid;
+        border-width: $front-triangle-height $front-triangle-width;
+        content: '';
+        display: block;
+        height: 0;
+        left: $acc-breadcrumb-width;
+        position: absolute;
+        top: 0;
+        width: 0;
+    }
+}
+
+// Content layer
+.acc-breadcrumb-item {
+    background-color: color($name: 'background', $hue: 'light');
+    bottom: $acc-breadcrumb-border-width;
+    left: $acc-breadcrumb-border-width;
+    position: absolute;
+    right: $acc-breadcrumb-border-width;
+    top: $acc-breadcrumb-border-width;
+
+    // Light front triangle
+    &:before {
+        border-color: transparent transparent transparent color($name: 'background', $hue: 'light');
+        border-style: solid;
+        border-width: ($acc-breadcrumb-height - $acc-breadcrumb-border-width*2)/2 ($front-triangle-width - $acc-breadcrumb-border-width/2);
+        content: '';
+        display: block;
+        height: 0;
+        left: $acc-breadcrumb-width - $acc-breadcrumb-border-width*2;
+        position: absolute;
+        top: 0;
+        width: 0;
+    }
+
+    // Accumulative symbol (+) legend
+    &:after {
+        background-color: color($name: 'background', $hue: 'light');
+        border-radius: 50%;
+        border: $acc-legend-border solid color($name: 'succeed', $variant: 'tertiary', $hue: 'dark');
+        bottom: $amount-legend-separation + $amount-legend-height/2;
+        color: color($name: 'text', $variant: 'secondary', $hue: 'dark');
+        content: '+';
+        font-size: 2.6rem;
+        height: $acc-legend-width;
+        line-height: $acc-legend-width - $acc-legend-border*2;
+        margin-bottom: -$acc-legend-width/2;
+        position: absolute;
+        right: -$acc-legend-width;
+        text-align: center;
+        width: $acc-legend-width;
+        z-index: 2;
+    }
+}
+
+// Back top triangles
+.acc-breadcrumb-item-back-top {
+    height: $back-triangle-height;
+    left: -$back-triangle-width;
+    position: absolute;
+    top: 0;
+    width: $back-triangle-width;
+
+    &:before, &:after {
+        border-style: solid;
+        border-width: 0 $back-triangle-width $front-triangle-height $back-triangle-width;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 0;
+    }
+
+    &:before {
+        border-color: transparent color($name: 'text', $variant: 'secondary', $hue: 'light') transparent transparent;
+        right: 0;
+        top: 0;
+    }
+
+    &:after {
+        border-color: transparent white transparent transparent;
+        top: $acc-breadcrumb-border-width;
+        right: -$acc-breadcrumb-border-width*2;
+    }
+}
+
+// Back bottom triangles
+.acc-breadcrumb-item-back-bottom {
+    bottom: 0;
+    height: $back-triangle-height;
+    left: -$back-triangle-width;
+    position: absolute;
+    width: $back-triangle-width;
+
+    &:before, &:after {
+        border-style: solid;
+        border-width: $front-triangle-height $back-triangle-width 0 $back-triangle-width;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 0;
+    }
+
+    &:before {
+        border-color: transparent color($name: 'text', $variant: 'secondary', $hue: 'light') transparent transparent;
+        right: 0;
+        top: 0;
+    }
+
+    &:after {
+        border-color: transparent white transparent transparent;
+        bottom: $acc-breadcrumb-border-width;
+        right: -$acc-breadcrumb-border-width*2;
+    }
+}
+
+// Amount legend
+.acc-breadcrumb-item-amount {
+    background-color: color($name: 'succeed', $variant: 'tertiary', $hue: 'dark');
+    border-radius: .4rem;
+    bottom: $amount-legend-separation;
+    color: color($name: 'text', $hue: 'dark');
+    font-size: 1.1rem;
+    left: $amount-legend-separation;
+    line-height: $amount-legend-height;
+    position: absolute;
+    right: $amount-legend-separation;
+    text-align: center;
+    z-index: 1;
+
+    // Amount side lines
+    &:after, &:before {
+        background-color: color($name: 'succeed', $variant: 'tertiary', $hue: 'dark');
+        content: '';
+        height: $amount-side-line-height;
+        margin-top: -$amount-side-line-height/2;
+        position: absolute;
+        top: 50%;
+    }
+
+    &:after {
+        right: -$amount-right-side-line-width;
+        width: $amount-right-side-line-width;
+    }
+
+    &:before {
+        left: -$amount-left-side-line-width;
+        width: $amount-left-side-line-width;
+    }
+}
+
+
+// Item event legend
+.acc-breadcrumb-item-event {
+    display: table;
+    height: $acc-breadcrumb-height - $amount-legend-height - $amount-legend-separation;
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.acc-breadcrumb-item-event-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.acc-breadcrumb-item-event-amount {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.acc-breadcrumb-item-event-action {
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+// Total amount shown in the last item
+.acc-breadcrumb-item-total {
+    background-color: color($name: 'succeed', $variant: 'tertiary', $hue: 'dark');
+    border-radius: .4rem;
+    display: table;
+    height: $total-amount-height;
+    line-height: 1;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.acc-breadcrumb-item-total-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.acc-breadcrumb-item-total-amount {
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.acc-breadcrumb-item-total-unit {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+// Hide back triangles, round left corners, hide left sideline
+.acc-breadcrumb-item-wrapper:first-child {
+    margin-left: 0;
+
+    .acc-breadcrumb-item-back-bottom,.acc-breadcrumb-item-back-top {
+        display: none;
+    }
+
+    &, .acc-breadcrumb-item {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .acc-breadcrumb-item-amount:before {
+        display: none;
+    }
+}
+
+// Show equal symbol for the accumulative legend in the 2 last child
+.acc-breadcrumb-item-wrapper:nth-last-child(2) {
+    .acc-breadcrumb-item:after {
+        content: '=';
+    }
+}
+
+// Hide front triangle and round right corners
+.acc-breadcrumb-item-wrapper:last-child {
+    margin-right: 0;
+
+    &, .acc-breadcrumb-item {
+        padding: 1.5rem;
+
+        &:before, &:after {
+            display: none;
+        }
+    }
+
+    &, .acc-breadcrumb-item {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
