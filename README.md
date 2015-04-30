@@ -22,6 +22,7 @@ While you're working on your project, run:
 
 And you're set!
 
+
 ## Directory Structure
 
   * `assets/`: Assets files like svgs or png for sprites.
