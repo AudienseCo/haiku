@@ -39,14 +39,14 @@ module.exports = function(grunt) {
         files: ['sass/**/*.scss', 'views/**/*.html'],
         tasks: ['sass'],
         options: {
-          livereload: true,
+          livereload: true
         }
       },
 
       js: {
         files: ['javascripts/**/*.js'],
         options: {
-          livereload: true,
+          livereload: true
         }
       }
 
@@ -82,12 +82,12 @@ module.exports = function(grunt) {
         prefix: 'icon-',
         cleanup: ['fill', 'stroke'],
         svg: {
-          style: "display: none;"
+          xmlns: 'http://www.w3.org/2000/svg'
         }
       },
       default: {
         files: {
-          "assets/sandbox.svg": ["assets/svg/compressed/*.svg"]
+          'assets/sandbox.svg': ['assets/svg/compressed/*.svg']
         }
       }
     },
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
       svg: {
         files: [{
           src: ['assets/sandbox.svg'],
-          dest: 'views/partial/svg.html'
+          dest: 'public/svg-defs.svg'
         }]
       }
     },
@@ -150,7 +150,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('express', 'Start a custom web server', function() {
     var port = process.env.PORT || 3000;
-    process.env.CALLER = "grunt";
+    process.env.CALLER = 'grunt';
     require('./app.js').listen(port);
     grunt.log.writeln('Started web server on port ' + port);
   });
@@ -170,4 +170,4 @@ module.exports = function(grunt) {
   grunt.registerTask('sprites', ['sprite']);
   grunt.registerTask('svg', ['clean', 'svgmin', 'svgstore', 'rename:svg']);
   grunt.registerTask('server', ['sass', 'express', 'watch']);
-}
+};
