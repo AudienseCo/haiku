@@ -51,7 +51,7 @@ This library is divided in the following sections:
 @import "base/fonts";
 //@import "base/global";
 //@import "base/lists";
-//@import "base/headings";
+@import "base/headings";
 //@import "base/links";
 //@import "base/label";
 //@import "base/paragraphs";
@@ -64,6 +64,7 @@ This library is divided in the following sections:
 @import "objects/buttons";
 @import "objects/icons";
 //@import "objects/media";
+@import "objects/forms";
 //@import "objects/justify-columns";
 //@import "objects/tabs";
 @import "objects/tables";
@@ -71,7 +72,7 @@ This library is divided in the following sections:
 @import "objects/breadcrumb";
 //@import "objects/dropdown-toggler";
 @import "objects/acc-breadcrumb";
-//@import "objects/grid-panel";
+@import "objects/grid-panel";
 
 /* 6. Layout */
 
