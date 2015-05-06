@@ -1,9 +1,9 @@
 # Containers
 
-- [Grid panel](#grid-panel)
+Here we will be listing all elements that acts as simple wrappers to hold specific content.
 
-## Grid panel
+## Panel
 
 A simple container with a title
 
-{{ component('components/grid-panel/default.html') }}
+{{ component('components/containers/panel.html') }}
