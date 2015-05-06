@@ -35,6 +35,27 @@ Forbidden cursor
 
 /*
 
+Disable appearance
+----------------
+
+  div.neutral {
+    @include disable-appearance;
+  }
+
+*/
+
+@mixin disable-appearance {
+    appearance:         none;
+    -moz-appearance:    none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+
+/*
+
 Center-align a block level element
 ----------------------------------
 

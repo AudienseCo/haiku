@@ -1,23 +1,72 @@
-// Input sizes
-$input-height: 3.6rem;
-$input-line-height: 2.4rem;
-$input-v-padding: ($input-height - $input-line-height)/2;
+$input-height:        3.6rem;
+$input-line-height:   2.4rem;
 $input-default-width: 20rem;
+$input-v-padding:     ($input-height - $input-line-height)/2;
 
-.input-text {
+// Common styles used in many inputs and select/dropdown buttons
+.input-base {
     background-color: color($name: "background", $hue: "light");
     border-radius: 3px;
-    border: 1px solid color($name: "border", $variant: "secondary");
+    border: .1rem solid color($name: "border", $variant: "secondary");
     color: color($name: "text", $hue: "dark");
     display: inline-block;
     font-size: 1.4rem;
     height: $input-height;
-    line-height: $input-line-height;
+    line-height: $input-line-height - .2rem;
     padding: $input-v-padding 1rem;
+    position: relative;
+    text-align: left;
     vertical-align: middle;
     width: $input-default-width;
+
+    &:focus {
+        border-color: color($name: "socialbro");
+    }
+
+    &.error {
+        background-color: color($name: "error", $variant: "tertiary");
+        border-color: color($name: "error", $variant: "secondary");
+        color: color($name: "error", $variant: "secondary");
+    }
+
+    // Use this modifier to add a caret in case it's a dropdown or select wrapper
+    &.with-caret {
+        cursor: pointer;
+
+        &:after {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #555;
+            content: "";
+            height: 0;
+            pointer-events: none;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            z-index: 1;
+        }
+    }
+
+    // Since we need a wrapper for a custom select, we need to position
+    // it absolute covering the whole wrapper
+    & > select {
+        @include disable-appearance;
+        @include abs-pos(0, 0, 0, 0);
+        cursor: pointer;
+        padding: $input-v-padding 1rem;
+        position: absolute;
+        width: 100%;
+
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+        }
+    }
 }
 
+// Group of label+input or input+button each with similar style
 .input-group {
     border-collapse: separate;
     border-width: 0;
@@ -26,12 +75,12 @@ $input-default-width: 20rem;
     width: $input-default-width;
 
     // an input text next to an input label
-    .input-label + .input-text {
+    .input-label + .input-base {
         border-width: 1px 1px 1px 0;
         border-radius: 0 3px 3px 0;
     }
 
-    .input-text {
+    .input-base {
         border-radius: 3px 0 0 3px;
         border-width: 1px 0 1px 1px;
         display: table-cell;
@@ -55,13 +104,15 @@ $input-default-width: 20rem;
     .input-label {
         background: color($name: "background");
         border-radius: 3px 0 0 3px;
-        border: 1px solid color($name: "border", $variant: "secondary");
+        border: .1rem solid color($name: "border", $variant: "secondary");
         color: color($name: "text", $hue: "dark");
+        cursor: default;
         display: table-cell;
         font-weight: bold;
         height: $input-height - .2rem;
-        line-height: $input-line-height;
+        line-height: $input-line-height - .2rem;
         padding: ($input-v-padding - .1rem) 1rem;
         vertical-align: middle;
+        white-space: nowrap;
     }
 }
