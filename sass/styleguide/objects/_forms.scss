@@ -31,17 +31,19 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
 
     // Use this modifier to add a caret in case it's a dropdown or select wrapper
     &.with-caret {
+        @include text-truncate;
         cursor: pointer;
+        padding-right: 3rem;
 
         &:after {
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 5px solid #555;
+            border-left: .5rem solid transparent;
+            border-right: .5rem solid transparent;
+            border-top: .5rem solid #555;
             content: "";
             height: 0;
             pointer-events: none;
             position: absolute;
-            right: 15px;
+            right: 1.5rem;
             top: 50%;
             transform: translateY(-50%);
             width: 0;
