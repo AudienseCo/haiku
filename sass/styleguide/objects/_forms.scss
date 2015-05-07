@@ -10,7 +10,6 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
     border: .1rem solid color($name: "border", $variant: "secondary");
     color: color($name: "text", $hue: "dark");
     display: inline-block;
-    font-size: 1.4rem;
     height: $input-height;
     line-height: $input-line-height - .2rem;
     padding: $input-v-padding 1rem;
