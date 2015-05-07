@@ -9,6 +9,10 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
     overflow: hidden;
 }
 
+.sb-table-fixed {
+    table-layout: fixed;
+}
+
 .sb-table-heading {
     background-color: color($name: "background");
     color: color($name: "titles", $hue: "dark");
