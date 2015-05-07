@@ -1668,4 +1668,9 @@ Use this to modify the default font size of an element.
     font-size: 20px;
 }
 
+.disabled
+{
+    opacity: .5;
+}
+
 /* 7. Vendor */
