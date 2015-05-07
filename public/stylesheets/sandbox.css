@@ -155,8 +155,7 @@ Responsive mixin
   }
 
 */
-/* 3. Helpers */
-/* 4. Base */
+/* 3. Base */
 /*
 
 Web fonts
@@ -218,7 +217,7 @@ h6
     color: #676767;
 }
 
-/* 5. Objects */
+/* 4. Objects */
 .btn
 {
     line-height: 22px;
@@ -349,6 +348,12 @@ h6
     background: #acacac;
 }
 
+.icon-size-16
+{
+    width: 16px; 
+    height: 16px;
+}
+
 .icon-size-18
 {
     width: 18px; 
@@ -423,7 +428,6 @@ h6
 
 .input-base
 {
-    font-size: 14px;
     line-height: 22px;
     position: relative;
     display: inline-block;
@@ -449,7 +453,11 @@ h6
 }
 .input-base.with-caret
 {
+    overflow: hidden;
+    padding-right: 30px; 
     cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .input-base.with-caret:after
 {
@@ -543,7 +551,7 @@ h6
     background: #f6f6f6;
 }
 
-.table
+.sb-table
 {
     display: table;
     overflow: hidden; 
@@ -552,7 +560,12 @@ h6
     border-radius: 4px;
 }
 
-.table-heading
+.sb-table-fixed
+{
+    table-layout: fixed;
+}
+
+.sb-table-heading
 {
     font-weight: bold;
     line-height: 1;
@@ -562,204 +575,204 @@ h6
     color: #000;
     background-color: #f6f6f6;
 }
-.table-heading .table-cell
+.sb-table-heading .sb-table-cell
 {
     border-bottom: 1px solid #d6d6d6;
 }
 
-.table-row
+.sb-table-row
 {
     display: table-row;
     height: 60px; 
     background-color: #eff7fd;
 }
-.table-row:nth-child(2n+1)
+.sb-table-row:nth-child(2n+1)
 {
     background-color: #fff;
 }
 
-.table-cell
+.sb-table-cell
 {
     display: table-cell;
     padding: 15px;
     vertical-align: middle;
 }
-.table-cell:not(:last-child)
+.sb-table-cell:not(:last-child)
 {
     border-right: 1px solid #d6d6d6;
 }
 
-.table-cell-title,
-.table-cell-subtitle
+.sb-table-cell-title,
+.sb-table-cell-subtitle
 {
     display: block;
 }
 
-.table-cell-subtitle
+.sb-table-cell-subtitle
 {
     font-weight: normal;
     text-transform: none; 
     color: #5e5e5e;
 }
 
-.first-highlight .table-heading .table-cell:nth-child(1)
+.first-highlight .sb-table-heading .sb-table-cell:nth-child(1)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.first-highlight .table-heading .table-cell:nth-child(1) .table-cell-subtitle
+.first-highlight .sb-table-heading .sb-table-cell:nth-child(1) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.first-highlight .table-cell:nth-child(1)
+.first-highlight .sb-table-cell:nth-child(1)
 {
     background-color: #f6e3d6;
 }
-.first-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(1)
+.first-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(1)
 {
     background-color: #faf1eb;
 }
 
-.second-highlight .table-heading .table-cell:nth-child(2)
+.second-highlight .sb-table-heading .sb-table-cell:nth-child(2)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.second-highlight .table-heading .table-cell:nth-child(2) .table-cell-subtitle
+.second-highlight .sb-table-heading .sb-table-cell:nth-child(2) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.second-highlight .table-cell:nth-child(2)
+.second-highlight .sb-table-cell:nth-child(2)
 {
     background-color: #f6e3d6;
 }
-.second-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(2)
+.second-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(2)
 {
     background-color: #faf1eb;
 }
 
-.third-highlight .table-heading .table-cell:nth-child(3)
+.third-highlight .sb-table-heading .sb-table-cell:nth-child(3)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.third-highlight .table-heading .table-cell:nth-child(3) .table-cell-subtitle
+.third-highlight .sb-table-heading .sb-table-cell:nth-child(3) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.third-highlight .table-cell:nth-child(3)
+.third-highlight .sb-table-cell:nth-child(3)
 {
     background-color: #f6e3d6;
 }
-.third-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(3)
+.third-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(3)
 {
     background-color: #faf1eb;
 }
 
-.fourth-highlight .table-heading .table-cell:nth-child(4)
+.fourth-highlight .sb-table-heading .sb-table-cell:nth-child(4)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.fourth-highlight .table-heading .table-cell:nth-child(4) .table-cell-subtitle
+.fourth-highlight .sb-table-heading .sb-table-cell:nth-child(4) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.fourth-highlight .table-cell:nth-child(4)
+.fourth-highlight .sb-table-cell:nth-child(4)
 {
     background-color: #f6e3d6;
 }
-.fourth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(4)
+.fourth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(4)
 {
     background-color: #faf1eb;
 }
 
-.fifth-highlight .table-heading .table-cell:nth-child(5)
+.fifth-highlight .sb-table-heading .sb-table-cell:nth-child(5)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.fifth-highlight .table-heading .table-cell:nth-child(5) .table-cell-subtitle
+.fifth-highlight .sb-table-heading .sb-table-cell:nth-child(5) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.fifth-highlight .table-cell:nth-child(5)
+.fifth-highlight .sb-table-cell:nth-child(5)
 {
     background-color: #f6e3d6;
 }
-.fifth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(5)
+.fifth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(5)
 {
     background-color: #faf1eb;
 }
 
-.sixth-highlight .table-heading .table-cell:nth-child(6)
+.sixth-highlight .sb-table-heading .sb-table-cell:nth-child(6)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.sixth-highlight .table-heading .table-cell:nth-child(6) .table-cell-subtitle
+.sixth-highlight .sb-table-heading .sb-table-cell:nth-child(6) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.sixth-highlight .table-cell:nth-child(6)
+.sixth-highlight .sb-table-cell:nth-child(6)
 {
     background-color: #f6e3d6;
 }
-.sixth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(6)
+.sixth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(6)
 {
     background-color: #faf1eb;
 }
 
-.seventh-highlight .table-heading .table-cell:nth-child(7)
+.seventh-highlight .sb-table-heading .sb-table-cell:nth-child(7)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.seventh-highlight .table-heading .table-cell:nth-child(7) .table-cell-subtitle
+.seventh-highlight .sb-table-heading .sb-table-cell:nth-child(7) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.seventh-highlight .table-cell:nth-child(7)
+.seventh-highlight .sb-table-cell:nth-child(7)
 {
     background-color: #f6e3d6;
 }
-.seventh-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(7)
+.seventh-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(7)
 {
     background-color: #faf1eb;
 }
 
-.eigth-highlight .table-heading .table-cell:nth-child(8)
+.eigth-highlight .sb-table-heading .sb-table-cell:nth-child(8)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.eigth-highlight .table-heading .table-cell:nth-child(8) .table-cell-subtitle
+.eigth-highlight .sb-table-heading .sb-table-cell:nth-child(8) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.eigth-highlight .table-cell:nth-child(8)
+.eigth-highlight .sb-table-cell:nth-child(8)
 {
     background-color: #f6e3d6;
 }
-.eigth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(8)
+.eigth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(8)
 {
     background-color: #faf1eb;
 }
 
-.ninth-highlight .table-heading .table-cell:nth-child(9)
+.ninth-highlight .sb-table-heading .sb-table-cell:nth-child(9)
 {
     color: #fff; 
     background-color: #f29556;
 }
-.ninth-highlight .table-heading .table-cell:nth-child(9) .table-cell-subtitle
+.ninth-highlight .sb-table-heading .sb-table-cell:nth-child(9) .sb-table-cell-subtitle
 {
     color: #fff;
 }
-.ninth-highlight .table-cell:nth-child(9)
+.ninth-highlight .sb-table-cell:nth-child(9)
 {
     background-color: #f6e3d6;
 }
-.ninth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(9)
+.ninth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(9)
 {
     background-color: #faf1eb;
 }
@@ -1173,5 +1186,486 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     padding: 10px 15px;
 }
 
-/* 6. Layout */
+/*
+
+Grid
+----
+
+Surprise! A grid system with rows and columns. You can nest it the times you want.
+
+<div class="row">
+  <div class="column">
+    <p class="demo-block">I'm a column. Full by default</p>
+  </div>
+  <div class="column one-third">
+    <p class="demo-block">Boring one-third column</p>
+  </div>
+  <div class="column two-thirds">
+    <p class="demo-block">Funny column two-third of width</p>
+  </div>
+</div>
+
+*/
+.row
+{
+    margin: 0;
+    margin-left: -20px;
+    padding: 0;
+}
+
+.column,
+.columns
+{
+    float: left;
+    width: 100%; 
+    padding-left: 20px;
+}
+
+.row-reverse > .column,
+.row-reverse .columns
+{
+    float: right;
+}
+
+.row-full
+{
+    margin-left: 0;
+}
+.row-full > .column,
+.row-full .columns
+{
+    padding-left: 0;
+}
+
+.row-narrow
+{
+    margin-left: -10px;
+}
+.row-narrow > .column,
+.row-narrow .columns
+{
+    padding-left: 10px;
+}
+
+.row-wide
+{
+    margin-left: -40px;
+}
+.row-wide > .column,
+.row-wide .columns
+{
+    padding-left: 40px;
+}
+
+/* Widths */
+.one.column
+{
+    width: 12.5%;
+}
+
+.two.columns,
+.one-quarter
+{
+    width: 25%;
+}
+
+.three.columns
+{
+    width: 37.5%;
+}
+
+.one-third
+{
+    width: 33.33%;
+}
+
+.four.columns,
+.one-half
+{
+    width: 50%;
+}
+
+.five.columns
+{
+    width: 62.5%;
+}
+
+.two-thirds
+{
+    width: 66.66%;
+}
+
+.six.columns,
+.three-quarters
+{
+    width: 75%;
+}
+
+.seven.columns
+{
+    width: 87.5%;
+}
+
+.eight.columns,
+.one-whole
+{
+    width: 100%;
+}
+
+/* 5. Layout */
+/* 6. Helpers */
+/*
+
+Align helper
+------------
+
+Utility class to align inline and inline-blocks elements.
+
+<div class="align-center">
+   I'm a centered text.
+</div>
+
+*/
+.align-center
+{
+    text-align: center;
+}
+
+.align-right
+{
+    text-align: right;
+}
+
+.align-left
+{
+    text-align: left;
+}
+
+.align-justify
+{
+    text-align: justify;
+}
+.align-justify:after
+{
+    display: inline-block;
+    width: 100%; 
+    content: '';
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+/*
+
+White-spacing
+-------------
+
+Margin and padding utilities. These utilities use a shorthand naming convention:
+
+Shorthand   Description
+---------   -----------
+
+m           Margin
+p           Padding
+t           Top
+r           Right
+b           Bottom
+l           Left
+x           X-axis (left and right)
+y           Y-axis (top and bottom)
+n           Negative (margin only)
+1           default 0.5rem;
+2           default 1rem;
+3           default 2rem;
+4           default 3rem;
+
+*/
+.m0
+{
+    margin: 0;
+}
+
+.mt0
+{
+    margin-top: 0;
+}
+
+.mr0
+{
+    margin-right: 0;
+}
+
+.mb0
+{
+    margin-bottom: 0;
+}
+
+.ml0
+{
+    margin-left: 0;
+}
+
+.m1
+{
+    margin: 5px;
+}
+
+.mt1
+{
+    margin-top: 5px;
+}
+
+.mr1
+{
+    margin-right: 5px;
+}
+
+.mb1
+{
+    margin-bottom: 5px;
+}
+
+.ml1
+{
+    margin-left: 5px;
+}
+
+.m2
+{
+    margin: 10px;
+}
+
+.mt2
+{
+    margin-top: 10px;
+}
+
+.mr2
+{
+    margin-right: 10px;
+}
+
+.mb2
+{
+    margin-bottom: 10px;
+}
+
+.ml2
+{
+    margin-left: 10px;
+}
+
+.m3
+{
+    margin: 20px;
+}
+
+.mt3
+{
+    margin-top: 20px;
+}
+
+.mr3
+{
+    margin-right: 20px;
+}
+
+.mb3
+{
+    margin-bottom: 20px;
+}
+
+.ml3
+{
+    margin-left: 20px;
+}
+
+.m4
+{
+    margin: 30px;
+}
+
+.mt4
+{
+    margin-top: 30px;
+}
+
+.mr4
+{
+    margin-right: 30px;
+}
+
+.mb4
+{
+    margin-bottom: 30px;
+}
+
+.ml4
+{
+    margin-left: 30px;
+}
+
+.mxn1
+{
+    margin-right: 5px; 
+    margin-left: 5px;
+}
+
+.mxn2
+{
+    margin-right: -10px; 
+    margin-left: -10px;
+}
+
+.mxn3
+{
+    margin-right: -20px; 
+    margin-left: -20px;
+}
+
+.mxn4
+{
+    margin-right: -30px; 
+    margin-left: -30px;
+}
+
+.mx-auto
+{
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.p1
+{
+    padding: 5px;
+}
+
+.py1
+{
+    padding-top: 5px; 
+    padding-bottom: 5px;
+}
+
+.px1
+{
+    padding-right: 5px; 
+    padding-left: 5px;
+}
+
+.p2
+{
+    padding: 10px;
+}
+
+.py2
+{
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+
+.px2
+{
+    padding-right: 10px; 
+    padding-left: 10px;
+}
+
+.p3
+{
+    padding: 20px;
+}
+
+.py3
+{
+    padding-top: 20px; 
+    padding-bottom: 20px;
+}
+
+.px3
+{
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+
+.p4
+{
+    padding: 30px;
+}
+
+.py4
+{
+    padding-top: 30px; 
+    padding-bottom: 30px;
+}
+
+.px4
+{
+    padding-right: 30px; 
+    padding-left: 30px;
+}
+
+/*
+
+Font size helpers
+-----------------
+
+Use this to modify the default font size of an element.
+
+*/
+.s10
+{
+    font-size: 10px;
+}
+
+.s11
+{
+    font-size: 11px;
+}
+
+.s12
+{
+    font-size: 12px;
+}
+
+.s13
+{
+    font-size: 13px;
+}
+
+.s14
+{
+    font-size: 14px;
+}
+
+.s15
+{
+    font-size: 15px;
+}
+
+.s16
+{
+    font-size: 16px;
+}
+
+.s17
+{
+    font-size: 17px;
+}
+
+.s18
+{
+    font-size: 18px;
+}
+
+.s19
+{
+    font-size: 19px;
+}
+
+.s20
+{
+    font-size: 20px;
+}
+
 /* 7. Vendor */
