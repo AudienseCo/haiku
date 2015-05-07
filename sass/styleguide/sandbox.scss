@@ -34,20 +34,7 @@ This library is divided in the following sections:
 @import "core/functions";
 @import "core/mixins";
 
-/* 3. Helpers */
-
-@import "helpers/align";
-@import "helpers/clearfix";
-@import "helpers/cursor";
-@import "helpers/percent";
-@import "helpers/float";
-@import "helpers/is-hidden";
-@import "helpers/no-scroll";
-@import "helpers/white-spacing";
-@import "helpers/font-sizes";
-@import "helpers/avatar";
-
-/* 4. Base */
+/* 3. Base */
 
 @import "base/fonts";
 @import "base/global";
@@ -57,10 +44,9 @@ This library is divided in the following sections:
 @import "base/label";
 @import "base/paragraphs";
 
-/* 5. Objects */
+/* 4. Objects */
 
 @import "objects/sprites";
-@import "objects/grid";
 @import "objects/nav";
 @import "objects/buttons";
 @import "objects/icons";
@@ -74,9 +60,24 @@ This library is divided in the following sections:
 @import "objects/dropdown-toggler";
 @import "objects/acc-breadcrumb";
 @import "objects/panel";
+@import "objects/grid";
 
-/* 6. Layout */
+/* 5. Layout */
 
 @import "layout/dashboard/breadcrumb";
+
+/* 6. Helpers */
+
+@import "helpers/align";
+@import "helpers/clearfix";
+@import "helpers/cursor";
+@import "helpers/percent";
+@import "helpers/float";
+@import "helpers/is-hidden";
+@import "helpers/no-scroll";
+@import "helpers/white-spacing";
+@import "helpers/font-sizes";
+@import "helpers/avatar";
+
 
 /* 7. Vendor */
