@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         },
         files: {
           'public/stylesheets/sandbox.css': 'sass/styleguide/sandbox.scss',
-          'public/stylesheets/main.css':    'sass/site/main.scss',
+          'public/stylesheets/main.css':    'sass/styleguide/main.scss',
           'public/stylesheets/docs.css':    'sass/docs/docs.scss'
         }
       }
