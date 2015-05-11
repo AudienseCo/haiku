@@ -3,6 +3,12 @@ $input-line-height:   2.4rem;
 $input-default-width: 20rem;
 $input-v-padding:     ($input-height - $input-line-height)/2;
 
+@mixin input-base-error {
+    background-color: color($name: "error", $variant: "tertiary");
+    border-color: color($name: "error", $variant: "secondary");
+    color: color($name: "error", $variant: "secondary");
+}
+
 // Common styles used in many inputs and select/dropdown buttons
 .input-base {
     background-color: color($name: "background", $hue: "light");
@@ -23,9 +29,7 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
     }
 
     &.error {
-        background-color: color($name: "error", $variant: "tertiary");
-        border-color: color($name: "error", $variant: "secondary");
-        color: color($name: "error", $variant: "secondary");
+        @include input-base-error;
     }
 
     // Use this modifier to add a caret in case it's a dropdown or select wrapper
@@ -115,5 +119,17 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
         padding: ($input-v-padding - .1rem) 1rem;
         vertical-align: middle;
         white-space: nowrap;
+    }
+
+    &.error {
+        .input-label, .input-group-button > .btn {
+            background-color: color($name: "error", $variant: "secondary");
+            border-color: color($name: "error", $variant: "secondary");
+            color: color($name: "background", $hue: "light");
+        }
+
+        .input-base {
+            @include input-base-error;
+        }
     }
 }
