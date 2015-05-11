@@ -81,7 +81,7 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
 
     // an input text next to an input label
     .input-label + .input-base {
-        border-width: 1px 1px 1px 0;
+        border-width: 1px;
         border-radius: 0 3px 3px 0;
     }
 
@@ -92,6 +92,14 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
         height: $input-height;
         padding: $input-v-padding 1rem;
         width: 100%;
+
+        &:focus {
+            border-right-width: 1px;
+
+            & + .input-group-button > .btn {
+                border-left-width: 0;
+            }
+        }
     }
 
     .input-group-button {
@@ -100,6 +108,7 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
         vertical-align: middle;
 
         & > .btn {
+            border-width: 1px;
             height: $input-height;
             border-radius: 0 3px 3px 0;
             width: 100%;
@@ -108,8 +117,10 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
 
     .input-label {
         background: color($name: "background");
+        border-color: color($name: "border", $variant: "secondary");
         border-radius: 3px 0 0 3px;
-        border: .1rem solid color($name: "border", $variant: "secondary");
+        border-style: solid;
+        border-width: 1px 0 1px 1px;
         color: color($name: "text", $hue: "dark");
         cursor: default;
         display: table-cell;
