@@ -20,9 +20,20 @@ module.exports = function(grunt) {
         },
         files: {
           'public/stylesheets/sandbox.css': 'sass/styleguide/sandbox.scss',
-          'public/stylesheets/main.css':    'sass/site/main.scss',
+          'public/stylesheets/main.css':    'sass/styleguide/main.scss',
           'public/stylesheets/docs.css':    'sass/docs/docs.scss'
         }
+      }
+    },
+
+    pixrem: {
+      options: {
+        rootvalue: '10px',
+        replace: true
+      },
+      build: {
+        src: 'public/stylesheets/sandbox.css',
+        dest: 'public/stylesheets/sandbox.css'
       }
     },
 
@@ -147,6 +158,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-svgstore');
   grunt.loadNpmTasks('grunt-csscomb');
+  grunt.loadNpmTasks('grunt-pixrem');
 
   grunt.registerTask('express', 'Start a custom web server', function() {
     var port = process.env.PORT || 3000;
@@ -166,7 +178,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['help']);
-  grunt.registerTask('build', ['sass', 'autoprefixer', 'csscomb', 'cssmin']);
+  grunt.registerTask('build', ['sass', 'pixrem', 'autoprefixer', 'csscomb', 'cssmin']);
   grunt.registerTask('sprites', ['sprite']);
   grunt.registerTask('svg', ['clean', 'svgmin', 'svgstore', 'rename:svg']);
   grunt.registerTask('server', ['sass', 'express', 'watch']);
