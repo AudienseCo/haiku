@@ -511,7 +511,7 @@ h6
 }
 .input-group .input-label + .input-base
 {
-    border-width: 1px 1px 1px 0;
+    border-width: 1px;
     border-radius: 0 3px 3px 0;
 }
 .input-group .input-base
@@ -523,6 +523,14 @@ h6
     border-width: 1px 0 1px 1px;
     border-radius: 3px 0 0 3px;
 }
+.input-group .input-base:focus
+{
+    border-right-width: 1px;
+}
+.input-group .input-base:focus + .input-group-button > .btn
+{
+    border-left-width: 0;
+}
 .input-group .input-group-button
 {
     display: table-cell;
@@ -533,6 +541,7 @@ h6
 {
     width: 100%; 
     height: 36px;
+    border-width: 1px;
     border-radius: 0 3px 3px 0;
 }
 .input-group .input-label
@@ -546,9 +555,24 @@ h6
     vertical-align: middle;
     white-space: nowrap; 
     color: #565656;
-    border: 1px solid #d6d6d6;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #d6d6d6;
     border-radius: 3px 0 0 3px;
     background: #f6f6f6;
+}
+.input-group.error .input-label,
+.input-group.error .input-group-button > .btn
+{
+    color: #fff; 
+    border-color: #cc8383;
+    background-color: #cc8383;
+}
+.input-group.error .input-base
+{
+    color: #cc8383; 
+    border-color: #cc8383;
+    background-color: #ffe6e6;
 }
 
 .sb-table
