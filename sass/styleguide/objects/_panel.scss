@@ -1,0 +1,22 @@
+.panel {
+    background-color: color($name: "background", $hue: "light");
+    border-radius: 3px;
+    border: 1px solid color($name: "border", $variant: "secondary");
+    display: inline-block;
+    overflow: hidden;
+}
+
+.panel-header {
+    background-color: color($name: "background");
+    padding: 1.2rem 1.5rem;
+}
+
+.panel-header-title {
+    color: color($name: "titles", $hue: "dark");
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.panel-body {
+    padding: 1rem 1.5rem;
+}

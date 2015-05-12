@@ -1,7 +1,7 @@
 $border-color: color($name: "text", $variant: "secondary", $hue: "light");
 $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "ninth";
 
-.table {
+.sb-table {
     border-collapse: separate;
     border-radius: 4px;
     border: 1px solid $border-color;
@@ -9,7 +9,11 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
     overflow: hidden;
 }
 
-.table-heading {
+.sb-table-fixed {
+    table-layout: fixed;
+}
+
+.sb-table-heading {
     background-color: color($name: "background");
     color: color($name: "titles", $hue: "dark");
     display: table-row;
@@ -18,12 +22,12 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
     line-height: 1;
     text-transform: uppercase;
 
-    .table-cell {
+    .sb-table-cell {
         border-bottom: 1px solid $border-color;
     }
 }
 
-.table-row {
+.sb-table-row {
     background-color: color($name: "service", $variant: "tertiary", $hue: "light");
     display: table-row;
     height: 6rem;
@@ -33,7 +37,7 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
     }
 }
 
-.table-cell {
+.sb-table-cell {
     display: table-cell;
     padding: 1.5rem;
     vertical-align: middle;
@@ -43,11 +47,11 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
     }
 }
 
-.table-cell-title, .table-cell-subtitle {
+.sb-table-cell-title, .sb-table-cell-subtitle {
     display: block;
 }
 
-.table-cell-subtitle {
+.sb-table-cell-subtitle {
     color: color($name: "text");
     font-weight: normal;
     text-transform: none;
@@ -55,20 +59,20 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
 
 @for $i from 1 through length($numerals) {
     .#{nth($numerals, $i)}-highlight {
-        .table-heading .table-cell:nth-child(#{$i}) {
+        .sb-table-heading .sb-table-cell:nth-child(#{$i}) {
             background-color: color($name: "primary");
             color: color($name: "background", $hue: "light");
 
-            .table-cell-subtitle {
+            .sb-table-cell-subtitle {
                 color: color($name: "background", $hue: "light");
             }
         }
 
-        .table-cell:nth-child(#{$i}) {
+        .sb-table-cell:nth-child(#{$i}) {
             background-color: lighten(color($name: "primary", $variant: "secondary", $hue: "light"), 2.5%);
         }
 
-        .table-row:nth-child(2n+1) .table-cell:nth-child(#{$i}) {
+        .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(#{$i}) {
             background-color: lighten(color($name: "primary", $variant: "secondary", $hue: "light"), 7.5%);
         }
     }

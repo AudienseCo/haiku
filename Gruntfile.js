@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       build: {
         files: {
           'dist/sandbox.css': 'sass/styleguide/sandbox.scss',
-          'dist/main.css':    'sass/styleguide/main.scss',
+          'dist/main.css':    'sass/styleguide/main.scss'
         }
       }
     },
@@ -138,7 +138,7 @@ module.exports = function(grunt) {
     },
 
     csscomb: {
-     options: {
+      options: {
         config: 'csscomb.json'
       },
       build: {

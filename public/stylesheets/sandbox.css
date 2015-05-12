@@ -62,6 +62,16 @@ Forbidden cursor
 */
 /*
 
+Disable appearance
+----------------
+
+  div.neutral {
+    @include disable-appearance;
+  }
+
+*/
+/*
+
 Center-align a block level element
 ----------------------------------
 
@@ -145,8 +155,7 @@ Responsive mixin
   }
 
 */
-/* 3. Helpers */
-/* 4. Base */
+/* 3. Base */
 /*
 
 Web fonts
@@ -155,211 +164,7 @@ Web fonts
 Drop the files in a folder, update the path and the name and go.
 
 */
-/* 5. Objects */
-.table {
-  border-collapse: separate;
-  border-radius: 4px;
-  border: 1px solid #d6d6d6;
-  display: table;
-  overflow: hidden; }
-
-.table-heading {
-  background-color: #f6f6f6;
-  color: #000000;
-  display: table-row;
-  font-weight: bold;
-  height: 6rem;
-  line-height: 1;
-  text-transform: uppercase; }
-  .table-heading .table-cell {
-    border-bottom: 1px solid #d6d6d6; }
-
-.table-row {
-  background-color: #eff7fd;
-  display: table-row;
-  height: 6rem; }
-  .table-row:nth-child(2n+1) {
-    background-color: #ffffff; }
-
-.table-cell {
-  display: table-cell;
-  padding: 1.5rem;
-  vertical-align: middle; }
-  .table-cell:not(:last-child) {
-    border-right: 1px solid #d6d6d6; }
-
-.table-cell-title, .table-cell-subtitle {
-  display: block; }
-
-.table-cell-subtitle {
-  color: #5e5e5e;
-  font-weight: normal;
-  text-transform: none; }
-
-.first-highlight .table-heading .table-cell:nth-child(1) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .first-highlight .table-heading .table-cell:nth-child(1) .table-cell-subtitle {
-    color: #ffffff; }
-.first-highlight .table-cell:nth-child(1) {
-  background-color: #f6e3d6; }
-.first-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(1) {
-  background-color: #faf1eb; }
-
-.second-highlight .table-heading .table-cell:nth-child(2) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .second-highlight .table-heading .table-cell:nth-child(2) .table-cell-subtitle {
-    color: #ffffff; }
-.second-highlight .table-cell:nth-child(2) {
-  background-color: #f6e3d6; }
-.second-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(2) {
-  background-color: #faf1eb; }
-
-.third-highlight .table-heading .table-cell:nth-child(3) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .third-highlight .table-heading .table-cell:nth-child(3) .table-cell-subtitle {
-    color: #ffffff; }
-.third-highlight .table-cell:nth-child(3) {
-  background-color: #f6e3d6; }
-.third-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(3) {
-  background-color: #faf1eb; }
-
-.fourth-highlight .table-heading .table-cell:nth-child(4) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .fourth-highlight .table-heading .table-cell:nth-child(4) .table-cell-subtitle {
-    color: #ffffff; }
-.fourth-highlight .table-cell:nth-child(4) {
-  background-color: #f6e3d6; }
-.fourth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(4) {
-  background-color: #faf1eb; }
-
-.fifth-highlight .table-heading .table-cell:nth-child(5) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .fifth-highlight .table-heading .table-cell:nth-child(5) .table-cell-subtitle {
-    color: #ffffff; }
-.fifth-highlight .table-cell:nth-child(5) {
-  background-color: #f6e3d6; }
-.fifth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(5) {
-  background-color: #faf1eb; }
-
-.sixth-highlight .table-heading .table-cell:nth-child(6) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .sixth-highlight .table-heading .table-cell:nth-child(6) .table-cell-subtitle {
-    color: #ffffff; }
-.sixth-highlight .table-cell:nth-child(6) {
-  background-color: #f6e3d6; }
-.sixth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(6) {
-  background-color: #faf1eb; }
-
-.seventh-highlight .table-heading .table-cell:nth-child(7) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .seventh-highlight .table-heading .table-cell:nth-child(7) .table-cell-subtitle {
-    color: #ffffff; }
-.seventh-highlight .table-cell:nth-child(7) {
-  background-color: #f6e3d6; }
-.seventh-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(7) {
-  background-color: #faf1eb; }
-
-.eigth-highlight .table-heading .table-cell:nth-child(8) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .eigth-highlight .table-heading .table-cell:nth-child(8) .table-cell-subtitle {
-    color: #ffffff; }
-.eigth-highlight .table-cell:nth-child(8) {
-  background-color: #f6e3d6; }
-.eigth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(8) {
-  background-color: #faf1eb; }
-
-.ninth-highlight .table-heading .table-cell:nth-child(9) {
-  background-color: #f29556;
-  color: #ffffff; }
-  .ninth-highlight .table-heading .table-cell:nth-child(9) .table-cell-subtitle {
-    color: #ffffff; }
-.ninth-highlight .table-cell:nth-child(9) {
-  background-color: #f6e3d6; }
-.ninth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(9) {
-  background-color: #faf1eb; }
-
-/*
-
-Breadcrumb
-----------
-
-Breadcrumb in two flavours: normal with arrow shapes and simple.
-
-*/
-.breadcrumb {
-  background-color: white;
-  border-radius: 4px;
-  border: 1px solid #d6d6d6;
-  overflow: hidden; }
-
-.breadcrumb-item {
-  background-color: #f6f6f6;
-  display: table-cell;
-  margin-left: -0.25rem;
-  padding: 1rem 1rem 1rem 2.5rem;
-  position: relative;
-  vertical-align: middle; }
-  .breadcrumb-item:after, .breadcrumb-item:before {
-    border-style: solid;
-    content: '';
-    display: block;
-    height: 0;
-    left: 100%;
-    position: absolute;
-    width: 0;
-    z-index: 1; }
-  .breadcrumb-item:before {
-    border-color: transparent transparent transparent #D6D6D6;
-    border-width: 2.1rem 2.1rem 2.1rem 1.3rem;
-    top: -0.1rem; }
-  .breadcrumb-item:after {
-    border-color: transparent transparent transparent #F6F6F6;
-    border-width: 2rem 2rem 2rem 1.2rem;
-    top: 0; }
-
-.breadcrumb-item:last-child {
-  background-color: #fff; }
-  .breadcrumb-item:last-child:after, .breadcrumb-item:last-child:before {
-    content: normal; }
-
-.breadcrumb-item-large {
-  height: 80px;
-  padding: 1rem 1rem 1rem 4rem; }
-  .breadcrumb-item-large:first-child {
-    padding-left: 2.5rem; }
-  .breadcrumb-item-large:before {
-    border-color: transparent transparent transparent #D6D6D6;
-    border-width: 4.1rem 4.1rem 4.1rem 2.5rem;
-    top: -0.1rem; }
-  .breadcrumb-item-large:after {
-    border-color: transparent transparent transparent #F6F6F6;
-    border-width: 4rem 4rem 4rem 2.4rem;
-    top: 0; }
-
-.breadcrumb-item-simple {
-  display: inline-block;
-  padding: 1rem 0;
-  vertical-align: middle; }
-  .breadcrumb-item-simple:after {
-    color: gray;
-    content: "/";
-    display: inline-block;
-    margin: 0 1rem; }
-
-.breadcrumb-item-simple:first-child {
-  margin-left: 2.5rem; }
-
-.breadcrumb-item-simple:last-child:after {
-  content: normal; }
-
+/* 4. Objects */
 .acc-breadcrumb-item-wrapper {
   background-color: #d6d6d6;
   display: block;
@@ -558,5 +363,1258 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px; }
 
-/* 6. Layout */
+/*
+
+Breadcrumb
+----------
+
+Breadcrumb in two flavours: normal with arrow shapes and simple.
+
+*/
+.breadcrumb {
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+  overflow: hidden; }
+
+.breadcrumb-item {
+  background-color: #f6f6f6;
+  display: table-cell;
+  margin-left: -0.25rem;
+  padding: 1rem 1rem 1rem 2.5rem;
+  position: relative;
+  vertical-align: middle; }
+  .breadcrumb-item:after, .breadcrumb-item:before {
+    border-style: solid;
+    content: '';
+    display: block;
+    height: 0;
+    left: 100%;
+    position: absolute;
+    width: 0;
+    z-index: 1; }
+  .breadcrumb-item:before {
+    border-color: transparent transparent transparent #D6D6D6;
+    border-width: 2.1rem 2.1rem 2.1rem 1.3rem;
+    top: -0.1rem; }
+  .breadcrumb-item:after {
+    border-color: transparent transparent transparent #F6F6F6;
+    border-width: 2rem 2rem 2rem 1.2rem;
+    top: 0; }
+
+.breadcrumb-item:last-child {
+  background-color: #fff; }
+  .breadcrumb-item:last-child:after, .breadcrumb-item:last-child:before {
+    content: normal; }
+
+.breadcrumb-item-large {
+  height: 80px;
+  padding: 1rem 1rem 1rem 4rem; }
+  .breadcrumb-item-large:first-child {
+    padding-left: 2.5rem; }
+  .breadcrumb-item-large:before {
+    border-color: transparent transparent transparent #D6D6D6;
+    border-width: 4.1rem 4.1rem 4.1rem 2.5rem;
+    top: -0.1rem; }
+  .breadcrumb-item-large:after {
+    border-color: transparent transparent transparent #F6F6F6;
+    border-width: 4rem 4rem 4rem 2.4rem;
+    top: 0; }
+
+.breadcrumb-item-simple {
+  display: inline-block;
+  padding: 1rem 0;
+  vertical-align: middle; }
+  .breadcrumb-item-simple:after {
+    color: gray;
+    content: "/";
+    display: inline-block;
+    margin: 0 1rem; }
+
+.breadcrumb-item-simple:first-child {
+  margin-left: 2.5rem; }
+
+.breadcrumb-item-simple:last-child:after {
+  content: normal; }
+
+.btn {
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  border: 0.1rem solid #d6d6d6;
+  color: #565656;
+  cursor: pointer;
+  display: inline-block;
+  height: 3.6rem;
+  line-height: 2.2rem;
+  overflow: hidden;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .btn:hover {
+    background-color: #ffffff; }
+  .btn:active, .btn.active {
+    background: #d6d6d6; }
+  .btn:disabled, .btn.disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+
+.btn-primary {
+  background: #f29556;
+  border: 1px solid #f18b46;
+  color: white; }
+  .btn-primary:hover {
+    background: #f39f66; }
+  .btn-primary:active, .btn-primary.active {
+    background: #f18b46; }
+
+.btn-success {
+  background: #72c427;
+  border: 1px solid #6ab624;
+  color: white; }
+  .btn-success:hover {
+    background: #7ad22a; }
+  .btn-success:active, .btn-success.active {
+    background: #6ab624; }
+
+.btn-service {
+  background: #00aaf2;
+  border: 1px solid #009ee1;
+  color: white; }
+  .btn-service:hover {
+    background: #04b4ff; }
+  .btn-service:active, .btn-service.active {
+    background: #009ee1; }
+
+.btn-danger {
+  background: #d60f36;
+  border: 1px solid #c60e32;
+  color: white; }
+  .btn-danger:hover {
+    background: #e6103a; }
+  .btn-danger:active, .btn-danger.active {
+    background: #c60e32; }
+
+.btn-contrast {
+  background: #ffffff;
+  border: 1px solid #ccd1d9;
+  color: inherit; }
+  .btn-contrast:hover {
+    background: #f6f6f6; }
+  .btn-contrast:active, .btn-contrast.active {
+    background: #ccd1d9; }
+
+.btn-skip {
+  background: #b9b9b9;
+  border: 1px solid #acacac;
+  color: white; }
+  .btn-skip:hover {
+    background: #c6c6c6; }
+  .btn-skip:active, .btn-skip.active {
+    background: #acacac; }
+
+.input-base {
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 0.1rem solid #d6d6d6;
+  color: #565656;
+  display: inline-block;
+  height: 3.6rem;
+  line-height: 2.2rem;
+  padding: 0.6rem 1rem;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  width: 20rem; }
+  .input-base:focus {
+    border-color: #29c4d0; }
+  .input-base.error {
+    background-color: #ffe6e6;
+    border-color: #cc8383;
+    color: #cc8383; }
+  .input-base.with-caret {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    padding-right: 3rem; }
+    .input-base.with-caret:after {
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      border-top: 0.5rem solid #555;
+      content: "";
+      height: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      z-index: 1; }
+  .input-base > select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    position: absolute;
+    width: 100%; }
+    .input-base > select:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000; }
+
+.input-group {
+  border-collapse: separate;
+  border-width: 0;
+  display: inline-table;
+  overflow: hidden;
+  width: 20rem; }
+  .input-group .input-label + .input-base {
+    border-width: 1px;
+    border-radius: 0 3px 3px 0; }
+  .input-group .input-base {
+    border-radius: 3px 0 0 3px;
+    border-width: 1px 0 1px 1px;
+    display: table-cell;
+    height: 3.6rem;
+    padding: 0.6rem 1rem;
+    width: 100%; }
+    .input-group .input-base:focus {
+      border-right-width: 1px; }
+      .input-group .input-base:focus + .input-group-button > .btn {
+        border-left-width: 0; }
+  .input-group .input-group-button {
+    display: table-cell;
+    height: 3.6rem;
+    vertical-align: middle; }
+    .input-group .input-group-button > .btn {
+      border-width: 1px;
+      height: 3.6rem;
+      border-radius: 0 3px 3px 0;
+      width: 100%; }
+  .input-group .input-label {
+    background: #f6f6f6;
+    border-color: #d6d6d6;
+    border-radius: 3px 0 0 3px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    color: #565656;
+    cursor: default;
+    display: table-cell;
+    font-weight: bold;
+    height: 3.4rem;
+    line-height: 2.2rem;
+    padding: 0.5rem 1rem;
+    vertical-align: middle;
+    white-space: nowrap; }
+  .input-group.error .input-label, .input-group.error .input-group-button > .btn {
+    background-color: #cc8383;
+    border-color: #cc8383;
+    color: #ffffff; }
+  .input-group.error .input-base {
+    background-color: #ffe6e6;
+    border-color: #cc8383;
+    color: #cc8383; }
+
+/*
+
+Grid
+----
+
+Surprise! A grid system with rows and columns. You can nest it the times you want.
+
+<div class="row">
+  <div class="column">
+    <p class="demo-block">I'm a column. Full by default</p>
+  </div>
+  <div class="column one-third">
+    <p class="demo-block">Boring one-third column</p>
+  </div>
+  <div class="column two-thirds">
+    <p class="demo-block">Funny column two-third of width</p>
+  </div>
+</div>
+
+*/
+.row {
+  margin: 0;
+  margin-left: -2rem;
+  padding: 0; }
+
+.column, .columns {
+  float: left;
+  padding-left: 2rem;
+  width: 100%; }
+
+.row-reverse > .column, .row-reverse .columns {
+  float: right; }
+
+.row-full {
+  margin-left: 0; }
+  .row-full > .column, .row-full .columns {
+    padding-left: 0; }
+
+.row-narrow {
+  margin-left: -1rem; }
+  .row-narrow > .column, .row-narrow .columns {
+    padding-left: 1rem; }
+
+.row-wide {
+  margin-left: -4rem; }
+  .row-wide > .column, .row-wide .columns {
+    padding-left: 4rem; }
+
+/* Widths */
+.one.column {
+  width: 12.5%; }
+
+.two.columns, .one-quarter {
+  width: 25%; }
+
+.three.columns {
+  width: 37.5%; }
+
+.one-third {
+  width: 33.33%; }
+
+.four.columns, .one-half {
+  width: 50%; }
+
+.five.columns {
+  width: 62.5%; }
+
+.two-thirds {
+  width: 66.66%; }
+
+.six.columns, .three-quarters {
+  width: 75%; }
+
+.seven.columns {
+  width: 87.5%; }
+
+.eight.columns, .one-whole {
+  width: 100%; }
+
+.icon-size-16 {
+  height: 1.6rem;
+  width: 1.6rem; }
+
+.icon-size-18 {
+  height: 1.8rem;
+  width: 1.8rem; }
+
+.icon-size-20 {
+  height: 2rem;
+  width: 2rem; }
+
+.icon-size-30 {
+  height: 3rem;
+  width: 3rem; }
+
+.icon-size-35 {
+  height: 3.5rem;
+  width: 3.5rem; }
+
+.icon-size-40 {
+  height: 4rem;
+  width: 4rem; }
+
+.icon-size-45 {
+  height: 4.5rem;
+  width: 4.5rem; }
+
+.icon-size-50 {
+  height: 5rem;
+  width: 5rem; }
+
+.icon-size-55 {
+  height: 5.5rem;
+  width: 5.5rem; }
+
+.icon-size-60 {
+  height: 6rem;
+  width: 6rem; }
+
+[class^="icon"] {
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: middle; }
+
+.icon-twitter {
+  fill: #55acee; }
+
+.icon-socialbro {
+  fill: #29c4d0; }
+
+/*
+
+Justified columns
+-----------------
+
+Use this structure to justify columns inside a container.
+
+    <ul class="justify-columns">
+      <li class="column">Left</li>
+      <li class="column">Center</li>
+      <li class="column">Right</li>
+    </ul>
+
+*/
+.justify-columns {
+  text-align: justify;
+  width: 100%; }
+  .justify-columns:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
+
+.justify-columns > .column {
+  display: inline-block;
+  vertical-align: top; }
+
+/*
+
+Media object
+------------
+
+Use this object to show an image and some text rendered in two columns.
+
+<div class="media">
+  <a href="#" class="media-image">
+    <img src="https://en.gravatar.com/userimage/294649/ecfe4df3dba5f939710d657157924d28.jpeg" alt="Megaman" />
+  </a>
+  <div class="media-body">
+    <p><strong>This is a media object (vertical-align: middle)</strong></p>
+    <p>Bacon ipsum dolor sit amet shankle swine cow, shoulder brisket pork belly leberkas tail ham shank beef ribs. Shankle jowl brisket beef filet mignon ribeye frankfurter pork loin tongue short ribs corned beef venison tenderloin. Pork loin swine hamburger, turducken tail boudin shoulder doner pig flank meatloaf ham pancetta t-bone shank.</p>
+  </div>
+</div>
+
+*/
+.media {
+  display: table;
+  width: 100%; }
+  .media.is-inline {
+    display: inline-table;
+    vertical-align: top; }
+
+.media-image, .media-body {
+  display: table-cell;
+  vertical-align: middle; }
+  .align-top .media-image, .align-top .media-body {
+    vertical-align: top; }
+  .align-bottom .media-image, .align-bottom .media-body {
+    vertical-align: bottom; }
+
+.media-image {
+  padding-right: 1rem; }
+  .media-image img {
+    display: block;
+    max-width: none; }
+  .reversed .media-image {
+    padding-right: 0;
+    padding-left: 1rem; }
+
+.media-body {
+  width: 100%; }
+
+/*
+
+Navigation menu
+---------------
+
+Navigation usually means list of links. And we have some flavours using distinct styles.
+
+<ul class=nav>
+  <li><a href=#>Home</a></li>
+  <li><a href=#>About</a></li>
+  <li><a href=#>Portfolio</a></li>
+  <li><a href=#>Contact</a></li>
+</ul>
+
+*/
+.nav > li, .nav > li > a {
+  display: inline-block; }
+
+.nav-banner {
+  text-align: center; }
+
+.nav-fit {
+  display: table;
+  width: 100%; }
+  .nav-fit > li {
+    display: table-cell; }
+    .nav-fit > li > a {
+      display: block; }
+
+.panel {
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #d6d6d6;
+  display: inline-block;
+  overflow: hidden; }
+
+.panel-header {
+  background-color: #f6f6f6;
+  padding: 1.2rem 1.5rem; }
+
+.panel-header-title {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: normal; }
+
+.panel-body {
+  padding: 1rem 1.5rem; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+.sb-table {
+  border-collapse: separate;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+  display: table;
+  overflow: hidden; }
+
+.sb-table-fixed {
+  table-layout: fixed; }
+
+.sb-table-heading {
+  background-color: #f6f6f6;
+  color: #000000;
+  display: table-row;
+  font-weight: bold;
+  height: 6rem;
+  line-height: 1;
+  text-transform: uppercase; }
+  .sb-table-heading .sb-table-cell {
+    border-bottom: 1px solid #d6d6d6; }
+
+.sb-table-row {
+  background-color: #eff7fd;
+  display: table-row;
+  height: 6rem; }
+  .sb-table-row:nth-child(2n+1) {
+    background-color: #ffffff; }
+
+.sb-table-cell {
+  display: table-cell;
+  padding: 1.5rem;
+  vertical-align: middle; }
+  .sb-table-cell:not(:last-child) {
+    border-right: 1px solid #d6d6d6; }
+
+.sb-table-cell-title, .sb-table-cell-subtitle {
+  display: block; }
+
+.sb-table-cell-subtitle {
+  color: #5e5e5e;
+  font-weight: normal;
+  text-transform: none; }
+
+.first-highlight .sb-table-heading .sb-table-cell:nth-child(1) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .first-highlight .sb-table-heading .sb-table-cell:nth-child(1) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.first-highlight .sb-table-cell:nth-child(1) {
+  background-color: #f6e3d6; }
+.first-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(1) {
+  background-color: #faf1eb; }
+
+.second-highlight .sb-table-heading .sb-table-cell:nth-child(2) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .second-highlight .sb-table-heading .sb-table-cell:nth-child(2) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.second-highlight .sb-table-cell:nth-child(2) {
+  background-color: #f6e3d6; }
+.second-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(2) {
+  background-color: #faf1eb; }
+
+.third-highlight .sb-table-heading .sb-table-cell:nth-child(3) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .third-highlight .sb-table-heading .sb-table-cell:nth-child(3) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.third-highlight .sb-table-cell:nth-child(3) {
+  background-color: #f6e3d6; }
+.third-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(3) {
+  background-color: #faf1eb; }
+
+.fourth-highlight .sb-table-heading .sb-table-cell:nth-child(4) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .fourth-highlight .sb-table-heading .sb-table-cell:nth-child(4) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.fourth-highlight .sb-table-cell:nth-child(4) {
+  background-color: #f6e3d6; }
+.fourth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(4) {
+  background-color: #faf1eb; }
+
+.fifth-highlight .sb-table-heading .sb-table-cell:nth-child(5) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .fifth-highlight .sb-table-heading .sb-table-cell:nth-child(5) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.fifth-highlight .sb-table-cell:nth-child(5) {
+  background-color: #f6e3d6; }
+.fifth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(5) {
+  background-color: #faf1eb; }
+
+.sixth-highlight .sb-table-heading .sb-table-cell:nth-child(6) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .sixth-highlight .sb-table-heading .sb-table-cell:nth-child(6) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.sixth-highlight .sb-table-cell:nth-child(6) {
+  background-color: #f6e3d6; }
+.sixth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(6) {
+  background-color: #faf1eb; }
+
+.seventh-highlight .sb-table-heading .sb-table-cell:nth-child(7) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .seventh-highlight .sb-table-heading .sb-table-cell:nth-child(7) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.seventh-highlight .sb-table-cell:nth-child(7) {
+  background-color: #f6e3d6; }
+.seventh-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(7) {
+  background-color: #faf1eb; }
+
+.eigth-highlight .sb-table-heading .sb-table-cell:nth-child(8) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .eigth-highlight .sb-table-heading .sb-table-cell:nth-child(8) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.eigth-highlight .sb-table-cell:nth-child(8) {
+  background-color: #f6e3d6; }
+.eigth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(8) {
+  background-color: #faf1eb; }
+
+.ninth-highlight .sb-table-heading .sb-table-cell:nth-child(9) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .ninth-highlight .sb-table-heading .sb-table-cell:nth-child(9) .sb-table-cell-subtitle {
+    color: #ffffff; }
+.ninth-highlight .sb-table-cell:nth-child(9) {
+  background-color: #f6e3d6; }
+.ninth-highlight .sb-table-row:nth-child(2n+1) .sb-table-cell:nth-child(9) {
+  background-color: #faf1eb; }
+
+/*
+
+Navigation menu
+---------------
+
+Navigation usually means list of links. And we have some flavours using distinct styles.
+
+*/
+.sb-tabs-container {
+  padding: 3rem 1.8rem; }
+
+.sb-tabs-container h3 {
+  margin-bottom: 2rem; }
+
+.sb-tabs {
+  margin-bottom: 2rem; }
+
+.sb-tabs:last-child {
+  margin-bottom: 0; }
+
+/* By default, tabs component is full width */
+.sb-tabs-group {
+  border-radius: 4px 4px 0 0;
+  display: table;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%; }
+
+.sb-tab {
+  background-color: #f7f7f7;
+  border-top: 1px solid #ccd1d9;
+  display: table-cell;
+  position: relative; }
+  .sb-tab a {
+    color: #565656; }
+
+.sb-tab-active {
+  background-color: white;
+  position: relative;
+  z-index: 1; }
+
+.sb-tab-active:after {
+  background-color: white;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  z-index: 2; }
+
+.sb-tab a {
+  display: block;
+  padding: 1em; }
+
+.sb-tab:first-child {
+  border-left: 1px solid #ccd1d9;
+  border-top-left-radius: 4px; }
+
+.sb-tab:last-child {
+  border-right: 1px solid #ccd1d9;
+  border-top-right-radius: 4px; }
+
+.sb-tab + .sb-tab {
+  border-left: 1px solid #ccd1d9; }
+
+.sb-tabs-content {
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #ccd1d9;
+  padding: 1em;
+  position: relative;
+  z-index: 0;
+  color: #565656; }
+
+/* Tabs block bottom */
+.sb-tabs--block-bottom .sb-tabs-group {
+  border-radius: 0 0 4px 4px; }
+
+.sb-tabs--block-bottom .sb-tab {
+  border-top: 0;
+  border-bottom: 1px solid #ccd1d9; }
+
+.sb-tabs--block-bottom .sb-tab:first-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 4px; }
+
+.sb-tabs--block-bottom .sb-tab:last-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 4px; }
+
+.sb-tabs--block-bottom .sb-tab-active:after {
+  bottom: calc(100% - 1px);
+  top: auto; }
+
+.sb-tabs--block-bottom .sb-tabs-content {
+  border-radius: 4px 4px 0 0; }
+
+/* Tabs block left */
+.sb-tabs--block-left .sb-tabs-group, .sb-tabs--block-right .sb-tabs-group {
+  float: left;
+  display: block;
+  width: auto; }
+
+.sb-tabs--block-left .sb-tabs-group:after, .sb-tabs--block-left .sb-tabs-group:before, .sb-tabs--block-right .sb-tabs-group:after, .sb-tabs--block-right .sb-tabs-group:before {
+  content: '';
+  display: table; }
+
+.sb-tabs--block-left .sb-tabs-group:after, .sb-tabs--block-right .sb-tabs-group:after {
+  clear: both; }
+
+.sb-tabs--block-left .sb-tab, .sb-tabs--block-right .sb-tab {
+  display: block;
+  float: left; }
+
+.sb-tabs--block-left .sb-tabs-content {
+  border-radius: 0 4px 4px 4px;
+  clear: left; }
+
+/* Tabs block right */
+.sb-tabs--block-right .sb-tabs-group {
+  float: right; }
+
+.sb-tabs--block-right .sb-tabs-content {
+  border-radius: 4px 0 4px 4px;
+  clear: right; }
+
+/* Tabs left */
+.sb-tabs--left:after, .sb-tabs--left:before, .sb-tabs--right:after, .sb-tabs--right:before {
+  content: '';
+  display: table; }
+
+.sb-tabs--left:after, .sb-tabs--right:after {
+  clear: both; }
+
+.sb-tabs--left .sb-tabs-group, .sb-tabs--right .sb-tabs-group {
+  display: block;
+  width: auto; }
+
+.sb-tabs--left .sb-tabs-group {
+  border-radius: 4px 0 0 4px;
+  float: left; }
+
+.sb-tabs--left .sb-tabs-content, .sb-tabs--right .sb-tabs-content {
+  overflow: auto; }
+
+.sb-tabs--left .sb-tab, .sb-tabs--right .sb-tab {
+  display: block; }
+
+.sb-tabs--left .sb-tab {
+  border-left: 1px solid #ccd1d9; }
+
+.sb-tabs--left .sb-tab:last-child {
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 4px; }
+
+.sb-tabs--left .sb-tab + .sb-tab {
+  border-top: 1px solid #ccd1d9;
+  border-right: 0; }
+
+.sb-tabs--left .sb-tab-active:after {
+  height: 100%;
+  left: 100%;
+  top: 0;
+  width: 2px; }
+
+.sb-tabs--left .sb-tabs-content {
+  border-radius: 0 4px 4px 4px; }
+
+/* Tabs right */
+.sb-tabs--right .sb-tabs-group {
+  border-radius: 0 4px 4px 0;
+  float: right; }
+
+.sb-tabs--right .sb-tab {
+  border-right: 1px solid #ccd1d9; }
+
+.sb-tabs--right .sb-tab-active:after {
+  height: 100%;
+  left: -1px;
+  top: 0;
+  width: 2px; }
+
+.sb-tabs--right .sb-tab:first-child {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 4px; }
+
+.sb-tabs--right .sb-tab:last-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 4px; }
+
+.sb-tabs--right .sb-tabs-content {
+  border-radius: 4px 0 4px 4px; }
+
+/* 5. Layout */
+/* 6. Helpers */
+/*
+
+Align helper
+------------
+
+Utility class to align inline and inline-blocks elements.
+
+<div class="align-center">
+   I'm a centered text.
+</div>
+
+*/
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+.align-left {
+  text-align: left; }
+
+.align-justify {
+  text-align: justify; }
+  .align-justify:after {
+    display: inline-block;
+    content: '';
+    width: 100%; }
+
+/*
+
+Avatar
+------
+
+Avatar helper to show rounded in a few sizes.
+
+    <img class="avatar-small" src="//gravatar.com/avatar/4aeb778e1a4f2afba6142d6eff73b8a6?s=80">
+
+*/
+.avatar-large, .avatar-medium, .avatar-small, .avatar-xsmall {
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px white; }
+
+.avatar-large {
+  width: 74px;
+  height: 74px; }
+
+.avatar-medium {
+  width: 48px;
+  height: 48px; }
+
+.avatar-small {
+  width: 35px;
+  height: 35px; }
+
+.avatar-xsmall {
+  width: 25px;
+  height: 25px; }
+
+/*
+
+Clearfix
+--------
+
+Clear floats utility.
+
+<div class="clearfix">
+   ...
+</div>
+
+*/
+.row:before, .nav:before, .row:after, .nav:after, .clearfix:before, .breadcrumb:before, .clearfix:after, .breadcrumb:after {
+  content: '';
+  display: table; }
+.row:after, .nav:after, .clearfix:after, .breadcrumb:after {
+  clear: both; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+.disabled {
+  opacity: 0.5; }
+
+/*
+
+Float
+-----
+
+Float or clear a HTML element.
+
+    <div class="float-left">This is floated left</div>
+    <div class="float-right">This is floated right</div>
+
+*/
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.float-none {
+  float: none; }
+
+/*
+
+Font size helpers
+-----------------
+
+Use this to modify the default font size of an element.
+
+*/
+.s10 {
+  font-size: 1rem; }
+
+.s11 {
+  font-size: 1.1rem; }
+
+.s12 {
+  font-size: 1.2rem; }
+
+.s13 {
+  font-size: 1.3rem; }
+
+.s14 {
+  font-size: 1.4rem; }
+
+.s15 {
+  font-size: 1.5rem; }
+
+.s16 {
+  font-size: 1.6rem; }
+
+.s17 {
+  font-size: 1.7rem; }
+
+.s18 {
+  font-size: 1.8rem; }
+
+.s19 {
+  font-size: 1.9rem; }
+
+.s20 {
+  font-size: 2rem; }
+
+/*
+
+Is Hidden
+---------
+
+Hides an element, normally remove after some user interaction through javascript.
+
+    <div class="is-hidden">You can't see me!</div>
+
+*/
+.is-hidden {
+  display: none; }
+
+/*
+
+No scroll
+---------
+
+This helper is using when you want to force a no-scroll. In this app, we are using it to disable the page scroll,
+for instance, when the sidebar off canvas menu is open or a modal window with scroll.
+
+<div class="no-scroll">
+  I'm poor, I have no scroll
+</div>
+
+*/
+.no-scroll {
+  overflow: hidden !important;
+  position: relative; }
+
+/*
+
+Percent
+-------
+Width in percents for all elements. Supported values are 5% to 100% in steps of 5%.
+
+    <div class="five percent">5% width</div>
+    <div class="thirty percent">30% width</div>
+
+*/
+.percent.five {
+  width: 5% !important; }
+.percent.ten {
+  width: 10% !important; }
+.percent.fifteen {
+  width: 15% !important; }
+.percent.twenty {
+  width: 20% !important; }
+.percent.twentyfive {
+  width: 25% !important; }
+.percent.thirty {
+  width: 30% !important; }
+.percent.thirtyfive {
+  width: 35% !important; }
+.percent.forty {
+  width: 40% !important; }
+.percent.fortyfive {
+  width: 45% !important; }
+.percent.fifty {
+  width: 50% !important; }
+.percent.fiftyfive {
+  width: 55% !important; }
+.percent.sixty {
+  width: 60% !important; }
+.percent.sixtyfive {
+  width: 65% !important; }
+.percent.seventy {
+  width: 70% !important; }
+.percent.seventyfive {
+  width: 75% !important; }
+.percent.eighty {
+  width: 80% !important; }
+.percent.eightyfive {
+  width: 85% !important; }
+.percent.ninety {
+  width: 90% !important; }
+.percent.ninetyfive {
+  width: 95% !important; }
+.percent.hundred {
+  width: 100% !important; }
+
+/*
+
+White-spacing
+-------------
+
+Margin and padding utilities. These utilities use a shorthand naming convention:
+
+Shorthand   Description
+---------   -----------
+
+m           Margin
+p           Padding
+t           Top
+r           Right
+b           Bottom
+l           Left
+x           X-axis (left and right)
+y           Y-axis (top and bottom)
+n           Negative (margin only)
+1           default 0.5rem;
+2           default 1rem;
+3           default 2rem;
+4           default 3rem;
+
+*/
+.m0 {
+  margin: 0; }
+
+.mt0 {
+  margin-top: 0; }
+
+.mr0 {
+  margin-right: 0; }
+
+.mb0 {
+  margin-bottom: 0; }
+
+.ml0 {
+  margin-left: 0; }
+
+.m1 {
+  margin: 0.5rem; }
+
+.mt1 {
+  margin-top: 0.5rem; }
+
+.mr1 {
+  margin-right: 0.5rem; }
+
+.mb1 {
+  margin-bottom: 0.5rem; }
+
+.ml1 {
+  margin-left: 0.5rem; }
+
+.m2 {
+  margin: 1rem; }
+
+.mt2 {
+  margin-top: 1rem; }
+
+.mr2 {
+  margin-right: 1rem; }
+
+.mb2 {
+  margin-bottom: 1rem; }
+
+.ml2 {
+  margin-left: 1rem; }
+
+.m3 {
+  margin: 2rem; }
+
+.mt3 {
+  margin-top: 2rem; }
+
+.mr3 {
+  margin-right: 2rem; }
+
+.mb3 {
+  margin-bottom: 2rem; }
+
+.ml3 {
+  margin-left: 2rem; }
+
+.m4 {
+  margin: 3rem; }
+
+.mt4 {
+  margin-top: 3rem; }
+
+.mr4 {
+  margin-right: 3rem; }
+
+.mb4 {
+  margin-bottom: 3rem; }
+
+.ml4 {
+  margin-left: 3rem; }
+
+.mxn1 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; }
+
+.mxn2 {
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
+.mxn3 {
+  margin-left: -2rem;
+  margin-right: -2rem; }
+
+.mxn4 {
+  margin-left: -3rem;
+  margin-right: -3rem; }
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto; }
+
+.p1 {
+  padding: 0.5rem; }
+
+.py1 {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem; }
+
+.px1 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+
+.p2 {
+  padding: 1rem; }
+
+.py2 {
+  padding-bottom: 1rem;
+  padding-top: 1rem; }
+
+.px2 {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.p3 {
+  padding: 2rem; }
+
+.py3 {
+  padding-bottom: 2rem;
+  padding-top: 2rem; }
+
+.px3 {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+.p4 {
+  padding: 3rem; }
+
+.py4 {
+  padding-bottom: 3rem;
+  padding-top: 3rem; }
+
+.px4 {
+  padding-left: 3rem;
+  padding-right: 3rem; }
+
 /* 7. Vendor */
