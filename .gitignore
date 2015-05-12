@@ -1,4 +1,5 @@
 *.DS_Store
 /node_modules/*
 /assets/svg/compressed/*
+public/stylesheets/*.css
 .idea
