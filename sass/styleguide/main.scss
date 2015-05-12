@@ -34,47 +34,50 @@ This library is divided in the following sections:
 @import "core/functions";
 @import "core/mixins";
 
-/* 3. Helpers */
-
-@import "helpers/align";
-@import "helpers/clearfix";
-@import "helpers/percent";
-@import "helpers/float";
-@import "helpers/is-hidden";
-@import "helpers/no-scroll";
-@import "helpers/white-spacing";
-@import "helpers/font-sizes";
-@import "helpers/avatar";
-
-/* 4. Base */
+/* 3. Base */
 
 @import "base/fonts";
 @import "base/global";
-@import "base/lists";
 @import "base/headings";
-@import "base/links";
 @import "base/label";
+@import "base/links";
+@import "base/lists";
 @import "base/paragraphs";
 
-/* 5. Objects */
+/* 4. Objects */
 
-@import "objects/sprites";
-@import "objects/grid";
-@import "objects/nav";
-@import "objects/buttons";
-@import "objects/icons";
-@import "objects/media";
-@import "objects/justify-columns";
-@import "objects/tabs";
-@import "objects/tables";
-@import "objects/pagination";
-@import "objects/breadcrumb";
-@import "objects/dropdown-toggler";
 @import "objects/acc-breadcrumb";
-@import "objects/grid-panel";
+@import "objects/breadcrumb";
+@import "objects/buttons";
+@import "objects/forms";
+@import "objects/dropdown-toggler";
+@import "objects/grid";
+@import "objects/icons";
+@import "objects/justify-columns";
+@import "objects/media";
+@import "objects/nav";
+@import "objects/panel";
+@import "objects/pagination";
+@import "objects/sprites";
+@import "objects/tables";
+@import "objects/tabs";
 
-/* 6. Layout */
+/* 5. Layout */
 
 @import "layout/dashboard/breadcrumb";
+
+/* 6. Helpers */
+
+@import "helpers/align";
+@import "helpers/avatar";
+@import "helpers/clearfix";
+@import "helpers/cursor";
+@import "helpers/disabled";
+@import "helpers/float";
+@import "helpers/font-sizes";
+@import "helpers/is-hidden";
+@import "helpers/no-scroll";
+@import "helpers/percent";
+@import "helpers/white-spacing";
 
 /* 7. Vendor */
