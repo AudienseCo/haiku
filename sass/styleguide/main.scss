@@ -26,7 +26,7 @@ This library is divided in the following sections:
 
 /* 1. Reset */
 
-//@import "base/normalize";
+@import "base/normalize";
 
 /* 2. Core */
 
@@ -34,44 +34,10 @@ This library is divided in the following sections:
 @import "core/functions";
 @import "core/mixins";
 
-/* 3. Base */
-
-@import "base/fonts";
-//@import "base/global";
-//@import "base/lists";
-//@import "base/headings";
-//@import "base/links";
-//@import "base/label";
-//@import "base/paragraphs";
-
-/* 4. Objects */
-
-@import "objects/sprites";
-@import "objects/nav";
-@import "objects/buttons";
-@import "objects/icons";
-@import "objects/media";
-@import "objects/forms";
-@import "objects/justify-columns";
-@import "objects/tabs";
-@import "objects/tables";
-//@import "objects/pagination";
-@import "objects/breadcrumb";
-//@import "objects/dropdown-toggler";
-@import "objects/acc-breadcrumb";
-@import "objects/panel";
-@import "objects/grid";
-
-
-/* 5. Layout */
-
-//@import "layout/dashboard/breadcrumb";
-
-/* 6. Helpers */
+/* 3. Helpers */
 
 @import "helpers/align";
 @import "helpers/clearfix";
-@import "helpers/cursor";
 @import "helpers/percent";
 @import "helpers/float";
 @import "helpers/is-hidden";
@@ -79,6 +45,36 @@ This library is divided in the following sections:
 @import "helpers/white-spacing";
 @import "helpers/font-sizes";
 @import "helpers/avatar";
-@import "helpers/disabled";
+
+/* 4. Base */
+
+@import "base/fonts";
+@import "base/global";
+@import "base/lists";
+@import "base/headings";
+@import "base/links";
+@import "base/label";
+@import "base/paragraphs";
+
+/* 5. Objects */
+
+@import "objects/sprites";
+@import "objects/grid";
+@import "objects/nav";
+@import "objects/buttons";
+@import "objects/icons";
+@import "objects/media";
+@import "objects/justify-columns";
+@import "objects/tabs";
+@import "objects/tables";
+@import "objects/pagination";
+@import "objects/breadcrumb";
+@import "objects/dropdown-toggler";
+@import "objects/acc-breadcrumb";
+@import "objects/grid-panel";
+
+/* 6. Layout */
+
+@import "layout/dashboard/breadcrumb";
 
 /* 7. Vendor */

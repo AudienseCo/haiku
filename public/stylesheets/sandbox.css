@@ -1,0 +1,562 @@
+/*
+
+Sandbox
+-------
+
+This library is divided in the following sections:
+
+1.  Reset removes all the default styles on the page to start building using
+    normalize.
+
+2.  Generic parts that load variables, functions and mixins. Use thisfolder for code that
+    is applied all over the app but it is not specific to a base element or an object.
+
+3.  Helpers and useful chunks of code that do not fit in an object and it is generic enough.
+    If possible, create objects.
+
+4.  Base elements are the building blocks of the page. Paragraphs, lists, images and so on.
+
+5.  Objects refer to each individual block that builds parts of the app.
+
+6.  Layout styles like background colors or images, usually they are refered as sections inside the dom html.
+
+7.  Vendor is code that other Javascript libraries use and do not tend to follow the OOCSS approach.
+
+*/
+/* 1. Reset */
+/* 2. Core */
+/*
+
+Variables, colors and other stuff
+---------------------------------
+
+*/
+/*
+
+Functions
+---------
+
+Calculations used by other SCSS files. If you need to DRY-up some CSS properties
+put that code in `core/_mixins.scss`, this is only for functions.
+
+*/
+/*
+
+Disabled cursor
+---------------
+
+  div.disabled {
+    @include disable-select;
+  }
+
+*/
+/*
+
+Forbidden cursor
+----------------
+
+  div.forbidden {
+    @include forbidden-select;
+  }
+
+*/
+/*
+
+Center-align a block level element
+----------------------------------
+
+  .footer-wrap {
+    width: 450px;
+    @include center-block;
+  }
+
+ */
+/*
+
+Text overflow
+-------------
+
+  .text-truncate {
+    @include text-truncate;
+  }
+
+ */
+/*
+
+Absolute positioned
+-------------------
+
+  .abs {
+    @include abs-pos(10px, 10px, 5px, 15px);
+  }
+
+ */
+/*
+
+Font Size in rem with px fallback
+---------------------------------
+
+  body {
+    @include font-size(16);
+  }
+
+ */
+/*
+
+Line Height in rem with px fallback
+-----------------------------------
+
+  body {
+    @include line-height (16);
+  }
+
+ */
+/*
+
+Text replacement (instead of text-indent)
+-----------------------------------------
+
+  .header h1 {
+    @include text-replacement;
+  }
+
+ */
+/*
+
+Placeholder
+-----------
+
+  input{
+    @include placeholder-color(#FA4A4A)
+  }
+
+ */
+/*
+
+Responsive mixin
+----------------
+
+  @include screen(768, 1280) {
+    background: black;
+  }
+
+  @include min-screen(320) {
+    width: 300px;
+  }
+
+*/
+/* 3. Helpers */
+/* 4. Base */
+/*
+
+Web fonts
+---------
+
+Drop the files in a folder, update the path and the name and go.
+
+*/
+/* 5. Objects */
+.table {
+  border-collapse: separate;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+  display: table;
+  overflow: hidden; }
+
+.table-heading {
+  background-color: #f6f6f6;
+  color: #000000;
+  display: table-row;
+  font-weight: bold;
+  height: 6rem;
+  line-height: 1;
+  text-transform: uppercase; }
+  .table-heading .table-cell {
+    border-bottom: 1px solid #d6d6d6; }
+
+.table-row {
+  background-color: #eff7fd;
+  display: table-row;
+  height: 6rem; }
+  .table-row:nth-child(2n+1) {
+    background-color: #ffffff; }
+
+.table-cell {
+  display: table-cell;
+  padding: 1.5rem;
+  vertical-align: middle; }
+  .table-cell:not(:last-child) {
+    border-right: 1px solid #d6d6d6; }
+
+.table-cell-title, .table-cell-subtitle {
+  display: block; }
+
+.table-cell-subtitle {
+  color: #5e5e5e;
+  font-weight: normal;
+  text-transform: none; }
+
+.first-highlight .table-heading .table-cell:nth-child(1) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .first-highlight .table-heading .table-cell:nth-child(1) .table-cell-subtitle {
+    color: #ffffff; }
+.first-highlight .table-cell:nth-child(1) {
+  background-color: #f6e3d6; }
+.first-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(1) {
+  background-color: #faf1eb; }
+
+.second-highlight .table-heading .table-cell:nth-child(2) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .second-highlight .table-heading .table-cell:nth-child(2) .table-cell-subtitle {
+    color: #ffffff; }
+.second-highlight .table-cell:nth-child(2) {
+  background-color: #f6e3d6; }
+.second-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(2) {
+  background-color: #faf1eb; }
+
+.third-highlight .table-heading .table-cell:nth-child(3) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .third-highlight .table-heading .table-cell:nth-child(3) .table-cell-subtitle {
+    color: #ffffff; }
+.third-highlight .table-cell:nth-child(3) {
+  background-color: #f6e3d6; }
+.third-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(3) {
+  background-color: #faf1eb; }
+
+.fourth-highlight .table-heading .table-cell:nth-child(4) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .fourth-highlight .table-heading .table-cell:nth-child(4) .table-cell-subtitle {
+    color: #ffffff; }
+.fourth-highlight .table-cell:nth-child(4) {
+  background-color: #f6e3d6; }
+.fourth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(4) {
+  background-color: #faf1eb; }
+
+.fifth-highlight .table-heading .table-cell:nth-child(5) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .fifth-highlight .table-heading .table-cell:nth-child(5) .table-cell-subtitle {
+    color: #ffffff; }
+.fifth-highlight .table-cell:nth-child(5) {
+  background-color: #f6e3d6; }
+.fifth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(5) {
+  background-color: #faf1eb; }
+
+.sixth-highlight .table-heading .table-cell:nth-child(6) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .sixth-highlight .table-heading .table-cell:nth-child(6) .table-cell-subtitle {
+    color: #ffffff; }
+.sixth-highlight .table-cell:nth-child(6) {
+  background-color: #f6e3d6; }
+.sixth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(6) {
+  background-color: #faf1eb; }
+
+.seventh-highlight .table-heading .table-cell:nth-child(7) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .seventh-highlight .table-heading .table-cell:nth-child(7) .table-cell-subtitle {
+    color: #ffffff; }
+.seventh-highlight .table-cell:nth-child(7) {
+  background-color: #f6e3d6; }
+.seventh-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(7) {
+  background-color: #faf1eb; }
+
+.eigth-highlight .table-heading .table-cell:nth-child(8) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .eigth-highlight .table-heading .table-cell:nth-child(8) .table-cell-subtitle {
+    color: #ffffff; }
+.eigth-highlight .table-cell:nth-child(8) {
+  background-color: #f6e3d6; }
+.eigth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(8) {
+  background-color: #faf1eb; }
+
+.ninth-highlight .table-heading .table-cell:nth-child(9) {
+  background-color: #f29556;
+  color: #ffffff; }
+  .ninth-highlight .table-heading .table-cell:nth-child(9) .table-cell-subtitle {
+    color: #ffffff; }
+.ninth-highlight .table-cell:nth-child(9) {
+  background-color: #f6e3d6; }
+.ninth-highlight .table-row:nth-child(2n+1) .table-cell:nth-child(9) {
+  background-color: #faf1eb; }
+
+/*
+
+Breadcrumb
+----------
+
+Breadcrumb in two flavours: normal with arrow shapes and simple.
+
+*/
+.breadcrumb {
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+  overflow: hidden; }
+
+.breadcrumb-item {
+  background-color: #f6f6f6;
+  display: table-cell;
+  margin-left: -0.25rem;
+  padding: 1rem 1rem 1rem 2.5rem;
+  position: relative;
+  vertical-align: middle; }
+  .breadcrumb-item:after, .breadcrumb-item:before {
+    border-style: solid;
+    content: '';
+    display: block;
+    height: 0;
+    left: 100%;
+    position: absolute;
+    width: 0;
+    z-index: 1; }
+  .breadcrumb-item:before {
+    border-color: transparent transparent transparent #D6D6D6;
+    border-width: 2.1rem 2.1rem 2.1rem 1.3rem;
+    top: -0.1rem; }
+  .breadcrumb-item:after {
+    border-color: transparent transparent transparent #F6F6F6;
+    border-width: 2rem 2rem 2rem 1.2rem;
+    top: 0; }
+
+.breadcrumb-item:last-child {
+  background-color: #fff; }
+  .breadcrumb-item:last-child:after, .breadcrumb-item:last-child:before {
+    content: normal; }
+
+.breadcrumb-item-large {
+  height: 80px;
+  padding: 1rem 1rem 1rem 4rem; }
+  .breadcrumb-item-large:first-child {
+    padding-left: 2.5rem; }
+  .breadcrumb-item-large:before {
+    border-color: transparent transparent transparent #D6D6D6;
+    border-width: 4.1rem 4.1rem 4.1rem 2.5rem;
+    top: -0.1rem; }
+  .breadcrumb-item-large:after {
+    border-color: transparent transparent transparent #F6F6F6;
+    border-width: 4rem 4rem 4rem 2.4rem;
+    top: 0; }
+
+.breadcrumb-item-simple {
+  display: inline-block;
+  padding: 1rem 0;
+  vertical-align: middle; }
+  .breadcrumb-item-simple:after {
+    color: gray;
+    content: "/";
+    display: inline-block;
+    margin: 0 1rem; }
+
+.breadcrumb-item-simple:first-child {
+  margin-left: 2.5rem; }
+
+.breadcrumb-item-simple:last-child:after {
+  content: normal; }
+
+.acc-breadcrumb-item-wrapper {
+  background-color: #d6d6d6;
+  display: block;
+  float: left;
+  height: 12rem;
+  margin: 0.8rem 1.6rem 0.8rem 3rem;
+  position: relative;
+  width: 16rem; }
+  .acc-breadcrumb-item-wrapper:before {
+    -moz-transform: scale(0.9999);
+    border-color: transparent transparent transparent #d6d6d6;
+    border-style: solid;
+    border-width: 6rem 2.8rem;
+    content: '';
+    display: block;
+    height: 0;
+    left: 16rem;
+    position: absolute;
+    top: 0;
+    width: 0; }
+
+.acc-breadcrumb-item {
+  background-color: #ffffff;
+  bottom: 0.1rem;
+  left: 0.1rem;
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem; }
+  .acc-breadcrumb-item:before {
+    border-color: transparent transparent transparent #ffffff;
+    border-style: solid;
+    border-width: 5.9rem 2.75rem;
+    content: '';
+    display: block;
+    height: 0;
+    left: 15.8rem;
+    position: absolute;
+    top: 0;
+    width: 0; }
+  .acc-breadcrumb-item:after {
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 0.3rem solid #d5f2d1;
+    bottom: 2.7rem;
+    color: #b1b1b1;
+    content: '+';
+    font-size: 2.6rem;
+    height: 4rem;
+    line-height: 3.4rem;
+    margin-bottom: -2rem;
+    position: absolute;
+    right: -4rem;
+    text-align: center;
+    width: 4rem;
+    z-index: 2; }
+
+.acc-breadcrumb-item-back-top {
+  height: 6rem;
+  left: -3rem;
+  position: absolute;
+  top: 0;
+  width: 3rem; }
+  .acc-breadcrumb-item-back-top:before, .acc-breadcrumb-item-back-top:after {
+    border-style: solid;
+    border-width: 0 3rem 6rem 3rem;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0; }
+  .acc-breadcrumb-item-back-top:before {
+    border-color: transparent #d6d6d6 transparent transparent;
+    right: 0;
+    top: 0; }
+  .acc-breadcrumb-item-back-top:after {
+    border-color: transparent white transparent transparent;
+    top: 0.1rem;
+    right: -0.2rem; }
+
+.acc-breadcrumb-item-back-bottom {
+  bottom: 0;
+  height: 6rem;
+  left: -3rem;
+  position: absolute;
+  width: 3rem; }
+  .acc-breadcrumb-item-back-bottom:before, .acc-breadcrumb-item-back-bottom:after {
+    border-style: solid;
+    border-width: 6rem 3rem 0 3rem;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0; }
+  .acc-breadcrumb-item-back-bottom:before {
+    border-color: transparent #d6d6d6 transparent transparent;
+    right: 0;
+    top: 0; }
+  .acc-breadcrumb-item-back-bottom:after {
+    border-color: transparent white transparent transparent;
+    bottom: 0.1rem;
+    right: -0.2rem; }
+
+.acc-breadcrumb-item-amount {
+  background-color: #d5f2d1;
+  border-radius: 0.4rem;
+  bottom: 1.5rem;
+  color: #565656;
+  font-size: 1.1rem;
+  left: 1.5rem;
+  line-height: 2.4rem;
+  position: absolute;
+  right: 1.5rem;
+  text-align: center;
+  z-index: 1; }
+  .acc-breadcrumb-item-amount:after, .acc-breadcrumb-item-amount:before {
+    background-color: #d5f2d1;
+    content: '';
+    height: 0.4rem;
+    margin-top: -0.2rem;
+    position: absolute;
+    top: 50%; }
+  .acc-breadcrumb-item-amount:after {
+    right: -8rem;
+    width: 8rem; }
+  .acc-breadcrumb-item-amount:before {
+    left: -4.4rem;
+    width: 4.4rem; }
+
+.acc-breadcrumb-item-event {
+  display: table;
+  height: 8.1rem;
+  line-height: 1;
+  text-align: center;
+  width: 100%; }
+
+.acc-breadcrumb-item-event-wrapper {
+  display: table-cell;
+  vertical-align: middle; }
+
+.acc-breadcrumb-item-event-amount {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: bold; }
+
+.acc-breadcrumb-item-event-action {
+  display: block;
+  font-size: 1.1rem;
+  text-transform: uppercase; }
+
+.acc-breadcrumb-item-total {
+  background-color: #d5f2d1;
+  border-radius: 0.4rem;
+  display: table;
+  height: 8.8rem;
+  line-height: 1;
+  position: relative;
+  text-align: center;
+  width: 100%; }
+
+.acc-breadcrumb-item-total-wrapper {
+  display: table-cell;
+  vertical-align: middle; }
+
+.acc-breadcrumb-item-total-amount {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: right; }
+
+.acc-breadcrumb-item-total-unit {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.acc-breadcrumb-item-wrapper:first-child {
+  margin-left: 0; }
+  .acc-breadcrumb-item-wrapper:first-child .acc-breadcrumb-item-back-bottom, .acc-breadcrumb-item-wrapper:first-child .acc-breadcrumb-item-back-top {
+    display: none; }
+  .acc-breadcrumb-item-wrapper:first-child, .acc-breadcrumb-item-wrapper:first-child .acc-breadcrumb-item {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+  .acc-breadcrumb-item-wrapper:first-child .acc-breadcrumb-item-amount:before {
+    display: none; }
+
+.acc-breadcrumb-item-wrapper:nth-last-child(2) .acc-breadcrumb-item:after {
+  content: '='; }
+
+.acc-breadcrumb-item-wrapper:last-child {
+  margin-right: 0; }
+  .acc-breadcrumb-item-wrapper:last-child, .acc-breadcrumb-item-wrapper:last-child .acc-breadcrumb-item {
+    padding: 1.5rem; }
+    .acc-breadcrumb-item-wrapper:last-child:before, .acc-breadcrumb-item-wrapper:last-child:after, .acc-breadcrumb-item-wrapper:last-child .acc-breadcrumb-item:before, .acc-breadcrumb-item-wrapper:last-child .acc-breadcrumb-item:after {
+      display: none; }
+  .acc-breadcrumb-item-wrapper:last-child, .acc-breadcrumb-item-wrapper:last-child .acc-breadcrumb-item {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
+
+/* 6. Layout */
+/* 7. Vendor */

@@ -33,6 +33,7 @@
     "grunt-sass": "~0.16.1",
     "grunt-spritesmith": "^2.20.0",
     "grunt-svgmin": "~2.0.0",
-    "grunt-svgstore": "^0.5.0"
+    "grunt-svgstore": "^0.5.0",
+    "grunt-pixrem": "git://github.com/SocialBro/grunt-pixrem.git"
   }
 }

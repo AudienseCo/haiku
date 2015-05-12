@@ -14,15 +14,32 @@ module.exports = function(grunt) {
     },
 
     sass: {
+      options: {
+        outputStyle: 'expanded'
+      },
       dev: {
-        options: {
-          outputStyle: 'expanded'
-        },
         files: {
           'public/stylesheets/sandbox.css': 'sass/styleguide/sandbox.scss',
-          'public/stylesheets/main.css':    'sass/site/main.scss',
+          'public/stylesheets/main.css':    'sass/styleguide/main.scss',
           'public/stylesheets/docs.css':    'sass/docs/docs.scss'
         }
+      },
+      build: {
+        files: {
+          'dist/sandbox.css': 'sass/styleguide/sandbox.scss',
+          'dist/main.css':    'sass/styleguide/main.scss',
+        }
+      }
+    },
+
+    pixrem: {
+      options: {
+        rootvalue: '10px',
+        replace: true
+      },
+      build: {
+        src: 'dist/sandbox.css',
+        dest: 'dist/sandbox.css'
       }
     },
 
@@ -63,6 +80,9 @@ module.exports = function(grunt) {
       },
       no_dest: {
         src: 'public/stylesheets/*.css'
+      },
+      build: {
+        src: 'dist/*.css'
       }
     },
 
@@ -75,7 +95,7 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: ['assets/sandbox.svg', 'assets/svg/compressed', 'assets/svg/output'],
+    clean: ['dist/', 'assets/sandbox.svg', 'assets/svg/compressed', 'assets/svg/output'],
 
     svgstore: {
       options: {
@@ -118,20 +138,21 @@ module.exports = function(grunt) {
     },
 
     csscomb: {
-      dev: {
-        options: {
-          config: 'csscomb.json'
-        },
+     options: {
+        config: 'csscomb.json'
+      },
+      build: {
         files: {
-          'public/stylesheets/sandbox.css': ['public/stylesheets/sandbox.css']
+          'dist/sandbox.css': 'dist/sandbox.css'
         }
       }
     },
 
     cssmin: {
-      css: {
-        files: {
-          'public/stylesheets/sandbox.min.css': ['public/stylesheets/sandbox.css']
+      build: {
+        files:{
+          'dist/sandbox-min.css': 'dist/sandbox.css',
+          'dist/main-min.css': 'dist/main.css'
         }
       }
     }
@@ -147,6 +168,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-svgstore');
   grunt.loadNpmTasks('grunt-csscomb');
+  grunt.loadNpmTasks('grunt-pixrem');
 
   grunt.registerTask('express', 'Start a custom web server', function() {
     var port = process.env.PORT || 3000;
@@ -166,7 +188,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['help']);
-  grunt.registerTask('build', ['sass', 'autoprefixer', 'csscomb', 'cssmin']);
+  grunt.registerTask('build', ['sass:build', 'pixrem:build', 'autoprefixer:build', 'csscomb:build', 'cssmin:build']);
   grunt.registerTask('sprites', ['sprite']);
   grunt.registerTask('svg', ['clean', 'svgmin', 'svgstore', 'rename:svg']);
   grunt.registerTask('server', ['sass', 'express', 'watch']);
