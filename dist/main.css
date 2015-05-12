@@ -1855,7 +1855,8 @@ Clear floats utility.
   clear: both; }
 
 .cursor-pointer {
-  cursor: pointer; }
+  cursor: pointer;
+  pointer-events: none; }
 
 .disabled {
   opacity: 0.5; }

@@ -1861,6 +1861,7 @@ Clear floats utility.
 .cursor-pointer
 {
     cursor: pointer;
+    pointer-events: none;
 }
 
 .disabled
