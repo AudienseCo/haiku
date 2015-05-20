@@ -95,7 +95,7 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: ['dist/', 'assets/sandbox.svg', 'assets/svg/compressed', 'assets/svg/output'],
+    clean: ['dist/', 'public/stylesheets/', 'assets/sandbox.svg', 'assets/svg/compressed', 'assets/svg/output'],
 
     svgstore: {
       options: {
