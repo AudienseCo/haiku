@@ -818,9 +818,11 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 */
 .breadcrumb {
   background-color: white;
-  border-radius: 4px;
-  border: 1px solid #d6d6d6;
   overflow: hidden; }
+
+.breadcrumb-holder {
+  border-radius: 4px;
+  border: 1px solid #d6d6d6; }
 
 .breadcrumb-item {
   background-color: #f6f6f6;
