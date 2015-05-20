@@ -10,9 +10,12 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .breadcrumb {
     @extend .clearfix;
     background-color: white;
+    overflow: hidden;
+}
+
+.breadcrumb-holder {
     border-radius: 4px;
     border: 1px solid color($name: "text", $variant: "secondary", $hue: "light");
-    overflow: hidden;
 }
 
 .breadcrumb-item {
