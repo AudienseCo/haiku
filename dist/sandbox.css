@@ -1234,6 +1234,11 @@ The provided mixins are intended to be used with the array-like variables
     table-layout: fixed;
 }
 
+.sb-table-compacted .sb-table-cell
+{
+    padding: 5px;
+}
+
 .sb-table-heading
 {
     font-weight: bold;

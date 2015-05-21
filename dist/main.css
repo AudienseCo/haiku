@@ -1440,6 +1440,9 @@ The provided mixins are intended to be used with the array-like variables
 .sb-table-fixed {
   table-layout: fixed; }
 
+.sb-table-compacted .sb-table-cell {
+  padding: 5px; }
+
 .sb-table-heading {
   background-color: #f6f6f6;
   color: #000000;
