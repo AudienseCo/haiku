@@ -1862,10 +1862,10 @@ Clear floats utility.
   clear: both; }
 
 .cursor-pointer {
-  cursor: pointer;
-  pointer-events: none; }
+  cursor: pointer; }
 
 .disabled {
+  pointer-events: none;
   opacity: 0.5; }
 
 /*
