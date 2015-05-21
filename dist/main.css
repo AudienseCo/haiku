@@ -1445,7 +1445,6 @@ The provided mixins are intended to be used with the array-like variables
   color: #000000;
   display: table-row;
   font-weight: bold;
-  height: 6rem;
   line-height: 1;
   text-transform: uppercase; }
   .sb-table-heading .sb-table-cell {
@@ -1453,8 +1452,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .sb-table-row {
   background-color: #eff7fd;
-  display: table-row;
-  height: 6rem; }
+  display: table-row; }
   .sb-table-row:nth-child(2n+1) {
     background-color: #ffffff; }
 
