@@ -13,6 +13,11 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
     table-layout: fixed;
 }
 
+.sb-table-panel {
+    border-style: solid none;
+    border-radius: 0;
+}
+
 .sb-table-compacted .sb-table-cell {
     padding: .5rem;
 }

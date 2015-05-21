@@ -7,3 +7,7 @@ We have a simple table design that accepts some modifiers to build more complex.
 ### Compacted table
 For showing a lot of tabular data you'd rather print a more compacted table than the base table. Add the helper class `sb-table-compacted` to shrink the cells padding:
 {{ component('components/tables/compacted-table.html') }}
+
+### Panel table
+You can use the `.sb-table-panel` to attach a table inside a panel
+{{ component('components/tables/panel-table.html') }}

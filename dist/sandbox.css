@@ -1234,6 +1234,12 @@ The provided mixins are intended to be used with the array-like variables
     table-layout: fixed;
 }
 
+.sb-table-panel
+{
+    border-style: solid none;
+    border-radius: 0;
+}
+
 .sb-table-compacted .sb-table-cell
 {
     padding: 5px;
@@ -2268,6 +2274,11 @@ n           Negative (margin only)
 {
     margin-right: auto; 
     margin-left: auto;
+}
+
+.p0
+{
+    padding: 0;
 }
 
 .p1
