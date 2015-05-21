@@ -13,6 +13,10 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
     table-layout: fixed;
 }
 
+.sb-table-compacted .sb-table-cell {
+    padding: .5rem;
+}
+
 .sb-table-heading {
     background-color: color($name: "background");
     color: color($name: "titles", $hue: "dark");
