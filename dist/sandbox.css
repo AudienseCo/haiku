@@ -1499,7 +1499,6 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     position: relative; 
     display: table-cell;
-    padding: 15px;
     border-top: 1px solid #ccd1d9;
     background-color: #f7f7f7;
 }
