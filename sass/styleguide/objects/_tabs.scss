@@ -42,6 +42,8 @@ Navigation usually means list of links. And we have some flavours using distinct
 
     a {
         color: color("text", $hue: "dark");
+        display: block;
+        padding: 1.5rem;
     }
 }
 
@@ -61,11 +63,6 @@ Navigation usually means list of links. And we have some flavours using distinct
     top: calc(100% - 1px);
     width: 100%;
     z-index: 2;
-}
-
-.sb-tab a {
-    display: block;
-    padding: 1em;
 }
 
 .sb-tab:first-child {

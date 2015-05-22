@@ -1504,6 +1504,8 @@ Navigation usually means list of links. And we have some flavours using distinct
 }
 .sb-tab a
 {
+    display: block;
+    padding: 15px; 
     color: #565656;
 }
 
@@ -1526,12 +1528,6 @@ Navigation usually means list of links. And we have some flavours using distinct
     height: 2px;
     content: '';
     background-color: white;
-}
-
-.sb-tab a
-{
-    display: block;
-    padding: 1em;
 }
 
 .sb-tab:first-child
