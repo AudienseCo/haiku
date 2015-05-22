@@ -757,7 +757,8 @@ p {
 .acc-breadcrumb-item-event-action {
   display: block;
   font-size: 1.1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 0 1rem; }
 
 .acc-breadcrumb-item-total {
   background-color: #d5f2d1;
