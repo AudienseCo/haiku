@@ -1602,9 +1602,11 @@ Navigation usually means list of links. And we have some flavours using distinct
   background-color: #f7f7f7;
   border-top: 1px solid #ccd1d9;
   display: table-cell;
+  padding: 1.5rem;
   position: relative; }
   .sb-tab a {
-    color: #565656; }
+    color: #565656;
+    display: block; }
 
 .sb-tab-active {
   background-color: white;
@@ -1622,10 +1624,6 @@ Navigation usually means list of links. And we have some flavours using distinct
   top: calc(100% - 1px);
   width: 100%;
   z-index: 2; }
-
-.sb-tab a {
-  display: block;
-  padding: 1em; }
 
 .sb-tab:first-child {
   border-left: 1px solid #ccd1d9;
