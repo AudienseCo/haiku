@@ -1697,6 +1697,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--left .sb-tab:last-child
 {
+    border-bottom: 1px solid #ccd1d9; 
     border-top-right-radius: 0;
     border-bottom-left-radius: 4px;
 }
@@ -1730,6 +1731,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs--right .sb-tab
 {
     border-right: 1px solid #ccd1d9;
+    border-left: 0;
 }
 
 .sb-tabs--right .sb-tab-active:after
@@ -1749,6 +1751,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--right .sb-tab:last-child
 {
+    border-bottom: 1px solid #ccd1d9; 
     border-top-right-radius: 0;
     border-bottom-right-radius: 4px;
 }
