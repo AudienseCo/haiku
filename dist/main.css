@@ -2180,9 +2180,6 @@ n           Negative (margin only)
   padding-right: 3rem; }
 
 .with-caret {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   cursor: pointer; }
   .with-caret:after {
     border-left: 0.36em solid transparent;

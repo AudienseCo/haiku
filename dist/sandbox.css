@@ -2353,10 +2353,7 @@ n           Negative (margin only)
 
 .with-caret
 {
-    overflow: hidden;
-    cursor: pointer; 
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    cursor: pointer;
 }
 .with-caret:after
 {
