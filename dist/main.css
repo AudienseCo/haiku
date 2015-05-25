@@ -1233,6 +1233,9 @@ Surprise! A grid system with rows and columns. You can nest it the times you wan
   display: inline-block;
   vertical-align: middle; }
 
+.icon-text-aligned {
+  vertical-align: text-bottom; }
+
 .icon-twitter {
   fill: #55acee; }
 

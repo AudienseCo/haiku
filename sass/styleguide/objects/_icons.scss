@@ -14,6 +14,10 @@ $base-sizes: 16 18 20 30 35 40 45 50 55 60;
     vertical-align: middle;
 }
 
+.icon-text-aligned {
+    vertical-align: text-bottom;
+}
+
 .icon-twitter {
     fill: color($name: "twitter");
 }
