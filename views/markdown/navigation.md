@@ -61,3 +61,14 @@ Similar to the previous one but the tabs float to the right in this case. You ca
 
 {{ component('components/tabs/block-right.html') }}
 
+### Tabs on left
+
+In this case the tabs are not a block anymore and they are floating to the left side of the table. You can use the modifier `.sb-tabs--left`.
+
+{{ component('components/tabs/left.html') }}
+
+### Tabs on right
+
+Similar to the previous one but the tabs are floating to the right side of the table. You can use the modifier `.sb-tabs--right`.
+
+{{ component('components/tabs/right.html') }}
