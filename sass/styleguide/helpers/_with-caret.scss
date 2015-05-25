@@ -1,5 +1,4 @@
 .with-caret {
-    @include text-truncate;
     cursor: pointer;
 
     &:after {
