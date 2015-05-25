@@ -2351,4 +2351,28 @@ n           Negative (margin only)
     padding-left: 30px;
 }
 
+.with-caret
+{
+    overflow: hidden;
+    cursor: pointer; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.with-caret:after
+{
+    z-index: 1; 
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    content: '';
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    pointer-events: none;
+    border-top: .36em solid currentColor;
+    border-right: .36em solid transparent;
+    border-left: .36em solid transparent;
+}
+
 /* 7. Vendor */
