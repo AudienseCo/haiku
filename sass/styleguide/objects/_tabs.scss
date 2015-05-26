@@ -83,10 +83,15 @@ Navigation usually means list of links. And we have some flavours using distinct
     background-color: #fff;
     border-radius: 0 0 4px 4px;
     border: 1px solid color("border");
+    color: color("text", $hue: "dark");
+    display: none;
     padding: 1em;
     position: relative;
     z-index: 0;
-    color: color("text", $hue: "dark");
+}
+
+.sb-tabs-content-active {
+    display: block;
 }
 
 /* Tabs block bottom */
