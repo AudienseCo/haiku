@@ -1644,10 +1644,14 @@ Navigation usually means list of links. And we have some flavours using distinct
   background-color: #fff;
   border-radius: 0 0 4px 4px;
   border: 1px solid #ccd1d9;
+  color: #565656;
+  display: none;
   padding: 1em;
   position: relative;
-  z-index: 0;
-  color: #565656; }
+  z-index: 0; }
+
+.sb-tabs-content-active {
+  display: block; }
 
 /* Tabs block bottom */
 .sb-tabs--block-bottom .sb-tabs-group {
