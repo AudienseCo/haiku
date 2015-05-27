@@ -3,3 +3,5 @@
 /assets/svg/compressed/*
 public/stylesheets/*.css
 .idea
+*.sublime-project
+*.sublime-workspace
