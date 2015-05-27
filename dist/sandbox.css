@@ -306,7 +306,7 @@ Drop the files in a folder, update the path and the name and go.
     left: 15px;
     text-align: center;
     color: #565656;
-    border-radius: 4px;
+    border-radius: .4rem;
     background-color: #d5f2d1;
 }
 .acc-breadcrumb-item-amount:after,
@@ -368,7 +368,7 @@ Drop the files in a folder, update the path and the name and go.
     width: 100%; 
     height: 88px;
     text-align: center;
-    border-radius: 4px;
+    border-radius: .4rem;
     background-color: #d5f2d1;
 }
 
@@ -838,83 +838,83 @@ Grid
 
 Surprise! A grid system with rows and columns. You can nest it the times you want.
 
-<div class="row">
-  <div class="column">
+<div class="grid-row">
+  <div class="grid-column">
     <p class="demo-block">I'm a column. Full by default</p>
   </div>
-  <div class="column one-third">
+  <div class="grid-column one-third">
     <p class="demo-block">Boring one-third column</p>
   </div>
-  <div class="column two-thirds">
+  <div class="grid-column two-thirds">
     <p class="demo-block">Funny column two-third of width</p>
   </div>
 </div>
 
 */
-.row
+.grid-row
 {
     margin: 0;
     margin-left: -20px;
     padding: 0;
 }
 
-.column,
-.columns
+.grid-column,
+.grid-columns
 {
     float: left;
     width: 100%; 
     padding-left: 20px;
 }
 
-.row-reverse > .column,
-.row-reverse .columns
+.grid-row.reverse > .column,
+.grid-row.reverse .columns
 {
     float: right;
 }
 
-.row-full
+.grid-row.full
 {
     margin-left: 0;
 }
-.row-full > .column,
-.row-full .columns
+.grid-row.full > .grid-column,
+.grid-row.full .grid-columns
 {
     padding-left: 0;
 }
 
-.row-narrow
+.grid-row.narrow
 {
     margin-left: -10px;
 }
-.row-narrow > .column,
-.row-narrow .columns
+.grid-row.narrow > .grid-column,
+.grid-row.narrow .grid-columns
 {
     padding-left: 10px;
 }
 
-.row-wide
+.grid-row.wide
 {
     margin-left: -40px;
 }
-.row-wide > .column,
-.row-wide .columns
+.grid-row.wide > .grid-column,
+.grid-row.wide .grid-columns
 {
     padding-left: 40px;
 }
 
 /* Widths */
-.one.column
+.one.grid-column
 {
     width: 12.5%;
 }
 
-.two.columns,
+.two.grid-columns,
 .one-quarter
 {
     width: 25%;
 }
 
-.three.columns
+.three.grid-columns
 {
     width: 37.5%;
 }
@@ -924,13 +924,13 @@ Surprise! A grid system with rows and columns. You can nest it the times you wan
     width: 33.33%;
 }
 
-.four.columns,
+.four.grid-columns,
 .one-half
 {
     width: 50%;
 }
 
-.five.columns
+.five.grid-columns
 {
     width: 62.5%;
 }
@@ -940,18 +940,18 @@ Surprise! A grid system with rows and columns. You can nest it the times you wan
     width: 66.66%;
 }
 
-.six.columns,
+.six.grid-columns,
 .three-quarters
 {
     width: 75%;
 }
 
-.seven.columns
+.seven.grid-columns
 {
     width: 87.5%;
 }
 
-.eight.columns,
+.eight.grid-columns,
 .one-whole
 {
     width: 100%;
@@ -1862,9 +1862,9 @@ Clear floats utility.
 </div>
 
 */
-.row:before,
+.grid-row:before,
 .nav:before,
-.row:after,
+.grid-row:after,
 .nav:after,
 .clearfix:before,
 .breadcrumb:before,
@@ -1874,7 +1874,7 @@ Clear floats utility.
     display: table; 
     content: '';
 }
-.row:after,
+.grid-row:after,
 .nav:after,
 .clearfix:after,
 .breadcrumb:after
