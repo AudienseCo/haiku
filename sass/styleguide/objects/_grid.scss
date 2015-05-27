@@ -5,14 +5,14 @@ Grid
 
 Surprise! A grid system with rows and columns. You can nest it the times you want.
 
-<div class="row">
-  <div class="column">
+<div class="grid-row">
+  <div class="grid-column">
     <p class="demo-block">I'm a column. Full by default</p>
   </div>
-  <div class="column one-third">
+  <div class="grid-column one-third">
     <p class="demo-block">Boring one-third column</p>
   </div>
-  <div class="column two-thirds">
+  <div class="grid-column two-thirds">
     <p class="demo-block">Funny column two-third of width</p>
   </div>
 </div>
@@ -21,60 +21,60 @@ Surprise! A grid system with rows and columns. You can nest it the times you wan
 
 $gutter-width: 2rem !default;
 
-.row {
+.grid-row {
     @extend %clearfix;
     margin: 0;
     margin-left: -$gutter-width;
     padding: 0;
 }
 
-.column, .columns {
+.grid-column, .grid-columns {
     float: left;
     padding-left: $gutter-width;
     width: 100%;
 }
 
-.row-reverse {
+.grid-row.reverse {
     > .column, .columns {
         float: right;
     }
 }
 
-.row-full {
+.grid-row.full {
     margin-left:0;
 
-    > .column, .columns {
+    > .grid-column, .grid-columns {
         padding-left:0;
     }
 }
 
-.row-narrow {
+.grid-row.narrow {
     margin-left:-($gutter-width / 2);
 
-    > .column, .columns {
+    > .grid-column, .grid-columns {
         padding-left:$gutter-width / 2;
     }
 }
 
-.row-wide {
+.grid-row.wide {
     margin-left:-($gutter-width * 2);
 
-    > .column, .columns {
+    > .grid-column, .grid-columns {
         padding-left:$gutter-width * 2;
     }
 }
 
 /* Widths */
 
-.one.column {
+.one.grid-column {
     width: 12.5%;
 }
 
-.two.columns, .one-quarter {
+.two.grid-columns, .one-quarter {
     width: 25%;
 }
 
-.three.columns {
+.three.grid-columns {
     width: 37.5%;
 }
 
@@ -82,11 +82,11 @@ $gutter-width: 2rem !default;
     width: 33.33%;
 }
 
-.four.columns, .one-half {
+.four.grid-columns, .one-half {
     width: 50%;
 }
 
-.five.columns {
+.five.grid-columns {
     width: 62.5%;
 }
 
@@ -94,14 +94,14 @@ $gutter-width: 2rem !default;
     width: 66.66%;
 }
 
-.six.columns, .three-quarters {
+.six.grid-columns, .three-quarters {
     width: 75%;
 }
 
-.seven.columns {
+.seven.grid-columns {
     width: 87.5%;
 }
 
-.eight.columns, .one-whole {
+.eight.grid-columns, .one-whole {
     width: 100%;
 }
