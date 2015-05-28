@@ -1887,6 +1887,11 @@ Clear floats utility.
     color: #d60f36;
 }
 
+.color-text-sd
+{
+    color: #b1b1b1;
+}
+
 .cursor-pointer
 {
     cursor: pointer;
