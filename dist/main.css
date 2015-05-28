@@ -1870,6 +1870,9 @@ Clear floats utility.
 .grid-row:after, .nav:after, .clearfix:after, .breadcrumb:after {
   clear: both; }
 
+.color-error {
+  color: #d60f36; }
+
 .cursor-pointer {
   cursor: pointer; }
 
