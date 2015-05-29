@@ -70,3 +70,31 @@ $btn-base-v-padding:   ($btn-base-height - $btn-base-line-height)/2;
 // Generate exception buttons
 @include btn($name: "contrast", $background: color("background", $hue: "light"), $border: color("border"), $hover: color("background"));
 @include btn($name: "skip", $background: color("text", $variant: "secondary"), $border: darken(color("text", $variant: "secondary"), 5%), $hover: lighten(color("text", $variant: "secondary"), 5%), $text: white);
+
+// Button grouping
+
+.btn-group .btn {
+    float:left;
+}
+
+.btn-group > .btn:first-child {
+    margin-left: 0;
+}
+
+.btn-group > .btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group .btn + .btn {
+    margin-left: -1px;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.btn-group > .btn:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
