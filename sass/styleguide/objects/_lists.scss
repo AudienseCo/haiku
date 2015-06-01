@@ -1,0 +1,28 @@
+.sb-list {
+    display: block;
+    padding: .5rem 0;
+
+    &.non-selectable .sb-list-item {
+        cursor: normal;
+
+        &:hover {
+            background-color: inherit;
+            border-bottom: 1px solid transparent;
+            border-top: 1px solid transparent;
+        }
+    }
+}
+
+.sb-list-item {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+    line-height: 2;
+    padding: 0 1.5rem;
+
+    &:hover {
+        background-color: color($name: "socialbro", $variant: "tertiary");
+        border-bottom: 1px solid color($name: "socialbro");
+        border-top: 1px solid color($name: "socialbro");
+    }
+}
