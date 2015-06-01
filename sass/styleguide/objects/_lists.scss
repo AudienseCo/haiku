@@ -1,5 +1,7 @@
 .sb-list {
     display: block;
+    list-style: none;
+    margin: 0;
     padding: .5rem 0;
 
     &.non-selectable .sb-list-item {

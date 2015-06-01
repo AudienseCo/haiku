@@ -1270,6 +1270,8 @@ Use this structure to justify columns inside a container.
 
 .sb-list {
   display: block;
+  list-style: none;
+  margin: 0;
   padding: 0.5rem 0; }
   .sb-list.non-selectable .sb-list-item {
     cursor: normal; }

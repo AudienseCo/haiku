@@ -1579,7 +1579,9 @@ Use this object to show an image and some text rendered in two columns.
 .sb-list
 {
     display: block;
-    padding: 5px 0;
+    margin: 0;
+    padding: 5px 0; 
+    list-style: none;
 }
 .sb-list.non-selectable .sb-list-item
 {
