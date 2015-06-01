@@ -2201,7 +2201,6 @@ n           Negative (margin only)
     content: "";
     display: inline-block;
     height: 0;
-    margin-left: 0.5rem;
     pointer-events: none;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
