@@ -1290,6 +1290,10 @@ Use this structure to justify columns inside a container.
     background-color: #c1eff3;
     border-bottom: 1px solid #29c4d0;
     border-top: 1px solid #29c4d0; }
+  .sb-list-item > a {
+    color: inherit;
+    display: block;
+    text-decoration: none; }
 
 /*
 

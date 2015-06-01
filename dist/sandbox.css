@@ -1608,6 +1608,12 @@ Use this object to show an image and some text rendered in two columns.
     border-bottom: 1px solid #29c4d0;
     background-color: #c1eff3;
 }
+.sb-list-item > a
+{
+    display: block;
+    text-decoration: none; 
+    color: inherit;
+}
 
 /*
 
