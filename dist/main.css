@@ -1027,7 +1027,6 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
   border-collapse: separate;
   border-width: 0;
   display: inline-table;
-  overflow: hidden;
   width: 20rem; }
   .input-group .input-label + .input-base {
     border-width: 1px;
