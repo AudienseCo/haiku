@@ -1198,7 +1198,6 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group
 {
     display: inline-table;
-    overflow: hidden;
     width: 200px; 
     border-collapse: separate;
     border-width: 0;

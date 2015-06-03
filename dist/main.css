@@ -1060,7 +1060,6 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
   border-collapse: separate;
   border-width: 0;
   display: inline-table;
-  overflow: hidden;
   width: 20rem; }
   .input-group .input-label + .input-base {
     border-width: 1px;
