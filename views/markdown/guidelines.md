@@ -45,7 +45,7 @@ Naming conventions are a team decision. Currently we are not following strict na
 ## Units
 
 The favorite unit to use in styleguide is `rem`.
-Then, a grun task ([grunt-pixrem](https://github.com/robwierzbowski/grunt-pixrem)) try to conver to `px in build to be compatible with SocialBro.
+Then, a grun task ([grunt-pixrem](https://github.com/robwierzbowski/grunt-pixrem)) try to convert to `px` in build to be compatible with SocialBro.
 
 The following rules **will no be converted**, so avoid use of `rem` on them:
 
