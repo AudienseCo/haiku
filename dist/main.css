@@ -963,6 +963,39 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
   .btn-skip:active, .btn-skip.active {
     background: #acacac; }
 
+/*
+
+Dropdown toggler
+----------------
+
+Base button to normalize behaviour. It renders the same for links, buttons or inputs type submit. Every other button style should extend this object.
+
+    <a href=# class="dropdown-toggler">Show settings options</a>
+
+*/
+.dropdown-toggler {
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.4rem 0.3rem;
+  vertical-align: text-top; }
+
+.dropdown-toggler:before {
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-top: 0.4rem solid #444;
+  content: '';
+  display: inline-block;
+  height: 0;
+  width: 0; }
+
 .input-base {
   background-color: #ffffff;
   border-radius: 3px;
@@ -1074,39 +1107,6 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     background-color: #ffe6e6;
     border-color: #cc8383;
     color: #cc8383; }
-
-/*
-
-Dropdown toggler
-----------------
-
-Base button to normalize behaviour. It renders the same for links, buttons or inputs type submit. Every other button style should extend this object.
-
-    <a href=# class="dropdown-toggler">Show settings options</a>
-
-*/
-.dropdown-toggler {
-  border: 0;
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none;
-  background-color: #fff;
-  border-radius: 3px;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-  padding: 0.4rem 0.3rem;
-  vertical-align: text-top; }
-
-.dropdown-toggler:before {
-  border-left: 0.4rem solid transparent;
-  border-right: 0.4rem solid transparent;
-  border-top: 0.4rem solid #444;
-  content: '';
-  display: inline-block;
-  height: 0;
-  width: 0; }
 
 /*
 
@@ -1267,6 +1267,33 @@ Use this structure to justify columns inside a container.
   display: inline-block;
   vertical-align: top; }
 
+.sb-list {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0; }
+  .sb-list.non-selectable .sb-list-item {
+    cursor: normal; }
+    .sb-list.non-selectable .sb-list-item:hover {
+      background-color: inherit;
+      border-bottom: 1px solid transparent;
+      border-top: 1px solid transparent; }
+
+.sb-list-item {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+  line-height: 2;
+  padding: 0 1.5rem; }
+  .sb-list-item:hover {
+    background-color: #c1eff3;
+    border-bottom: 1px solid #29c4d0;
+    border-top: 1px solid #29c4d0; }
+  .sb-list-item > a {
+    color: inherit;
+    display: block;
+    text-decoration: none; }
+
 /*
 
 Media object
@@ -1341,25 +1368,6 @@ Navigation usually means list of links. And we have some flavours using distinct
     .nav-fit > li > a {
       display: block; }
 
-.panel {
-  background-color: #ffffff;
-  border-radius: 3px;
-  border: 1px solid #d6d6d6;
-  display: inline-block;
-  overflow: hidden; }
-
-.panel-header {
-  background-color: #f6f6f6;
-  padding: 1.2rem 1.5rem; }
-
-.panel-header-title {
-  color: #000000;
-  font-size: 1.8rem;
-  font-weight: normal; }
-
-.panel-body {
-  padding: 1rem 1.5rem; }
-
 /*
 
 Pagination
@@ -1411,6 +1419,25 @@ Pagination pattern.
 
 .pagination-next {
   border-radius: 0 4px 4px 0; }
+
+.panel {
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #d6d6d6;
+  display: inline-block;
+  overflow: hidden; }
+
+.panel-header {
+  background-color: #f6f6f6;
+  padding: 1.2rem 1.5rem; }
+
+.panel-header-title {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: normal; }
+
+.panel-body {
+  padding: 1rem 1.5rem; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name

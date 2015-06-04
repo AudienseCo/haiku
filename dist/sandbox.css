@@ -1575,6 +1575,45 @@ Use this object to show an image and some text rendered in two columns.
     width: 100%;
 }
 
+.sb-list
+{
+    display: block;
+    margin: 0;
+    padding: 5px 0; 
+    list-style: none;
+}
+.sb-list.non-selectable .sb-list-item
+{
+    cursor: normal;
+}
+.sb-list.non-selectable .sb-list-item:hover
+{
+    border-top: 1px solid transparent; 
+    border-bottom: 1px solid transparent;
+    background-color: inherit;
+}
+
+.sb-list-item
+{
+    line-height: 2;
+    padding: 0 15px; 
+    cursor: pointer;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.sb-list-item:hover
+{
+    border-top: 1px solid #29c4d0; 
+    border-bottom: 1px solid #29c4d0;
+    background-color: #c1eff3;
+}
+.sb-list-item > a
+{
+    display: block;
+    text-decoration: none; 
+    color: inherit;
+}
+
 /*
 
 Navigation menu
