@@ -161,7 +161,7 @@ $total-amount-height: 8.8rem;
 // Amount legend
 .acc-breadcrumb-item-amount {
     background-color: color($name: 'succeed', $variant: 'tertiary', $hue: 'dark');
-    border-radius: .4rem;
+    border-radius: 4px;
     bottom: $amount-legend-separation;
     color: color($name: 'text', $hue: 'dark');
     font-size: 1.1rem;
@@ -224,7 +224,7 @@ $total-amount-height: 8.8rem;
 // Total amount shown in the last item
 .acc-breadcrumb-item-total {
     background-color: color($name: 'succeed', $variant: 'tertiary', $hue: 'dark');
-    border-radius: .4rem;
+    border-radius: 4px;
     display: table;
     height: $total-amount-height;
     line-height: 1;
