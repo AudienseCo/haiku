@@ -714,7 +714,7 @@ p {
 
 .acc-breadcrumb-item-amount {
   background-color: #d5f2d1;
-  border-radius: 0.4rem;
+  border-radius: 4px;
   bottom: 1.5rem;
   color: #565656;
   font-size: 1.1rem;
@@ -762,7 +762,7 @@ p {
 
 .acc-breadcrumb-item-total {
   background-color: #d5f2d1;
-  border-radius: 0.4rem;
+  border-radius: 4px;
   display: table;
   height: 8.8rem;
   line-height: 1;
