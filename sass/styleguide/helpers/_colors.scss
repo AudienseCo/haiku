@@ -6,6 +6,11 @@
     color: color($name: "text");
 }
 
+.color-text-l {
+    color: color($name: "text", $hue: "light");
+}
+
+
 .color-text-sd {
     color: color($name: "text", $variant: "secondary", $hue: "dark");
 }
