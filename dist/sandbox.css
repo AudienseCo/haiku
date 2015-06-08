@@ -2373,6 +2373,11 @@ Clear floats utility.
     color: #191919;
 }
 
+.color-titles-secondary
+{
+    color: #8a4fa2;
+}
+
 .cursor-pointer
 {
     cursor: pointer;

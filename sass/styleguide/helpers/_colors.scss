@@ -9,3 +9,7 @@
 .color-titles {
     color: color($name: "titles");
 }
+
+.color-titles-secondary {
+    color: color($name: "titles", $variant: "secondary");
+}
