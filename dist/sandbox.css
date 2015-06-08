@@ -2368,6 +2368,11 @@ Clear floats utility.
     color: #b1b1b1;
 }
 
+.color-titles
+{
+    color: #191919;
+}
+
 .cursor-pointer
 {
     cursor: pointer;

@@ -5,3 +5,7 @@
 .color-text-sd {
     color: color($name: "text", $variant: "secondary", $hue: "dark");
 }
+
+.color-titles {
+    color: color($name: "titles");
+}
