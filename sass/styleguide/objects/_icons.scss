@@ -8,7 +8,6 @@ $base-sizes: 16 18 20 30 35 40 45 50 55 60;
 }
 
 [class^="icon"] {
-    @extend .icon-4;
     fill: currentColor;
     display: inline-block;
     vertical-align: middle;

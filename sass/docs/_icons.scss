@@ -16,6 +16,11 @@ $icon-label-height: 2.8rem;
     position: relative;
     text-align: center;
     width: 12.5rem;
+
+    & > [class^="icon"]:not([class^="icon-container"]) {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .icon-container-name {
