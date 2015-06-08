@@ -2,6 +2,10 @@
     color: color($name: "error");
 }
 
+.color-text {
+    color: color($name: "text");
+}
+
 .color-text-sd {
     color: color($name: "text", $variant: "secondary", $hue: "dark");
 }
