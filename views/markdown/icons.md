@@ -3,7 +3,7 @@
 Using SVG icons, an image format for vector graphics, we make our CSS more and more modular, structured and flexible. Instead of a icon font, we go for SVG sprite maps. To use an icon you just have to declare an `svg` node with a class `.icon` to inherit the base icon properties. Then, inside the node include a `use` tag with a reference to the sprite map and the shape you want to use. For example, to include *socialbro* icon you need to write:
 
 ```html
-<svg viewBox="0 0 100 100" class="icon">
+<svg class="icon">
   <use xlink:href="/svg-defs.svg#icon-socialbro"></use>
 </svg>
 ```
