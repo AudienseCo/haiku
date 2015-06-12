@@ -1,7 +1,5 @@
 .panel {
-    background-color: color($name: "background", $hue: "light");
-    border-radius: 3px;
-    border: 1px solid color($name: "border", $variant: "secondary");
+    @include standard-container;
     display: inline-block;
     overflow: hidden;
 }
