@@ -1,8 +1,9 @@
 /*
 
-Sandbox
+Sandbox stylesheet to integrate with Socialbro
 -------
 
+The areas commented files are not integrated yet in Socialbro. All should be uncommented as soon as possible.
 This library is divided in the following sections:
 
 1.  Reset removes all the default styles on the page to start building using
@@ -11,14 +12,14 @@ This library is divided in the following sections:
 2.  Generic parts that load variables, functions and mixins. Use thisfolder for code that
     is applied all over the app but it is not specific to a base element or an object.
 
-3.  Helpers and useful chunks of code that do not fit in an object and it is generic enough.
+3.  Base elements are the building blocks of the page. Paragraphs, lists, images and so on.
+
+4.  Objects refer to each individual block that builds parts of the app.
+
+5.  Layout styles like background colors or images, usually they are refered as sections inside the dom html.
+
+6.  Helpers and useful chunks of code that do not fit in an object and it is generic enough.
     If possible, create objects.
-
-4.  Base elements are the building blocks of the page. Paragraphs, lists, images and so on.
-
-5.  Objects refer to each individual block that builds parts of the app.
-
-6.  Layout styles like background colors or images, usually they are refered as sections inside the dom html.
 
 7.  Vendor is code that other Javascript libraries use and do not tend to follow the OOCSS approach.
 
@@ -465,12 +466,6 @@ th
 /* 2. Core */
 /*
 
-Variables, colors and other stuff
----------------------------------
-
-*/
-/*
-
 Functions
 ---------
 
@@ -591,6 +586,22 @@ Responsive mixin
   @include min-screen(320) {
     width: 300px;
   }
+
+*/
+/*
+
+Standard container
+----------------
+
+    .menu {
+        @include standard-container;
+    }
+
+*/
+/*
+
+Variables, colors and other stuff
+---------------------------------
 
 */
 /* 3. Base */
@@ -1268,78 +1279,54 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     background-color: #ffe6e6;
 }
 
-/*
-
-Grid
-----
-
-Surprise! A grid system with rows and columns. You can nest it the times you want.
-
-<div class="grid-row">
-  <div class="grid-column">
-    <p class="demo-block">I'm a column. Full by default</p>
-  </div>
-  <div class="grid-column one-third">
-    <p class="demo-block">Boring one-third column</p>
-  </div>
-  <div class="grid-column two-thirds">
-    <p class="demo-block">Funny column two-third of width</p>
-  </div>
-</div>
-
-*/
 .grid-row
 {
-    margin: 0;
+    margin-right: -10px; 
+    margin-left: -10px;
+}
+.grid-row > .grid-column,
+.grid-row .grid-columns
+{
+    padding: 0 10px;
+}
+.grid-row.full
+{
+    margin-right: 0; 
+    margin-left: 0;
+}
+.grid-row.full > .grid-column,
+.grid-row.full .grid-columns
+{
+    padding: 0 0;
+}
+.grid-row.narrow
+{
+    margin-right: -5px; 
+    margin-left: -5px;
+}
+.grid-row.narrow > .grid-column,
+.grid-row.narrow .grid-columns
+{
+    padding: 0 5px;
+}
+.grid-row.wide
+{
+    margin-right: -20px; 
     margin-left: -20px;
-    padding: 0;
+}
+.grid-row.wide > .grid-column,
+.grid-row.wide .grid-columns
+{
+    padding: 0 20px;
 }
 
 .grid-column,
 .grid-columns
 {
     float: left;
-    width: 100%; 
-    padding-left: 20px;
+    width: 100%;
 }
 
-.grid-row.reverse > .column,
-.grid-row.reverse .columns
-{
-    float: right;
-}
-
-.grid-row.full
-{
-    margin-left: 0;
-}
-.grid-row.full > .grid-column,
-.grid-row.full .grid-columns
-{
-    padding-left: 0;
-}
-
-.grid-row.narrow
-{
-    margin-left: -10px;
-}
-.grid-row.narrow > .grid-column,
-.grid-row.narrow .grid-columns
-{
-    padding-left: 10px;
-}
-
-.grid-row.wide
-{
-    margin-left: -40px;
-}
-.grid-row.wide > .grid-column,
-.grid-row.wide .grid-columns
-{
-    padding-left: 40px;
-}
-
-/* Widths */
 .one.grid-column
 {
     width: 12.5%;
@@ -1509,6 +1496,56 @@ Use this structure to justify columns inside a container.
     vertical-align: top;
 }
 
+.menu-list
+{
+    display: block;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    white-space: nowrap;
+}
+.menu-list.non-selectable .menu-list-item
+{
+    cursor: normal;
+}
+.menu-list.non-selectable .menu-list-item:hover
+{
+    border-top: 1px solid transparent; 
+    border-bottom: 1px solid transparent;
+    background-color: inherit;
+}
+
+.menu-list-item
+{
+    line-height: 1.5;
+    display: block;
+    padding: 3px 15px; 
+    cursor: pointer;
+    color: #565656;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.menu-list-item:hover
+{
+    text-decoration: none; 
+    border-top: 1px solid #29c4d0;
+    border-bottom: 1px solid #29c4d0;
+    background-color: #c1eff3;
+}
+.menu-list-item > a
+{
+    display: block;
+    text-decoration: none; 
+    color: inherit;
+}
+.menu-list-item > [class^='icon']
+{
+    width: 1.3em; 
+    height: 1.5em;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
 /*
 
 Media object
@@ -1575,43 +1612,399 @@ Use this object to show an image and some text rendered in two columns.
     width: 100%;
 }
 
-.sb-list
+.menu,
+.menu-bubble-top,
+.menu-bubble-bottom,
+.menu-bubble-top-right,
+.menu-bubble-top-left,
+.menu-bubble-bottom-right,
+.menu-bubble-bottom-left
 {
-    display: block;
-    margin: 0;
-    padding: 5px 0; 
-    list-style: none;
-}
-.sb-list.non-selectable .sb-list-item
-{
-    cursor: normal;
-}
-.sb-list.non-selectable .sb-list-item:hover
-{
-    border-top: 1px solid transparent; 
-    border-bottom: 1px solid transparent;
-    background-color: inherit;
+    display: block; 
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
 }
 
-.sb-list-item
+.menu-bubble-top
 {
-    line-height: 2;
-    padding: 0 15px; 
-    cursor: pointer;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    position: absolute;
+    margin-top: 12px;
 }
-.sb-list-item:hover
+.menu-bubble-top:before,
+.menu-bubble-top:after
 {
-    border-top: 1px solid #29c4d0; 
-    border-bottom: 1px solid #29c4d0;
-    background-color: #c1eff3;
-}
-.sb-list-item > a
-{
+    position: absolute;
     display: block;
-    text-decoration: none; 
-    color: inherit;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.menu-bubble-top:before,
+.menu-bubble-top:after
+{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); 
+    border-width: 0 12px 12px 12px;
+}
+.menu-bubble-top:before
+{
+    top: -12px; 
+    border-color: transparent transparent #d6d6d6 transparent;
+}
+.menu-bubble-top:after
+{
+    top: -11px; 
+    border-color: transparent transparent white transparent;
+}
+
+.menu-bubble-bottom
+{
+    position: absolute;
+    margin-bottom: 12px;
+}
+.menu-bubble-bottom:before,
+.menu-bubble-bottom:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.menu-bubble-bottom:before,
+.menu-bubble-bottom:after
+{
+    left: 50%;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    border-width: 0 17px 17px 0;
+}
+.menu-bubble-bottom:before
+{
+    bottom: -17px;
+    border-color: transparent transparent #d6d6d6 #d6d6d6;
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.menu-bubble-bottom:after
+{
+    bottom: -16px; 
+    border-color: transparent transparent white white;
+}
+
+.menu-bubble-top-right
+{
+    position: absolute;
+    margin-top: 12px;
+}
+.menu-bubble-top-right:before,
+.menu-bubble-top-right:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.menu-bubble-top-right:before,
+.menu-bubble-top-right:after
+{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); 
+    border-width: 0 12px 12px 12px;
+}
+.menu-bubble-top-right:before
+{
+    top: -12px; 
+    border-color: transparent transparent #d6d6d6 transparent;
+}
+.menu-bubble-top-right:after
+{
+    top: -11px; 
+    border-color: transparent transparent white transparent;
+}
+.menu-bubble-top-right:before,
+.menu-bubble-top-right:after
+{
+    right: 35px;
+    left: auto;
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+}
+
+.menu-bubble-top-left
+{
+    position: absolute;
+    margin-top: 12px;
+}
+.menu-bubble-top-left:before,
+.menu-bubble-top-left:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.menu-bubble-top-left:before,
+.menu-bubble-top-left:after
+{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); 
+    border-width: 0 12px 12px 12px;
+}
+.menu-bubble-top-left:before
+{
+    top: -12px; 
+    border-color: transparent transparent #d6d6d6 transparent;
+}
+.menu-bubble-top-left:after
+{
+    top: -11px; 
+    border-color: transparent transparent white transparent;
+}
+.menu-bubble-top-left:before,
+.menu-bubble-top-left:after
+{
+    left: 35px;
+}
+
+.menu-bubble-bottom-right
+{
+    position: absolute;
+    margin-bottom: 12px;
+}
+.menu-bubble-bottom-right:before,
+.menu-bubble-bottom-right:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.menu-bubble-bottom-right:before,
+.menu-bubble-bottom-right:after
+{
+    left: 50%;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    border-width: 0 17px 17px 0;
+}
+.menu-bubble-bottom-right:before
+{
+    bottom: -17px;
+    border-color: transparent transparent #d6d6d6 #d6d6d6;
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.menu-bubble-bottom-right:after
+{
+    bottom: -16px; 
+    border-color: transparent transparent white white;
+}
+.menu-bubble-bottom-right:before,
+.menu-bubble-bottom-right:after
+{
+    right: 35px;
+    left: auto;
+    -webkit-transform: rotate(-45deg) translateX(25%) translateY(25%);
+        -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
+            transform: rotate(-45deg) translateX(25%) translateY(25%);
+}
+
+.menu-bubble-bottom-left
+{
+    position: absolute;
+    margin-bottom: 12px;
+}
+.menu-bubble-bottom-left:before,
+.menu-bubble-bottom-left:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.menu-bubble-bottom-left:before,
+.menu-bubble-bottom-left:after
+{
+    left: 50%;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    border-width: 0 17px 17px 0;
+}
+.menu-bubble-bottom-left:before
+{
+    bottom: -17px;
+    border-color: transparent transparent #d6d6d6 #d6d6d6;
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.menu-bubble-bottom-left:after
+{
+    bottom: -16px; 
+    border-color: transparent transparent white white;
+}
+.menu-bubble-bottom-left:before,
+.menu-bubble-bottom-left:after
+{
+    left: 35px;
+}
+
+.menu-align-top
+{
+    position: relative; 
+    display: inline-block;
+}
+.menu-align-top > .menu
+{
+    position: absolute;
+}
+.menu-align-top > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
+.menu-align-top > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble'])
+{
+    margin-bottom: 5px;
+}
+.menu-align-top > .menu
+{
+    bottom: 100%;
+}
+.menu-align-top > .menu
+{
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+.menu-align-top > .menu-bubble-top-left,
+.menu-align-top .menu-bubble-bottom-left
+{
+    -webkit-transform: translate(-35px);
+        -ms-transform: translate(-35px);
+            transform: translate(-35px);
+}
+.menu-align-top > .menu-bubble-top-right,
+.menu-align-top .menu-bubble-bottom-right
+{
+    right: 50%;
+    left: auto;
+    -webkit-transform: translate(35px);
+        -ms-transform: translate(35px);
+            transform: translate(35px);
+}
+
+.menu-align-bottom
+{
+    position: relative; 
+    display: inline-block;
+}
+.menu-align-bottom > .menu
+{
+    position: absolute;
+}
+.menu-align-bottom > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
+.menu-align-bottom > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble'])
+{
+    margin-top: 5px;
+}
+.menu-align-bottom > .menu
+{
+    top: 100%;
+}
+.menu-align-bottom > .menu
+{
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+.menu-align-bottom > .menu-bubble-top-left,
+.menu-align-bottom .menu-bubble-bottom-left
+{
+    -webkit-transform: translate(-35px);
+        -ms-transform: translate(-35px);
+            transform: translate(-35px);
+}
+.menu-align-bottom > .menu-bubble-top-right,
+.menu-align-bottom .menu-bubble-bottom-right
+{
+    right: 50%;
+    left: auto;
+    -webkit-transform: translate(35px);
+        -ms-transform: translate(35px);
+            transform: translate(35px);
+}
+
+.menu-align-bottom-right
+{
+    position: relative; 
+    display: inline-block;
+}
+.menu-align-bottom-right > .menu
+{
+    position: absolute;
+}
+.menu-align-bottom-right > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
+.menu-align-bottom-right > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble'])
+{
+    margin-top: 5px;
+}
+.menu-align-bottom-right > .menu
+{
+    top: 100%;
+}
+.menu-align-bottom-right > .menu
+{
+    right: 0;
+}
+
+.menu-align-bottom-left
+{
+    position: relative; 
+    display: inline-block;
+}
+.menu-align-bottom-left > .menu
+{
+    position: absolute;
+}
+.menu-align-bottom-left > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
+.menu-align-bottom-left > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble'])
+{
+    margin-top: 5px;
+}
+.menu-align-bottom-left > .menu
+{
+    top: 100%;
+}
+.menu-align-bottom-left > .menu
+{
+    left: 0;
 }
 
 /*
@@ -1659,7 +2052,7 @@ Navigation usually means list of links. And we have some flavours using distinct
     display: inline-block;
     overflow: hidden; 
     border: 1px solid #d6d6d6;
-    border-radius: 3px;
+    border-radius: 4px;
     background-color: #fff;
 }
 
@@ -2503,6 +2896,52 @@ Hides an element, normally remove after some user interaction through javascript
     display: none;
 }
 
+.di
+{
+    display: inline;
+}
+
+.db
+{
+    display: block;
+}
+
+.dib
+{
+    display: inline-block;
+}
+
+.dibm
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dt
+{
+    display: table;
+    width: 100%;
+}
+
+.dtc
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dtct
+{
+    display: table-cell;
+    vertical-align: top;
+}
+
+.dtf
+{
+    display: table;
+    width: 100%; 
+    table-layout: fixed;
+}
+
 /*
 
 No scroll
@@ -2611,6 +3050,21 @@ Width in percents for all elements. Supported values are 5% to 100% in steps of 
 .percent.hundred
 {
     width: 100% !important;
+}
+
+.prel
+{
+    position: relative;
+}
+
+.pabs
+{
+    position: absolute;
+}
+
+.pst
+{
+    position: static;
 }
 
 /*
