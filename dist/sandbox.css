@@ -1034,6 +1034,10 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     cursor: not-allowed;
     opacity: .5;
 }
+.btn.with-caret:after
+{
+    margin-left: 3px;
+}
 
 .btn-primary
 {
@@ -1449,6 +1453,16 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     fill: currentColor;
 }
 
+.icon-text,
+.btn > [class^='icon'],
+.menu-list-item > [class^='icon']
+{
+    width: 1.3em; 
+    height: 1.5em;
+    margin-right: 3px;
+    vertical-align: bottom;
+}
+
 .icon-text-aligned
 {
     vertical-align: text-bottom;
@@ -1537,13 +1551,6 @@ Use this structure to justify columns inside a container.
     display: block;
     text-decoration: none; 
     color: inherit;
-}
-.menu-list-item > [class^='icon']
-{
-    width: 1.3em; 
-    height: 1.5em;
-    margin-right: 5px;
-    vertical-align: bottom;
 }
 
 /*
