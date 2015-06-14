@@ -1351,7 +1351,7 @@ Use this object to show an image and some text rendered in two columns.
 
 .sb-menu-bubble-top {
   position: absolute;
-  margin-top: 12px; }
+  margin-top: 10px; }
   .sb-menu-bubble-top:before, .sb-menu-bubble-top:after {
     border-style: solid;
     content: '';
@@ -1360,21 +1360,21 @@ Use this object to show an image and some text rendered in two columns.
     position: absolute;
     width: 0; }
   .sb-menu-bubble-top:before, .sb-menu-bubble-top:after {
-    border-width: 0 12px 12px 12px;
+    border-width: 0 10px 10px 10px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
   .sb-menu-bubble-top:before {
     border-color: transparent transparent #d6d6d6 transparent;
-    top: -12px; }
+    top: -10px; }
   .sb-menu-bubble-top:after {
     border-color: transparent transparent white transparent;
-    top: -11px; }
+    top: -9px; }
 
 .sb-menu-bubble-bottom {
   position: absolute;
-  margin-bottom: 12px; }
+  margin-bottom: 10px; }
   .sb-menu-bubble-bottom:before, .sb-menu-bubble-bottom:after {
     border-style: solid;
     content: '';
@@ -1383,7 +1383,7 @@ Use this object to show an image and some text rendered in two columns.
     position: absolute;
     width: 0; }
   .sb-menu-bubble-bottom:before, .sb-menu-bubble-bottom:after {
-    border-width: 0 17px 17px 0;
+    border-width: 0 15px 15px 0;
     left: 50%;
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
@@ -1393,15 +1393,15 @@ Use this object to show an image and some text rendered in two columns.
             transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
-    bottom: -17px;
+    bottom: -15px;
     box-shadow: -2px 2px 3px 0px rgba(0, 0, 0, 0.1); }
   .sb-menu-bubble-bottom:after {
     border-color: transparent transparent white white;
-    bottom: -16px; }
+    bottom: -14px; }
 
 .sb-menu-bubble-top-right {
   position: absolute;
-  margin-top: 12px; }
+  margin-top: 10px; }
   .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     border-style: solid;
     content: '';
@@ -1410,27 +1410,27 @@ Use this object to show an image and some text rendered in two columns.
     position: absolute;
     width: 0; }
   .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
-    border-width: 0 12px 12px 12px;
+    border-width: 0 10px 10px 10px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
   .sb-menu-bubble-top-right:before {
     border-color: transparent transparent #d6d6d6 transparent;
-    top: -12px; }
+    top: -10px; }
   .sb-menu-bubble-top-right:after {
     border-color: transparent transparent white transparent;
-    top: -11px; }
+    top: -9px; }
   .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     left: auto;
-    right: 3.5rem;
+    right: 2.2rem;
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
             transform: translateX(50%); }
 
 .sb-menu-bubble-top-left {
   position: absolute;
-  margin-top: 12px; }
+  margin-top: 10px; }
   .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
     border-style: solid;
     content: '';
@@ -1439,23 +1439,23 @@ Use this object to show an image and some text rendered in two columns.
     position: absolute;
     width: 0; }
   .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
-    border-width: 0 12px 12px 12px;
+    border-width: 0 10px 10px 10px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
   .sb-menu-bubble-top-left:before {
     border-color: transparent transparent #d6d6d6 transparent;
-    top: -12px; }
+    top: -10px; }
   .sb-menu-bubble-top-left:after {
     border-color: transparent transparent white transparent;
-    top: -11px; }
+    top: -9px; }
   .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
-    left: 3.5rem; }
+    left: 2.2rem; }
 
 .sb-menu-bubble-bottom-right {
   position: absolute;
-  margin-bottom: 12px; }
+  margin-bottom: 10px; }
   .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     border-style: solid;
     content: '';
@@ -1464,7 +1464,7 @@ Use this object to show an image and some text rendered in two columns.
     position: absolute;
     width: 0; }
   .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
-    border-width: 0 17px 17px 0;
+    border-width: 0 15px 15px 0;
     left: 50%;
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
@@ -1474,21 +1474,21 @@ Use this object to show an image and some text rendered in two columns.
             transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom-right:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
-    bottom: -17px;
+    bottom: -15px;
     box-shadow: -2px 2px 3px 0px rgba(0, 0, 0, 0.1); }
   .sb-menu-bubble-bottom-right:after {
     border-color: transparent transparent white white;
-    bottom: -16px; }
+    bottom: -14px; }
   .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     left: auto;
-    right: 3.5rem;
+    right: 2.2rem;
     -webkit-transform: rotate(-45deg) translateX(25%) translateY(25%);
         -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
             transform: rotate(-45deg) translateX(25%) translateY(25%); }
 
 .sb-menu-bubble-bottom-left {
   position: absolute;
-  margin-bottom: 12px; }
+  margin-bottom: 10px; }
   .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
     border-style: solid;
     content: '';
@@ -1497,7 +1497,7 @@ Use this object to show an image and some text rendered in two columns.
     position: absolute;
     width: 0; }
   .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
-    border-width: 0 17px 17px 0;
+    border-width: 0 15px 15px 0;
     left: 50%;
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
@@ -1507,13 +1507,13 @@ Use this object to show an image and some text rendered in two columns.
             transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom-left:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
-    bottom: -17px;
+    bottom: -15px;
     box-shadow: -2px 2px 3px 0px rgba(0, 0, 0, 0.1); }
   .sb-menu-bubble-bottom-left:after {
     border-color: transparent transparent white white;
-    bottom: -16px; }
+    bottom: -14px; }
   .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
-    left: 3.5rem; }
+    left: 2.2rem; }
 
 .sb-menu-align-top {
   display: inline-block;
@@ -1530,15 +1530,15 @@ Use this object to show an image and some text rendered in two columns.
         -ms-transform: translate(-50%);
             transform: translate(-50%); }
   .sb-menu-align-top > .sb-menu-bubble-top-left, .sb-menu-align-top .sb-menu-bubble-bottom-left {
-    -webkit-transform: translate(-3.5rem);
-        -ms-transform: translate(-3.5rem);
-            transform: translate(-3.5rem); }
+    -webkit-transform: translate(-2.2rem);
+        -ms-transform: translate(-2.2rem);
+            transform: translate(-2.2rem); }
   .sb-menu-align-top > .sb-menu-bubble-top-right, .sb-menu-align-top .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
-    -webkit-transform: translate(3.5rem);
-        -ms-transform: translate(3.5rem);
-            transform: translate(3.5rem); }
+    -webkit-transform: translate(2.2rem);
+        -ms-transform: translate(2.2rem);
+            transform: translate(2.2rem); }
 
 .sb-menu-align-bottom {
   display: inline-block;
@@ -1555,15 +1555,15 @@ Use this object to show an image and some text rendered in two columns.
         -ms-transform: translate(-50%);
             transform: translate(-50%); }
   .sb-menu-align-bottom > .sb-menu-bubble-top-left, .sb-menu-align-bottom .sb-menu-bubble-bottom-left {
-    -webkit-transform: translate(-3.5rem);
-        -ms-transform: translate(-3.5rem);
-            transform: translate(-3.5rem); }
+    -webkit-transform: translate(-2.2rem);
+        -ms-transform: translate(-2.2rem);
+            transform: translate(-2.2rem); }
   .sb-menu-align-bottom > .sb-menu-bubble-top-right, .sb-menu-align-bottom .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
-    -webkit-transform: translate(3.5rem);
-        -ms-transform: translate(3.5rem);
-            transform: translate(3.5rem); }
+    -webkit-transform: translate(2.2rem);
+        -ms-transform: translate(2.2rem);
+            transform: translate(2.2rem); }
 
 .sb-menu-align-bottom-right {
   display: inline-block;

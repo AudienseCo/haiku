@@ -1645,7 +1645,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-top
 {
     position: absolute;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 .sb-menu-bubble-top:before,
 .sb-menu-bubble-top:after
@@ -1664,23 +1664,23 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); 
-    border-width: 0 12px 12px 12px;
+    border-width: 0 10px 10px 10px;
 }
 .sb-menu-bubble-top:before
 {
-    top: -12px; 
+    top: -10px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
 .sb-menu-bubble-top:after
 {
-    top: -11px; 
+    top: -9px; 
     border-color: transparent transparent white transparent;
 }
 
 .sb-menu-bubble-bottom
 {
     position: absolute;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 .sb-menu-bubble-bottom:before,
 .sb-menu-bubble-bottom:after
@@ -1702,24 +1702,24 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-    border-width: 0 17px 17px 0;
+    border-width: 0 15px 15px 0;
 }
 .sb-menu-bubble-bottom:before
 {
-    bottom: -17px;
+    bottom: -15px;
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
 }
 .sb-menu-bubble-bottom:after
 {
-    bottom: -16px; 
+    bottom: -14px; 
     border-color: transparent transparent white white;
 }
 
 .sb-menu-bubble-top-right
 {
     position: absolute;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 .sb-menu-bubble-top-right:before,
 .sb-menu-bubble-top-right:after
@@ -1738,22 +1738,22 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); 
-    border-width: 0 12px 12px 12px;
+    border-width: 0 10px 10px 10px;
 }
 .sb-menu-bubble-top-right:before
 {
-    top: -12px; 
+    top: -10px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
 .sb-menu-bubble-top-right:after
 {
-    top: -11px; 
+    top: -9px; 
     border-color: transparent transparent white transparent;
 }
 .sb-menu-bubble-top-right:before,
 .sb-menu-bubble-top-right:after
 {
-    right: 35px;
+    right: 22px;
     left: auto;
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
@@ -1763,7 +1763,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-top-left
 {
     position: absolute;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 .sb-menu-bubble-top-left:before,
 .sb-menu-bubble-top-left:after
@@ -1782,28 +1782,28 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); 
-    border-width: 0 12px 12px 12px;
+    border-width: 0 10px 10px 10px;
 }
 .sb-menu-bubble-top-left:before
 {
-    top: -12px; 
+    top: -10px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
 .sb-menu-bubble-top-left:after
 {
-    top: -11px; 
+    top: -9px; 
     border-color: transparent transparent white transparent;
 }
 .sb-menu-bubble-top-left:before,
 .sb-menu-bubble-top-left:after
 {
-    left: 35px;
+    left: 22px;
 }
 
 .sb-menu-bubble-bottom-right
 {
     position: absolute;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 .sb-menu-bubble-bottom-right:before,
 .sb-menu-bubble-bottom-right:after
@@ -1825,23 +1825,23 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-    border-width: 0 17px 17px 0;
+    border-width: 0 15px 15px 0;
 }
 .sb-menu-bubble-bottom-right:before
 {
-    bottom: -17px;
+    bottom: -15px;
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
 }
 .sb-menu-bubble-bottom-right:after
 {
-    bottom: -16px; 
+    bottom: -14px; 
     border-color: transparent transparent white white;
 }
 .sb-menu-bubble-bottom-right:before,
 .sb-menu-bubble-bottom-right:after
 {
-    right: 35px;
+    right: 22px;
     left: auto;
     -webkit-transform: rotate(-45deg) translateX(25%) translateY(25%);
         -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
@@ -1851,7 +1851,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-bottom-left
 {
     position: absolute;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 .sb-menu-bubble-bottom-left:before,
 .sb-menu-bubble-bottom-left:after
@@ -1873,23 +1873,23 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
-    border-width: 0 17px 17px 0;
+    border-width: 0 15px 15px 0;
 }
 .sb-menu-bubble-bottom-left:before
 {
-    bottom: -17px;
+    bottom: -15px;
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
 }
 .sb-menu-bubble-bottom-left:after
 {
-    bottom: -16px; 
+    bottom: -14px; 
     border-color: transparent transparent white white;
 }
 .sb-menu-bubble-bottom-left:before,
 .sb-menu-bubble-bottom-left:after
 {
-    left: 35px;
+    left: 22px;
 }
 
 .sb-menu-align-top
@@ -1920,18 +1920,18 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-top > .sb-menu-bubble-top-left,
 .sb-menu-align-top .sb-menu-bubble-bottom-left
 {
-    -webkit-transform: translate(-35px);
-        -ms-transform: translate(-35px);
-            transform: translate(-35px);
+    -webkit-transform: translate(-22px);
+        -ms-transform: translate(-22px);
+            transform: translate(-22px);
 }
 .sb-menu-align-top > .sb-menu-bubble-top-right,
 .sb-menu-align-top .sb-menu-bubble-bottom-right
 {
     right: 50%;
     left: auto;
-    -webkit-transform: translate(35px);
-        -ms-transform: translate(35px);
-            transform: translate(35px);
+    -webkit-transform: translate(22px);
+        -ms-transform: translate(22px);
+            transform: translate(22px);
 }
 
 .sb-menu-align-bottom
@@ -1962,18 +1962,18 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-bottom > .sb-menu-bubble-top-left,
 .sb-menu-align-bottom .sb-menu-bubble-bottom-left
 {
-    -webkit-transform: translate(-35px);
-        -ms-transform: translate(-35px);
-            transform: translate(-35px);
+    -webkit-transform: translate(-22px);
+        -ms-transform: translate(-22px);
+            transform: translate(-22px);
 }
 .sb-menu-align-bottom > .sb-menu-bubble-top-right,
 .sb-menu-align-bottom .sb-menu-bubble-bottom-right
 {
     right: 50%;
     left: auto;
-    -webkit-transform: translate(35px);
-        -ms-transform: translate(35px);
-            transform: translate(35px);
+    -webkit-transform: translate(22px);
+        -ms-transform: translate(22px);
+            transform: translate(22px);
 }
 
 .sb-menu-align-bottom-right
