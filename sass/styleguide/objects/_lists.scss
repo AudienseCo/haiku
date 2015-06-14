@@ -40,9 +40,6 @@
     }
 
     & > [class^="icon"] {
-        height: 1.5em;
-        margin-right: .5rem;
-        vertical-align: bottom;
-        width: 1.3em;
+        @extend %icon-text;
     }
 }

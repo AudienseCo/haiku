@@ -33,6 +33,14 @@ $btn-base-v-padding:   ($btn-base-height - $btn-base-line-height)/2;
         cursor: not-allowed;
         opacity: 0.5;
     }
+
+    & > [class^="icon"] {
+        @extend %icon-text;
+    }
+
+    &.with-caret:after {
+        margin-left: .3rem;
+    }
 }
 
 // Generates a button class from some color parameters
