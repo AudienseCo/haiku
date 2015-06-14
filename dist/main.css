@@ -1227,8 +1227,6 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
 
 .icon-text, .menu-list-item > [class^="icon"] {
   height: 1.5em;
-  margin-right: 0.3rem;
-  vertical-align: bottom;
   width: 1.3em; }
 
 .icon-text-aligned {
@@ -1296,6 +1294,8 @@ Use this structure to justify columns inside a container.
     color: inherit;
     display: block;
     text-decoration: none; }
+  .menu-list-item > [class^="icon"] {
+    margin-right: 0.3rem; }
 
 /*
 

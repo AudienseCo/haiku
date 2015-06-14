@@ -1465,8 +1465,6 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 {
     width: 1.3em; 
     height: 1.5em;
-    margin-right: 3px;
-    vertical-align: bottom;
 }
 
 .icon-text-aligned
@@ -1557,6 +1555,10 @@ Use this structure to justify columns inside a container.
     display: block;
     text-decoration: none; 
     color: inherit;
+}
+.menu-list-item > [class^='icon']
+{
+    margin-right: 3px;
 }
 
 /*

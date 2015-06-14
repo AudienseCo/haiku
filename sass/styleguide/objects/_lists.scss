@@ -41,5 +41,6 @@
 
     & > [class^="icon"] {
         @extend %icon-text;
+        margin-right: .3rem;
     }
 }
