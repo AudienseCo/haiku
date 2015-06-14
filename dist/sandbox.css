@@ -1036,7 +1036,10 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .btn > [class^='icon']
 {
+    width: 1.3em; 
     height: 22px;
+    margin-right: 3px;
+    vertical-align: bottom;
 }
 .btn.with-caret:after
 {
@@ -1458,7 +1461,6 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 
 .icon-text,
-.btn > [class^='icon'],
 .menu-list-item > [class^='icon']
 {
     width: 1.3em; 

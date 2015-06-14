@@ -35,8 +35,10 @@ $btn-base-v-padding:   ($btn-base-height - $btn-base-line-height)/2;
     }
 
     & > [class^="icon"] {
-        @extend %icon-text;
         height: $btn-base-line-height - .2rem;
+        margin-right: .3rem;
+        vertical-align: bottom;
+        width: 1.3em;
     }
 
     &.with-caret:after {

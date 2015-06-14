@@ -919,7 +919,10 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     cursor: not-allowed;
     opacity: 0.5; }
   .btn > [class^="icon"] {
-    height: 2.2rem; }
+    height: 2.2rem;
+    margin-right: 0.3rem;
+    vertical-align: bottom;
+    width: 1.3em; }
   .btn.with-caret:after {
     margin-left: 0.3rem; }
 
@@ -1222,7 +1225,7 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
   display: inline-block;
   vertical-align: middle; }
 
-.icon-text, .btn > [class^="icon"], .menu-list-item > [class^="icon"] {
+.icon-text, .menu-list-item > [class^="icon"] {
   height: 1.5em;
   margin-right: 0.3rem;
   vertical-align: bottom;
