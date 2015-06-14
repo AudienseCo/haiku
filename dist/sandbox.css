@@ -1034,6 +1034,10 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     cursor: not-allowed;
     opacity: .5;
 }
+.btn > [class^='icon']
+{
+    height: 22px;
+}
 .btn.with-caret:after
 {
     margin-left: 3px;
