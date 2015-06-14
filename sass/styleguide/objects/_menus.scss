@@ -4,7 +4,7 @@ $bubble-pointer-width:  24px;
 $bubble-lateral-margin: 3.5rem;
 
 // Generic wrapper for the menu component
-.menu, %menu {
+.sb-menu, %sb-menu {
     @include standard-container;
     box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.10);
     display: block;
@@ -15,8 +15,8 @@ $sqrt2: 1.4142135623730;
 $bubble-rotate-width: ceil($bubble-pointer-width / $sqrt2);
 $bubble-pointer-base: $bubble-pointer-width / 2;
 
-@mixin menu-bubble {
-    @extend %menu;
+@mixin sb-menu-bubble {
+    @extend %sb-menu;
     position: absolute;
 
     &:before, &:after {
@@ -30,7 +30,7 @@ $bubble-pointer-base: $bubble-pointer-width / 2;
 }
 
 @mixin bubble-pointer-top {
-    @include menu-bubble;
+    @include sb-menu-bubble;
     margin-top: $bubble-pointer-base;
 
     &:before, &:after {
@@ -53,7 +53,7 @@ $bubble-pointer-base: $bubble-pointer-width / 2;
 // Note: in this case the technique to draw the triangle is a little different because we
 // need to rotate the box in order to get a shadow
 @mixin bubble-pointer-bottom {
-    @include menu-bubble;
+    @include sb-menu-bubble;
     margin-bottom: $bubble-pointer-base;
 
     &:before, &:after {
@@ -98,36 +98,36 @@ $bubble-pointer-base: $bubble-pointer-width / 2;
 }
 
 // Bubble menus with different pointer position
-.menu-bubble-top {
+.sb-menu-bubble-top {
     @include bubble-pointer-top;
 }
 
-.menu-bubble-bottom {
+.sb-menu-bubble-bottom {
     @include bubble-pointer-bottom;
 }
 
-.menu-bubble-top-right {
+.sb-menu-bubble-top-right {
     @include bubble-pointer-top;
     @include bubble-pointer-top-right;
 }
 
-.menu-bubble-top-left {
+.sb-menu-bubble-top-left {
     @include bubble-pointer-top;
     @include bubble-pointer-left;
 }
 
-.menu-bubble-bottom-right {
+.sb-menu-bubble-bottom-right {
     @include bubble-pointer-bottom;
     @include bubble-pointer-bottom-right;
 }
 
-.menu-bubble-bottom-left {
+.sb-menu-bubble-bottom-left {
     @include bubble-pointer-bottom;
     @include bubble-pointer-left;
 }
 
 // Helpers used to set the position of a menu from a parent node
-@mixin menu-align {
+@mixin sb-menu-align {
     display: inline-block;
     position: relative;
 
@@ -136,68 +136,68 @@ $bubble-pointer-base: $bubble-pointer-width / 2;
     }
 }
 
-@mixin menu-align-bottom {
-    @include menu-align;
+@mixin sb-menu-align-bottom {
+    @include sb-menu-align;
 
-    & > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
-    & > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']) {
+    & > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+    & > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']) {
         margin-top: .5rem;
     }
 
-    & > .menu {
+    & > .sb-menu {
         top: 100%;
     }
 }
 
-@mixin menu-align-top {
-    @include menu-align;
+@mixin sb-menu-align-top {
+    @include sb-menu-align;
 
-    & > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
-    & > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']) {
+    & > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+    & > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']) {
         margin-bottom: .5rem;
     }
 
-    & > .menu {
+    & > .sb-menu {
         bottom: 100%;
     }
 }
 
-@mixin menu-align-lateral {
-    & > .menu {
+@mixin sb-menu-align-lateral {
+    & > .sb-menu {
         left: 50%;
         transform: translate(-50%);
     }
 
-    & > .menu-bubble-top-left, .menu-bubble-bottom-left {
+    & > .sb-menu-bubble-top-left, .sb-menu-bubble-bottom-left {
         transform: translate(-1 * $bubble-lateral-margin);
     }
 
-    & > .menu-bubble-top-right, .menu-bubble-bottom-right {
+    & > .sb-menu-bubble-top-right, .sb-menu-bubble-bottom-right {
         left: auto;
         right: 50%;
         transform: translate($bubble-lateral-margin);
     }
 }
 
-.menu-align-top {
-    @include menu-align-top;
-    @include menu-align-lateral;
+.sb-menu-align-top {
+    @include sb-menu-align-top;
+    @include sb-menu-align-lateral;
 }
 
-.menu-align-bottom {
-    @include menu-align-bottom;
-    @include menu-align-lateral;
+.sb-menu-align-bottom {
+    @include sb-menu-align-bottom;
+    @include sb-menu-align-lateral;
 }
 
-.menu-align-bottom-right {
-    @include menu-align-bottom;
+.sb-menu-align-bottom-right {
+    @include sb-menu-align-bottom;
     & > .menu {
         right: 0;
     }
 }
 
-.menu-align-bottom-left {
-    @include menu-align-bottom;
+.sb-menu-align-bottom-left {
+    @include sb-menu-align-bottom;
     & > .menu {
         left: 0;
     }

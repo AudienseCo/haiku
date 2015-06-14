@@ -1342,47 +1342,47 @@ Use this object to show an image and some text rendered in two columns.
 .media-body {
   width: 100%; }
 
-.menu, .menu-bubble-top, .menu-bubble-bottom, .menu-bubble-top-right, .menu-bubble-top-left, .menu-bubble-bottom-right, .menu-bubble-bottom-left {
+.sb-menu, .sb-menu-bubble-top, .sb-menu-bubble-bottom, .sb-menu-bubble-top-right, .sb-menu-bubble-top-left, .sb-menu-bubble-bottom-right, .sb-menu-bubble-bottom-left {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #d6d6d6;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   display: block; }
 
-.menu-bubble-top {
+.sb-menu-bubble-top {
   position: absolute;
   margin-top: 12px; }
-  .menu-bubble-top:before, .menu-bubble-top:after {
+  .sb-menu-bubble-top:before, .sb-menu-bubble-top:after {
     border-style: solid;
     content: '';
     display: block;
     height: 0;
     position: absolute;
     width: 0; }
-  .menu-bubble-top:before, .menu-bubble-top:after {
+  .sb-menu-bubble-top:before, .sb-menu-bubble-top:after {
     border-width: 0 12px 12px 12px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-  .menu-bubble-top:before {
+  .sb-menu-bubble-top:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -12px; }
-  .menu-bubble-top:after {
+  .sb-menu-bubble-top:after {
     border-color: transparent transparent white transparent;
     top: -11px; }
 
-.menu-bubble-bottom {
+.sb-menu-bubble-bottom {
   position: absolute;
   margin-bottom: 12px; }
-  .menu-bubble-bottom:before, .menu-bubble-bottom:after {
+  .sb-menu-bubble-bottom:before, .sb-menu-bubble-bottom:after {
     border-style: solid;
     content: '';
     display: block;
     height: 0;
     position: absolute;
     width: 0; }
-  .menu-bubble-bottom:before, .menu-bubble-bottom:after {
+  .sb-menu-bubble-bottom:before, .sb-menu-bubble-bottom:after {
     border-width: 0 17px 17px 0;
     left: 50%;
     -webkit-transform-origin: 0 0;
@@ -1391,79 +1391,79 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
         -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
             transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
-  .menu-bubble-bottom:before {
+  .sb-menu-bubble-bottom:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -17px;
     box-shadow: -2px 2px 3px 0px rgba(0, 0, 0, 0.1); }
-  .menu-bubble-bottom:after {
+  .sb-menu-bubble-bottom:after {
     border-color: transparent transparent white white;
     bottom: -16px; }
 
-.menu-bubble-top-right {
+.sb-menu-bubble-top-right {
   position: absolute;
   margin-top: 12px; }
-  .menu-bubble-top-right:before, .menu-bubble-top-right:after {
+  .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     border-style: solid;
     content: '';
     display: block;
     height: 0;
     position: absolute;
     width: 0; }
-  .menu-bubble-top-right:before, .menu-bubble-top-right:after {
+  .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     border-width: 0 12px 12px 12px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-  .menu-bubble-top-right:before {
+  .sb-menu-bubble-top-right:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -12px; }
-  .menu-bubble-top-right:after {
+  .sb-menu-bubble-top-right:after {
     border-color: transparent transparent white transparent;
     top: -11px; }
-  .menu-bubble-top-right:before, .menu-bubble-top-right:after {
+  .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     left: auto;
     right: 3.5rem;
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
             transform: translateX(50%); }
 
-.menu-bubble-top-left {
+.sb-menu-bubble-top-left {
   position: absolute;
   margin-top: 12px; }
-  .menu-bubble-top-left:before, .menu-bubble-top-left:after {
+  .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
     border-style: solid;
     content: '';
     display: block;
     height: 0;
     position: absolute;
     width: 0; }
-  .menu-bubble-top-left:before, .menu-bubble-top-left:after {
+  .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
     border-width: 0 12px 12px 12px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-  .menu-bubble-top-left:before {
+  .sb-menu-bubble-top-left:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -12px; }
-  .menu-bubble-top-left:after {
+  .sb-menu-bubble-top-left:after {
     border-color: transparent transparent white transparent;
     top: -11px; }
-  .menu-bubble-top-left:before, .menu-bubble-top-left:after {
+  .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
     left: 3.5rem; }
 
-.menu-bubble-bottom-right {
+.sb-menu-bubble-bottom-right {
   position: absolute;
   margin-bottom: 12px; }
-  .menu-bubble-bottom-right:before, .menu-bubble-bottom-right:after {
+  .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     border-style: solid;
     content: '';
     display: block;
     height: 0;
     position: absolute;
     width: 0; }
-  .menu-bubble-bottom-right:before, .menu-bubble-bottom-right:after {
+  .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     border-width: 0 17px 17px 0;
     left: 50%;
     -webkit-transform-origin: 0 0;
@@ -1472,31 +1472,31 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
         -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
             transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
-  .menu-bubble-bottom-right:before {
+  .sb-menu-bubble-bottom-right:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -17px;
     box-shadow: -2px 2px 3px 0px rgba(0, 0, 0, 0.1); }
-  .menu-bubble-bottom-right:after {
+  .sb-menu-bubble-bottom-right:after {
     border-color: transparent transparent white white;
     bottom: -16px; }
-  .menu-bubble-bottom-right:before, .menu-bubble-bottom-right:after {
+  .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     left: auto;
     right: 3.5rem;
     -webkit-transform: rotate(-45deg) translateX(25%) translateY(25%);
         -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
             transform: rotate(-45deg) translateX(25%) translateY(25%); }
 
-.menu-bubble-bottom-left {
+.sb-menu-bubble-bottom-left {
   position: absolute;
   margin-bottom: 12px; }
-  .menu-bubble-bottom-left:before, .menu-bubble-bottom-left:after {
+  .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
     border-style: solid;
     content: '';
     display: block;
     height: 0;
     position: absolute;
     width: 0; }
-  .menu-bubble-bottom-left:before, .menu-bubble-bottom-left:after {
+  .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
     border-width: 0 17px 17px 0;
     left: 50%;
     -webkit-transform-origin: 0 0;
@@ -1505,88 +1505,88 @@ Use this object to show an image and some text rendered in two columns.
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
         -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
             transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
-  .menu-bubble-bottom-left:before {
+  .sb-menu-bubble-bottom-left:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -17px;
     box-shadow: -2px 2px 3px 0px rgba(0, 0, 0, 0.1); }
-  .menu-bubble-bottom-left:after {
+  .sb-menu-bubble-bottom-left:after {
     border-color: transparent transparent white white;
     bottom: -16px; }
-  .menu-bubble-bottom-left:before, .menu-bubble-bottom-left:after {
+  .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
     left: 3.5rem; }
 
-.menu-align-top {
+.sb-menu-align-top {
   display: inline-block;
   position: relative; }
-  .menu-align-top > .menu {
+  .sb-menu-align-top > .menu {
     position: absolute; }
-  .menu-align-top > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']), .menu-align-top > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']) {
+  .sb-menu-align-top > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']), .sb-menu-align-top > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']) {
     margin-bottom: 0.5rem; }
-  .menu-align-top > .menu {
+  .sb-menu-align-top > .sb-menu {
     bottom: 100%; }
-  .menu-align-top > .menu {
+  .sb-menu-align-top > .sb-menu {
     left: 50%;
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
             transform: translate(-50%); }
-  .menu-align-top > .menu-bubble-top-left, .menu-align-top .menu-bubble-bottom-left {
+  .sb-menu-align-top > .sb-menu-bubble-top-left, .sb-menu-align-top .sb-menu-bubble-bottom-left {
     -webkit-transform: translate(-3.5rem);
         -ms-transform: translate(-3.5rem);
             transform: translate(-3.5rem); }
-  .menu-align-top > .menu-bubble-top-right, .menu-align-top .menu-bubble-bottom-right {
+  .sb-menu-align-top > .sb-menu-bubble-top-right, .sb-menu-align-top .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
     -webkit-transform: translate(3.5rem);
         -ms-transform: translate(3.5rem);
             transform: translate(3.5rem); }
 
-.menu-align-bottom {
+.sb-menu-align-bottom {
   display: inline-block;
   position: relative; }
-  .menu-align-bottom > .menu {
+  .sb-menu-align-bottom > .menu {
     position: absolute; }
-  .menu-align-bottom > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']), .menu-align-bottom > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']) {
+  .sb-menu-align-bottom > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']), .sb-menu-align-bottom > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']) {
     margin-top: 0.5rem; }
-  .menu-align-bottom > .menu {
+  .sb-menu-align-bottom > .sb-menu {
     top: 100%; }
-  .menu-align-bottom > .menu {
+  .sb-menu-align-bottom > .sb-menu {
     left: 50%;
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
             transform: translate(-50%); }
-  .menu-align-bottom > .menu-bubble-top-left, .menu-align-bottom .menu-bubble-bottom-left {
+  .sb-menu-align-bottom > .sb-menu-bubble-top-left, .sb-menu-align-bottom .sb-menu-bubble-bottom-left {
     -webkit-transform: translate(-3.5rem);
         -ms-transform: translate(-3.5rem);
             transform: translate(-3.5rem); }
-  .menu-align-bottom > .menu-bubble-top-right, .menu-align-bottom .menu-bubble-bottom-right {
+  .sb-menu-align-bottom > .sb-menu-bubble-top-right, .sb-menu-align-bottom .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
     -webkit-transform: translate(3.5rem);
         -ms-transform: translate(3.5rem);
             transform: translate(3.5rem); }
 
-.menu-align-bottom-right {
+.sb-menu-align-bottom-right {
   display: inline-block;
   position: relative; }
-  .menu-align-bottom-right > .menu {
+  .sb-menu-align-bottom-right > .menu {
     position: absolute; }
-  .menu-align-bottom-right > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']), .menu-align-bottom-right > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']) {
+  .sb-menu-align-bottom-right > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']), .sb-menu-align-bottom-right > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']) {
     margin-top: 0.5rem; }
-  .menu-align-bottom-right > .menu {
+  .sb-menu-align-bottom-right > .sb-menu {
     top: 100%; }
-  .menu-align-bottom-right > .menu {
+  .sb-menu-align-bottom-right > .menu {
     right: 0; }
 
-.menu-align-bottom-left {
+.sb-menu-align-bottom-left {
   display: inline-block;
   position: relative; }
-  .menu-align-bottom-left > .menu {
+  .sb-menu-align-bottom-left > .menu {
     position: absolute; }
-  .menu-align-bottom-left > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']), .menu-align-bottom-left > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']) {
+  .sb-menu-align-bottom-left > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']), .sb-menu-align-bottom-left > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']) {
     margin-top: 0.5rem; }
-  .menu-align-bottom-left > .menu {
+  .sb-menu-align-bottom-left > .sb-menu {
     top: 100%; }
-  .menu-align-bottom-left > .menu {
+  .sb-menu-align-bottom-left > .menu {
     left: 0; }
 
 /*

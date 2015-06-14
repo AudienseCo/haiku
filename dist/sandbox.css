@@ -1627,13 +1627,13 @@ Use this object to show an image and some text rendered in two columns.
     width: 100%;
 }
 
-.menu,
-.menu-bubble-top,
-.menu-bubble-bottom,
-.menu-bubble-top-right,
-.menu-bubble-top-left,
-.menu-bubble-bottom-right,
-.menu-bubble-bottom-left
+.sb-menu,
+.sb-menu-bubble-top,
+.sb-menu-bubble-bottom,
+.sb-menu-bubble-top-right,
+.sb-menu-bubble-top-left,
+.sb-menu-bubble-bottom-right,
+.sb-menu-bubble-bottom-left
 {
     display: block; 
     border: 1px solid #d6d6d6;
@@ -1642,13 +1642,13 @@ Use this object to show an image and some text rendered in two columns.
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
 }
 
-.menu-bubble-top
+.sb-menu-bubble-top
 {
     position: absolute;
     margin-top: 12px;
 }
-.menu-bubble-top:before,
-.menu-bubble-top:after
+.sb-menu-bubble-top:before,
+.sb-menu-bubble-top:after
 {
     position: absolute;
     display: block;
@@ -1657,8 +1657,8 @@ Use this object to show an image and some text rendered in two columns.
     content: '';
     border-style: solid;
 }
-.menu-bubble-top:before,
-.menu-bubble-top:after
+.sb-menu-bubble-top:before,
+.sb-menu-bubble-top:after
 {
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1666,24 +1666,24 @@ Use this object to show an image and some text rendered in two columns.
             transform: translateX(-50%); 
     border-width: 0 12px 12px 12px;
 }
-.menu-bubble-top:before
+.sb-menu-bubble-top:before
 {
     top: -12px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
-.menu-bubble-top:after
+.sb-menu-bubble-top:after
 {
     top: -11px; 
     border-color: transparent transparent white transparent;
 }
 
-.menu-bubble-bottom
+.sb-menu-bubble-bottom
 {
     position: absolute;
     margin-bottom: 12px;
 }
-.menu-bubble-bottom:before,
-.menu-bubble-bottom:after
+.sb-menu-bubble-bottom:before,
+.sb-menu-bubble-bottom:after
 {
     position: absolute;
     display: block;
@@ -1692,8 +1692,8 @@ Use this object to show an image and some text rendered in two columns.
     content: '';
     border-style: solid;
 }
-.menu-bubble-bottom:before,
-.menu-bubble-bottom:after
+.sb-menu-bubble-bottom:before,
+.sb-menu-bubble-bottom:after
 {
     left: 50%;
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
@@ -1704,25 +1704,25 @@ Use this object to show an image and some text rendered in two columns.
             transform-origin: 0 0;
     border-width: 0 17px 17px 0;
 }
-.menu-bubble-bottom:before
+.sb-menu-bubble-bottom:before
 {
     bottom: -17px;
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
 }
-.menu-bubble-bottom:after
+.sb-menu-bubble-bottom:after
 {
     bottom: -16px; 
     border-color: transparent transparent white white;
 }
 
-.menu-bubble-top-right
+.sb-menu-bubble-top-right
 {
     position: absolute;
     margin-top: 12px;
 }
-.menu-bubble-top-right:before,
-.menu-bubble-top-right:after
+.sb-menu-bubble-top-right:before,
+.sb-menu-bubble-top-right:after
 {
     position: absolute;
     display: block;
@@ -1731,8 +1731,8 @@ Use this object to show an image and some text rendered in two columns.
     content: '';
     border-style: solid;
 }
-.menu-bubble-top-right:before,
-.menu-bubble-top-right:after
+.sb-menu-bubble-top-right:before,
+.sb-menu-bubble-top-right:after
 {
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1740,18 +1740,18 @@ Use this object to show an image and some text rendered in two columns.
             transform: translateX(-50%); 
     border-width: 0 12px 12px 12px;
 }
-.menu-bubble-top-right:before
+.sb-menu-bubble-top-right:before
 {
     top: -12px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
-.menu-bubble-top-right:after
+.sb-menu-bubble-top-right:after
 {
     top: -11px; 
     border-color: transparent transparent white transparent;
 }
-.menu-bubble-top-right:before,
-.menu-bubble-top-right:after
+.sb-menu-bubble-top-right:before,
+.sb-menu-bubble-top-right:after
 {
     right: 35px;
     left: auto;
@@ -1760,13 +1760,13 @@ Use this object to show an image and some text rendered in two columns.
             transform: translateX(50%);
 }
 
-.menu-bubble-top-left
+.sb-menu-bubble-top-left
 {
     position: absolute;
     margin-top: 12px;
 }
-.menu-bubble-top-left:before,
-.menu-bubble-top-left:after
+.sb-menu-bubble-top-left:before,
+.sb-menu-bubble-top-left:after
 {
     position: absolute;
     display: block;
@@ -1775,8 +1775,8 @@ Use this object to show an image and some text rendered in two columns.
     content: '';
     border-style: solid;
 }
-.menu-bubble-top-left:before,
-.menu-bubble-top-left:after
+.sb-menu-bubble-top-left:before,
+.sb-menu-bubble-top-left:after
 {
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1784,29 +1784,29 @@ Use this object to show an image and some text rendered in two columns.
             transform: translateX(-50%); 
     border-width: 0 12px 12px 12px;
 }
-.menu-bubble-top-left:before
+.sb-menu-bubble-top-left:before
 {
     top: -12px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
-.menu-bubble-top-left:after
+.sb-menu-bubble-top-left:after
 {
     top: -11px; 
     border-color: transparent transparent white transparent;
 }
-.menu-bubble-top-left:before,
-.menu-bubble-top-left:after
+.sb-menu-bubble-top-left:before,
+.sb-menu-bubble-top-left:after
 {
     left: 35px;
 }
 
-.menu-bubble-bottom-right
+.sb-menu-bubble-bottom-right
 {
     position: absolute;
     margin-bottom: 12px;
 }
-.menu-bubble-bottom-right:before,
-.menu-bubble-bottom-right:after
+.sb-menu-bubble-bottom-right:before,
+.sb-menu-bubble-bottom-right:after
 {
     position: absolute;
     display: block;
@@ -1815,8 +1815,8 @@ Use this object to show an image and some text rendered in two columns.
     content: '';
     border-style: solid;
 }
-.menu-bubble-bottom-right:before,
-.menu-bubble-bottom-right:after
+.sb-menu-bubble-bottom-right:before,
+.sb-menu-bubble-bottom-right:after
 {
     left: 50%;
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
@@ -1827,19 +1827,19 @@ Use this object to show an image and some text rendered in two columns.
             transform-origin: 0 0;
     border-width: 0 17px 17px 0;
 }
-.menu-bubble-bottom-right:before
+.sb-menu-bubble-bottom-right:before
 {
     bottom: -17px;
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
 }
-.menu-bubble-bottom-right:after
+.sb-menu-bubble-bottom-right:after
 {
     bottom: -16px; 
     border-color: transparent transparent white white;
 }
-.menu-bubble-bottom-right:before,
-.menu-bubble-bottom-right:after
+.sb-menu-bubble-bottom-right:before,
+.sb-menu-bubble-bottom-right:after
 {
     right: 35px;
     left: auto;
@@ -1848,13 +1848,13 @@ Use this object to show an image and some text rendered in two columns.
             transform: rotate(-45deg) translateX(25%) translateY(25%);
 }
 
-.menu-bubble-bottom-left
+.sb-menu-bubble-bottom-left
 {
     position: absolute;
     margin-bottom: 12px;
 }
-.menu-bubble-bottom-left:before,
-.menu-bubble-bottom-left:after
+.sb-menu-bubble-bottom-left:before,
+.sb-menu-bubble-bottom-left:after
 {
     position: absolute;
     display: block;
@@ -1863,8 +1863,8 @@ Use this object to show an image and some text rendered in two columns.
     content: '';
     border-style: solid;
 }
-.menu-bubble-bottom-left:before,
-.menu-bubble-bottom-left:after
+.sb-menu-bubble-bottom-left:before,
+.sb-menu-bubble-bottom-left:after
 {
     left: 50%;
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
@@ -1875,57 +1875,57 @@ Use this object to show an image and some text rendered in two columns.
             transform-origin: 0 0;
     border-width: 0 17px 17px 0;
 }
-.menu-bubble-bottom-left:before
+.sb-menu-bubble-bottom-left:before
 {
     bottom: -17px;
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
 }
-.menu-bubble-bottom-left:after
+.sb-menu-bubble-bottom-left:after
 {
     bottom: -16px; 
     border-color: transparent transparent white white;
 }
-.menu-bubble-bottom-left:before,
-.menu-bubble-bottom-left:after
+.sb-menu-bubble-bottom-left:before,
+.sb-menu-bubble-bottom-left:after
 {
     left: 35px;
 }
 
-.menu-align-top
+.sb-menu-align-top
 {
     position: relative; 
     display: inline-block;
 }
-.menu-align-top > .menu
+.sb-menu-align-top > .menu
 {
     position: absolute;
 }
-.menu-align-top > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
-.menu-align-top > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble'])
+.sb-menu-align-top > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+.sb-menu-align-top > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
 {
     margin-bottom: 5px;
 }
-.menu-align-top > .menu
+.sb-menu-align-top > .sb-menu
 {
     bottom: 100%;
 }
-.menu-align-top > .menu
+.sb-menu-align-top > .sb-menu
 {
     left: 50%;
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
             transform: translate(-50%);
 }
-.menu-align-top > .menu-bubble-top-left,
-.menu-align-top .menu-bubble-bottom-left
+.sb-menu-align-top > .sb-menu-bubble-top-left,
+.sb-menu-align-top .sb-menu-bubble-bottom-left
 {
     -webkit-transform: translate(-35px);
         -ms-transform: translate(-35px);
             transform: translate(-35px);
 }
-.menu-align-top > .menu-bubble-top-right,
-.menu-align-top .menu-bubble-bottom-right
+.sb-menu-align-top > .sb-menu-bubble-top-right,
+.sb-menu-align-top .sb-menu-bubble-bottom-right
 {
     right: 50%;
     left: auto;
@@ -1934,40 +1934,40 @@ Use this object to show an image and some text rendered in two columns.
             transform: translate(35px);
 }
 
-.menu-align-bottom
+.sb-menu-align-bottom
 {
     position: relative; 
     display: inline-block;
 }
-.menu-align-bottom > .menu
+.sb-menu-align-bottom > .menu
 {
     position: absolute;
 }
-.menu-align-bottom > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
-.menu-align-bottom > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble'])
+.sb-menu-align-bottom > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+.sb-menu-align-bottom > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
 {
     margin-top: 5px;
 }
-.menu-align-bottom > .menu
+.sb-menu-align-bottom > .sb-menu
 {
     top: 100%;
 }
-.menu-align-bottom > .menu
+.sb-menu-align-bottom > .sb-menu
 {
     left: 50%;
     -webkit-transform: translate(-50%);
         -ms-transform: translate(-50%);
             transform: translate(-50%);
 }
-.menu-align-bottom > .menu-bubble-top-left,
-.menu-align-bottom .menu-bubble-bottom-left
+.sb-menu-align-bottom > .sb-menu-bubble-top-left,
+.sb-menu-align-bottom .sb-menu-bubble-bottom-left
 {
     -webkit-transform: translate(-35px);
         -ms-transform: translate(-35px);
             transform: translate(-35px);
 }
-.menu-align-bottom > .menu-bubble-top-right,
-.menu-align-bottom .menu-bubble-bottom-right
+.sb-menu-align-bottom > .sb-menu-bubble-top-right,
+.sb-menu-align-bottom .sb-menu-bubble-bottom-right
 {
     right: 50%;
     left: auto;
@@ -1976,48 +1976,48 @@ Use this object to show an image and some text rendered in two columns.
             transform: translate(35px);
 }
 
-.menu-align-bottom-right
+.sb-menu-align-bottom-right
 {
     position: relative; 
     display: inline-block;
 }
-.menu-align-bottom-right > .menu
+.sb-menu-align-bottom-right > .menu
 {
     position: absolute;
 }
-.menu-align-bottom-right > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
-.menu-align-bottom-right > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble'])
+.sb-menu-align-bottom-right > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+.sb-menu-align-bottom-right > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
 {
     margin-top: 5px;
 }
-.menu-align-bottom-right > .menu
+.sb-menu-align-bottom-right > .sb-menu
 {
     top: 100%;
 }
-.menu-align-bottom-right > .menu
+.sb-menu-align-bottom-right > .menu
 {
     right: 0;
 }
 
-.menu-align-bottom-left
+.sb-menu-align-bottom-left
 {
     position: relative; 
     display: inline-block;
 }
-.menu-align-bottom-left > .menu
+.sb-menu-align-bottom-left > .menu
 {
     position: absolute;
 }
-.menu-align-bottom-left > [class*=' menu']:not([class*=' menu-bubble']):not([class^='menu-bubble']),
-.menu-align-bottom-left > [class^='menu']:not([class*=' menu-bubble']):not([class^='menu-bubble'])
+.sb-menu-align-bottom-left > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+.sb-menu-align-bottom-left > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
 {
     margin-top: 5px;
 }
-.menu-align-bottom-left > .menu
+.sb-menu-align-bottom-left > .sb-menu
 {
     top: 100%;
 }
-.menu-align-bottom-left > .menu
+.sb-menu-align-bottom-left > .menu
 {
     left: 0;
 }
