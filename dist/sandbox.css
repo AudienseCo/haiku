@@ -1536,7 +1536,7 @@ Use this structure to justify columns inside a container.
 {
     line-height: 1.5;
     display: block;
-    padding: 3px 15px; 
+    padding: 4px 15px; 
     cursor: pointer;
     color: #565656;
     border-top: 1px solid transparent;
@@ -1559,7 +1559,8 @@ Use this structure to justify columns inside a container.
 {
     display: inline-block;
     width: 1.3em; 
-    margin-right: 3px;
+    height: 1.5em;
+    margin-right: 6px;
     vertical-align: bottom;
 
     fill: currentColor;

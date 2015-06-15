@@ -24,7 +24,7 @@
     cursor: pointer;
     display: block;
     line-height: 1.5;
-    padding: .3rem 1.5rem;
+    padding: .4rem 1.5rem;
 
     &:hover {
         background-color: color($name: "socialbro", $variant: "tertiary");
@@ -42,8 +42,9 @@
     & > [class^="icon"] {
         display: inline-block;
         fill: currentColor;
-        margin-right: .3rem;
+        margin-right: .6rem;
         vertical-align: bottom;
+        height: 1.5em;
         width: 1.3em;
     }
 }
