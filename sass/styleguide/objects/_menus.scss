@@ -2,6 +2,7 @@
 $menu-border-color:     color($name: "border", $variant: "secondary");
 $bubble-pointer-width:  20px;
 $bubble-lateral-margin: 2.2rem;
+$parity-offset:         0.1rem;
 
 // Generic wrapper for the menu component
 .sb-menu, %sb-menu {
@@ -169,13 +170,13 @@ $bubble-pointer-base: $bubble-pointer-width / 2;
     }
 
     & > .sb-menu-bubble-top-left, .sb-menu-bubble-bottom-left {
-        transform: translate(-1 * $bubble-lateral-margin);
+        transform: translate(-1 * ($bubble-lateral-margin + $parity-offset));
     }
 
     & > .sb-menu-bubble-top-right, .sb-menu-bubble-bottom-right {
         left: auto;
         right: 50%;
-        transform: translate($bubble-lateral-margin);
+        transform: translate(($bubble-lateral-margin + $parity-offset));
     }
 }
 

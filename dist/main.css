@@ -1530,15 +1530,15 @@ Use this object to show an image and some text rendered in two columns.
         -ms-transform: translate(-50%);
             transform: translate(-50%); }
   .sb-menu-align-top > .sb-menu-bubble-top-left, .sb-menu-align-top .sb-menu-bubble-bottom-left {
-    -webkit-transform: translate(-2.2rem);
-        -ms-transform: translate(-2.2rem);
-            transform: translate(-2.2rem); }
+    -webkit-transform: translate(-2.3rem);
+        -ms-transform: translate(-2.3rem);
+            transform: translate(-2.3rem); }
   .sb-menu-align-top > .sb-menu-bubble-top-right, .sb-menu-align-top .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
-    -webkit-transform: translate(2.2rem);
-        -ms-transform: translate(2.2rem);
-            transform: translate(2.2rem); }
+    -webkit-transform: translate(2.3rem);
+        -ms-transform: translate(2.3rem);
+            transform: translate(2.3rem); }
 
 .sb-menu-align-bottom {
   display: inline-block;
@@ -1555,15 +1555,15 @@ Use this object to show an image and some text rendered in two columns.
         -ms-transform: translate(-50%);
             transform: translate(-50%); }
   .sb-menu-align-bottom > .sb-menu-bubble-top-left, .sb-menu-align-bottom .sb-menu-bubble-bottom-left {
-    -webkit-transform: translate(-2.2rem);
-        -ms-transform: translate(-2.2rem);
-            transform: translate(-2.2rem); }
+    -webkit-transform: translate(-2.3rem);
+        -ms-transform: translate(-2.3rem);
+            transform: translate(-2.3rem); }
   .sb-menu-align-bottom > .sb-menu-bubble-top-right, .sb-menu-align-bottom .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
-    -webkit-transform: translate(2.2rem);
-        -ms-transform: translate(2.2rem);
-            transform: translate(2.2rem); }
+    -webkit-transform: translate(2.3rem);
+        -ms-transform: translate(2.3rem);
+            transform: translate(2.3rem); }
 
 .sb-menu-align-bottom-right {
   display: inline-block;
