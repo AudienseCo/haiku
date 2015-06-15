@@ -1460,8 +1460,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     fill: currentColor;
 }
 
-.icon-text,
-.menu-list-item > [class^='icon']
+.icon-text
 {
     width: 1.3em; 
     height: 1.5em;
@@ -1558,7 +1557,12 @@ Use this structure to justify columns inside a container.
 }
 .menu-list-item > [class^='icon']
 {
+    display: inline-block;
+    width: 1.3em; 
     margin-right: 3px;
+    vertical-align: bottom;
+
+    fill: currentColor;
 }
 
 /*

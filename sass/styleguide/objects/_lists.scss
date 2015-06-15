@@ -40,7 +40,10 @@
     }
 
     & > [class^="icon"] {
-        @extend %icon-text;
+        display: inline-block;
+        fill: currentColor;
         margin-right: .3rem;
+        vertical-align: bottom;
+        width: 1.3em;
     }
 }
