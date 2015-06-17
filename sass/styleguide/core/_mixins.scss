@@ -227,3 +227,19 @@ $units: 1px !default;
         @content;
     }
 }
+
+/*
+
+Standard container
+----------------
+
+    .menu {
+        @include standard-container;
+    }
+
+*/
+@mixin standard-container {
+    background-color: color($name: "background", $hue: "light");
+    border-radius: 4px;
+    border: 1px solid color($name: "border", $variant: "secondary");
+}

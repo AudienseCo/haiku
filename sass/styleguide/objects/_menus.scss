@@ -1,0 +1,205 @@
+// Menu styling settings
+$menu-border-color:     color($name: "border", $variant: "secondary");
+$bubble-pointer-width:  20px;
+$bubble-lateral-margin: 2.2rem;
+$parity-offset:         0.1rem;
+
+// Generic wrapper for the menu component
+.sb-menu, %sb-menu {
+    @include standard-container;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.10);
+    display: block;
+}
+
+// Variables and mixins to calculate bubble pointers
+$sqrt2: 1.4142135623730;
+$bubble-rotate-width: ceil($bubble-pointer-width / $sqrt2);
+$bubble-pointer-base: $bubble-pointer-width / 2;
+
+@mixin sb-menu-bubble {
+    @extend %sb-menu;
+    position: absolute;
+
+    &:before, &:after {
+        border-style: solid;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 0;
+    }
+}
+
+@mixin bubble-pointer-top {
+    @include sb-menu-bubble;
+    margin-top: $bubble-pointer-base;
+
+    &:before, &:after {
+        border-width: 0 $bubble-pointer-base $bubble-pointer-base $bubble-pointer-base;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:before {
+        border-color: transparent transparent $menu-border-color transparent;
+        top: -$bubble-pointer-base;
+    }
+
+    &:after  {
+        border-color: transparent transparent white transparent;
+        top: -$bubble-pointer-base + 1px;
+    }
+}
+
+// Note: in this case the technique to draw the triangle is a little different because we
+// need to rotate the box in order to get a shadow
+@mixin bubble-pointer-bottom {
+    @include sb-menu-bubble;
+    margin-bottom: $bubble-pointer-base;
+
+    &:before, &:after {
+        border-width: 0 $bubble-rotate-width $bubble-rotate-width 0;
+        left: 50%;
+        transform-origin: 0 0;
+        transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+    }
+
+    &:before {
+        border-color: transparent transparent $menu-border-color $menu-border-color;
+        bottom: -$bubble-rotate-width;
+        box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.10);
+    }
+
+    &:after  {
+        border-color: transparent transparent white white;
+        bottom: -$bubble-rotate-width + 1px;
+    }
+}
+
+@mixin bubble-pointer-top-right {
+    &:before, &:after {
+        left: auto;
+        right: $bubble-lateral-margin;
+        transform: translateX(50%);
+    }
+}
+
+@mixin bubble-pointer-bottom-right {
+    &:before, &:after {
+        left: auto;
+        right: $bubble-lateral-margin;
+        transform: rotate(-45deg) translateX(25%) translateY(25%);
+    }
+}
+
+@mixin bubble-pointer-left {
+    &:before, &:after {
+        left: $bubble-lateral-margin;
+    }
+}
+
+// Bubble menus with different pointer position
+.sb-menu-bubble-top {
+    @include bubble-pointer-top;
+}
+
+.sb-menu-bubble-bottom {
+    @include bubble-pointer-bottom;
+}
+
+.sb-menu-bubble-top-right {
+    @include bubble-pointer-top;
+    @include bubble-pointer-top-right;
+}
+
+.sb-menu-bubble-top-left {
+    @include bubble-pointer-top;
+    @include bubble-pointer-left;
+}
+
+.sb-menu-bubble-bottom-right {
+    @include bubble-pointer-bottom;
+    @include bubble-pointer-bottom-right;
+}
+
+.sb-menu-bubble-bottom-left {
+    @include bubble-pointer-bottom;
+    @include bubble-pointer-left;
+}
+
+// Helpers used to set the position of a menu from a parent node
+@mixin sb-menu-align {
+    display: inline-block;
+    position: relative;
+
+    & > .menu {
+        position: absolute;
+    }
+}
+
+@mixin sb-menu-align-bottom {
+    @include sb-menu-align;
+
+    & > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+    & > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']) {
+        margin-top: .5rem;
+    }
+
+    & > .sb-menu {
+        top: 100%;
+    }
+}
+
+@mixin sb-menu-align-top {
+    @include sb-menu-align;
+
+    & > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+    & > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']) {
+        margin-bottom: .5rem;
+    }
+
+    & > .sb-menu {
+        bottom: 100%;
+    }
+}
+
+@mixin sb-menu-align-lateral {
+    & > .sb-menu {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    & > .sb-menu-bubble-top-left, .sb-menu-bubble-bottom-left {
+        transform: translate(-1 * ($bubble-lateral-margin + $parity-offset));
+    }
+
+    & > .sb-menu-bubble-top-right, .sb-menu-bubble-bottom-right {
+        left: auto;
+        right: 50%;
+        transform: translate(($bubble-lateral-margin + $parity-offset));
+    }
+}
+
+.sb-menu-align-top {
+    @include sb-menu-align-top;
+    @include sb-menu-align-lateral;
+}
+
+.sb-menu-align-bottom {
+    @include sb-menu-align-bottom;
+    @include sb-menu-align-lateral;
+}
+
+.sb-menu-align-bottom-right {
+    @include sb-menu-align-bottom;
+    & > .menu {
+        right: 0;
+    }
+}
+
+.sb-menu-align-bottom-left {
+    @include sb-menu-align-bottom;
+    & > .menu {
+        left: 0;
+    }
+}

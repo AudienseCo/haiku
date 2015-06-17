@@ -1,71 +1,30 @@
-/*
-
-Grid
-----
-
-Surprise! A grid system with rows and columns. You can nest it the times you want.
-
-<div class="grid-row">
-  <div class="grid-column">
-    <p class="demo-block">I'm a column. Full by default</p>
-  </div>
-  <div class="grid-column one-third">
-    <p class="demo-block">Boring one-third column</p>
-  </div>
-  <div class="grid-column two-thirds">
-    <p class="demo-block">Funny column two-third of width</p>
-  </div>
-</div>
-
-*/
-
 $gutter-width: 2rem !default;
 
+// Grid definition
+@mixin grid-gutter($size) {
+    margin-left:  -$size/2;
+    margin-right: -$size/2;
+
+    > .grid-column, .grid-columns {
+        padding: 0 $size/2;
+    }
+}
+
 .grid-row {
-    @extend %clearfix;
-    margin: 0;
-    margin-left: -$gutter-width;
-    padding: 0;
+    @extend  %clearfix;
+    @include grid-gutter($gutter-width);
+
+    &.full   { @include grid-gutter(0); }
+    &.narrow { @include grid-gutter($gutter-width/2); }
+    &.wide   { @include grid-gutter($gutter-width*2); }
 }
 
 .grid-column, .grid-columns {
-    float: left;
-    padding-left: $gutter-width;
-    width: 100%;
-}
+   float: left;
+   width: 100%;
+ }
 
-.grid-row.reverse {
-    > .column, .columns {
-        float: right;
-    }
-}
-
-.grid-row.full {
-    margin-left:0;
-
-    > .grid-column, .grid-columns {
-        padding-left:0;
-    }
-}
-
-.grid-row.narrow {
-    margin-left:-($gutter-width / 2);
-
-    > .grid-column, .grid-columns {
-        padding-left:$gutter-width / 2;
-    }
-}
-
-.grid-row.wide {
-    margin-left:-($gutter-width * 2);
-
-    > .grid-column, .grid-columns {
-        padding-left:$gutter-width * 2;
-    }
-}
-
-/* Widths */
-
+// Widhts
 .one.grid-column {
     width: 12.5%;
 }
