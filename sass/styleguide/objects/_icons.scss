@@ -8,10 +8,14 @@ $base-sizes: 16 18 20 30 35 40 45 50 55 60;
 }
 
 [class^="icon"] {
-    @extend .icon-4;
     fill: currentColor;
     display: inline-block;
     vertical-align: middle;
+}
+
+.icon-text, %icon-text {
+    height: 1.5em;
+    width: 1.3em;
 }
 
 .icon-text-aligned {

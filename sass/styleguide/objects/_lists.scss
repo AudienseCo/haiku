@@ -1,0 +1,50 @@
+// A selectable list mainly used inside menus
+.menu-list {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    white-space: nowrap;
+
+    &.non-selectable .menu-list-item {
+        cursor: normal;
+
+        &:hover {
+            background-color: inherit;
+            border-bottom: 1px solid transparent;
+            border-top: 1px solid transparent;
+        }
+    }
+}
+
+.menu-list-item {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    color: color($name: "text", $hue: "dark");
+    cursor: pointer;
+    display: block;
+    line-height: 1.5;
+    padding: .4rem 1.5rem;
+
+    &:hover {
+        background-color: color($name: "socialbro", $variant: "tertiary");
+        border-bottom: 1px solid color($name: "socialbro");
+        border-top: 1px solid color($name: "socialbro");
+        text-decoration: none;
+    }
+
+    & > a {
+        color: inherit;
+        display: block;
+        text-decoration: none;
+    }
+
+    & > [class^="icon"] {
+        display: inline-block;
+        fill: currentColor;
+        margin-right: .6rem;
+        vertical-align: bottom;
+        height: 1.5em;
+        width: 1.3em;
+    }
+}

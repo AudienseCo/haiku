@@ -101,6 +101,7 @@ module.exports = function(grunt) {
       options: {
         prefix: 'icon-',
         cleanup: ['fill', 'stroke'],
+        symbol: true,
         svg: {
           xmlns: 'http://www.w3.org/2000/svg'
         }

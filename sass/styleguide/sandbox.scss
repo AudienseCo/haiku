@@ -1,8 +1,9 @@
 /*
 
-Sandbox
+Sandbox stylesheet to integrate with Socialbro
 -------
 
+The areas commented files are not integrated yet in Socialbro. All should be uncommented as soon as possible.
 This library is divided in the following sections:
 
 1.  Reset removes all the default styles on the page to start building using
@@ -11,14 +12,14 @@ This library is divided in the following sections:
 2.  Generic parts that load variables, functions and mixins. Use thisfolder for code that
     is applied all over the app but it is not specific to a base element or an object.
 
-3.  Helpers and useful chunks of code that do not fit in an object and it is generic enough.
+3.  Base elements are the building blocks of the page. Paragraphs, lists, images and so on.
+
+4.  Objects refer to each individual block that builds parts of the app.
+
+5.  Layout styles like background colors or images, usually they are refered as sections inside the dom html.
+
+6.  Helpers and useful chunks of code that do not fit in an object and it is generic enough.
     If possible, create objects.
-
-4.  Base elements are the building blocks of the page. Paragraphs, lists, images and so on.
-
-5.  Objects refer to each individual block that builds parts of the app.
-
-6.  Layout styles like background colors or images, usually they are refered as sections inside the dom html.
 
 7.  Vendor is code that other Javascript libraries use and do not tend to follow the OOCSS approach.
 
@@ -26,38 +27,40 @@ This library is divided in the following sections:
 
 /* 1. Reset */
 
-//@import "base/normalize";
+@import "base/normalize";
 
 /* 2. Core */
 
-@import "core/settings";
 @import "core/functions";
 @import "core/mixins";
+@import "core/settings";
 
 /* 3. Base */
 
 @import "base/fonts";
-//@import "base/global";
-//@import "base/headings";
-//@import "base/label";
-//@import "base/links";
-//@import "base/lists";
-//@import "base/paragraphs";
+// @import "base/global";
+// @import "base/headings";
+// @import "base/label";
+// @import "base/links";
+// @import "base/lists";
+// @import "base/paragraphs";
 
 /* 4. Objects */
 
 @import "objects/acc-breadcrumb";
 @import "objects/breadcrumb";
 @import "objects/buttons";
+// @import "objects/dropdown-toggler";
 @import "objects/forms";
-//@import "objects/dropdown-toggler";
 @import "objects/grid";
 @import "objects/icons";
 @import "objects/justify-columns";
+@import "objects/lists";
 @import "objects/media";
+@import "objects/menus";
 @import "objects/nav";
+// @import "objects/pagination";
 @import "objects/panel";
-//@import "objects/pagination";
 @import "objects/sprites";
 @import "objects/tables";
 @import "objects/tabs";
@@ -65,7 +68,7 @@ This library is divided in the following sections:
 
 /* 5. Layout */
 
-//@import "layout/dashboard/breadcrumb";
+// @import "layout/dashboard/breadcrumb";
 
 /* 6. Helpers */
 
@@ -78,8 +81,10 @@ This library is divided in the following sections:
 @import "helpers/float";
 @import "helpers/font-sizes";
 @import "helpers/is-hidden";
+@import "helpers/layout";
 @import "helpers/no-scroll";
 @import "helpers/percent";
+@import "helpers/position";
 @import "helpers/white-spacing";
 @import "helpers/with-caret";
 

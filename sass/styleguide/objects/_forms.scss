@@ -76,7 +76,6 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
     border-collapse: separate;
     border-width: 0;
     display: inline-table;
-    overflow: hidden;
     width: $input-default-width;
 
     // an input text next to an input label

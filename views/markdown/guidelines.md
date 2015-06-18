@@ -42,6 +42,33 @@ Naming conventions are a team decision. Currently we are not following strict na
 - Keep things as short as possible without adding confusion.
 - Comments rarely hurt. If you find an answer on Stack Overflow then add the link to a comment so future people know what’s up.
 
+## Units
+
+The favorite unit to use in styleguide is `rem`.
+Then, a grun task ([grunt-pixrem](https://github.com/robwierzbowski/grunt-pixrem)) try to convert to `px` in build to be compatible with SocialBro.
+
+The following rules **will no be converted**, so avoid use of `rem` on them:
+
+```
+background-size
+border-image
+border-radius
+box-shadow
+clip-path
+column
+grid
+mask
+object
+perspective
+scroll
+shape
+size
+stroke
+transform
+```
+
+Same happens with values that contains `calc` or `gradient`.
+
 ## Order
 
 - Place scoped variables, `@extends` and `@includes` (excluding media query stuff) at the top of your declaration list, in that order.

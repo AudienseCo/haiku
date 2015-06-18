@@ -1,8 +1,9 @@
 /*
 
-Sandbox
+Sandbox stylesheet to integrate with Socialbro
 -------
 
+The areas commented files are not integrated yet in Socialbro. All should be uncommented as soon as possible.
 This library is divided in the following sections:
 
 1.  Reset removes all the default styles on the page to start building using
@@ -11,26 +12,458 @@ This library is divided in the following sections:
 2.  Generic parts that load variables, functions and mixins. Use thisfolder for code that
     is applied all over the app but it is not specific to a base element or an object.
 
-3.  Helpers and useful chunks of code that do not fit in an object and it is generic enough.
+3.  Base elements are the building blocks of the page. Paragraphs, lists, images and so on.
+
+4.  Objects refer to each individual block that builds parts of the app.
+
+5.  Layout styles like background colors or images, usually they are refered as sections inside the dom html.
+
+6.  Helpers and useful chunks of code that do not fit in an object and it is generic enough.
     If possible, create objects.
-
-4.  Base elements are the building blocks of the page. Paragraphs, lists, images and so on.
-
-5.  Objects refer to each individual block that builds parts of the app.
-
-6.  Layout styles like background colors or images, usually they are refered as sections inside the dom html.
 
 7.  Vendor is code that other Javascript libraries use and do not tend to follow the OOCSS approach.
 
 */
 /* 1. Reset */
-/* 2. Core */
-/*
-
-Variables, colors and other stuff
----------------------------------
-
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+* 1. Set default font family to sans-serif.
+* 2. Prevent iOS text size adjust after orientation change, without disabling
+*    user zoom.
 */
+html
+{
+    font-family: sans-serif;
+    /* 1 */
+
+        -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+/**
+* Remove default margin.
+*/
+body
+{
+    margin: 0;
+}
+
+/* HTML5 display definitions
+========================================================================== */
+/**
+* Correct `block` display not defined for any HTML5 element in IE 8/9.
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox.
+* Correct `block` display not defined for `main` in IE 11.
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary
+{
+    display: block;
+}
+
+/**
+* 1. Correct `inline-block` display not defined in IE 8/9.
+* 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+*/
+audio,
+canvas,
+progress,
+video
+{
+    display: inline-block;
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */
+}
+
+/**
+* Prevent modern browsers from displaying `audio` without controls.
+* Remove excess height in iOS 5 devices.
+*/
+audio:not([controls])
+{
+    display: none;
+    height: 0;
+}
+
+/**
+* Address `[hidden]` styling not present in IE 8/9/10.
+* Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+*/
+[hidden],
+template
+{
+    display: none;
+}
+
+/* Links
+========================================================================== */
+/**
+* Remove the gray background color from active links in IE 10.
+*/
+a
+{
+    background-color: transparent;
+}
+
+/**
+* Improve readability when focused and also mouse hovered in all browsers.
+*/
+a:active,
+a:hover
+{
+    outline: 0;
+}
+
+/* Text-level semantics
+========================================================================== */
+/**
+* Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+*/
+abbr[title]
+{
+    border-bottom: 1px dotted;
+}
+
+/**
+* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+*/
+b,
+strong
+{
+    font-weight: bold;
+}
+
+/**
+* Address styling not present in Safari and Chrome.
+*/
+dfn
+{
+    font-style: italic;
+}
+
+/**
+* Address variable `h1` font-size and margin within `section` and `article`
+* contexts in Firefox 4+, Safari, and Chrome.
+*/
+h1
+{
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+/**
+* Address styling not present in IE 8/9.
+*/
+mark
+{
+    color: #000; 
+    background: #ff0;
+}
+
+/**
+* Address inconsistent and variable font size in all browsers.
+*/
+small
+{
+    font-size: 80%;
+}
+
+/**
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
+sub,
+sup
+{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup
+{
+    top: -.5em;
+}
+
+sub
+{
+    bottom: -.25em;
+}
+
+/* Embedded content
+========================================================================== */
+/**
+* Remove border when inside `a` element in IE 8/9/10.
+*/
+img
+{
+    border: 0;
+}
+
+/**
+* Correct overflow not hidden in IE 9/10/11.
+*/
+svg:not(:root)
+{
+    overflow: hidden;
+}
+
+/* Grouping content
+========================================================================== */
+/**
+* Address margin not present in IE 8/9 and Safari.
+*/
+figure
+{
+    margin: 1em 40px;
+}
+
+/**
+* Address differences between Firefox and other browsers.
+*/
+hr
+{
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+* Contain overflow in all browsers.
+*/
+pre
+{
+    overflow: auto;
+}
+
+/**
+* Address odd `em`-unit font size rendering in all browsers.
+*/
+code,
+kbd,
+pre,
+samp
+{
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+/* Forms
+========================================================================== */
+/**
+* Known limitation: by default, Chrome and Safari on OS X allow very limited
+* styling of `select`, unless a `border` property is set.
+*/
+/**
+* 1. Correct color not being inherited.
+*    Known issue: affects color of disabled elements.
+* 2. Correct font properties not being inherited.
+* 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+*/
+button,
+input,
+optgroup,
+select,
+textarea
+{
+    /* 1 */
+    font: inherit;
+    /* 2 */
+    margin: 0;
+    color: inherit;
+    /* 3 */
+}
+
+/**
+* Address `overflow` set to `hidden` in IE 8/9/10/11.
+*/
+button
+{
+    overflow: visible;
+}
+
+/**
+* Address inconsistent `text-transform` inheritance for `button` and `select`.
+* All other form control elements do not inherit `text-transform` values.
+* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+* Correct `select` style inheritance in Firefox.
+*/
+button,
+select
+{
+    text-transform: none;
+}
+
+/**
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+*    and `video` controls.
+* 2. Correct inability to style clickable `input` types in iOS.
+* 3. Improve usability and consistency of cursor style between image-type
+*    `input` and others.
+*/
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit']
+{
+    /* 2 */
+    cursor: pointer;
+
+    -webkit-appearance: button;
+    /* 3 */
+}
+
+/**
+* Re-set default cursor for disabled elements.
+*/
+button[disabled],
+html input[disabled]
+{
+    cursor: default;
+}
+
+/**
+* Remove inner padding and border in Firefox 4+.
+*/
+button::-moz-focus-inner,
+input::-moz-focus-inner
+{
+    padding: 0; 
+    border: 0;
+}
+
+/**
+* Address Firefox 4+ setting `line-height` on `input` using `!important` in
+* the UA stylesheet.
+*/
+input
+{
+    line-height: normal;
+}
+
+/**
+* It's recommended that you don't attempt to style these elements.
+* Firefox's implementation doesn't respect box-sizing, padding, or width.
+*
+* 1. Address box sizing set to `content-box` in IE 8/9/10.
+* 2. Remove excess padding in IE 8/9/10.
+*/
+input[type='checkbox'],
+input[type='radio']
+{
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/**
+* Fix the cursor style for Chrome's increment/decrement buttons. For certain
+* `font-size` values of the `input`, it causes the cursor style of the
+* decrement button to change from `default` to `text`.
+*/
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button
+{
+    height: auto;
+}
+
+/**
+* 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+* 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+*    (include `-moz` to future-proof).
+*/
+input[type='search']
+{
+    /* 1 */
+    /* 2 */
+    box-sizing: content-box; 
+
+    -webkit-appearance: textfield;
+}
+
+/**
+* Remove inner padding and search cancel button in Safari and Chrome on OS X.
+* Safari (but not Chrome) clips the cancel button when the search input has
+* padding (and `textfield` appearance).
+*/
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration
+{
+    -webkit-appearance: none;
+}
+
+/**
+* Define consistent border, margin, and padding.
+*/
+fieldset
+{
+    margin: 0 2px;
+    padding: .35em .625em .75em; 
+    border: 1px solid #c0c0c0;
+}
+
+/**
+* 1. Correct `color` not being inherited in IE 8/9/10/11.
+* 2. Remove padding so people aren't caught out if they zero out fieldsets.
+*/
+legend
+{
+    /* 1 */
+    padding: 0;
+    border: 0;
+    /* 2 */
+}
+
+/**
+* Remove default vertical scrollbar in IE 8/9/10/11.
+*/
+textarea
+{
+    overflow: auto;
+}
+
+/**
+* Don't inherit the `font-weight` (applied by a rule above).
+* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+*/
+optgroup
+{
+    font-weight: bold;
+}
+
+/* Tables
+========================================================================== */
+/**
+* Remove most spacing between table cells.
+*/
+table
+{
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+
+td,
+th
+{
+    padding: 0;
+}
+
+/* 2. Core */
 /*
 
 Functions
@@ -155,6 +588,22 @@ Responsive mixin
   }
 
 */
+/*
+
+Standard container
+----------------
+
+    .menu {
+        @include standard-container;
+    }
+
+*/
+/*
+
+Variables, colors and other stuff
+---------------------------------
+
+*/
 /* 3. Base */
 /*
 
@@ -170,7 +619,7 @@ Drop the files in a folder, update the path and the name and go.
     position: relative;
     display: block;
     float: left;
-    width: 160px;
+    width: 160px; 
     height: 120px;
     margin: 8px 16px 8px 30px;
     background-color: #d6d6d6;
@@ -181,7 +630,7 @@ Drop the files in a folder, update the path and the name and go.
     top: 0;
     left: 160px;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     -moz-transform: scale(.9999);
@@ -193,7 +642,7 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item
 {
     position: absolute;
-    top: 1px;
+    top: 1px; 
     right: 1px;
     bottom: 1px;
     left: 1px;
@@ -205,7 +654,7 @@ Drop the files in a folder, update the path and the name and go.
     top: 0;
     left: 158px;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-width: 59px 27px;
@@ -217,7 +666,7 @@ Drop the files in a folder, update the path and the name and go.
     font-size: 26px;
     line-height: 34px;
     position: absolute;
-    z-index: 2;
+    z-index: 2; 
     right: -40px;
     bottom: 27px;
     width: 40px;
@@ -236,7 +685,7 @@ Drop the files in a folder, update the path and the name and go.
     position: absolute;
     top: 0;
     left: -30px;
-    width: 30px;
+    width: 30px; 
     height: 60px;
 }
 .acc-breadcrumb-item-back-top:before,
@@ -244,7 +693,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-width: 0 30px 60px 30px;
@@ -252,14 +701,14 @@ Drop the files in a folder, update the path and the name and go.
 }
 .acc-breadcrumb-item-back-top:before
 {
-    top: 0;
+    top: 0; 
     right: 0;
     border-color: transparent #d6d6d6 transparent transparent;
 }
 .acc-breadcrumb-item-back-top:after
 {
     top: 1px;
-    right: -2px;
+    right: -2px; 
     border-color: transparent white transparent transparent;
 }
 
@@ -268,7 +717,7 @@ Drop the files in a folder, update the path and the name and go.
     position: absolute;
     bottom: 0;
     left: -30px;
-    width: 30px;
+    width: 30px; 
     height: 60px;
 }
 .acc-breadcrumb-item-back-bottom:before,
@@ -276,7 +725,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-width: 60px 30px 0 30px;
@@ -284,13 +733,13 @@ Drop the files in a folder, update the path and the name and go.
 }
 .acc-breadcrumb-item-back-bottom:before
 {
-    top: 0;
+    top: 0; 
     right: 0;
     border-color: transparent #d6d6d6 transparent transparent;
 }
 .acc-breadcrumb-item-back-bottom:after
 {
-    right: -2px;
+    right: -2px; 
     bottom: 1px;
     border-color: transparent white transparent transparent;
 }
@@ -300,7 +749,7 @@ Drop the files in a folder, update the path and the name and go.
     font-size: 11px;
     line-height: 24px;
     position: absolute;
-    z-index: 1;
+    z-index: 1; 
     right: 15px;
     bottom: 15px;
     left: 15px;
@@ -313,7 +762,7 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item-amount:before
 {
     position: absolute;
-    top: 50%;
+    top: 50%; 
     height: 4px;
     margin-top: -2px;
     content: '';
@@ -334,7 +783,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     line-height: 1;
     display: table;
-    width: 100%;
+    width: 100%; 
     height: 81px;
     text-align: center;
 }
@@ -348,7 +797,7 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item-event-amount
 {
     font-size: 22px;
-    font-weight: bold;
+    font-weight: bold; 
     display: block;
 }
 
@@ -356,7 +805,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     font-size: 11px;
     display: block;
-    padding: 0 10px;
+    padding: 0 10px; 
     text-transform: uppercase;
 }
 
@@ -365,7 +814,7 @@ Drop the files in a folder, update the path and the name and go.
     line-height: 1;
     position: relative;
     display: table;
-    width: 100%;
+    width: 100%; 
     height: 88px;
     text-align: center;
     border-radius: 4px;
@@ -452,13 +901,13 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 */
 .breadcrumb
 {
-    overflow: hidden;
+    overflow: hidden; 
     background-color: white;
 }
 
 .breadcrumb-with-borders
 {
-    border: 1px solid #d6d6d6;
+    border: 1px solid #d6d6d6; 
     border-radius: 4px;
 }
 
@@ -468,14 +917,14 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     display: table-cell;
     margin-left: -2px;
     padding: 10px 10px 10px 25px;
-    vertical-align: middle;
+    vertical-align: middle; 
     background-color: #f6f6f6;
 }
 .breadcrumb-item:after,
 .breadcrumb-item:before
 {
     position: absolute;
-    z-index: 1;
+    z-index: 1; 
     left: 100%;
     display: block;
     width: 0;
@@ -485,13 +934,13 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .breadcrumb-item:before
 {
-    top: -1px;
+    top: -1px; 
     border-width: 21px 21px 21px 13px;
     border-color: transparent transparent transparent #d6d6d6;
 }
 .breadcrumb-item:after
 {
-    top: 0;
+    top: 0; 
     border-width: 20px 20px 20px 12px;
     border-color: transparent transparent transparent #f6f6f6;
 }
@@ -517,13 +966,13 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .breadcrumb-item-large:before
 {
-    top: -1px;
+    top: -1px; 
     border-width: 41px 41px 41px 25px;
     border-color: transparent transparent transparent #d6d6d6;
 }
 .breadcrumb-item-large:after
 {
-    top: 0;
+    top: 0; 
     border-width: 40px 40px 40px 24px;
     border-color: transparent transparent transparent #f6f6f6;
 }
@@ -537,7 +986,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .breadcrumb-item-simple:after
 {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 10px; 
     content: '/';
     color: gray;
 }
@@ -562,7 +1011,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
-    white-space: nowrap;
+    white-space: nowrap; 
     text-decoration: none;
     text-overflow: ellipsis;
     color: #565656;
@@ -585,10 +1034,21 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     cursor: not-allowed;
     opacity: .5;
 }
+.btn > [class^='icon']
+{
+    width: 1.3em; 
+    height: 22px;
+    margin-right: 3px;
+    vertical-align: bottom;
+}
+.btn.with-caret:after
+{
+    margin-left: 3px;
+}
 
 .btn-primary
 {
-    color: white;
+    color: white; 
     border: 1px solid #f18b46;
     background: #f29556;
 }
@@ -604,7 +1064,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-success
 {
-    color: white;
+    color: white; 
     border: 1px solid #6ab624;
     background: #72c427;
 }
@@ -620,7 +1080,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-service
 {
-    color: white;
+    color: white; 
     border: 1px solid #009ee1;
     background: #00aaf2;
 }
@@ -636,7 +1096,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-danger
 {
-    color: white;
+    color: white; 
     border: 1px solid #c60e32;
     background: #d60f36;
 }
@@ -652,7 +1112,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-contrast
 {
-    color: inherit;
+    color: inherit; 
     border: 1px solid #ccd1d9;
     background: #fff;
 }
@@ -668,7 +1128,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-skip
 {
-    color: white;
+    color: white; 
     border: 1px solid #acacac;
     background: #b9b9b9;
 }
@@ -682,44 +1142,12 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     background: #acacac;
 }
 
-.btn-group .btn
-{
-    float: left;
-}
-
-.btn-group > .btn:first-child
-{
-    margin-left: 0;
-}
-
-.btn-group > .btn:first-child:not(:last-child)
-{
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.btn-group .btn + .btn
-{
-    margin-left: -1px;
-}
-
-.btn-group > .btn:not(:first-child):not(:last-child)
-{
-    border-radius: 0;
-}
-
-.btn-group > .btn:last-child:not(:first-child)
-{
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
 .input-base
 {
     line-height: 22px;
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 200px; 
     height: 36px;
     padding: 6px 10px;
     text-align: left;
@@ -735,14 +1163,14 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .input-base.error
 {
-    color: #cc8383;
+    color: #cc8383; 
     border-color: #cc8383;
     background-color: #ffe6e6;
 }
 .input-base.with-caret
 {
     overflow: hidden;
-    padding-right: 30px;
+    padding-right: 30px; 
     cursor: pointer;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -750,7 +1178,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-base.with-caret:after
 {
     position: absolute;
-    z-index: 1;
+    z-index: 1; 
     top: 50%;
     right: 15px;
     width: 0;
@@ -772,7 +1200,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     right: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100%; 
     padding: 6px 10px;
     cursor: pointer;
     border: 0;
@@ -792,8 +1220,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group
 {
     display: inline-table;
-    overflow: hidden;
-    width: 200px;
+    width: 200px; 
     border-collapse: separate;
     border-width: 0;
 }
@@ -805,7 +1232,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group .input-base
 {
     display: table-cell;
-    width: 100%;
+    width: 100%; 
     height: 36px;
     padding: 6px 10px;
     border-width: 1px 0 1px 1px;
@@ -827,7 +1254,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .input-group .input-group-button > .btn
 {
-    width: 100%;
+    width: 100%; 
     height: 36px;
     border-width: 1px;
     border-radius: 0 3px 3px 0;
@@ -841,7 +1268,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     padding: 5px 10px;
     cursor: default;
     vertical-align: middle;
-    white-space: nowrap;
+    white-space: nowrap; 
     color: #565656;
     border-width: 1px 0 1px 1px;
     border-style: solid;
@@ -852,42 +1279,56 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group.error .input-label,
 .input-group.error .input-group-button > .btn
 {
-    color: #fff;
+    color: #fff; 
     border-color: #cc8383;
     background-color: #cc8383;
 }
 .input-group.error .input-base
 {
-    color: #cc8383;
+    color: #cc8383; 
     border-color: #cc8383;
     background-color: #ffe6e6;
 }
 
-/*
-
-Grid
-----
-
-Surprise! A grid system with rows and columns. You can nest it the times you want.
-
-<div class="grid-row">
-  <div class="grid-column">
-    <p class="demo-block">I'm a column. Full by default</p>
-  </div>
-  <div class="grid-column one-third">
-    <p class="demo-block">Boring one-third column</p>
-  </div>
-  <div class="grid-column two-thirds">
-    <p class="demo-block">Funny column two-third of width</p>
-  </div>
-</div>
-
-*/
 .grid-row
 {
-    margin: 0;
+    margin-right: -10px; 
+    margin-left: -10px;
+}
+.grid-row > .grid-column,
+.grid-row .grid-columns
+{
+    padding: 0 10px;
+}
+.grid-row.full
+{
+    margin-right: 0; 
+    margin-left: 0;
+}
+.grid-row.full > .grid-column,
+.grid-row.full .grid-columns
+{
+    padding: 0 0;
+}
+.grid-row.narrow
+{
+    margin-right: -5px; 
+    margin-left: -5px;
+}
+.grid-row.narrow > .grid-column,
+.grid-row.narrow .grid-columns
+{
+    padding: 0 5px;
+}
+.grid-row.wide
+{
+    margin-right: -20px; 
     margin-left: -20px;
-    padding: 0;
+}
+.grid-row.wide > .grid-column,
+.grid-row.wide .grid-columns
+{
+    padding: 0 20px;
 }
 
 .grid-column,
@@ -895,46 +1336,8 @@ Surprise! A grid system with rows and columns. You can nest it the times you wan
 {
     float: left;
     width: 100%;
-    padding-left: 20px;
 }
 
-.grid-row.reverse > .column,
-.grid-row.reverse .columns
-{
-    float: right;
-}
-
-.grid-row.full
-{
-    margin-left: 0;
-}
-.grid-row.full > .grid-column,
-.grid-row.full .grid-columns
-{
-    padding-left: 0;
-}
-
-.grid-row.narrow
-{
-    margin-left: -10px;
-}
-.grid-row.narrow > .grid-column,
-.grid-row.narrow .grid-columns
-{
-    padding-left: 10px;
-}
-
-.grid-row.wide
-{
-    margin-left: -40px;
-}
-.grid-row.wide > .grid-column,
-.grid-row.wide .grid-columns
-{
-    padding-left: 40px;
-}
-
-/* Widths */
 .one.grid-column
 {
     width: 12.5%;
@@ -991,70 +1394,76 @@ Surprise! A grid system with rows and columns. You can nest it the times you wan
 
 .icon-size-16
 {
-    width: 16px;
+    width: 16px; 
     height: 16px;
 }
 
 .icon-size-18
 {
-    width: 18px;
+    width: 18px; 
     height: 18px;
 }
 
 .icon-size-20
 {
-    width: 20px;
+    width: 20px; 
     height: 20px;
 }
 
 .icon-size-30
 {
-    width: 30px;
+    width: 30px; 
     height: 30px;
 }
 
 .icon-size-35
 {
-    width: 35px;
+    width: 35px; 
     height: 35px;
 }
 
 .icon-size-40
 {
-    width: 40px;
+    width: 40px; 
     height: 40px;
 }
 
 .icon-size-45
 {
-    width: 45px;
+    width: 45px; 
     height: 45px;
 }
 
 .icon-size-50
 {
-    width: 50px;
+    width: 50px; 
     height: 50px;
 }
 
 .icon-size-55
 {
-    width: 55px;
+    width: 55px; 
     height: 55px;
 }
 
 .icon-size-60
 {
-    width: 60px;
+    width: 60px; 
     height: 60px;
 }
 
 [class^='icon']
 {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: middle; 
 
     fill: currentColor;
+}
+
+.icon-text
+{
+    width: 1.3em; 
+    height: 1.5em;
 }
 
 .icon-text-aligned
@@ -1088,13 +1497,13 @@ Use this structure to justify columns inside a container.
 */
 .justify-columns
 {
-    width: 100%;
+    width: 100%; 
     text-align: justify;
 }
 .justify-columns:after
 {
     display: inline-block;
-    width: 100%;
+    width: 100%; 
     content: '';
 }
 
@@ -1102,6 +1511,59 @@ Use this structure to justify columns inside a container.
 {
     display: inline-block;
     vertical-align: top;
+}
+
+.menu-list
+{
+    display: block;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    white-space: nowrap;
+}
+.menu-list.non-selectable .menu-list-item
+{
+    cursor: normal;
+}
+.menu-list.non-selectable .menu-list-item:hover
+{
+    border-top: 1px solid transparent; 
+    border-bottom: 1px solid transparent;
+    background-color: inherit;
+}
+
+.menu-list-item
+{
+    line-height: 1.5;
+    display: block;
+    padding: 4px 15px; 
+    cursor: pointer;
+    color: #565656;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.menu-list-item:hover
+{
+    text-decoration: none; 
+    border-top: 1px solid #29c4d0;
+    border-bottom: 1px solid #29c4d0;
+    background-color: #c1eff3;
+}
+.menu-list-item > a
+{
+    display: block;
+    text-decoration: none; 
+    color: inherit;
+}
+.menu-list-item > [class^='icon']
+{
+    display: inline-block;
+    width: 1.3em; 
+    height: 1.5em;
+    margin-right: 6px;
+    vertical-align: bottom;
+
+    fill: currentColor;
 }
 
 /*
@@ -1170,6 +1632,401 @@ Use this object to show an image and some text rendered in two columns.
     width: 100%;
 }
 
+.sb-menu,
+.sb-menu-bubble-top,
+.sb-menu-bubble-bottom,
+.sb-menu-bubble-top-right,
+.sb-menu-bubble-top-left,
+.sb-menu-bubble-bottom-right,
+.sb-menu-bubble-bottom-left
+{
+    display: block; 
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+
+.sb-menu-bubble-top
+{
+    position: absolute;
+    margin-top: 10px;
+}
+.sb-menu-bubble-top:before,
+.sb-menu-bubble-top:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.sb-menu-bubble-top:before,
+.sb-menu-bubble-top:after
+{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); 
+    border-width: 0 10px 10px 10px;
+}
+.sb-menu-bubble-top:before
+{
+    top: -10px; 
+    border-color: transparent transparent #d6d6d6 transparent;
+}
+.sb-menu-bubble-top:after
+{
+    top: -9px; 
+    border-color: transparent transparent white transparent;
+}
+
+.sb-menu-bubble-bottom
+{
+    position: absolute;
+    margin-bottom: 10px;
+}
+.sb-menu-bubble-bottom:before,
+.sb-menu-bubble-bottom:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.sb-menu-bubble-bottom:before,
+.sb-menu-bubble-bottom:after
+{
+    left: 50%;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    border-width: 0 15px 15px 0;
+}
+.sb-menu-bubble-bottom:before
+{
+    bottom: -15px;
+    border-color: transparent transparent #d6d6d6 #d6d6d6;
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.sb-menu-bubble-bottom:after
+{
+    bottom: -14px; 
+    border-color: transparent transparent white white;
+}
+
+.sb-menu-bubble-top-right
+{
+    position: absolute;
+    margin-top: 10px;
+}
+.sb-menu-bubble-top-right:before,
+.sb-menu-bubble-top-right:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.sb-menu-bubble-top-right:before,
+.sb-menu-bubble-top-right:after
+{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); 
+    border-width: 0 10px 10px 10px;
+}
+.sb-menu-bubble-top-right:before
+{
+    top: -10px; 
+    border-color: transparent transparent #d6d6d6 transparent;
+}
+.sb-menu-bubble-top-right:after
+{
+    top: -9px; 
+    border-color: transparent transparent white transparent;
+}
+.sb-menu-bubble-top-right:before,
+.sb-menu-bubble-top-right:after
+{
+    right: 22px;
+    left: auto;
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+}
+
+.sb-menu-bubble-top-left
+{
+    position: absolute;
+    margin-top: 10px;
+}
+.sb-menu-bubble-top-left:before,
+.sb-menu-bubble-top-left:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.sb-menu-bubble-top-left:before,
+.sb-menu-bubble-top-left:after
+{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); 
+    border-width: 0 10px 10px 10px;
+}
+.sb-menu-bubble-top-left:before
+{
+    top: -10px; 
+    border-color: transparent transparent #d6d6d6 transparent;
+}
+.sb-menu-bubble-top-left:after
+{
+    top: -9px; 
+    border-color: transparent transparent white transparent;
+}
+.sb-menu-bubble-top-left:before,
+.sb-menu-bubble-top-left:after
+{
+    left: 22px;
+}
+
+.sb-menu-bubble-bottom-right
+{
+    position: absolute;
+    margin-bottom: 10px;
+}
+.sb-menu-bubble-bottom-right:before,
+.sb-menu-bubble-bottom-right:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.sb-menu-bubble-bottom-right:before,
+.sb-menu-bubble-bottom-right:after
+{
+    left: 50%;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    border-width: 0 15px 15px 0;
+}
+.sb-menu-bubble-bottom-right:before
+{
+    bottom: -15px;
+    border-color: transparent transparent #d6d6d6 #d6d6d6;
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.sb-menu-bubble-bottom-right:after
+{
+    bottom: -14px; 
+    border-color: transparent transparent white white;
+}
+.sb-menu-bubble-bottom-right:before,
+.sb-menu-bubble-bottom-right:after
+{
+    right: 22px;
+    left: auto;
+    -webkit-transform: rotate(-45deg) translateX(25%) translateY(25%);
+        -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
+            transform: rotate(-45deg) translateX(25%) translateY(25%);
+}
+
+.sb-menu-bubble-bottom-left
+{
+    position: absolute;
+    margin-bottom: 10px;
+}
+.sb-menu-bubble-bottom-left:before,
+.sb-menu-bubble-bottom-left:after
+{
+    position: absolute;
+    display: block;
+    width: 0; 
+    height: 0;
+    content: '';
+    border-style: solid;
+}
+.sb-menu-bubble-bottom-left:before,
+.sb-menu-bubble-bottom-left:after
+{
+    left: 50%;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    border-width: 0 15px 15px 0;
+}
+.sb-menu-bubble-bottom-left:before
+{
+    bottom: -15px;
+    border-color: transparent transparent #d6d6d6 #d6d6d6;
+    box-shadow: -2px 2px 3px 0 rgba(0, 0, 0, .1);
+}
+.sb-menu-bubble-bottom-left:after
+{
+    bottom: -14px; 
+    border-color: transparent transparent white white;
+}
+.sb-menu-bubble-bottom-left:before,
+.sb-menu-bubble-bottom-left:after
+{
+    left: 22px;
+}
+
+.sb-menu-align-top
+{
+    position: relative; 
+    display: inline-block;
+}
+.sb-menu-align-top > .menu
+{
+    position: absolute;
+}
+.sb-menu-align-top > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+.sb-menu-align-top > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
+{
+    margin-bottom: 5px;
+}
+.sb-menu-align-top > .sb-menu
+{
+    bottom: 100%;
+}
+.sb-menu-align-top > .sb-menu
+{
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+.sb-menu-align-top > .sb-menu-bubble-top-left,
+.sb-menu-align-top .sb-menu-bubble-bottom-left
+{
+    -webkit-transform: translate(-23px);
+        -ms-transform: translate(-23px);
+            transform: translate(-23px);
+}
+.sb-menu-align-top > .sb-menu-bubble-top-right,
+.sb-menu-align-top .sb-menu-bubble-bottom-right
+{
+    right: 50%;
+    left: auto;
+    -webkit-transform: translate(23px);
+        -ms-transform: translate(23px);
+            transform: translate(23px);
+}
+
+.sb-menu-align-bottom
+{
+    position: relative; 
+    display: inline-block;
+}
+.sb-menu-align-bottom > .menu
+{
+    position: absolute;
+}
+.sb-menu-align-bottom > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+.sb-menu-align-bottom > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
+{
+    margin-top: 5px;
+}
+.sb-menu-align-bottom > .sb-menu
+{
+    top: 100%;
+}
+.sb-menu-align-bottom > .sb-menu
+{
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+}
+.sb-menu-align-bottom > .sb-menu-bubble-top-left,
+.sb-menu-align-bottom .sb-menu-bubble-bottom-left
+{
+    -webkit-transform: translate(-23px);
+        -ms-transform: translate(-23px);
+            transform: translate(-23px);
+}
+.sb-menu-align-bottom > .sb-menu-bubble-top-right,
+.sb-menu-align-bottom .sb-menu-bubble-bottom-right
+{
+    right: 50%;
+    left: auto;
+    -webkit-transform: translate(23px);
+        -ms-transform: translate(23px);
+            transform: translate(23px);
+}
+
+.sb-menu-align-bottom-right
+{
+    position: relative; 
+    display: inline-block;
+}
+.sb-menu-align-bottom-right > .menu
+{
+    position: absolute;
+}
+.sb-menu-align-bottom-right > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+.sb-menu-align-bottom-right > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
+{
+    margin-top: 5px;
+}
+.sb-menu-align-bottom-right > .sb-menu
+{
+    top: 100%;
+}
+.sb-menu-align-bottom-right > .menu
+{
+    right: 0;
+}
+
+.sb-menu-align-bottom-left
+{
+    position: relative; 
+    display: inline-block;
+}
+.sb-menu-align-bottom-left > .menu
+{
+    position: absolute;
+}
+.sb-menu-align-bottom-left > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
+.sb-menu-align-bottom-left > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
+{
+    margin-top: 5px;
+}
+.sb-menu-align-bottom-left > .sb-menu
+{
+    top: 100%;
+}
+.sb-menu-align-bottom-left > .menu
+{
+    left: 0;
+}
+
 /*
 
 Navigation menu
@@ -1213,22 +2070,22 @@ Navigation usually means list of links. And we have some flavours using distinct
 .panel
 {
     display: inline-block;
-    overflow: hidden;
+    overflow: hidden; 
     border: 1px solid #d6d6d6;
-    border-radius: 3px;
+    border-radius: 4px;
     background-color: #fff;
 }
 
 .panel-header
 {
-    padding: 12px 15px;
+    padding: 12px 15px; 
     background-color: #f6f6f6;
 }
 
 .panel-header-title
 {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: normal; 
     color: #000;
 }
 
@@ -1261,7 +2118,7 @@ The provided mixins are intended to be used with the array-like variables
 .sb-table
 {
     display: table;
-    overflow: hidden;
+    overflow: hidden; 
     border-collapse: separate;
     border: 1px solid #d6d6d6;
     border-radius: 4px;
@@ -1288,7 +2145,7 @@ The provided mixins are intended to be used with the array-like variables
     font-weight: bold;
     line-height: 1;
     display: table-row;
-    text-transform: uppercase;
+    text-transform: uppercase; 
     color: #000;
     background-color: #f6f6f6;
 }
@@ -1299,7 +2156,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .sb-table-row
 {
-    display: table-row;
+    display: table-row; 
     background-color: #eff7fd;
 }
 .sb-table-row:nth-child(2n+1)
@@ -1327,13 +2184,13 @@ The provided mixins are intended to be used with the array-like variables
 .sb-table-cell-subtitle
 {
     font-weight: normal;
-    text-transform: none;
+    text-transform: none; 
     color: #5e5e5e;
 }
 
 .first-highlight .sb-table-heading .sb-table-cell:nth-child(1)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .first-highlight .sb-table-heading .sb-table-cell:nth-child(1) .sb-table-cell-subtitle
@@ -1351,7 +2208,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .second-highlight .sb-table-heading .sb-table-cell:nth-child(2)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .second-highlight .sb-table-heading .sb-table-cell:nth-child(2) .sb-table-cell-subtitle
@@ -1369,7 +2226,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .third-highlight .sb-table-heading .sb-table-cell:nth-child(3)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .third-highlight .sb-table-heading .sb-table-cell:nth-child(3) .sb-table-cell-subtitle
@@ -1387,7 +2244,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .fourth-highlight .sb-table-heading .sb-table-cell:nth-child(4)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .fourth-highlight .sb-table-heading .sb-table-cell:nth-child(4) .sb-table-cell-subtitle
@@ -1405,7 +2262,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .fifth-highlight .sb-table-heading .sb-table-cell:nth-child(5)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .fifth-highlight .sb-table-heading .sb-table-cell:nth-child(5) .sb-table-cell-subtitle
@@ -1423,7 +2280,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .sixth-highlight .sb-table-heading .sb-table-cell:nth-child(6)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .sixth-highlight .sb-table-heading .sb-table-cell:nth-child(6) .sb-table-cell-subtitle
@@ -1441,7 +2298,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .seventh-highlight .sb-table-heading .sb-table-cell:nth-child(7)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .seventh-highlight .sb-table-heading .sb-table-cell:nth-child(7) .sb-table-cell-subtitle
@@ -1459,7 +2316,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .eigth-highlight .sb-table-heading .sb-table-cell:nth-child(8)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .eigth-highlight .sb-table-heading .sb-table-cell:nth-child(8) .sb-table-cell-subtitle
@@ -1477,7 +2334,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .ninth-highlight .sb-table-heading .sb-table-cell:nth-child(9)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .ninth-highlight .sb-table-heading .sb-table-cell:nth-child(9) .sb-table-cell-subtitle
@@ -1525,7 +2382,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs-group
 {
     display: table;
-    width: 100%;
+    width: 100%; 
     margin: 0;
     padding: 0;
     table-layout: fixed;
@@ -1535,7 +2392,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tab
 {
-    position: relative;
+    position: relative; 
     display: table-cell;
     border-top: 1px solid #ccd1d9;
     background-color: #f7f7f7;
@@ -1543,21 +2400,21 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tab a
 {
     display: block;
-    padding: 15px;
+    padding: 15px; 
     color: #565656;
 }
 
 .sb-tab-active
 {
     position: relative;
-    z-index: 1;
+    z-index: 1; 
     background-color: white;
 }
 
 .sb-tab-active:after
 {
     position: absolute;
-    z-index: 2;
+    z-index: 2; 
     top: -webkit-calc(100% - 1px);
     top:         calc(100% - 1px);
     left: 0;
@@ -1588,7 +2445,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs-content
 {
     position: relative;
-    z-index: 0;
+    z-index: 0; 
     display: none;
     padding: 1em;
     color: #565656;
@@ -1628,7 +2485,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--block-bottom .sb-tab-active:after
 {
-    top: auto;
+    top: auto; 
     bottom: -webkit-calc(100% - 1px);
     bottom:         calc(100% - 1px);
 }
@@ -1652,7 +2509,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs--block-right .sb-tabs-group:after,
 .sb-tabs--block-right .sb-tabs-group:before
 {
-    display: table;
+    display: table; 
     content: '';
 }
 
@@ -1671,7 +2528,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--block-left .sb-tabs-content
 {
-    clear: left;
+    clear: left; 
     border-radius: 0 4px 4px 4px;
 }
 
@@ -1683,7 +2540,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--block-right .sb-tabs-content
 {
-    clear: right;
+    clear: right; 
     border-radius: 4px 0 4px 4px;
 }
 
@@ -1693,7 +2550,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs--right:after,
 .sb-tabs--right:before
 {
-    display: table;
+    display: table; 
     content: '';
 }
 
@@ -1712,7 +2569,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--left .sb-tabs-group
 {
-    float: left;
+    float: left; 
     border-radius: 4px 0 0 4px;
 }
 
@@ -1735,7 +2592,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--left .sb-tab:last-child
 {
-    border-bottom: 1px solid #ccd1d9;
+    border-bottom: 1px solid #ccd1d9; 
     border-top-right-radius: 0;
     border-bottom-left-radius: 4px;
 }
@@ -1750,7 +2607,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     top: 0;
     left: 100%;
-    width: 2px;
+    width: 2px; 
     height: 100%;
 }
 
@@ -1762,7 +2619,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 /* Tabs right */
 .sb-tabs--right .sb-tabs-group
 {
-    float: right;
+    float: right; 
     border-radius: 0 4px 4px 0;
 }
 
@@ -1776,7 +2633,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     top: 0;
     left: -1px;
-    width: 2px;
+    width: 2px; 
     height: 100%;
 }
 
@@ -1789,7 +2646,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--right .sb-tab:last-child
 {
-    border-bottom: 1px solid #ccd1d9;
+    border-bottom: 1px solid #ccd1d9; 
     border-top-right-radius: 0;
     border-bottom-right-radius: 4px;
 }
@@ -1835,7 +2692,7 @@ Utility class to align inline and inline-blocks elements.
 .align-justify:after
 {
     display: inline-block;
-    width: 100%;
+    width: 100%; 
     content: '';
 }
 
@@ -1903,7 +2760,7 @@ Clear floats utility.
 .clearfix:after,
 .breadcrumb:after
 {
-    display: table;
+    display: table; 
     content: '';
 }
 .grid-row:after,
@@ -1919,9 +2776,29 @@ Clear floats utility.
     color: #d60f36;
 }
 
+.color-text
+{
+    color: #5e5e5e;
+}
+
+.color-text-l
+{
+    color: #676767;
+}
+
 .color-text-sd
 {
     color: #b1b1b1;
+}
+
+.color-titles
+{
+    color: #191919;
+}
+
+.color-titles-s
+{
+    color: #8a4fa2;
 }
 
 .cursor-pointer
@@ -2039,6 +2916,52 @@ Hides an element, normally remove after some user interaction through javascript
     display: none;
 }
 
+.di
+{
+    display: inline;
+}
+
+.db
+{
+    display: block;
+}
+
+.dib
+{
+    display: inline-block;
+}
+
+.dibm
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dt
+{
+    display: table;
+    width: 100%;
+}
+
+.dtc
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dtct
+{
+    display: table-cell;
+    vertical-align: top;
+}
+
+.dtf
+{
+    display: table;
+    width: 100%; 
+    table-layout: fixed;
+}
+
 /*
 
 No scroll
@@ -2054,7 +2977,7 @@ for instance, when the sidebar off canvas menu is open or a modal window with sc
 */
 .no-scroll
 {
-    position: relative;
+    position: relative; 
     overflow: hidden !important;
 }
 
@@ -2147,6 +3070,21 @@ Width in percents for all elements. Supported values are 5% to 100% in steps of 
 .percent.hundred
 {
     width: 100% !important;
+}
+
+.prel
+{
+    position: relative;
+}
+
+.pabs
+{
+    position: absolute;
+}
+
+.pst
+{
+    position: static;
 }
 
 /*
@@ -2301,31 +3239,31 @@ n           Negative (margin only)
 
 .mxn1
 {
-    margin-right: 5px;
+    margin-right: 5px; 
     margin-left: 5px;
 }
 
 .mxn2
 {
-    margin-right: -10px;
+    margin-right: -10px; 
     margin-left: -10px;
 }
 
 .mxn3
 {
-    margin-right: -20px;
+    margin-right: -20px; 
     margin-left: -20px;
 }
 
 .mxn4
 {
-    margin-right: -30px;
+    margin-right: -30px; 
     margin-left: -30px;
 }
 
 .mx-auto
 {
-    margin-right: auto;
+    margin-right: auto; 
     margin-left: auto;
 }
 
@@ -2341,13 +3279,13 @@ n           Negative (margin only)
 
 .py1
 {
-    padding-top: 5px;
+    padding-top: 5px; 
     padding-bottom: 5px;
 }
 
 .px1
 {
-    padding-right: 5px;
+    padding-right: 5px; 
     padding-left: 5px;
 }
 
@@ -2358,13 +3296,13 @@ n           Negative (margin only)
 
 .py2
 {
-    padding-top: 10px;
+    padding-top: 10px; 
     padding-bottom: 10px;
 }
 
 .px2
 {
-    padding-right: 10px;
+    padding-right: 10px; 
     padding-left: 10px;
 }
 
@@ -2375,13 +3313,13 @@ n           Negative (margin only)
 
 .py3
 {
-    padding-top: 20px;
+    padding-top: 20px; 
     padding-bottom: 20px;
 }
 
 .px3
 {
-    padding-right: 20px;
+    padding-right: 20px; 
     padding-left: 20px;
 }
 
@@ -2392,13 +3330,13 @@ n           Negative (margin only)
 
 .py4
 {
-    padding-top: 30px;
+    padding-top: 30px; 
     padding-bottom: 30px;
 }
 
 .px4
 {
-    padding-right: 30px;
+    padding-right: 30px; 
     padding-left: 30px;
 }
 
@@ -2408,11 +3346,10 @@ n           Negative (margin only)
 }
 .with-caret:after
 {
-    z-index: 1;
+    z-index: 1; 
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: 5px;
     content: '';
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
