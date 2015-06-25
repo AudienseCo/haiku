@@ -1590,8 +1590,6 @@ Use this structure to justify columns inside a container.
     height: 1.5em;
     margin-right: 6px;
     vertical-align: bottom;
-
-    fill: currentColor;
 }
 
 /*

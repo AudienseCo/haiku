@@ -1313,7 +1313,6 @@ Use this structure to justify columns inside a container.
     text-decoration: none; }
   .menu-list-item > [class^="icon"] {
     display: inline-block;
-    fill: currentColor;
     margin-right: 0.6rem;
     vertical-align: bottom;
     height: 1.5em;
