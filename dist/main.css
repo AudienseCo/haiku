@@ -1238,6 +1238,23 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
 .icon-socialbro {
   fill: #29c4d0; }
 
+.icon-pdf, .icon-ads, .icon-xls {
+  border-radius: 4px;
+  fill: #ffffff; }
+
+.icon-pdf {
+  background: #e6103a;
+  border-radius: 3px;
+  padding: 6%; }
+
+.icon-ads {
+  background: #00aaf2;
+  padding: 10%; }
+
+.icon-xls {
+  background: #7ad22a;
+  padding: 10%; }
+
 /*
 
 Justified columns
