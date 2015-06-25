@@ -39,17 +39,17 @@ $base-sizes: 16 18 20 30 35 40 45 50 55 60;
     @extend %icon-file;
     background: color($name: "error", $hue: "light");
     border-radius: 3px;
-    padding: 6%;
+    padding: 2px;
 }
 
 .icon-ads {
     @extend %icon-file;
     background: color($name: "service");
-    padding: 10%;
+    padding: 2px;
 }
 
 .icon-xls {
     @extend %icon-file;
     background: color($name: "succeed", $hue: "light");
-    padding: 10%;
+    padding: 2px;
 }

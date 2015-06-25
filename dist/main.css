@@ -1245,15 +1245,15 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
 .icon-pdf {
   background: #e6103a;
   border-radius: 3px;
-  padding: 6%; }
+  padding: 2px; }
 
 .icon-ads {
   background: #00aaf2;
-  padding: 10%; }
+  padding: 2px; }
 
 .icon-xls {
   background: #7ad22a;
-  padding: 10%; }
+  padding: 2px; }
 
 /*
 
