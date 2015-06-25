@@ -1925,18 +1925,18 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-top > .sb-menu-bubble-top-left,
 .sb-menu-align-top .sb-menu-bubble-bottom-left
 {
-    -webkit-transform: translate(-23px);
-        -ms-transform: translate(-23px);
-            transform: translate(-23px);
+    -webkit-transform: translate(-2.3rem);
+        -ms-transform: translate(-2.3rem);
+            transform: translate(-2.3rem);
 }
 .sb-menu-align-top > .sb-menu-bubble-top-right,
 .sb-menu-align-top .sb-menu-bubble-bottom-right
 {
     right: 50%;
     left: auto;
-    -webkit-transform: translate(23px);
-        -ms-transform: translate(23px);
-            transform: translate(23px);
+    -webkit-transform: translate(2.3rem);
+        -ms-transform: translate(2.3rem);
+            transform: translate(2.3rem);
 }
 
 .sb-menu-align-bottom
@@ -1967,18 +1967,18 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-bottom > .sb-menu-bubble-top-left,
 .sb-menu-align-bottom .sb-menu-bubble-bottom-left
 {
-    -webkit-transform: translate(-23px);
-        -ms-transform: translate(-23px);
-            transform: translate(-23px);
+    -webkit-transform: translate(-2.3rem);
+        -ms-transform: translate(-2.3rem);
+            transform: translate(-2.3rem);
 }
 .sb-menu-align-bottom > .sb-menu-bubble-top-right,
 .sb-menu-align-bottom .sb-menu-bubble-bottom-right
 {
     right: 50%;
     left: auto;
-    -webkit-transform: translate(23px);
-        -ms-transform: translate(23px);
-            transform: translate(23px);
+    -webkit-transform: translate(2.3rem);
+        -ms-transform: translate(2.3rem);
+            transform: translate(2.3rem);
 }
 
 .sb-menu-align-bottom-right
