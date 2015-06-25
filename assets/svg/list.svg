@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.083px"
+	 height="25.66px" viewBox="-3.491 -2.758 23.083 25.66" style="enable-background:new -3.491 -2.758 23.083 25.66;"
+	 xml:space="preserve">
+<title>list</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="icons_x40_2x" transform="translate(-233.000000, -127.000000)" sketch:type="MSArtboardGroup">
+		<g id="list" transform="translate(233.000000, 127.749699)" sketch:type="MSLayerGroup">
+			<g id="Rectangle-1">
+				<path d="M13,19H4c-2.757,0-5-2.243-5-5V4c0-2.757,2.243-5,5-5h9c2.757,0,5,2.243,5,5v10C18,16.757,15.757,19,13,19z M4,1
+					C2.346,1,1,2.346,1,4v10c0,1.654,1.346,3,3,3h9c1.654,0,3-1.346,3-3V4c0-1.654-1.346-3-3-3H4z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<path d="M13.012,6.441c0-0.55-0.45-1-1-1H5.188c-0.55,0-1,0.45-1,1V6.58c0,0.55,0.45,1,1,1h6.823c0.55,0,1-0.45,1-1V6.441z"/>
+</g>
+<g>
+	<path d="M13.012,10.006c0-0.55-0.45-1-1-1H5.188c-0.55,0-1,0.45-1,1v0.139c0,0.55,0.45,1,1,1h6.823c0.55,0,1-0.45,1-1V10.006z"/>
+</g>
+<g>
+	<path d="M13.012,13.57c0-0.55-0.45-1-1-1H5.188c-0.55,0-1,0.45-1,1v0.139c0,0.55,0.45,1,1,1h6.823c0.55,0,1-0.45,1-1V13.57z"/>
+</g>
+</svg>
