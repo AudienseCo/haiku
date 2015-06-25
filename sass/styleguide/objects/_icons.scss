@@ -29,3 +29,27 @@ $base-sizes: 16 18 20 30 35 40 45 50 55 60;
 .icon-socialbro {
     fill: color($name: "socialbro");
 }
+
+%icon-file {
+    border-radius: 4px;
+    fill: color($name: "background", $hue: "light");
+}
+
+.icon-pdf {
+    @extend %icon-file;
+    background: color($name: "error", $hue: "light");
+    border-radius: 3px;
+    padding: 6%;
+}
+
+.icon-ads {
+    @extend %icon-file;
+    background: color($name: "service");
+    padding: 10%;
+}
+
+.icon-xls {
+    @extend %icon-file;
+    background: color($name: "succeed", $hue: "light");
+    padding: 10%;
+}
