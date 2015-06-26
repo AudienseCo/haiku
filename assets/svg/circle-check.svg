@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px"
+	 viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+<title>un block</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1_1_" sketch:type="MSPage">
+	<g id="icons_x40_2x" transform="translate(-755.000000, -402.000000)" sketch:type="MSArtboardGroup">
+		<g id="un-block" transform="translate(755.000000, 402.000000)" sketch:type="MSLayerGroup">
+			<g id="Page-1" sketch:type="MSShapeGroup">
+				<g id="block-2-_x2B_-Path-157">
+					<g id="block-2">
+						<path id="block" d="M18,9c0-4.971-4.029-9-9-9S0,4.029,0,9s4.029,9,9,9S18,13.971,18,9L18,9z M2.571,9
+							C2.571,5.45,5.45,2.571,9,2.571c3.551,0,6.429,2.878,6.429,6.429c0,3.551-2.878,6.429-6.429,6.429
+							C5.45,15.429,2.571,12.551,2.571,9L2.571,9z"/>
+					</g>
+					<path id="Path-157" d="M7.6,10.859l-2.476-1.67l-1.248,1.872l3.375,2.25l0.936,0.625l0.624-0.937l4.5-6.75l-1.871-1.248
+						L7.6,10.859z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
