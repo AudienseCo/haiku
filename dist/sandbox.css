@@ -1492,20 +1492,17 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .icon-pdf
 {
-    padding: 2px; 
-    border-radius: 3px;
+    border-radius: 3px; 
     background: #e6103a;
 }
 
 .icon-ads
 {
-    padding: 2px; 
     background: #00aaf2;
 }
 
 .icon-xls
 {
-    padding: 2px; 
     background: #7ad22a;
 }
 
