@@ -37,7 +37,7 @@ $tooltip-text-color:       color($name: "background", $hue: "light");
 }
 
 // This will indicate when we'll activate the tooltip
-.tooltipped:hover:not(:focus){
+.tooltipped.tooltip-active {
   &:before,
   &:after {
     display: inline-block;
@@ -45,7 +45,7 @@ $tooltip-text-color:       color($name: "background", $hue: "light");
   }
 }
 
-.tooltipped-multiline:hover:not(:focus) {
+.tooltipped-multiline.tooltip-active {
   &:after {
     display: table-cell;
   }

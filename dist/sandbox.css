@@ -2746,14 +2746,14 @@ Navigation usually means list of links. And we have some flavours using distinct
     border: 5px solid transparent;
 }
 
-.tooltipped:hover:not(:focus):before,
-.tooltipped:hover:not(:focus):after
+.tooltipped.tooltip-active:before,
+.tooltipped.tooltip-active:after
 {
     display: inline-block;
     text-decoration: none;
 }
 
-.tooltipped-multiline:hover:not(:focus):after
+.tooltipped-multiline.tooltip-active:after
 {
     display: table-cell;
 }
