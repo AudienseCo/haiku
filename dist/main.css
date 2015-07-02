@@ -176,6 +176,7 @@ figure {
 * Address differences between Firefox and other browsers.
 */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -289,6 +290,8 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -904,7 +907,6 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
   display: inline-block;
   height: 3.6rem;
   line-height: 2.2rem;
-  overflow: hidden;
   padding: 0.6rem 1rem;
   text-align: center;
   text-decoration: none;
@@ -1068,9 +1070,7 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
       position: absolute;
       right: 1.5rem;
       top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
+      transform: translateY(-50%);
       width: 0;
       z-index: 1; }
   .input-base > select {
@@ -1400,9 +1400,7 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-top:before, .sb-menu-bubble-top:after {
     border-width: 0 10px 10px 10px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    transform: translateX(-50%); }
   .sb-menu-bubble-top:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -10px; }
@@ -1423,12 +1421,8 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-bottom:before, .sb-menu-bubble-bottom:after {
     border-width: 0 15px 15px 0;
     left: 50%;
-    -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-            transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
+    transform-origin: 0 0;
+    transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -15px;
@@ -1450,9 +1444,7 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     border-width: 0 10px 10px 10px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    transform: translateX(-50%); }
   .sb-menu-bubble-top-right:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -10px; }
@@ -1462,9 +1454,7 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     left: auto;
     right: 2.2rem;
-    -webkit-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-            transform: translateX(50%); }
+    transform: translateX(50%); }
 
 .sb-menu-bubble-top-left {
   position: absolute;
@@ -1479,9 +1469,7 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
     border-width: 0 10px 10px 10px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    transform: translateX(-50%); }
   .sb-menu-bubble-top-left:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -10px; }
@@ -1504,12 +1492,8 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     border-width: 0 15px 15px 0;
     left: 50%;
-    -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-            transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
+    transform-origin: 0 0;
+    transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom-right:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -15px;
@@ -1520,9 +1504,7 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     left: auto;
     right: 2.2rem;
-    -webkit-transform: rotate(-45deg) translateX(25%) translateY(25%);
-        -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
-            transform: rotate(-45deg) translateX(25%) translateY(25%); }
+    transform: rotate(-45deg) translateX(25%) translateY(25%); }
 
 .sb-menu-bubble-bottom-left {
   position: absolute;
@@ -1537,12 +1519,8 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
     border-width: 0 15px 15px 0;
     left: 50%;
-    -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-            transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
+    transform-origin: 0 0;
+    transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom-left:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -15px;
@@ -1564,19 +1542,13 @@ Use this object to show an image and some text rendered in two columns.
     bottom: 100%; }
   .sb-menu-align-top > .sb-menu {
     left: 50%;
-    -webkit-transform: translate(-50%);
-        -ms-transform: translate(-50%);
-            transform: translate(-50%); }
+    transform: translate(-50%); }
   .sb-menu-align-top > .sb-menu-bubble-top-left, .sb-menu-align-top .sb-menu-bubble-bottom-left {
-    -webkit-transform: translate(-2.3rem);
-        -ms-transform: translate(-2.3rem);
-            transform: translate(-2.3rem); }
+    transform: translate(-2.3rem); }
   .sb-menu-align-top > .sb-menu-bubble-top-right, .sb-menu-align-top .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
-    -webkit-transform: translate(2.3rem);
-        -ms-transform: translate(2.3rem);
-            transform: translate(2.3rem); }
+    transform: translate(2.3rem); }
 
 .sb-menu-align-bottom {
   display: inline-block;
@@ -1589,19 +1561,13 @@ Use this object to show an image and some text rendered in two columns.
     top: 100%; }
   .sb-menu-align-bottom > .sb-menu {
     left: 50%;
-    -webkit-transform: translate(-50%);
-        -ms-transform: translate(-50%);
-            transform: translate(-50%); }
+    transform: translate(-50%); }
   .sb-menu-align-bottom > .sb-menu-bubble-top-left, .sb-menu-align-bottom .sb-menu-bubble-bottom-left {
-    -webkit-transform: translate(-2.3rem);
-        -ms-transform: translate(-2.3rem);
-            transform: translate(-2.3rem); }
+    transform: translate(-2.3rem); }
   .sb-menu-align-bottom > .sb-menu-bubble-top-right, .sb-menu-align-bottom .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
-    -webkit-transform: translate(2.3rem);
-        -ms-transform: translate(2.3rem);
-            transform: translate(2.3rem); }
+    transform: translate(2.3rem); }
 
 .sb-menu-align-bottom-right {
   display: inline-block;
@@ -1938,7 +1904,6 @@ Navigation usually means list of links. And we have some flavours using distinct
   height: 2px;
   left: 0;
   position: absolute;
-  top: -webkit-calc(100% - 1px);
   top: calc(100% - 1px);
   width: 100%;
   z-index: 2; }
@@ -1984,7 +1949,6 @@ Navigation usually means list of links. And we have some flavours using distinct
   border-bottom-right-radius: 4px; }
 
 .sb-tabs--block-bottom .sb-tab-active:after {
-  bottom: -webkit-calc(100% - 1px);
   bottom: calc(100% - 1px);
   top: auto; }
 
@@ -2090,6 +2054,123 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--right .sb-tabs-content {
   border-radius: 4px 0 4px 4px; }
+
+.tooltipped {
+  position: relative; }
+
+.tooltipped:after {
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  color: #ffffff;
+  content: attr(aria-label);
+  display: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.8rem;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  white-space: pre;
+  z-index: 1000000; }
+
+.tooltipped:before {
+  border: 5px solid transparent;
+  color: rgba(0, 0, 0, 0.8);
+  content: "";
+  display: none;
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  z-index: 1000001; }
+
+.tooltipped:hover:before, .tooltipped:hover:after, .tooltipped:active:before, .tooltipped:active:after, .tooltipped:focus:before, .tooltipped:focus:after {
+  display: inline-block;
+  text-decoration: none; }
+
+.tooltipped-multiline:hover:after, .tooltipped-multiline:active:after, .tooltipped-multiline:focus:after {
+  display: table-cell; }
+
+.tooltipped-s:after, .tooltipped-se:after, .tooltipped-sw:after {
+  margin-top: 0.5rem;
+  right: 50%;
+  top: 100%; }
+.tooltipped-s:before, .tooltipped-se:before, .tooltipped-sw:before {
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  bottom: -0.5rem;
+  margin-right: -0.5rem;
+  right: 50%;
+  top: auto; }
+
+.tooltipped-se:after {
+  left: 50%;
+  margin-left: -1.5rem;
+  right: auto; }
+
+.tooltipped-sw:after {
+  margin-right: -1.5rem; }
+
+.tooltipped-n:after, .tooltipped-ne:after, .tooltipped-nw:after {
+  bottom: 100%;
+  margin-bottom: 0.5rem;
+  right: 50%; }
+.tooltipped-n:before, .tooltipped-ne:before, .tooltipped-nw:before {
+  border-top-color: rgba(0, 0, 0, 0.8);
+  bottom: auto;
+  margin-right: -0.5rem;
+  right: 50%;
+  top: -0.5rem; }
+
+.tooltipped-ne:after {
+  left: 50%;
+  margin-left: -1.5rem;
+  right: auto; }
+
+.tooltipped-nw:after {
+  margin-right: -1.5rem; }
+
+.tooltipped-s:after, .tooltipped-n:after {
+  transform: translateX(50%); }
+
+.tooltipped-w:after {
+  bottom: 50%;
+  margin-right: 0.5rem;
+  right: 100%;
+  transform: translateY(50%); }
+.tooltipped-w:before {
+  border-left-color: rgba(0, 0, 0, 0.8);
+  bottom: 50%;
+  left: -0.5rem;
+  margin-top: -0.5rem;
+  top: 50%; }
+
+.tooltipped-e:after {
+  bottom: 50%;
+  left: 100%;
+  margin-left: 0.5rem;
+  transform: translateY(50%); }
+.tooltipped-e:before {
+  border-right-color: rgba(0, 0, 0, 0.8);
+  bottom: 50%;
+  margin-top: -0.5rem;
+  right: -0.5rem;
+  top: 50%; }
+
+.tooltipped-multiline:after {
+  max-width: auto;
+  white-space: normal;
+  width: 25rem; }
+.tooltipped-multiline.tooltipped-s:after, .tooltipped-multiline.tooltipped-n:after {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%); }
+.tooltipped-multiline.tooltipped-w:after, .tooltipped-multiline.tooltipped-e:after {
+  right: 100%; }
+
+.tooltipped-sticky:before, .tooltipped-sticky:after {
+  display: inline-block; }
+.tooltipped-sticky.tooltipped-multiline:after {
+  display: table-cell; }
 
 /* 5. Layout */
 /*
@@ -2567,9 +2648,7 @@ n           Negative (margin only)
     display: inline-block;
     height: 0;
     pointer-events: none;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     width: 0;
     z-index: 1; }
 

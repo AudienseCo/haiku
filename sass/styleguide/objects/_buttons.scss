@@ -13,7 +13,6 @@ $btn-base-v-padding:   ($btn-base-height - $btn-base-line-height)/2;
     display: inline-block;
     height: $btn-base-height;
     line-height: $btn-base-line-height - .2rem;
-    overflow: hidden;
     padding: $btn-base-v-padding $btn-base-h-padding;
     text-align: center;
     text-decoration: none;
