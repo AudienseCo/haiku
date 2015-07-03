@@ -2718,10 +2718,11 @@ Navigation usually means list of links. And we have some flavours using distinct
 .tooltipped:after
 {
     font-size: 13px;
+    line-height: 1.4;
     position: absolute;
     z-index: 1000000; 
     display: none;
-    padding: 5px 8px;
+    padding: 10px;
     content: attr(aria-label);
     text-align: center;
     white-space: pre;

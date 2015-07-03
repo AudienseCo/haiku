@@ -2101,7 +2101,8 @@ Navigation usually means list of links. And we have some flavours using distinct
   content: attr(aria-label);
   display: none;
   font-size: 1.3rem;
-  padding: 0.5rem 0.8rem;
+  line-height: 1.4;
+  padding: 1rem;
   pointer-events: none;
   position: absolute;
   text-align: center;
