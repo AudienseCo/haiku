@@ -171,7 +171,7 @@ h1
 */
 mark
 {
-    color: #000;
+    color: #000; 
     background: #ff0;
 }
 
@@ -342,7 +342,7 @@ html input[disabled]
 button::-moz-focus-inner,
 input::-moz-focus-inner
 {
-    padding: 0;
+    padding: 0; 
     border: 0;
 }
 
@@ -391,7 +391,7 @@ input[type='search']
 {
     /* 1 */
     /* 2 */
-    box-sizing: content-box;
+    box-sizing: content-box; 
 
     -webkit-appearance: textfield;
 }
@@ -413,7 +413,7 @@ input[type='search']::-webkit-search-decoration
 fieldset
 {
     margin: 0 2px;
-    padding: .35em .625em .75em;
+    padding: .35em .625em .75em; 
     border: 1px solid #c0c0c0;
 }
 
@@ -453,7 +453,7 @@ optgroup
 */
 table
 {
-    border-spacing: 0;
+    border-spacing: 0; 
     border-collapse: collapse;
 }
 
@@ -619,7 +619,7 @@ Drop the files in a folder, update the path and the name and go.
     position: relative;
     display: block;
     float: left;
-    width: 160px;
+    width: 160px; 
     height: 120px;
     margin: 8px 16px 8px 30px;
     background-color: #d6d6d6;
@@ -630,7 +630,7 @@ Drop the files in a folder, update the path and the name and go.
     top: 0;
     left: 160px;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     -moz-transform: scale(.9999);
@@ -642,7 +642,7 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item
 {
     position: absolute;
-    top: 1px;
+    top: 1px; 
     right: 1px;
     bottom: 1px;
     left: 1px;
@@ -654,7 +654,7 @@ Drop the files in a folder, update the path and the name and go.
     top: 0;
     left: 158px;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-width: 59px 27px;
@@ -666,7 +666,7 @@ Drop the files in a folder, update the path and the name and go.
     font-size: 26px;
     line-height: 34px;
     position: absolute;
-    z-index: 2;
+    z-index: 2; 
     right: -40px;
     bottom: 27px;
     width: 40px;
@@ -685,7 +685,7 @@ Drop the files in a folder, update the path and the name and go.
     position: absolute;
     top: 0;
     left: -30px;
-    width: 30px;
+    width: 30px; 
     height: 60px;
 }
 .acc-breadcrumb-item-back-top:before,
@@ -693,7 +693,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-width: 0 30px 60px 30px;
@@ -701,14 +701,14 @@ Drop the files in a folder, update the path and the name and go.
 }
 .acc-breadcrumb-item-back-top:before
 {
-    top: 0;
+    top: 0; 
     right: 0;
     border-color: transparent #d6d6d6 transparent transparent;
 }
 .acc-breadcrumb-item-back-top:after
 {
     top: 1px;
-    right: -2px;
+    right: -2px; 
     border-color: transparent white transparent transparent;
 }
 
@@ -717,7 +717,7 @@ Drop the files in a folder, update the path and the name and go.
     position: absolute;
     bottom: 0;
     left: -30px;
-    width: 30px;
+    width: 30px; 
     height: 60px;
 }
 .acc-breadcrumb-item-back-bottom:before,
@@ -725,7 +725,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-width: 60px 30px 0 30px;
@@ -733,13 +733,13 @@ Drop the files in a folder, update the path and the name and go.
 }
 .acc-breadcrumb-item-back-bottom:before
 {
-    top: 0;
+    top: 0; 
     right: 0;
     border-color: transparent #d6d6d6 transparent transparent;
 }
 .acc-breadcrumb-item-back-bottom:after
 {
-    right: -2px;
+    right: -2px; 
     bottom: 1px;
     border-color: transparent white transparent transparent;
 }
@@ -749,7 +749,7 @@ Drop the files in a folder, update the path and the name and go.
     font-size: 11px;
     line-height: 24px;
     position: absolute;
-    z-index: 1;
+    z-index: 1; 
     right: 15px;
     bottom: 15px;
     left: 15px;
@@ -762,7 +762,7 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item-amount:before
 {
     position: absolute;
-    top: 50%;
+    top: 50%; 
     height: 4px;
     margin-top: -2px;
     content: '';
@@ -783,7 +783,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     line-height: 1;
     display: table;
-    width: 100%;
+    width: 100%; 
     height: 81px;
     text-align: center;
 }
@@ -797,7 +797,7 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item-event-amount
 {
     font-size: 22px;
-    font-weight: bold;
+    font-weight: bold; 
     display: block;
 }
 
@@ -805,7 +805,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     font-size: 11px;
     display: block;
-    padding: 0 10px;
+    padding: 0 10px; 
     text-transform: uppercase;
 }
 
@@ -814,7 +814,7 @@ Drop the files in a folder, update the path and the name and go.
     line-height: 1;
     position: relative;
     display: table;
-    width: 100%;
+    width: 100%; 
     height: 88px;
     text-align: center;
     border-radius: 4px;
@@ -901,13 +901,13 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 */
 .breadcrumb
 {
-    overflow: hidden;
+    overflow: hidden; 
     background-color: white;
 }
 
 .breadcrumb-with-borders
 {
-    border: 1px solid #d6d6d6;
+    border: 1px solid #d6d6d6; 
     border-radius: 4px;
 }
 
@@ -917,14 +917,14 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     display: table-cell;
     margin-left: -2px;
     padding: 10px 10px 10px 25px;
-    vertical-align: middle;
+    vertical-align: middle; 
     background-color: #f6f6f6;
 }
 .breadcrumb-item:after,
 .breadcrumb-item:before
 {
     position: absolute;
-    z-index: 1;
+    z-index: 1; 
     left: 100%;
     display: block;
     width: 0;
@@ -934,13 +934,13 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .breadcrumb-item:before
 {
-    top: -1px;
+    top: -1px; 
     border-width: 21px 21px 21px 13px;
     border-color: transparent transparent transparent #d6d6d6;
 }
 .breadcrumb-item:after
 {
-    top: 0;
+    top: 0; 
     border-width: 20px 20px 20px 12px;
     border-color: transparent transparent transparent #f6f6f6;
 }
@@ -966,13 +966,13 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .breadcrumb-item-large:before
 {
-    top: -1px;
+    top: -1px; 
     border-width: 41px 41px 41px 25px;
     border-color: transparent transparent transparent #d6d6d6;
 }
 .breadcrumb-item-large:after
 {
-    top: 0;
+    top: 0; 
     border-width: 40px 40px 40px 24px;
     border-color: transparent transparent transparent #f6f6f6;
 }
@@ -986,7 +986,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .breadcrumb-item-simple:after
 {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 10px; 
     content: '/';
     color: gray;
 }
@@ -1005,13 +1005,12 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 {
     line-height: 22px;
     display: inline-block;
-    overflow: hidden;
     height: 36px;
     padding: 6px 10px;
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
-    white-space: nowrap;
+    white-space: nowrap; 
     text-decoration: none;
     text-overflow: ellipsis;
     color: #565656;
@@ -1036,7 +1035,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .btn > [class^='icon']
 {
-    width: 1.3em;
+    width: 1.3em; 
     height: 22px;
     margin-right: 3px;
     vertical-align: bottom;
@@ -1048,7 +1047,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-primary
 {
-    color: white;
+    color: white; 
     border: 1px solid #f18b46;
     background: #f29556;
 }
@@ -1064,7 +1063,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-success
 {
-    color: white;
+    color: white; 
     border: 1px solid #6ab624;
     background: #72c427;
 }
@@ -1080,7 +1079,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-service
 {
-    color: white;
+    color: white; 
     border: 1px solid #009ee1;
     background: #00aaf2;
 }
@@ -1096,7 +1095,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-danger
 {
-    color: white;
+    color: white; 
     border: 1px solid #c60e32;
     background: #d60f36;
 }
@@ -1112,7 +1111,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-contrast
 {
-    color: inherit;
+    color: inherit; 
     border: 1px solid #ccd1d9;
     background: #fff;
 }
@@ -1128,7 +1127,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn-skip
 {
-    color: white;
+    color: white; 
     border: 1px solid #acacac;
     background: #b9b9b9;
 }
@@ -1179,7 +1178,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     line-height: 22px;
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 200px; 
     height: 36px;
     padding: 6px 10px;
     text-align: left;
@@ -1195,14 +1194,14 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .input-base.error
 {
-    color: #cc8383;
+    color: #cc8383; 
     border-color: #cc8383;
     background-color: #ffe6e6;
 }
 .input-base.with-caret
 {
     overflow: hidden;
-    padding-right: 30px;
+    padding-right: 30px; 
     cursor: pointer;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1210,7 +1209,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-base.with-caret:after
 {
     position: absolute;
-    z-index: 1;
+    z-index: 1; 
     top: 50%;
     right: 15px;
     width: 0;
@@ -1232,7 +1231,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     right: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100%; 
     padding: 6px 10px;
     cursor: pointer;
     border: 0;
@@ -1252,7 +1251,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group
 {
     display: inline-table;
-    width: 200px;
+    width: 200px; 
     border-collapse: separate;
     border-width: 0;
 }
@@ -1264,7 +1263,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group .input-base
 {
     display: table-cell;
-    width: 100%;
+    width: 100%; 
     height: 36px;
     padding: 6px 10px;
     border-width: 1px 0 1px 1px;
@@ -1286,7 +1285,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .input-group .input-group-button > .btn
 {
-    width: 100%;
+    width: 100%; 
     height: 36px;
     border-width: 1px;
     border-radius: 0 3px 3px 0;
@@ -1300,7 +1299,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     padding: 5px 10px;
     cursor: default;
     vertical-align: middle;
-    white-space: nowrap;
+    white-space: nowrap; 
     color: #565656;
     border-width: 1px 0 1px 1px;
     border-style: solid;
@@ -1311,20 +1310,20 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group.error .input-label,
 .input-group.error .input-group-button > .btn
 {
-    color: #fff;
+    color: #fff; 
     border-color: #cc8383;
     background-color: #cc8383;
 }
 .input-group.error .input-base
 {
-    color: #cc8383;
+    color: #cc8383; 
     border-color: #cc8383;
     background-color: #ffe6e6;
 }
 
 .grid-row
 {
-    margin-right: -10px;
+    margin-right: -10px; 
     margin-left: -10px;
 }
 .grid-row > .grid-column,
@@ -1334,7 +1333,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .grid-row.full
 {
-    margin-right: 0;
+    margin-right: 0; 
     margin-left: 0;
 }
 .grid-row.full > .grid-column,
@@ -1344,7 +1343,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .grid-row.narrow
 {
-    margin-right: -5px;
+    margin-right: -5px; 
     margin-left: -5px;
 }
 .grid-row.narrow > .grid-column,
@@ -1354,7 +1353,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .grid-row.wide
 {
-    margin-right: -20px;
+    margin-right: -20px; 
     margin-left: -20px;
 }
 .grid-row.wide > .grid-column,
@@ -1426,75 +1425,75 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .icon-size-16
 {
-    width: 16px;
+    width: 16px; 
     height: 16px;
 }
 
 .icon-size-18
 {
-    width: 18px;
+    width: 18px; 
     height: 18px;
 }
 
 .icon-size-20
 {
-    width: 20px;
+    width: 20px; 
     height: 20px;
 }
 
 .icon-size-30
 {
-    width: 30px;
+    width: 30px; 
     height: 30px;
 }
 
 .icon-size-35
 {
-    width: 35px;
+    width: 35px; 
     height: 35px;
 }
 
 .icon-size-40
 {
-    width: 40px;
+    width: 40px; 
     height: 40px;
 }
 
 .icon-size-45
 {
-    width: 45px;
+    width: 45px; 
     height: 45px;
 }
 
 .icon-size-50
 {
-    width: 50px;
+    width: 50px; 
     height: 50px;
 }
 
 .icon-size-55
 {
-    width: 55px;
+    width: 55px; 
     height: 55px;
 }
 
 .icon-size-60
 {
-    width: 60px;
+    width: 60px; 
     height: 60px;
 }
 
 [class^='icon']
 {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: middle; 
 
     fill: currentColor;
 }
 
 .icon-text
 {
-    width: 1.3em;
+    width: 1.3em; 
     height: 1.5em;
 }
 
@@ -1524,7 +1523,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .icon-pdf
 {
-    border-radius: 3px;
+    border-radius: 3px; 
     background: #e6103a;
 }
 
@@ -1554,13 +1553,13 @@ Use this structure to justify columns inside a container.
 */
 .justify-columns
 {
-    width: 100%;
+    width: 100%; 
     text-align: justify;
 }
 .justify-columns:after
 {
     display: inline-block;
-    width: 100%;
+    width: 100%; 
     content: '';
 }
 
@@ -1584,7 +1583,7 @@ Use this structure to justify columns inside a container.
 }
 .menu-list.non-selectable .menu-list-item:hover
 {
-    border-top: 1px solid transparent;
+    border-top: 1px solid transparent; 
     border-bottom: 1px solid transparent;
     background-color: inherit;
 }
@@ -1593,7 +1592,7 @@ Use this structure to justify columns inside a container.
 {
     line-height: 1.5;
     display: block;
-    padding: 4px 15px;
+    padding: 4px 15px; 
     cursor: pointer;
     color: #565656;
     border-top: 1px solid transparent;
@@ -1601,7 +1600,7 @@ Use this structure to justify columns inside a container.
 }
 .menu-list-item:hover
 {
-    text-decoration: none;
+    text-decoration: none; 
     border-top: 1px solid #29c4d0;
     border-bottom: 1px solid #29c4d0;
     background-color: #c1eff3;
@@ -1609,13 +1608,13 @@ Use this structure to justify columns inside a container.
 .menu-list-item > a
 {
     display: block;
-    text-decoration: none;
+    text-decoration: none; 
     color: inherit;
 }
 .menu-list-item > [class^='icon']
 {
     display: inline-block;
-    width: 1.3em;
+    width: 1.3em; 
     height: 1.5em;
     margin-right: 6px;
     vertical-align: bottom;
@@ -1695,7 +1694,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-bottom-right,
 .sb-menu-bubble-bottom-left
 {
-    display: block;
+    display: block; 
     border: 1px solid #d6d6d6;
     border-radius: 4px;
     background-color: #fff;
@@ -1712,7 +1711,7 @@ Use this object to show an image and some text rendered in two columns.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-style: solid;
@@ -1723,17 +1722,17 @@ Use this object to show an image and some text rendered in two columns.
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+            transform: translateX(-50%); 
     border-width: 0 10px 10px 10px;
 }
 .sb-menu-bubble-top:before
 {
-    top: -10px;
+    top: -10px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
 .sb-menu-bubble-top:after
 {
-    top: -9px;
+    top: -9px; 
     border-color: transparent transparent white transparent;
 }
 
@@ -1747,7 +1746,7 @@ Use this object to show an image and some text rendered in two columns.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-style: solid;
@@ -1758,7 +1757,7 @@ Use this object to show an image and some text rendered in two columns.
     left: 50%;
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
         -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-            transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1772,7 +1771,7 @@ Use this object to show an image and some text rendered in two columns.
 }
 .sb-menu-bubble-bottom:after
 {
-    bottom: -14px;
+    bottom: -14px; 
     border-color: transparent transparent white white;
 }
 
@@ -1786,7 +1785,7 @@ Use this object to show an image and some text rendered in two columns.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-style: solid;
@@ -1797,17 +1796,17 @@ Use this object to show an image and some text rendered in two columns.
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+            transform: translateX(-50%); 
     border-width: 0 10px 10px 10px;
 }
 .sb-menu-bubble-top-right:before
 {
-    top: -10px;
+    top: -10px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
 .sb-menu-bubble-top-right:after
 {
-    top: -9px;
+    top: -9px; 
     border-color: transparent transparent white transparent;
 }
 .sb-menu-bubble-top-right:before,
@@ -1830,7 +1829,7 @@ Use this object to show an image and some text rendered in two columns.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-style: solid;
@@ -1841,17 +1840,17 @@ Use this object to show an image and some text rendered in two columns.
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+            transform: translateX(-50%); 
     border-width: 0 10px 10px 10px;
 }
 .sb-menu-bubble-top-left:before
 {
-    top: -10px;
+    top: -10px; 
     border-color: transparent transparent #d6d6d6 transparent;
 }
 .sb-menu-bubble-top-left:after
 {
-    top: -9px;
+    top: -9px; 
     border-color: transparent transparent white transparent;
 }
 .sb-menu-bubble-top-left:before,
@@ -1870,7 +1869,7 @@ Use this object to show an image and some text rendered in two columns.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-style: solid;
@@ -1881,7 +1880,7 @@ Use this object to show an image and some text rendered in two columns.
     left: 50%;
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
         -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-            transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1895,7 +1894,7 @@ Use this object to show an image and some text rendered in two columns.
 }
 .sb-menu-bubble-bottom-right:after
 {
-    bottom: -14px;
+    bottom: -14px; 
     border-color: transparent transparent white white;
 }
 .sb-menu-bubble-bottom-right:before,
@@ -1918,7 +1917,7 @@ Use this object to show an image and some text rendered in two columns.
 {
     position: absolute;
     display: block;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     border-style: solid;
@@ -1929,7 +1928,7 @@ Use this object to show an image and some text rendered in two columns.
     left: 50%;
     -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
         -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-            transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); 
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
@@ -1943,7 +1942,7 @@ Use this object to show an image and some text rendered in two columns.
 }
 .sb-menu-bubble-bottom-left:after
 {
-    bottom: -14px;
+    bottom: -14px; 
     border-color: transparent transparent white white;
 }
 .sb-menu-bubble-bottom-left:before,
@@ -1954,7 +1953,7 @@ Use this object to show an image and some text rendered in two columns.
 
 .sb-menu-align-top
 {
-    position: relative;
+    position: relative; 
     display: inline-block;
 }
 .sb-menu-align-top > .menu
@@ -1996,7 +1995,7 @@ Use this object to show an image and some text rendered in two columns.
 
 .sb-menu-align-bottom
 {
-    position: relative;
+    position: relative; 
     display: inline-block;
 }
 .sb-menu-align-bottom > .menu
@@ -2038,7 +2037,7 @@ Use this object to show an image and some text rendered in two columns.
 
 .sb-menu-align-bottom-right
 {
-    position: relative;
+    position: relative; 
     display: inline-block;
 }
 .sb-menu-align-bottom-right > .menu
@@ -2061,7 +2060,7 @@ Use this object to show an image and some text rendered in two columns.
 
 .sb-menu-align-bottom-left
 {
-    position: relative;
+    position: relative; 
     display: inline-block;
 }
 .sb-menu-align-bottom-left > .menu
@@ -2125,7 +2124,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .panel
 {
     display: inline-block;
-    overflow: hidden;
+    overflow: hidden; 
     border: 1px solid #d6d6d6;
     border-radius: 4px;
     background-color: #fff;
@@ -2133,14 +2132,14 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .panel-header
 {
-    padding: 12px 15px;
+    padding: 12px 15px; 
     background-color: #f6f6f6;
 }
 
 .panel-header-title
 {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: normal; 
     color: #000;
 }
 
@@ -2173,7 +2172,7 @@ The provided mixins are intended to be used with the array-like variables
 .sb-table
 {
     display: table;
-    overflow: hidden;
+    overflow: hidden; 
     border-collapse: separate;
     border: 1px solid #d6d6d6;
     border-radius: 4px;
@@ -2200,7 +2199,7 @@ The provided mixins are intended to be used with the array-like variables
     font-weight: bold;
     line-height: 1;
     display: table-row;
-    text-transform: uppercase;
+    text-transform: uppercase; 
     color: #000;
     background-color: #f6f6f6;
 }
@@ -2211,7 +2210,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .sb-table-row
 {
-    display: table-row;
+    display: table-row; 
     background-color: #eff7fd;
 }
 .sb-table-row:nth-child(2n+1)
@@ -2239,13 +2238,13 @@ The provided mixins are intended to be used with the array-like variables
 .sb-table-cell-subtitle
 {
     font-weight: normal;
-    text-transform: none;
+    text-transform: none; 
     color: #5e5e5e;
 }
 
 .first-highlight .sb-table-heading .sb-table-cell:nth-child(1)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .first-highlight .sb-table-heading .sb-table-cell:nth-child(1) .sb-table-cell-subtitle
@@ -2263,7 +2262,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .second-highlight .sb-table-heading .sb-table-cell:nth-child(2)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .second-highlight .sb-table-heading .sb-table-cell:nth-child(2) .sb-table-cell-subtitle
@@ -2281,7 +2280,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .third-highlight .sb-table-heading .sb-table-cell:nth-child(3)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .third-highlight .sb-table-heading .sb-table-cell:nth-child(3) .sb-table-cell-subtitle
@@ -2299,7 +2298,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .fourth-highlight .sb-table-heading .sb-table-cell:nth-child(4)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .fourth-highlight .sb-table-heading .sb-table-cell:nth-child(4) .sb-table-cell-subtitle
@@ -2317,7 +2316,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .fifth-highlight .sb-table-heading .sb-table-cell:nth-child(5)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .fifth-highlight .sb-table-heading .sb-table-cell:nth-child(5) .sb-table-cell-subtitle
@@ -2335,7 +2334,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .sixth-highlight .sb-table-heading .sb-table-cell:nth-child(6)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .sixth-highlight .sb-table-heading .sb-table-cell:nth-child(6) .sb-table-cell-subtitle
@@ -2353,7 +2352,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .seventh-highlight .sb-table-heading .sb-table-cell:nth-child(7)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .seventh-highlight .sb-table-heading .sb-table-cell:nth-child(7) .sb-table-cell-subtitle
@@ -2371,7 +2370,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .eigth-highlight .sb-table-heading .sb-table-cell:nth-child(8)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .eigth-highlight .sb-table-heading .sb-table-cell:nth-child(8) .sb-table-cell-subtitle
@@ -2389,7 +2388,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .ninth-highlight .sb-table-heading .sb-table-cell:nth-child(9)
 {
-    color: #fff;
+    color: #fff; 
     background-color: #f29556;
 }
 .ninth-highlight .sb-table-heading .sb-table-cell:nth-child(9) .sb-table-cell-subtitle
@@ -2437,7 +2436,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs-group
 {
     display: table;
-    width: 100%;
+    width: 100%; 
     margin: 0;
     padding: 0;
     table-layout: fixed;
@@ -2447,7 +2446,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tab
 {
-    position: relative;
+    position: relative; 
     display: table-cell;
     border-top: 1px solid #ccd1d9;
     background-color: #f7f7f7;
@@ -2455,21 +2454,21 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tab a
 {
     display: block;
-    padding: 15px;
+    padding: 15px; 
     color: #565656;
 }
 
 .sb-tab-active
 {
     position: relative;
-    z-index: 1;
+    z-index: 1; 
     background-color: white;
 }
 
 .sb-tab-active:after
 {
     position: absolute;
-    z-index: 2;
+    z-index: 2; 
     top: -webkit-calc(100% - 1px);
     top:         calc(100% - 1px);
     left: 0;
@@ -2500,7 +2499,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs-content
 {
     position: relative;
-    z-index: 0;
+    z-index: 0; 
     display: none;
     padding: 1em;
     color: #565656;
@@ -2540,7 +2539,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--block-bottom .sb-tab-active:after
 {
-    top: auto;
+    top: auto; 
     bottom: -webkit-calc(100% - 1px);
     bottom:         calc(100% - 1px);
 }
@@ -2564,7 +2563,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs--block-right .sb-tabs-group:after,
 .sb-tabs--block-right .sb-tabs-group:before
 {
-    display: table;
+    display: table; 
     content: '';
 }
 
@@ -2583,7 +2582,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--block-left .sb-tabs-content
 {
-    clear: left;
+    clear: left; 
     border-radius: 0 4px 4px 4px;
 }
 
@@ -2595,7 +2594,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--block-right .sb-tabs-content
 {
-    clear: right;
+    clear: right; 
     border-radius: 4px 0 4px 4px;
 }
 
@@ -2605,7 +2604,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs--right:after,
 .sb-tabs--right:before
 {
-    display: table;
+    display: table; 
     content: '';
 }
 
@@ -2624,7 +2623,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--left .sb-tabs-group
 {
-    float: left;
+    float: left; 
     border-radius: 4px 0 0 4px;
 }
 
@@ -2647,7 +2646,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--left .sb-tab:last-child
 {
-    border-bottom: 1px solid #ccd1d9;
+    border-bottom: 1px solid #ccd1d9; 
     border-top-right-radius: 0;
     border-bottom-left-radius: 4px;
 }
@@ -2662,7 +2661,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     top: 0;
     left: 100%;
-    width: 2px;
+    width: 2px; 
     height: 100%;
 }
 
@@ -2674,7 +2673,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 /* Tabs right */
 .sb-tabs--right .sb-tabs-group
 {
-    float: right;
+    float: right; 
     border-radius: 0 4px 4px 0;
 }
 
@@ -2688,7 +2687,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     top: 0;
     left: -1px;
-    width: 2px;
+    width: 2px; 
     height: 100%;
 }
 
@@ -2701,7 +2700,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .sb-tabs--right .sb-tab:last-child
 {
-    border-bottom: 1px solid #ccd1d9;
+    border-bottom: 1px solid #ccd1d9; 
     border-top-right-radius: 0;
     border-bottom-right-radius: 4px;
 }
@@ -2709,6 +2708,194 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs--right .sb-tabs-content
 {
     border-radius: 4px 0 4px 4px;
+}
+
+.tooltipped
+{
+    position: relative;
+}
+
+.tooltipped:after
+{
+    font-size: 13px;
+    position: absolute;
+    z-index: 1000000; 
+    display: none;
+    padding: 5px 8px;
+    content: attr(aria-label);
+    text-align: center;
+    white-space: pre;
+    pointer-events: none;
+    color: #fff;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, .8);
+
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.tooltipped:before
+{
+    position: absolute;
+    z-index: 1000001; 
+    display: none;
+    width: 0;
+    height: 0;
+    content: '';
+    pointer-events: none;
+    color: rgba(0, 0, 0, .8);
+    border: 5px solid transparent;
+}
+
+.tooltipped:not(.js-tooltipped):hover:before,
+.tooltipped:not(.js-tooltipped):hover:after,
+.tooltipped.js-tooltipped.tooltip-active:before,
+.tooltipped.js-tooltipped.tooltip-active:after
+{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.tooltipped-multiline:not(.js-tooltipped):hover:after,
+.tooltipped-multiline.js-tooltipped.tooltip-active:after
+{
+    display: table-cell;
+}
+
+.tooltipped-s:after,
+.tooltipped-se:after,
+.tooltipped-sw:after
+{
+    top: 100%; 
+    right: 50%;
+    margin-top: 5px;
+}
+.tooltipped-s:before,
+.tooltipped-se:before,
+.tooltipped-sw:before
+{
+    top: auto; 
+    right: 50%;
+    bottom: -5px;
+    margin-right: -5px;
+    border-bottom-color: rgba(0, 0, 0, .8);
+}
+
+.tooltipped-se:after
+{
+    right: auto; 
+    left: 50%;
+    margin-left: -15px;
+}
+
+.tooltipped-sw:after
+{
+    margin-right: -15px;
+}
+
+.tooltipped-n:after,
+.tooltipped-ne:after,
+.tooltipped-nw:after
+{
+    right: 50%; 
+    bottom: 100%;
+    margin-bottom: 5px;
+}
+.tooltipped-n:before,
+.tooltipped-ne:before,
+.tooltipped-nw:before
+{
+    top: -5px; 
+    right: 50%;
+    bottom: auto;
+    margin-right: -5px;
+    border-top-color: rgba(0, 0, 0, .8);
+}
+
+.tooltipped-ne:after
+{
+    right: auto; 
+    left: 50%;
+    margin-left: -15px;
+}
+
+.tooltipped-nw:after
+{
+    margin-right: -15px;
+}
+
+.tooltipped-s:after,
+.tooltipped-n:after
+{
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
+}
+
+.tooltipped-w:after
+{
+    right: 100%;
+    bottom: 50%;
+    margin-right: 5px;
+    -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+            transform: translateY(50%);
+}
+.tooltipped-w:before
+{
+    top: 50%; 
+    bottom: 50%;
+    left: -5px;
+    margin-top: -5px;
+    border-left-color: rgba(0, 0, 0, .8);
+}
+
+.tooltipped-e:after
+{
+    bottom: 50%;
+    left: 100%;
+    margin-left: 5px;
+    -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+            transform: translateY(50%);
+}
+.tooltipped-e:before
+{
+    top: 50%; 
+    right: -5px;
+    bottom: 50%;
+    margin-top: -5px;
+    border-right-color: rgba(0, 0, 0, .8);
+}
+
+.tooltipped-multiline:after
+{
+    width: 250px; 
+    max-width: auto;
+    white-space: normal;
+}
+.tooltipped-multiline.tooltipped-s:after,
+.tooltipped-multiline.tooltipped-n:after
+{
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+.tooltipped-multiline.tooltipped-w:after,
+.tooltipped-multiline.tooltipped-e:after
+{
+    right: 100%;
+}
+
+.tooltipped-sticky:before,
+.tooltipped-sticky:after
+{
+    display: inline-block;
+}
+.tooltipped-sticky.tooltipped-multiline:after
+{
+    display: table-cell;
 }
 
 /* 5. Layout */
@@ -2747,7 +2934,7 @@ Utility class to align inline and inline-blocks elements.
 .align-justify:after
 {
     display: inline-block;
-    width: 100%;
+    width: 100%; 
     content: '';
 }
 
@@ -2815,7 +3002,7 @@ Clear floats utility.
 .clearfix:after,
 .breadcrumb:after
 {
-    display: table;
+    display: table; 
     content: '';
 }
 .grid-row:after,
@@ -3013,7 +3200,7 @@ Hides an element, normally remove after some user interaction through javascript
 .dtf
 {
     display: table;
-    width: 100%;
+    width: 100%; 
     table-layout: fixed;
 }
 
@@ -3032,7 +3219,7 @@ for instance, when the sidebar off canvas menu is open or a modal window with sc
 */
 .no-scroll
 {
-    position: relative;
+    position: relative; 
     overflow: hidden !important;
 }
 
@@ -3294,31 +3481,31 @@ n           Negative (margin only)
 
 .mxn1
 {
-    margin-right: 5px;
+    margin-right: 5px; 
     margin-left: 5px;
 }
 
 .mxn2
 {
-    margin-right: -10px;
+    margin-right: -10px; 
     margin-left: -10px;
 }
 
 .mxn3
 {
-    margin-right: -20px;
+    margin-right: -20px; 
     margin-left: -20px;
 }
 
 .mxn4
 {
-    margin-right: -30px;
+    margin-right: -30px; 
     margin-left: -30px;
 }
 
 .mx-auto
 {
-    margin-right: auto;
+    margin-right: auto; 
     margin-left: auto;
 }
 
@@ -3334,13 +3521,13 @@ n           Negative (margin only)
 
 .py1
 {
-    padding-top: 5px;
+    padding-top: 5px; 
     padding-bottom: 5px;
 }
 
 .px1
 {
-    padding-right: 5px;
+    padding-right: 5px; 
     padding-left: 5px;
 }
 
@@ -3351,13 +3538,13 @@ n           Negative (margin only)
 
 .py2
 {
-    padding-top: 10px;
+    padding-top: 10px; 
     padding-bottom: 10px;
 }
 
 .px2
 {
-    padding-right: 10px;
+    padding-right: 10px; 
     padding-left: 10px;
 }
 
@@ -3368,13 +3555,13 @@ n           Negative (margin only)
 
 .py3
 {
-    padding-top: 20px;
+    padding-top: 20px; 
     padding-bottom: 20px;
 }
 
 .px3
 {
-    padding-right: 20px;
+    padding-right: 20px; 
     padding-left: 20px;
 }
 
@@ -3385,13 +3572,13 @@ n           Negative (margin only)
 
 .py4
 {
-    padding-top: 30px;
+    padding-top: 30px; 
     padding-bottom: 30px;
 }
 
 .px4
 {
-    padding-right: 30px;
+    padding-right: 30px; 
     padding-left: 30px;
 }
 
@@ -3401,7 +3588,7 @@ n           Negative (margin only)
 }
 .with-caret:after
 {
-    z-index: 1;
+    z-index: 1; 
     display: inline-block;
     width: 0;
     height: 0;
