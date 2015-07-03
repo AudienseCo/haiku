@@ -2119,11 +2119,11 @@ Navigation usually means list of links. And we have some flavours using distinct
   width: 0;
   z-index: 1000001; }
 
-.tooltipped:not(.js-tooltipped):hover:before, .tooltipped:not(.js-tooltipped):hover:after, .tooltipped.js-tooltipped.active:before, .tooltipped.js-tooltipped.active:after {
+.tooltipped:not(.js-tooltipped):hover:before, .tooltipped:not(.js-tooltipped):hover:after, .tooltipped.js-tooltipped.tooltip-active:before, .tooltipped.js-tooltipped.tooltip-active:after {
   display: inline-block;
   text-decoration: none; }
 
-.tooltipped-multiline:not(.js-tooltipped):hover:after, .tooltipped-multiline.js-tooltipped.active:after {
+.tooltipped-multiline:not(.js-tooltipped):hover:after, .tooltipped-multiline.js-tooltipped.tooltip-active:after {
   display: table-cell; }
 
 .tooltipped-s:after, .tooltipped-se:after, .tooltipped-sw:after {

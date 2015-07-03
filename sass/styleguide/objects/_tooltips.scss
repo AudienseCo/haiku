@@ -37,7 +37,7 @@ $tooltip-text-color:       color($name: "background", $hue: "light");
 }
 
 // This will indicate when we'll activate the tooltip
-.tooltipped:not(.js-tooltipped):hover, .tooltipped.js-tooltipped.active {
+.tooltipped:not(.js-tooltipped):hover, .tooltipped.js-tooltipped.tooltip-active {
   &:before,
   &:after {
     display: inline-block;
@@ -45,7 +45,7 @@ $tooltip-text-color:       color($name: "background", $hue: "light");
   }
 }
 
-.tooltipped-multiline:not(.js-tooltipped):hover, .tooltipped-multiline.js-tooltipped.active {
+.tooltipped-multiline:not(.js-tooltipped):hover, .tooltipped-multiline.js-tooltipped.tooltip-active {
   &:after {
     display: table-cell;
   }
