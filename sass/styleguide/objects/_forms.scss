@@ -50,7 +50,6 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
             top: 50%;
             transform: translateY(-50%);
             width: 0;
-            z-index: 1;
         }
     }
 
@@ -140,6 +139,59 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
 
         .input-base {
             @include input-base-error;
+        }
+    }
+}
+
+// Checkboxes styling. In this case we can allow use label to target
+.input-checkbox {
+    cursor: pointer;
+    display: inline-block;
+    height: 1.6rem;
+    margin-right: .3rem;
+    position: relative;
+    vertical-align: middle;
+    width: 1.6rem;
+
+    &:hover > label {
+        opacity: 0.6;
+    }
+
+    & > label {
+        border-radius: 2px;
+        bottom: 0;
+        box-shadow: 0 0 0 1px #ccc;
+        color: transparent;
+        cursor: pointer;
+        font: 0/0 a;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-shadow: none;
+        top: 0;
+    }
+
+    & > input[type=checkbox] {
+        display: none;
+        visibility: hidden;
+    }
+
+    & > input[type=checkbox]:checked + label {
+        background: color($name: "socialbro");
+        box-shadow: 0 0 0 1px color($name: "socialbro");
+
+        &:after {
+            background: transparent;
+            border: 3px solid color($name: "background", $hue: "light");
+            border-right: none;
+            border-top: none;
+            content: '';
+            height: .7rem;
+            left: .3rem;
+            position: absolute;
+            top: .3rem;
+            transform: rotate(-45deg);
+            width: 1.1rem;
         }
     }
 }
