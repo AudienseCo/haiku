@@ -50,3 +50,8 @@ $base-sizes: 16 18 20 30 35 40 45 50 55 60;
     @extend %icon-file;
     background: color($name: "succeed", $hue: "light");
 }
+
+.icon-learn {
+    @extend %icon-file;
+    fill: color($name: "succeed", $hue: "light");
+}

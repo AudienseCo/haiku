@@ -1514,7 +1514,8 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .icon-pdf,
 .icon-ads,
-.icon-xls
+.icon-xls,
+.icon-learn
 {
     border-radius: 4px;
 
@@ -1535,6 +1536,11 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .icon-xls
 {
     background: #7ad22a;
+}
+
+.icon-learn
+{
+    fill: #7ad22a;
 }
 
 /*

@@ -1257,7 +1257,7 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
 .icon-socialbro {
   fill: #29c4d0; }
 
-.icon-pdf, .icon-ads, .icon-xls {
+.icon-pdf, .icon-ads, .icon-xls, .icon-learn {
   border-radius: 4px;
   fill: #ffffff; }
 
@@ -1270,6 +1270,9 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
 
 .icon-xls {
   background: #7ad22a; }
+
+.icon-learn {
+  fill: #7ad22a; }
 
 /*
 
