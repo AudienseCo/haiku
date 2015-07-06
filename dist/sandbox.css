@@ -1209,10 +1209,9 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-base.with-caret:after
 {
     position: absolute;
-    z-index: 1; 
     top: 50%;
     right: 15px;
-    width: 0;
+    width: 0; 
     height: 0;
     content: '';
     -webkit-transform: translateY(-50%);
@@ -1319,6 +1318,61 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     color: #cc8383; 
     border-color: #cc8383;
     background-color: #ffe6e6;
+}
+
+.input-checkbox
+{
+    position: relative;
+    display: inline-block;
+    width: 16px; 
+    height: 16px;
+    margin-right: 3px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.input-checkbox:hover > label
+{
+    opacity: .6;
+}
+.input-checkbox > label
+{
+    font: 0/0 a;
+    position: absolute;
+    top: 0; 
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    color: transparent;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #ccc;
+    text-shadow: none;
+}
+.input-checkbox > input[type=checkbox]
+{
+    display: none;
+    visibility: hidden;
+}
+.input-checkbox > input[type=checkbox]:checked + label
+{
+    background: #29c4d0;
+    box-shadow: 0 0 0 1px #29c4d0;
+}
+.input-checkbox > input[type=checkbox]:checked + label:after
+{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 11px; 
+    height: 7px;
+    content: '';
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    background: transparent;
 }
 
 .grid-row
@@ -1985,18 +2039,18 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-top > .sb-menu-bubble-top-left,
 .sb-menu-align-top .sb-menu-bubble-bottom-left
 {
-    -webkit-transform: translate(-2.3rem);
-        -ms-transform: translate(-2.3rem);
-            transform: translate(-2.3rem);
+    -webkit-transform: translate(-23px);
+        -ms-transform: translate(-23px);
+            transform: translate(-23px);
 }
 .sb-menu-align-top > .sb-menu-bubble-top-right,
 .sb-menu-align-top .sb-menu-bubble-bottom-right
 {
     right: 50%;
     left: auto;
-    -webkit-transform: translate(2.3rem);
-        -ms-transform: translate(2.3rem);
-            transform: translate(2.3rem);
+    -webkit-transform: translate(23px);
+        -ms-transform: translate(23px);
+            transform: translate(23px);
 }
 
 .sb-menu-align-bottom
@@ -2027,18 +2081,18 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-bottom > .sb-menu-bubble-top-left,
 .sb-menu-align-bottom .sb-menu-bubble-bottom-left
 {
-    -webkit-transform: translate(-2.3rem);
-        -ms-transform: translate(-2.3rem);
-            transform: translate(-2.3rem);
+    -webkit-transform: translate(-23px);
+        -ms-transform: translate(-23px);
+            transform: translate(-23px);
 }
 .sb-menu-align-bottom > .sb-menu-bubble-top-right,
 .sb-menu-align-bottom .sb-menu-bubble-bottom-right
 {
     right: 50%;
     left: auto;
-    -webkit-transform: translate(2.3rem);
-        -ms-transform: translate(2.3rem);
-            transform: translate(2.3rem);
+    -webkit-transform: translate(23px);
+        -ms-transform: translate(23px);
+            transform: translate(23px);
 }
 
 .sb-menu-align-bottom-right

@@ -1070,8 +1070,7 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%);
-      width: 0;
-      z-index: 1; }
+      width: 0; }
   .input-base > select {
     appearance: none;
     -moz-appearance: none;
@@ -1143,6 +1142,49 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
     background-color: #ffe6e6;
     border-color: #cc8383;
     color: #cc8383; }
+
+.input-checkbox {
+  cursor: pointer;
+  display: inline-block;
+  height: 1.6rem;
+  margin-right: 0.3rem;
+  position: relative;
+  vertical-align: middle;
+  width: 1.6rem; }
+  .input-checkbox:hover > label {
+    opacity: 0.6; }
+  .input-checkbox > label {
+    border-radius: 2px;
+    bottom: 0;
+    box-shadow: 0 0 0 1px #ccc;
+    color: transparent;
+    cursor: pointer;
+    font: 0/0 a;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-shadow: none;
+    top: 0; }
+  .input-checkbox > input[type=checkbox] {
+    display: none;
+    visibility: hidden; }
+  .input-checkbox > input[type=checkbox]:checked + label {
+    background: #29c4d0;
+    box-shadow: 0 0 0 1px #29c4d0; }
+    .input-checkbox > input[type=checkbox]:checked + label:after {
+      background: transparent;
+      border: 3px solid #ffffff;
+      border-right: none;
+      border-top: none;
+      content: '';
+      height: 0.7rem;
+      left: 0.3rem;
+      position: absolute;
+      top: 0.3rem;
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      width: 1.1rem; }
 
 .grid-row {
   margin-left: -1rem;
