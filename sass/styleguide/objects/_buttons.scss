@@ -43,6 +43,16 @@ $btn-base-v-padding:   ($btn-base-height - $btn-base-line-height)/2;
     &.with-caret:after {
         margin-left: .3rem;
     }
+
+    &.btn-icon {
+        border: 0;
+        padding: 0;
+        text-align: center;
+
+        & > [class^="icon"] {
+            margin-right: 0;
+        }
+    }
 }
 
 // Generates a button class from some color parameters
