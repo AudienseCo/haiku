@@ -1,4 +1,4 @@
-.card-data-title, .value-label {
+.data-title, .value-label {
     display: block;
     font-size: 1.2rem;
     color: color($name: "text", $variant: "secondary", $hue: "dark");
@@ -16,12 +16,12 @@
     margin: 0;
 }
 
-.card-data-title {
+.data-title {
     clear: both;
     float: left;
 }
 
-.card-data-value {
+.data-value {
     margin: 0 0 1rem 0;
     float: right;
     line-height: 1.2;
@@ -33,11 +33,11 @@
 }
 
 .main-data {
-    .card-data-title {
+    .data-title {
         float: none;
     }
 
-    .card-data-value {
+    .data-value {
         float: none;
         font-size: 2rem;
         font-weight: bold;
