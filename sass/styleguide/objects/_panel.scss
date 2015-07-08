@@ -7,12 +7,30 @@
 .panel-header {
     background-color: color($name: "background");
     padding: 1.2rem 1.5rem;
+
+    &.with-actions {
+        display: flex;
+    }
+
+    .icon-kebab {
+        margin-left: -4px;
+    }
 }
 
 .panel-header-title {
     color: color($name: "titles", $hue: "dark");
     font-size: 1.8rem;
     font-weight: normal;
+
+    .subtitle {
+        display: block;
+        font-size: 1.2rem;
+        color: color($name: "text", $variant: "secondary", $hue: "dark");
+    }
+}
+
+.with-actions .panel-header-title {
+    margin: 0 .5rem;
 }
 
 .panel-body {

@@ -1,5 +1,58 @@
-.panel-header-title .subtitle {
+.card-data-title, .value-label {
     display: block;
     font-size: 1.2rem;
     color: color($name: "text", $variant: "secondary", $hue: "dark");
+}
+
+.card-split {
+    clear: both;
+    border: 1px solid color($name: "border", $variant:"secondary", $hue: "light");
+    border-width: 1px 0 0;
+    background: none;
+    margin-bottom: 1rem;
+}
+
+.card-data-list {
+    margin: 0;
+}
+
+.card-data-title {
+    clear: both;
+    float: left;
+}
+
+.card-data-value {
+    margin: 0 0 1rem 0;
+    float: right;
+    line-height: 1.2;
+
+    & .value-label {
+        display: block;
+        text-align: right;
+    }
+}
+
+.main-data {
+    .card-data-title {
+        float: none;
+    }
+
+    .card-data-value {
+        float: none;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.card-actions, .card-status {
+    clear: both;
+}
+.card-actions .action, .card-status {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card-actions :last-child {
+    margin-bottom: 0;
 }

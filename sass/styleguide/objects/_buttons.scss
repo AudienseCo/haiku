@@ -48,9 +48,14 @@ $btn-base-v-padding:   ($btn-base-height - $btn-base-line-height)/2;
         border: 0;
         padding: 0;
         text-align: center;
+        background: none;
 
         & > [class^="icon"] {
             margin-right: 0;
+        }
+
+        &:hover {
+            background: none;
         }
     }
 }
