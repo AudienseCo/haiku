@@ -1310,6 +1310,12 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     border-radius: 3px 0 0 3px;
     background: #f6f6f6;
 }
+.input-group .input-label:last-child
+{
+    font-weight: normal; 
+    border-width: 1px;
+    border-radius: 0 3px 3px 0;
+}
 .input-group.error .input-label,
 .input-group.error .input-group-button > .btn
 {

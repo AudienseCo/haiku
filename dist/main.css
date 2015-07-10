@@ -1136,6 +1136,10 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
     padding: 0.5rem 1rem;
     vertical-align: middle;
     white-space: nowrap; }
+    .input-group .input-label:last-child {
+      border-radius: 0 3px 3px 0;
+      border-width: 1px;
+      font-weight: normal; }
   .input-group.error .input-label, .input-group.error .input-group-button > .btn {
     background-color: #cc8383;
     border-color: #cc8383;
