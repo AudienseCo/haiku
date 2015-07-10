@@ -83,9 +83,13 @@ $input-v-padding:     ($input-height - $input-line-height)/2;
         border-radius: 0 3px 3px 0;
     }
 
-    .input-base {
-        border-radius: 3px 0 0 3px;
+    .input-base:not(:last-child) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
         border-width: 1px 0 1px 1px;
+    }
+
+    .input-base {
         display: table-cell;
         height: $input-height;
         padding: $input-v-padding 1rem;

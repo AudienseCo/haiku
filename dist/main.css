@@ -1099,9 +1099,11 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
   .input-group .input-label + .input-base {
     border-width: 1px;
     border-radius: 0 3px 3px 0; }
+  .input-group .input-base:not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-width: 1px 0 1px 1px; }
   .input-group .input-base {
-    border-radius: 3px 0 0 3px;
-    border-width: 1px 0 1px 1px;
     display: table-cell;
     height: 3.6rem;
     padding: 0.6rem 1rem;
