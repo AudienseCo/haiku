@@ -6,14 +6,21 @@
 
 .panel-header {
     background-color: color($name: "background");
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem;
 
     &.with-actions {
         display: flex;
+        position: relative;
+    }
+
+    .handle {
+        flex: 0 0 .8rem;
+
     }
 
     .icon-kebab {
-        margin-left: -4px;
+        margin-left: -.4rem;
+        fill: #36C4CF;
     }
 }
 
@@ -34,5 +41,23 @@
 }
 
 .panel-body {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.2rem;
+}
+
+/* Optional header menu */
+
+.panel-header-menu .header-menu-actions {
+    display: block;
+    @include standard-container;
+    padding: 1rem;
+    border-top-left-radius: 0;
+}
+
+.active .panel-header-menu {
+    position: absolute;
+    left: 0;
+}
+
+.active .handle {
+    background: color($name: "background", $hue: "light");
 }

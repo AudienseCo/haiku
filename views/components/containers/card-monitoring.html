@@ -1,10 +1,29 @@
 <div class="panel">
   <header class="panel-header with-actions">
-    <button class="btn btn-icon action">
-      <svg class="icon-kebab">
-        <use xlink:href="/svg-defs.svg#icon-kebab"></use>
-      </svg>
-    </button>
+    <div class="action active">
+      <div class="panel-header-menu">
+        <button class="btn btn-icon handle">
+          <svg class="icon-kebab">
+            <use xlink:href="/svg-defs.svg#icon-kebab"></use>
+          </svg>
+          Menu
+        </button>
+        <div class="header-menu-actions">
+          <button class="btn btn-contrast">
+            <svg class="icon-trash">
+              <use xlink:href="/svg-defs.svg#icon-trash"></use>
+            </svg>
+            Edit
+          </button>
+          <button class="btn btn-contrast">
+            <svg class="icon-trash">
+              <use xlink:href="/svg-defs.svg#icon-trash"></use>
+            </svg>
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
     <h2 class="panel-header-title">
       This is the title of the card
       <span class="subtitle">This is the subtitle</span>
