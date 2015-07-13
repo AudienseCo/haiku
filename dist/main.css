@@ -1192,6 +1192,39 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
               transform: rotate(-45deg);
       width: 1.1rem; }
 
+.input-radio {
+  background-color: #dfdfdf;
+  border-radius: 100%;
+  border: 1px solid #ffffff;
+  box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.09);
+  cursor: pointer;
+  display: inline-block;
+  height: 2rem;
+  position: relative;
+  vertical-align: middle;
+  width: 2rem;
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+  .input-radio:after {
+    background: #ffffff;
+    border-radius: 100%;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+    content: '';
+    display: block;
+    height: 1rem;
+    left: 50%;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    position: relative;
+    top: 50%;
+    width: 1rem; }
+  .input-radio:checked:after {
+    background: #29c4d0;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.33), inset 0 1px rgba(0, 0, 0, 0.09); }
+  .input-radio:focus {
+    background: #c1eff3; }
+
 .grid-row {
   margin-left: -1rem;
   margin-right: -1rem; }

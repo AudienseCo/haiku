@@ -16,6 +16,12 @@ This allows to attach a label or a button action to a text input. There are some
 
 ## Checkboxes
 
-We have a custom style for checkboxes. It's important to use a similar markup to the one shown in the example. Note the use of `label` node with a `for` attribute that references the input `id`. This will allow to change the checked value so you should always add it. 
+We have a custom style for checkboxes. It's important to use a similar markup to the one shown in the example. Note the use of `label` node with a `for` attribute that references the input `id`. This will allow to change the checked value so you should always add it.
 
 {{ component('components/forms/checkboxes.html') }}
+
+## Radio Buttons
+
+Radio buttons have a custom style too. Use here a markup similar to the one used in checkboxes, with an id for the input element and a label referring to it.
+
+{{ component('components/forms/radio-buttons.html') }}
