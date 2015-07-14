@@ -7,21 +7,6 @@
 .panel-header {
     background-color: color($name: "background");
     padding: 1.2rem;
-
-    &.with-actions {
-        display: flex;
-        position: relative;
-    }
-
-    .handle {
-        flex: 0 0 .8rem;
-
-    }
-
-    .icon-kebab {
-        margin-left: -.4rem;
-        fill: #36C4CF;
-    }
 }
 
 .panel-header-title {
@@ -36,28 +21,127 @@
     }
 }
 
-.with-actions .panel-header-title {
-    margin: 0 .5rem;
-}
-
 .panel-body {
     padding: 1rem 1.2rem;
 }
 
-/* Optional header menu */
+.card-split {
+    clear: both;
+    border: 1px solid color($name: "border", $variant:"secondary", $hue: "light");
+    border-width: 1px 0 0;
+    background: none;
+    margin-bottom: 1rem;
+}
 
-.panel-header-menu .header-menu-actions {
-    display: block;
+/* Optional header menu */
+.panel-header {
+
+    &.with-actions {
+        position: relative;
+        padding-left: 2.4rem;
+        padding-right: 3rem;
+    }
+}
+
+.action-menu-actions {
     @include standard-container;
+    display: none;
     padding: 1rem;
     border-top-left-radius: 0;
+    z-index: 1;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+
+    .action {
+        display: inline-block;
+        padding: 1rem 2rem;
+        height: auto;
+
+        .icon {
+            height: 1.6rem;
+            width: 1.6rem;
+            vertical-align: top;
+            margin-top: .2rem;
+        }
+    }
 }
 
-.active .panel-header-menu {
+.action-delete {
+    &, .icon-trash{
+        border-color: color($name:"error");
+        fill: color($name:"error");
+        color: color($name:"error");
+    }
+}
+
+.action-menu {
     position: absolute;
+    top: 1rem;
     left: 0;
+
+    .icon-kebab {
+        margin-left: .6rem;
+        fill: #36C4CF;
+    }
+
+    .handle .label {
+        display: none;
+    }
+
+    &.active {
+        .handle {
+            @include standard-container;
+            background: color($name: "background", $hue: "light");
+            padding-right: 1rem;
+            position: relative;
+            border-bottom: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-bottom: -1px;
+            z-index: 2;
+        }
+
+        .label {
+            display: inline;
+        }
+
+        .action-menu-actions {
+            display: block;
+        }
+    }
 }
 
-.active .handle {
-    background: color($name: "background", $hue: "light");
+.action-info {
+
+    .btn {
+        position: absolute;
+        top: .3rem;
+        right: 1rem;
+    }
+
+    .icon {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    &.active {
+        .icon {
+            transform: scaleY(-1);
+        }
+
+        .action-info-data {
+            display:block;
+        }
+    }
+}
+
+.action-info-data {
+    display: none;
+    position: absolute;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    background: color($name: "background");
+    padding: 1.2rem;
+    left: 0;
+    right: 0;
+    max-height: 20rem;
+    overflow: auto;
 }

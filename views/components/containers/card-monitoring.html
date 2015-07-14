@@ -1,38 +1,47 @@
-<div class="panel">
+<!-- Running card -->
+<div class="panel currently-running">
   <header class="panel-header with-actions">
-    <div class="action active">
-      <div class="panel-header-menu">
-        <button class="btn btn-icon handle">
-          <svg class="icon-kebab">
-            <use xlink:href="/svg-defs.svg#icon-kebab"></use>
-          </svg>
-          Menu
-        </button>
-        <div class="header-menu-actions">
-          <button class="btn btn-contrast">
-            <svg class="icon-trash">
-              <use xlink:href="/svg-defs.svg#icon-trash"></use>
-            </svg>
-            Edit
-          </button>
-          <button class="btn btn-contrast">
-            <svg class="icon-trash">
-              <use xlink:href="/svg-defs.svg#icon-trash"></use>
-            </svg>
-            Delete
-          </button>
-        </div>
-      </div>
-    </div>
     <h2 class="panel-header-title">
       This is the title of the card
       <span class="subtitle">This is the subtitle</span>
     </h2>
-    <button class="btn btn-icon action">
-      <svg class="icon">
-        <use xlink:href="/svg-defs.svg#icon-toggle"></use>
-      </svg>
-    </button>
+    <div class="action-menu">
+      <button class="btn btn-icon handle">
+        <svg class="icon-kebab">
+          <use xlink:href="/svg-defs.svg#icon-kebab"></use>
+        </svg>
+        <span class="label">Menu</span>
+      </button>
+      <div class="action-menu-actions">
+        <button class="btn btn-contrast action action-edit">
+          <svg class="icon icon-edit">
+            <use xlink:href="/svg-defs.svg#icon-edit"></use>
+          </svg>
+          Edit
+        </button>
+        <button class="btn btn-contrast action action-delete">
+          <svg class="icon icon-trash">
+            <use xlink:href="/svg-defs.svg#icon-trash"></use>
+          </svg>
+          Delete
+        </button>
+      </div>
+    </div>
+    <div class="action-info">
+      <button class="btn btn-icon">
+        <svg class="icon">
+          <use xlink:href="/svg-defs.svg#icon-toggle"></use>
+        </svg>
+      </button>
+      <div class="action-info-data">
+        <hr class="card-split">
+        <ul>
+          <li><strong>Created on:</strong> DD MM AAAA 09:26 MT</li>
+          <li><strong>Criteria used:</strong> User bio, contains any socialbro.com</li>
+          <li><strong>Sample of tweets:</strong> 100%</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <div class="panel-body">
@@ -47,11 +56,17 @@
       <dt class="data-title">Data title</dt>
       <dd class="data-value">999 999<span class="value-label">subtitle</span></dd>
     </dl>
-    <button class="btn btn-contrast card-status">
+    <button class="btn btn-contrast card-status status-running">
       <svg class="icon">
         <use xlink:href="/svg-defs.svg#icon-running"></use>
       </svg>
-      Status
+      Running
+    </button>
+    <button class="btn btn-contrast card-status status-paused">
+      <svg class="icon">
+        <use xlink:href="/svg-defs.svg#icon-pause"></use>
+      </svg>
+      Paused
     </button>
     <div class="card-actions">
       <button class="btn action">
@@ -61,3 +76,242 @@
   </div>
 </div>
 
+
+
+<!-- Paused card -->
+<div class="panel currently-paused">
+  <header class="panel-header with-actions">
+    <h2 class="panel-header-title">
+      This is the title of the card
+      <span class="subtitle">This is the subtitle</span>
+    </h2>
+    <div class="action-menu">
+      <button class="btn btn-icon handle">
+        <svg class="icon-kebab">
+          <use xlink:href="/svg-defs.svg#icon-kebab"></use>
+        </svg>
+        <span class="label">Menu</span>
+      </button>
+      <div class="action-menu-actions">
+        <button class="btn btn-contrast action action-edit">
+          <svg class="icon icon-edit">
+            <use xlink:href="/svg-defs.svg#icon-edit"></use>
+          </svg>
+          Edit
+        </button>
+        <button class="btn btn-contrast action action-delete">
+          <svg class="icon icon-trash">
+            <use xlink:href="/svg-defs.svg#icon-trash"></use>
+          </svg>
+          Delete
+        </button>
+      </div>
+    </div>
+    <div class="action-info">
+      <button class="btn btn-icon">
+        <svg class="icon">
+          <use xlink:href="/svg-defs.svg#icon-toggle"></use>
+        </svg>
+      </button>
+      <div class="action-info-data">
+        <hr class="card-split">
+        <ul>
+          <li><strong>Created on:</strong> DD MM AAAA 09:26 MT</li>
+          <li><strong>Criteria used:</strong> User bio, contains any socialbro.com</li>
+          <li><strong>Sample of tweets:</strong> 100%</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="panel-body">
+    <dl class="card-data-list main-data">
+      <dt class="data-title">Reference subtitle</dt>
+      <dd class="data-value">99 999 / 999 999</dd>
+    </dl>
+    <hr class="card-split">
+    <dl class="card-data-list">
+      <dt class="data-title">Data title</dt>
+      <dd class="data-value">DD / MM / AAAA<span class="value-label">subtitle</span></dd>
+      <dt class="data-title">Data title</dt>
+      <dd class="data-value">999 999<span class="value-label">subtitle</span></dd>
+    </dl>
+    <button class="btn btn-contrast card-status status-running">
+      <svg class="icon">
+        <use xlink:href="/svg-defs.svg#icon-running"></use>
+      </svg>
+      Running
+    </button>
+    <button class="btn btn-contrast card-status status-paused">
+      <svg class="icon">
+        <use xlink:href="/svg-defs.svg#icon-pause"></use>
+      </svg>
+      Paused
+    </button>
+    <div class="card-actions">
+      <button class="btn action">
+        Label
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Active action menu -->
+<div class="panel currently-paused">
+  <header class="panel-header with-actions">
+    <h2 class="panel-header-title">
+      This is the title of the card
+      <span class="subtitle">This is the subtitle</span>
+    </h2>
+    <div class="action-menu active">
+      <button class="btn btn-icon handle">
+        <svg class="icon-kebab">
+          <use xlink:href="/svg-defs.svg#icon-kebab"></use>
+        </svg>
+        <span class="label">Menu</span>
+      </button>
+      <div class="action-menu-actions">
+        <button class="btn btn-contrast action action-edit">
+          <svg class="icon icon-edit">
+            <use xlink:href="/svg-defs.svg#icon-edit"></use>
+          </svg>
+          Edit
+        </button>
+        <button class="btn btn-contrast action action-delete">
+          <svg class="icon icon-trash">
+            <use xlink:href="/svg-defs.svg#icon-trash"></use>
+          </svg>
+          Delete
+        </button>
+      </div>
+    </div>
+    <div class="action-info">
+      <button class="btn btn-icon">
+        <svg class="icon">
+          <use xlink:href="/svg-defs.svg#icon-toggle"></use>
+        </svg>
+      </button>
+      <div class="action-info-data">
+        <hr class="card-split">
+        <ul>
+          <li><strong>Created on:</strong> DD MM AAAA 09:26 MT</li>
+          <li><strong>Criteria used:</strong> User bio, contains any socialbro.com</li>
+          <li><strong>Sample of tweets:</strong> 100%</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="panel-body">
+    <dl class="card-data-list main-data">
+      <dt class="data-title">Reference subtitle</dt>
+      <dd class="data-value">99 999 / 999 999</dd>
+    </dl>
+    <hr class="card-split">
+    <dl class="card-data-list">
+      <dt class="data-title">Data title</dt>
+      <dd class="data-value">DD / MM / AAAA<span class="value-label">subtitle</span></dd>
+      <dt class="data-title">Data title</dt>
+      <dd class="data-value">999 999<span class="value-label">subtitle</span></dd>
+    </dl>
+    <button class="btn btn-contrast card-status status-running">
+      <svg class="icon">
+        <use xlink:href="/svg-defs.svg#icon-running"></use>
+      </svg>
+      Running
+    </button>
+    <button class="btn btn-contrast card-status status-paused">
+      <svg class="icon">
+        <use xlink:href="/svg-defs.svg#icon-pause"></use>
+      </svg>
+      Paused
+    </button>
+    <div class="card-actions">
+      <button class="btn action">
+        Label
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Active info menu -->
+<div class="panel currently-paused">
+  <header class="panel-header with-actions">
+    <h2 class="panel-header-title">
+      This is the title of the card
+      <span class="subtitle">This is the subtitle</span>
+    </h2>
+    <div class="action-menu">
+      <button class="btn btn-icon handle">
+        <svg class="icon-kebab">
+          <use xlink:href="/svg-defs.svg#icon-kebab"></use>
+        </svg>
+        <span class="label">Menu</span>
+      </button>
+      <div class="action-menu-actions">
+        <button class="btn btn-contrast action action-edit">
+          <svg class="icon icon-edit">
+            <use xlink:href="/svg-defs.svg#icon-edit"></use>
+          </svg>
+          Edit
+        </button>
+        <button class="btn btn-contrast action action-delete">
+          <svg class="icon icon-trash">
+            <use xlink:href="/svg-defs.svg#icon-trash"></use>
+          </svg>
+          Delete
+        </button>
+      </div>
+    </div>
+    <div class="action-info active">
+      <button class="btn btn-icon">
+        <svg class="icon">
+          <use xlink:href="/svg-defs.svg#icon-toggle"></use>
+        </svg>
+      </button>
+      <div class="action-info-data">
+        <hr class="card-split">
+        <ul>
+          <li><strong>Created on:</strong> DD MM AAAA 09:26 MT</li>
+          <li><strong>Criteria used:</strong> User bio, contains any socialbro.com</li>
+          <li><strong>Sample of tweets:</strong> 100%</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="panel-body">
+    <dl class="card-data-list main-data">
+      <dt class="data-title">Reference subtitle</dt>
+      <dd class="data-value">99 999 / 999 999</dd>
+    </dl>
+    <hr class="card-split">
+    <dl class="card-data-list">
+      <dt class="data-title">Data title</dt>
+      <dd class="data-value">DD / MM / AAAA<span class="value-label">subtitle</span></dd>
+      <dt class="data-title">Data title</dt>
+      <dd class="data-value">999 999<span class="value-label">subtitle</span></dd>
+    </dl>
+    <button class="btn btn-contrast card-status status-running">
+      <svg class="icon">
+        <use xlink:href="/svg-defs.svg#icon-running"></use>
+      </svg>
+      Running
+    </button>
+    <button class="btn btn-contrast card-status status-paused">
+      <svg class="icon">
+        <use xlink:href="/svg-defs.svg#icon-pause"></use>
+      </svg>
+      Paused
+    </button>
+    <div class="card-actions">
+      <button class="btn action">
+        Label
+      </button>
+    </div>
+  </div>
+</div>

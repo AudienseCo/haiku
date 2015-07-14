@@ -1,15 +1,15 @@
+.currently-running [class$="-running"] {
+    display: block;
+}
+
+.currently-paused [class$="-paused"] {
+    display: block;
+}
+
 .data-title, .value-label {
     display: block;
     font-size: 1.2rem;
     color: color($name: "text", $variant: "secondary", $hue: "dark");
-}
-
-.card-split {
-    clear: both;
-    border: 1px solid color($name: "border", $variant:"secondary", $hue: "light");
-    border-width: 1px 0 0;
-    background: none;
-    margin-bottom: 1rem;
 }
 
 .card-data-list {
@@ -47,10 +47,27 @@
 .card-actions, .card-status {
     clear: both;
 }
+
+.card-status {
+    display: none;
+}
+
 .card-actions .action, .card-status {
-    display: block;
     width: 100%;
     margin-bottom: 1rem;
+}
+
+.card-status.status-running {
+    border-color: color($name:"succeed");
+    color: color($name:"succeed");
+
+    .icon {
+        fill: color($name:"succeed");
+    }
+}
+
+.card-status.status-paused .icon {
+    fill: color($name:"primary");
 }
 
 .card-actions :last-child {
