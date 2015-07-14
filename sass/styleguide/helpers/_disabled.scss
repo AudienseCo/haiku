@@ -5,7 +5,7 @@
 
 .disabled-cascade {
   opacity: .5;
-  & * {
+  &, & * {
     pointer-events: none;
   }
 }

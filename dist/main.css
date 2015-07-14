@@ -2576,7 +2576,7 @@ Clear floats utility.
 
 .disabled-cascade {
   opacity: 0.5; }
-  .disabled-cascade * {
+  .disabled-cascade, .disabled-cascade * {
     pointer-events: none; }
 
 /*
