@@ -54,7 +54,7 @@
 
 .card-actions .action, .card-status {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .card-status.status-running {
@@ -70,6 +70,3 @@
     fill: color($name:"primary");
 }
 
-.card-actions :last-child {
-    margin-bottom: 0;
-}
