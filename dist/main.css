@@ -1952,7 +1952,7 @@ Pagination pattern.
 
 .card-actions .action, .card-status {
   width: 100%;
-  margin-bottom: 1rem; }
+  margin-top: 1rem; }
 
 .card-status.status-running {
   border-color: #72c427;
@@ -1962,9 +1962,6 @@ Pagination pattern.
 
 .card-status.status-paused .icon {
   fill: #f29556; }
-
-.card-actions :last-child {
-  margin-bottom: 0; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
