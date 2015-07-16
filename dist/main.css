@@ -1289,6 +1289,10 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
 .eight.grid-columns, .one-whole {
   width: 100%; }
 
+.icon-size-14 {
+  height: 1.4rem;
+  width: 1.4rem; }
+
 .icon-size-16 {
   height: 1.6rem;
   width: 1.6rem; }
