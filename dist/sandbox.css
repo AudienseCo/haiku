@@ -3962,4 +3962,9 @@ n           Negative (margin only)
     border-left: .36em solid transparent;
 }
 
+.capitalize
+{
+    text-transform: capitalize;
+}
+
 /* 7. Vendor */
