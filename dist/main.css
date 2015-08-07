@@ -2343,6 +2343,7 @@ Navigation usually means list of links. And we have some flavours using distinct
   display: none;
   font-size: 1.3rem;
   line-height: 1.4;
+  font-weight: normal;
   padding: 1rem;
   pointer-events: none;
   position: absolute;

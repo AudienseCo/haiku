@@ -3067,6 +3067,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .tooltipped:after
 {
     font-size: 13px;
+    font-weight: normal;
     line-height: 1.4;
     position: absolute;
     z-index: 1000000; 
