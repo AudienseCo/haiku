@@ -22,6 +22,6 @@ We have a custom style for checkboxes. It's important to use a similar markup to
 
 ## Radio Buttons
 
-Radio buttons have a custom style too. Use here a markup similar to the one used in checkboxes, with an id for the input element and a label referring to it.
+Radio buttons have a custom style too. Use here a markup similar to the one used in checkboxes.
 
 {{ component('components/forms/radio-buttons.html') }}
