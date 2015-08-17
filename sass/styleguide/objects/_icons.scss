@@ -55,3 +55,11 @@ $base-sizes: 14 16 18 20 30 35 40 45 50 55 60;
     @extend %icon-file;
     fill: color($name: "succeed", $hue: "light");
 }
+
+.spin {
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    0%   {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}

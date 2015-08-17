@@ -20,6 +20,8 @@ Consider using helpers to give a the size of an icon. By default `40px` is the s
 
 In case your icon is integrated with text you can use the class `.icon-text` which will give you a sizing and alignment proportional to the text in which is integrated.
 
+You can use the `.spin` class to make any icon spin.
+
 ## Adding a new shape
 
 To add a new shape you just have to copy the svg source file at `/assets/svg` with the name you want, for example `bubble.svg`. Then run `grunt svg` from the command line to update the sprite map located at `/public` folder. Now you can reference the shape with `#icon-name` in the `use` tag. In the `bubble.svg` example it would be `#icon-bubble`.
