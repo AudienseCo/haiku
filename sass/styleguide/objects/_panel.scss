@@ -1,7 +1,6 @@
 .panel {
     @include standard-container;
     display: inline-block;
-    overflow: hidden;
 }
 
 .panel-header {
