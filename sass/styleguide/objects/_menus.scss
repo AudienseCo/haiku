@@ -9,6 +9,7 @@ $parity-offset:         0.1rem;
     @include standard-container;
     box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.10);
     display: block;
+    z-index: 99999;
 }
 
 // Variables and mixins to calculate bubble pointers
