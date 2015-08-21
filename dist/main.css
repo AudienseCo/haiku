@@ -1508,7 +1508,8 @@ Use this object to show an image and some text rendered in two columns.
   border-radius: 4px;
   border: 1px solid #d6d6d6;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-  display: block; }
+  display: block;
+  z-index: 99999; }
 
 .sb-menu-bubble-top {
   position: absolute;
