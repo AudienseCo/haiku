@@ -2232,7 +2232,8 @@ Navigation usually means list of links. And we have some flavours using distinct
   z-index: 0; }
 
 .sb-tabs-content-active {
-  display: inline-table; }
+  display: inline-table;
+  width: 100%; }
 
 /* Tabs block bottom */
 .sb-tabs--block-bottom .sb-tabs-group {
