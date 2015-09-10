@@ -3446,6 +3446,11 @@ Clear floats utility.
     cursor: pointer;
 }
 
+.no-pointer-events
+{
+    pointer-events: none;
+}
+
 .disabled
 {
     pointer-events: none;

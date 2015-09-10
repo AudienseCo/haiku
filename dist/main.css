@@ -2600,6 +2600,9 @@ Clear floats utility.
 .cursor-pointer {
   cursor: pointer; }
 
+.no-pointer-events {
+  pointer-events: none; }
+
 .disabled {
   pointer-events: none;
   opacity: 0.5; }
