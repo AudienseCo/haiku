@@ -22,3 +22,7 @@
 .color-titles-s {
     color: color($name: "titles", $variant: "secondary");
 }
+
+.color-link {
+    color: color($name: "service", $hue: "light")
+}

@@ -3441,6 +3441,11 @@ Clear floats utility.
     color: #8a4fa2;
 }
 
+.color-link
+{
+    color: #04b4ff;
+}
+
 .cursor-pointer
 {
     cursor: pointer;
