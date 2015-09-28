@@ -619,22 +619,22 @@ Drop the files in a folder, update the path and the name and go.
     position: relative;
     display: block;
     float: left;
-    width: 160px; 
-    height: 120px;
-    margin: 8px 16px 8px 30px;
+    width: 256px; 
+    height: 192px;
+    margin: 12.8px 25.6px 12.8px 48px;
     background-color: #d6d6d6;
 }
 .acc-breadcrumb-item-wrapper:before
 {
     position: absolute;
     top: 0;
-    left: 160px;
+    left: 256px;
     display: block;
     width: 0; 
     height: 0;
     content: '';
     -moz-transform: scale(.9999);
-    border-width: 60px 28px;
+    border-width: 96px 44.8px;
     border-style: solid;
     border-color: transparent transparent transparent #d6d6d6;
 }
@@ -642,40 +642,40 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item
 {
     position: absolute;
-    top: 1px; 
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
+    top: 1.6px; 
+    right: 1.6px;
+    bottom: 1.6px;
+    left: 1.6px;
     background-color: #fff;
 }
 .acc-breadcrumb-item:before
 {
     position: absolute;
     top: 0;
-    left: 158px;
+    left: 252.8px;
     display: block;
     width: 0; 
     height: 0;
     content: '';
-    border-width: 59px 27px;
+    border-width: 94.4px 44px;
     border-style: solid;
     border-color: transparent transparent transparent #fff;
 }
 .acc-breadcrumb-item:after
 {
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 41.6px;
+    line-height: 54.4px;
     position: absolute;
     z-index: 2; 
-    right: -40px;
-    bottom: 27px;
-    width: 40px;
-    height: 40px;
-    margin-bottom: -20px;
+    right: -64px;
+    bottom: 43.2px;
+    width: 64px;
+    height: 64px;
+    margin-bottom: -32px;
     content: '+';
     text-align: center;
     color: #b1b1b1;
-    border: 3px solid #d5f2d1;
+    border: 4.8px solid #d5f2d1;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -684,9 +684,9 @@ Drop the files in a folder, update the path and the name and go.
 {
     position: absolute;
     top: 0;
-    left: -30px;
-    width: 30px; 
-    height: 60px;
+    left: -48px;
+    width: 48px; 
+    height: 96px;
 }
 .acc-breadcrumb-item-back-top:before,
 .acc-breadcrumb-item-back-top:after
@@ -696,7 +696,7 @@ Drop the files in a folder, update the path and the name and go.
     width: 0; 
     height: 0;
     content: '';
-    border-width: 0 30px 60px 30px;
+    border-width: 0 48px 96px 48px;
     border-style: solid;
 }
 .acc-breadcrumb-item-back-top:before
@@ -707,8 +707,8 @@ Drop the files in a folder, update the path and the name and go.
 }
 .acc-breadcrumb-item-back-top:after
 {
-    top: 1px;
-    right: -2px; 
+    top: 1.6px;
+    right: -3.2px; 
     border-color: transparent white transparent transparent;
 }
 
@@ -716,9 +716,9 @@ Drop the files in a folder, update the path and the name and go.
 {
     position: absolute;
     bottom: 0;
-    left: -30px;
-    width: 30px; 
-    height: 60px;
+    left: -48px;
+    width: 48px; 
+    height: 96px;
 }
 .acc-breadcrumb-item-back-bottom:before,
 .acc-breadcrumb-item-back-bottom:after
@@ -728,7 +728,7 @@ Drop the files in a folder, update the path and the name and go.
     width: 0; 
     height: 0;
     content: '';
-    border-width: 60px 30px 0 30px;
+    border-width: 96px 48px 0 48px;
     border-style: solid;
 }
 .acc-breadcrumb-item-back-bottom:before
@@ -739,20 +739,20 @@ Drop the files in a folder, update the path and the name and go.
 }
 .acc-breadcrumb-item-back-bottom:after
 {
-    right: -2px; 
-    bottom: 1px;
+    right: -3.2px; 
+    bottom: 1.6px;
     border-color: transparent white transparent transparent;
 }
 
 .acc-breadcrumb-item-amount
 {
-    font-size: 11px;
-    line-height: 24px;
+    font-size: 17.6px;
+    line-height: 38.4px;
     position: absolute;
     z-index: 1; 
-    right: 15px;
-    bottom: 15px;
-    left: 15px;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
     text-align: center;
     color: #565656;
     border-radius: 4px;
@@ -763,20 +763,20 @@ Drop the files in a folder, update the path and the name and go.
 {
     position: absolute;
     top: 50%; 
-    height: 4px;
-    margin-top: -2px;
+    height: 6.4px;
+    margin-top: -3.2px;
     content: '';
     background-color: #d5f2d1;
 }
 .acc-breadcrumb-item-amount:after
 {
-    right: -80px;
-    width: 80px;
+    right: -128px;
+    width: 128px;
 }
 .acc-breadcrumb-item-amount:before
 {
-    left: -44px;
-    width: 44px;
+    left: -70.4px;
+    width: 70.4px;
 }
 
 .acc-breadcrumb-item-event
@@ -784,7 +784,7 @@ Drop the files in a folder, update the path and the name and go.
     line-height: 1;
     display: table;
     width: 100%; 
-    height: 81px;
+    height: 129.6px;
     text-align: center;
 }
 
@@ -796,16 +796,16 @@ Drop the files in a folder, update the path and the name and go.
 
 .acc-breadcrumb-item-event-amount
 {
-    font-size: 22px;
+    font-size: 35.2px;
     font-weight: bold; 
     display: block;
 }
 
 .acc-breadcrumb-item-event-action
 {
-    font-size: 11px;
+    font-size: 17.6px;
     display: block;
-    padding: 0 10px; 
+    padding: 0 16px; 
     text-transform: uppercase;
 }
 
@@ -815,7 +815,7 @@ Drop the files in a folder, update the path and the name and go.
     position: relative;
     display: table;
     width: 100%; 
-    height: 88px;
+    height: 140.8px;
     text-align: center;
     border-radius: 4px;
     background-color: #d5f2d1;
@@ -829,7 +829,7 @@ Drop the files in a folder, update the path and the name and go.
 
 .acc-breadcrumb-item-total-amount
 {
-    font-size: 24px;
+    font-size: 38.4px;
     font-weight: bold;
     display: inline-block;
     text-align: right;
@@ -837,7 +837,7 @@ Drop the files in a folder, update the path and the name and go.
 
 .acc-breadcrumb-item-total-unit
 {
-    font-size: 14px;
+    font-size: 22.4px;
     font-weight: normal;
     display: block;
     text-transform: uppercase;
@@ -875,7 +875,7 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item-wrapper:last-child,
 .acc-breadcrumb-item-wrapper:last-child .acc-breadcrumb-item
 {
-    padding: 15px;
+    padding: 24px;
 }
 .acc-breadcrumb-item-wrapper:last-child:before,
 .acc-breadcrumb-item-wrapper:last-child:after,
@@ -915,8 +915,8 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 {
     position: relative;
     display: table-cell;
-    margin-left: -2px;
-    padding: 10px 10px 10px 25px;
+    margin-left: -4px;
+    padding: 16px 16px 16px 40px;
     vertical-align: middle; 
     background-color: #f6f6f6;
 }
@@ -934,14 +934,14 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .breadcrumb-item:before
 {
-    top: -1px; 
-    border-width: 21px 21px 21px 13px;
+    top: -1.6px; 
+    border-width: 33.6px 33.6px 33.6px 20.8px;
     border-color: transparent transparent transparent #d6d6d6;
 }
 .breadcrumb-item:after
 {
     top: 0; 
-    border-width: 20px 20px 20px 12px;
+    border-width: 32px 32px 32px 19.2px;
     border-color: transparent transparent transparent #f6f6f6;
 }
 
@@ -958,42 +958,42 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .breadcrumb-item-large
 {
     height: 80px;
-    padding: 10px 10px 10px 40px;
+    padding: 16px 16px 16px 64px;
 }
 .breadcrumb-item-large:first-child
 {
-    padding-left: 25px;
+    padding-left: 40px;
 }
 .breadcrumb-item-large:before
 {
-    top: -1px; 
-    border-width: 41px 41px 41px 25px;
+    top: -1.6px; 
+    border-width: 65.6px 65.6px 65.6px 40px;
     border-color: transparent transparent transparent #d6d6d6;
 }
 .breadcrumb-item-large:after
 {
     top: 0; 
-    border-width: 40px 40px 40px 24px;
+    border-width: 64px 64px 64px 38.4px;
     border-color: transparent transparent transparent #f6f6f6;
 }
 
 .breadcrumb-item-simple
 {
     display: inline-block;
-    padding: 10px 0;
+    padding: 16px 0;
     vertical-align: middle;
 }
 .breadcrumb-item-simple:after
 {
     display: inline-block;
-    margin: 0 10px; 
+    margin: 0 16px; 
     content: '/';
     color: gray;
 }
 
 .breadcrumb-item-simple:first-child
 {
-    margin-left: 25px;
+    margin-left: 40px;
 }
 
 .breadcrumb-item-simple:last-child:after
@@ -1003,10 +1003,10 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .btn
 {
-    line-height: 22px;
+    line-height: 35.2px;
     display: inline-block;
-    height: 36px;
-    padding: 6px 10px;
+    height: 57.6px;
+    padding: 9.6px 16px;
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
@@ -1014,7 +1014,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     text-decoration: none;
     text-overflow: ellipsis;
     color: #565656;
-    border: 1px solid #d6d6d6;
+    border: 1.6px solid #d6d6d6;
     border-radius: 3px;
     background-color: #f6f6f6;
 }
@@ -1036,13 +1036,13 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .btn > [class^='icon']
 {
     width: 1.3em; 
-    height: 22px;
-    margin-right: 3px;
+    height: 35.2px;
+    margin-right: 4.8px;
     vertical-align: bottom;
 }
 .btn.with-caret:after
 {
-    margin-left: 3px;
+    margin-left: 4.8px;
 }
 .btn.btn-icon
 {
@@ -1190,16 +1190,16 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .input-base
 {
-    line-height: 22px;
+    line-height: 35.2px;
     position: relative;
     display: inline-block;
-    width: 200px; 
-    height: 36px;
-    padding: 6px 10px;
+    width: 320px; 
+    height: 57.6px;
+    padding: 9.6px 16px;
     text-align: left;
     vertical-align: middle;
     color: #565656;
-    border: 1px solid #d6d6d6;
+    border: 1.6px solid #d6d6d6;
     border-radius: 3px;
     background-color: #fff;
 }
@@ -1216,7 +1216,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-base.with-caret
 {
     overflow: hidden;
-    padding-right: 30px; 
+    padding-right: 48px; 
     cursor: pointer;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1225,7 +1225,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 {
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 24px;
     width: 0; 
     height: 0;
     content: '';
@@ -1233,9 +1233,9 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     pointer-events: none;
-    border-top: 5px solid #555;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
+    border-top: 8px solid #555;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
 }
 .input-base > select
 {
@@ -1246,7 +1246,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     bottom: 0;
     left: 0;
     width: 100%; 
-    padding: 6px 10px;
+    padding: 9.6px 16px;
     cursor: pointer;
     border: 0;
     outline: 0;
@@ -1265,7 +1265,7 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group
 {
     display: inline-table;
-    width: 200px; 
+    width: 320px; 
     border-collapse: separate;
     border-width: 0;
 }
@@ -1284,8 +1284,8 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 {
     display: table-cell;
     width: 100%; 
-    height: 36px;
-    padding: 6px 10px;
+    height: 57.6px;
+    padding: 9.6px 16px;
 }
 .input-group .input-base:focus
 {
@@ -1298,23 +1298,23 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-group .input-group-button
 {
     display: table-cell;
-    height: 36px;
+    height: 57.6px;
     vertical-align: middle;
 }
 .input-group .input-group-button > .btn
 {
     width: 100%; 
-    height: 36px;
+    height: 57.6px;
     border-width: 1px;
     border-radius: 0 3px 3px 0;
 }
 .input-group .input-label
 {
     font-weight: bold;
-    line-height: 22px;
+    line-height: 35.2px;
     display: table-cell;
-    height: 34px;
-    padding: 5px 10px;
+    height: 54.4px;
+    padding: 8px 16px;
     cursor: default;
     vertical-align: middle;
     white-space: nowrap; 
@@ -1349,9 +1349,9 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 {
     position: relative;
     display: inline-block;
-    width: 16px; 
-    height: 16px;
-    margin-right: 3px;
+    width: 25.6px; 
+    height: 25.6px;
+    margin-right: 4.8px;
     cursor: pointer;
     vertical-align: middle;
 }
@@ -1386,10 +1386,10 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-checkbox > input[type=checkbox]:checked + label:after
 {
     position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 11px; 
-    height: 7px;
+    top: 4.8px;
+    left: 4.8px;
+    width: 17.6px; 
+    height: 11.2px;
     content: '';
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
@@ -1407,11 +1407,11 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 .input-radio:before
 {
     position: absolute;
-    top: -2px; 
+    top: -3.2px; 
     left: 0;
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     content: '';
     cursor: pointer;
     border: 1px solid #fff;
@@ -1426,16 +1426,16 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .input-radio > span
 {
-    margin-left: 24px;
+    margin-left: 38.4px;
 }
 .input-radio > span:after
 {
     position: absolute;
-    top: 3px; 
-    left: 5px;
+    top: 4.8px; 
+    left: 8px;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     content: '';
     border: 1px solid transparent;
     border-radius: 100%;
@@ -1454,13 +1454,13 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .grid-row
 {
-    margin-right: -10px; 
-    margin-left: -10px;
+    margin-right: -16px; 
+    margin-left: -16px;
 }
 .grid-row > .grid-column,
 .grid-row .grid-columns
 {
-    padding: 0 10px;
+    padding: 0 16px;
 }
 .grid-row.full
 {
@@ -1474,23 +1474,23 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 }
 .grid-row.narrow
 {
-    margin-right: -5px; 
-    margin-left: -5px;
+    margin-right: -8px; 
+    margin-left: -8px;
 }
 .grid-row.narrow > .grid-column,
 .grid-row.narrow .grid-columns
 {
-    padding: 0 5px;
+    padding: 0 8px;
 }
 .grid-row.wide
 {
-    margin-right: -20px; 
-    margin-left: -20px;
+    margin-right: -32px; 
+    margin-left: -32px;
 }
 .grid-row.wide > .grid-column,
 .grid-row.wide .grid-columns
 {
-    padding: 0 20px;
+    padding: 0 32px;
 }
 
 .grid-column,
@@ -1556,68 +1556,68 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
 
 .icon-size-14
 {
-    width: 14px; 
-    height: 14px;
+    width: 22.4px; 
+    height: 22.4px;
 }
 
 .icon-size-16
 {
-    width: 16px; 
-    height: 16px;
+    width: 25.6px; 
+    height: 25.6px;
 }
 
 .icon-size-18
 {
-    width: 18px; 
-    height: 18px;
+    width: 28.8px; 
+    height: 28.8px;
 }
 
 .icon-size-20
 {
-    width: 20px; 
-    height: 20px;
+    width: 32px; 
+    height: 32px;
 }
 
 .icon-size-30
 {
-    width: 30px; 
-    height: 30px;
+    width: 48px; 
+    height: 48px;
 }
 
 .icon-size-35
 {
-    width: 35px; 
-    height: 35px;
+    width: 56px; 
+    height: 56px;
 }
 
 .icon-size-40
 {
-    width: 40px; 
-    height: 40px;
+    width: 64px; 
+    height: 64px;
 }
 
 .icon-size-45
 {
-    width: 45px; 
-    height: 45px;
+    width: 72px; 
+    height: 72px;
 }
 
 .icon-size-50
 {
-    width: 50px; 
-    height: 50px;
+    width: 80px; 
+    height: 80px;
 }
 
 .icon-size-55
 {
-    width: 55px; 
-    height: 55px;
+    width: 88px; 
+    height: 88px;
 }
 
 .icon-size-60
 {
-    width: 60px; 
-    height: 60px;
+    width: 96px; 
+    height: 96px;
 }
 
 [class^='icon']
@@ -1752,7 +1752,7 @@ Use this structure to justify columns inside a container.
 {
     display: block;
     margin: 0;
-    padding: 10px 0;
+    padding: 16px 0;
     list-style: none;
     white-space: nowrap;
 }
@@ -1771,7 +1771,7 @@ Use this structure to justify columns inside a container.
 {
     line-height: 1.5;
     display: block;
-    padding: 4px 15px; 
+    padding: 6.4px 24px; 
     cursor: pointer;
     color: #565656;
     border-top: 1px solid transparent;
@@ -1795,7 +1795,7 @@ Use this structure to justify columns inside a container.
     display: inline-block;
     width: 1.3em; 
     height: 1.5em;
-    margin-right: 6px;
+    margin-right: 9.6px;
     vertical-align: bottom;
 }
 
@@ -1847,7 +1847,7 @@ Use this object to show an image and some text rendered in two columns.
 
 .media-image
 {
-    padding-right: 10px;
+    padding-right: 16px;
 }
 .media-image img
 {
@@ -1857,7 +1857,7 @@ Use this object to show an image and some text rendered in two columns.
 .reversed .media-image
 {
     padding-right: 0;
-    padding-left: 10px;
+    padding-left: 16px;
 }
 
 .media-body
@@ -1992,7 +1992,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-top-right:before,
 .sb-menu-bubble-top-right:after
 {
-    right: 22px;
+    right: 35.2px;
     left: auto;
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
@@ -2036,7 +2036,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-top-left:before,
 .sb-menu-bubble-top-left:after
 {
-    left: 22px;
+    left: 35.2px;
 }
 
 .sb-menu-bubble-bottom-right
@@ -2080,7 +2080,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-bottom-right:before,
 .sb-menu-bubble-bottom-right:after
 {
-    right: 22px;
+    right: 35.2px;
     left: auto;
     -webkit-transform: rotate(-45deg) translateX(25%) translateY(25%);
         -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
@@ -2128,7 +2128,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-bottom-left:before,
 .sb-menu-bubble-bottom-left:after
 {
-    left: 22px;
+    left: 35.2px;
 }
 
 .sb-menu-align-top
@@ -2143,7 +2143,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-top > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
 .sb-menu-align-top > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
 {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 .sb-menu-align-top > .sb-menu
 {
@@ -2185,7 +2185,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-bottom > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
 .sb-menu-align-bottom > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
 {
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .sb-menu-align-bottom > .sb-menu
 {
@@ -2227,7 +2227,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-bottom-right > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
 .sb-menu-align-bottom-right > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
 {
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .sb-menu-align-bottom-right > .sb-menu
 {
@@ -2250,7 +2250,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-align-bottom-left > [class*=' sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble']),
 .sb-menu-align-bottom-left > [class^='sb-menu']:not([class*=' sb-menu-bubble']):not([class^='sb-menu-bubble'])
 {
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .sb-menu-align-bottom-left > .sb-menu
 {
@@ -2311,32 +2311,32 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .panel-header
 {
-    padding: 12px; 
+    padding: 19.2px; 
     background-color: #f6f6f6;
 }
 
 .panel-header-title
 {
-    font-size: 18px;
+    font-size: 28.8px;
     font-weight: normal; 
     color: #000;
 }
 .panel-header-title .subtitle
 {
-    font-size: 12px;
+    font-size: 19.2px;
     display: block;
     color: #b1b1b1;
 }
 
 .panel-body
 {
-    padding: 10px 12px;
+    padding: 16px 19.2px;
 }
 
 .card-split
 {
     clear: both;
-    margin-bottom: 10px; 
+    margin-bottom: 16px; 
     border: 1px solid #dfdfdf;
     border-width: 1px 0 0;
     background: none;
@@ -2346,15 +2346,15 @@ Navigation usually means list of links. And we have some flavours using distinct
 .panel-header.with-actions
 {
     position: relative;
-    padding-right: 30px; 
-    padding-left: 24px;
+    padding-right: 48px; 
+    padding-left: 38.4px;
 }
 
 .action-menu-actions
 {
     z-index: 1;
     display: none;
-    padding: 10px;
+    padding: 16px;
     border: 1px solid #d6d6d6;
     border-radius: 4px;
     border-top-left-radius: 0;
@@ -2365,13 +2365,13 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     display: inline-block;
     height: auto; 
-    padding: 10px 20px;
+    padding: 16px 32px;
 }
 .action-menu-actions .action .icon
 {
-    width: 16px;
-    height: 16px;
-    margin-top: 2px; 
+    width: 25.6px;
+    height: 25.6px;
+    margin-top: 3.2px; 
     vertical-align: top;
 }
 
@@ -2387,12 +2387,12 @@ Navigation usually means list of links. And we have some flavours using distinct
 .action-menu
 {
     position: absolute;
-    top: 10px;
+    top: 16px;
     left: 0;
 }
 .action-menu .icon-menu-narrow
 {
-    margin-left: 6px;
+    margin-left: 9.6px;
 
     fill: #36c4cf;
 }
@@ -2405,7 +2405,7 @@ Navigation usually means list of links. And we have some flavours using distinct
     position: relative;
     z-index: 2; 
     margin-bottom: -1px;
-    padding-right: 10px;
+    padding-right: 16px;
     border: 1px solid #d6d6d6;
     border-bottom: 0;
     border-radius: 4px;
@@ -2426,13 +2426,13 @@ Navigation usually means list of links. And we have some flavours using distinct
 .action-info .btn
 {
     position: absolute;
-    top: 3px;
-    right: 10px;
+    top: 4.8px;
+    right: 16px;
 }
 .action-info .icon
 {
-    width: 12px;
-    height: 12px;
+    width: 19.2px;
+    height: 19.2px;
 }
 .action-info.active .icon
 {
@@ -2452,8 +2452,8 @@ Navigation usually means list of links. And we have some flavours using distinct
     left: 0;
     display: none;
     overflow: auto; 
-    max-height: 200px;
-    padding: 12px;
+    max-height: 320px;
+    padding: 19.2px;
     background: #f6f6f6;
     box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
 }
@@ -2471,7 +2471,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .data-title,
 .value-label
 {
-    font-size: 12px;
+    font-size: 19.2px;
     display: block;
     color: #b1b1b1;
 }
@@ -2491,7 +2491,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     line-height: 1.2; 
     float: right;
-    margin: 0 0 10px 0;
+    margin: 0 0 16px 0;
 }
 .data-value .value-label
 {
@@ -2505,7 +2505,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 }
 .main-data .data-value
 {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: bold; 
     float: none;
 }
@@ -2525,7 +2525,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .card-status
 {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 16px;
 }
 
 .card-status.status-running
@@ -2586,7 +2586,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .sb-table-compacted .sb-table-cell
 {
-    padding: 5px;
+    padding: 8px;
 }
 
 .sb-table-heading
@@ -2616,7 +2616,7 @@ The provided mixins are intended to be used with the array-like variables
 .sb-table-cell
 {
     display: table-cell;
-    padding: 15px;
+    padding: 24px;
     vertical-align: middle;
 }
 .sb-table-cell:not(:last-child)
@@ -2809,17 +2809,17 @@ Navigation usually means list of links. And we have some flavours using distinct
 */
 .sb-tabs-container
 {
-    padding: 30px 18px;
+    padding: 48px 28.8px;
 }
 
 .sb-tabs-container h3
 {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 
 .sb-tabs
 {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 
 .sb-tabs:last-child
@@ -2849,7 +2849,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tab a
 {
     display: block;
-    padding: 15px; 
+    padding: 24px; 
     color: #565656;
 }
 
@@ -3113,13 +3113,13 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .tooltipped:after
 {
-    font-size: 13px;
+    font-size: 20.8px;
     font-weight: normal;
     line-height: 1.4;
     position: absolute;
     z-index: 1000000; 
     display: none;
-    padding: 10px;
+    padding: 16px;
     content: attr(aria-label);
     text-align: center;
     white-space: pre;
@@ -3165,7 +3165,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     top: 100%; 
     right: 50%;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .tooltipped-s:before,
 .tooltipped-se:before,
@@ -3173,8 +3173,8 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     top: auto; 
     right: 50%;
-    bottom: -5px;
-    margin-right: -5px;
+    bottom: -8px;
+    margin-right: -8px;
     border-bottom-color: rgba(0, 0, 0, .8);
 }
 
@@ -3182,12 +3182,12 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     right: auto; 
     left: 50%;
-    margin-left: -15px;
+    margin-left: -24px;
 }
 
 .tooltipped-sw:after
 {
-    margin-right: -15px;
+    margin-right: -24px;
 }
 
 .tooltipped-n:after,
@@ -3196,16 +3196,16 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     right: 50%; 
     bottom: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 .tooltipped-n:before,
 .tooltipped-ne:before,
 .tooltipped-nw:before
 {
-    top: -5px; 
+    top: -8px; 
     right: 50%;
     bottom: auto;
-    margin-right: -5px;
+    margin-right: -8px;
     border-top-color: rgba(0, 0, 0, .8);
 }
 
@@ -3213,12 +3213,12 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     right: auto; 
     left: 50%;
-    margin-left: -15px;
+    margin-left: -24px;
 }
 
 .tooltipped-nw:after
 {
-    margin-right: -15px;
+    margin-right: -24px;
 }
 
 .tooltipped-s:after,
@@ -3233,7 +3233,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     right: 100%;
     bottom: 50%;
-    margin-right: 5px;
+    margin-right: 8px;
     -webkit-transform: translateY(50%);
         -ms-transform: translateY(50%);
             transform: translateY(50%);
@@ -3242,8 +3242,8 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     top: 50%; 
     bottom: 50%;
-    left: -5px;
-    margin-top: -5px;
+    left: -8px;
+    margin-top: -8px;
     border-left-color: rgba(0, 0, 0, .8);
 }
 
@@ -3251,7 +3251,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     bottom: 50%;
     left: 100%;
-    margin-left: 5px;
+    margin-left: 8px;
     -webkit-transform: translateY(50%);
         -ms-transform: translateY(50%);
             transform: translateY(50%);
@@ -3259,15 +3259,15 @@ Navigation usually means list of links. And we have some flavours using distinct
 .tooltipped-e:before
 {
     top: 50%; 
-    right: -5px;
+    right: -8px;
     bottom: 50%;
-    margin-top: -5px;
+    margin-top: -8px;
     border-right-color: rgba(0, 0, 0, .8);
 }
 
 .tooltipped-multiline:after
 {
-    width: 250px; 
+    width: 400px; 
     max-width: auto;
     white-space: normal;
 }
@@ -3508,57 +3508,57 @@ Use this to modify the default font size of an element.
 */
 .s10
 {
-    font-size: 10px;
+    font-size: 16px;
 }
 
 .s11
 {
-    font-size: 11px;
+    font-size: 17.6px;
 }
 
 .s12
 {
-    font-size: 12px;
+    font-size: 19.2px;
 }
 
 .s13
 {
-    font-size: 13px;
+    font-size: 20.8px;
 }
 
 .s14
 {
-    font-size: 14px;
+    font-size: 22.4px;
 }
 
 .s15
 {
-    font-size: 15px;
+    font-size: 24px;
 }
 
 .s16
 {
-    font-size: 16px;
+    font-size: 25.6px;
 }
 
 .s17
 {
-    font-size: 17px;
+    font-size: 27.2px;
 }
 
 .s18
 {
-    font-size: 18px;
+    font-size: 28.8px;
 }
 
 .s19
 {
-    font-size: 19px;
+    font-size: 30.4px;
 }
 
 .s20
 {
-    font-size: 20px;
+    font-size: 32px;
 }
 
 /*
@@ -3799,126 +3799,126 @@ n           Negative (margin only)
 
 .m1
 {
-    margin: 5px;
+    margin: 8px;
 }
 
 .mt1
 {
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .mr1
 {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .mb1
 {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .ml1
 {
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
 .m2
 {
-    margin: 10px;
+    margin: 16px;
 }
 
 .mt2
 {
-    margin-top: 10px;
+    margin-top: 16px;
 }
 
 .mr2
 {
-    margin-right: 10px;
+    margin-right: 16px;
 }
 
 .mb2
 {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .ml2
 {
-    margin-left: 10px;
+    margin-left: 16px;
 }
 
 .m3
 {
-    margin: 20px;
+    margin: 32px;
 }
 
 .mt3
 {
-    margin-top: 20px;
+    margin-top: 32px;
 }
 
 .mr3
 {
-    margin-right: 20px;
+    margin-right: 32px;
 }
 
 .mb3
 {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 }
 
 .ml3
 {
-    margin-left: 20px;
+    margin-left: 32px;
 }
 
 .m4
 {
-    margin: 30px;
+    margin: 48px;
 }
 
 .mt4
 {
-    margin-top: 30px;
+    margin-top: 48px;
 }
 
 .mr4
 {
-    margin-right: 30px;
+    margin-right: 48px;
 }
 
 .mb4
 {
-    margin-bottom: 30px;
+    margin-bottom: 48px;
 }
 
 .ml4
 {
-    margin-left: 30px;
+    margin-left: 48px;
 }
 
 .mxn1
 {
-    margin-right: 5px; 
-    margin-left: 5px;
+    margin-right: 8px; 
+    margin-left: 8px;
 }
 
 .mxn2
 {
-    margin-right: -10px; 
-    margin-left: -10px;
+    margin-right: -16px; 
+    margin-left: -16px;
 }
 
 .mxn3
 {
-    margin-right: -20px; 
-    margin-left: -20px;
+    margin-right: -32px; 
+    margin-left: -32px;
 }
 
 .mxn4
 {
-    margin-right: -30px; 
-    margin-left: -30px;
+    margin-right: -48px; 
+    margin-left: -48px;
 }
 
 .mx-auto
@@ -3934,70 +3934,70 @@ n           Negative (margin only)
 
 .p1
 {
-    padding: 5px;
+    padding: 8px;
 }
 
 .py1
 {
-    padding-top: 5px; 
-    padding-bottom: 5px;
+    padding-top: 8px; 
+    padding-bottom: 8px;
 }
 
 .px1
 {
-    padding-right: 5px; 
-    padding-left: 5px;
+    padding-right: 8px; 
+    padding-left: 8px;
 }
 
 .p2
 {
-    padding: 10px;
+    padding: 16px;
 }
 
 .py2
 {
-    padding-top: 10px; 
-    padding-bottom: 10px;
+    padding-top: 16px; 
+    padding-bottom: 16px;
 }
 
 .px2
 {
-    padding-right: 10px; 
-    padding-left: 10px;
+    padding-right: 16px; 
+    padding-left: 16px;
 }
 
 .p3
 {
-    padding: 20px;
+    padding: 32px;
 }
 
 .py3
 {
-    padding-top: 20px; 
-    padding-bottom: 20px;
+    padding-top: 32px; 
+    padding-bottom: 32px;
 }
 
 .px3
 {
-    padding-right: 20px; 
-    padding-left: 20px;
+    padding-right: 32px; 
+    padding-left: 32px;
 }
 
 .p4
 {
-    padding: 30px;
+    padding: 48px;
 }
 
 .py4
 {
-    padding-top: 30px; 
-    padding-bottom: 30px;
+    padding-top: 48px; 
+    padding-bottom: 48px;
 }
 
 .px4
 {
-    padding-right: 30px; 
-    padding-left: 30px;
+    padding-right: 48px; 
+    padding-left: 48px;
 }
 
 .with-caret
