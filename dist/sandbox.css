@@ -2864,8 +2864,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 {
     position: absolute;
     z-index: 2; 
-    top: -webkit-calc(100% - 1px);
-    top:         calc(100% - 1px);
+    top: calc(100% - 1px);
     left: 0;
     display: block;
     width: 100%;
@@ -2936,8 +2935,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .sb-tabs--block-bottom .sb-tab-active:after
 {
     top: auto; 
-    bottom: -webkit-calc(100% - 1px);
-    bottom:         calc(100% - 1px);
+    bottom: calc(100% - 1px);
 }
 
 .sb-tabs--block-bottom .sb-tabs-content
