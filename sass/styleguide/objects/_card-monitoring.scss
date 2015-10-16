@@ -1,8 +1,8 @@
-.currently-running [class$="-running"] {
+.currently-running:not(.currently-deleted) [class$="-running"] {
     display: block;
 }
 
-.currently-paused [class$="-paused"] {
+.currently-paused:not(.currently-deleted) [class$="-paused"] {
     display: block;
 }
 
