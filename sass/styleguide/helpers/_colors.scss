@@ -26,3 +26,7 @@
 .color-link {
     color: color($name: "service", $hue: "light")
 }
+
+.color-noticeable {
+    color: color($name: "noticeable");
+}
