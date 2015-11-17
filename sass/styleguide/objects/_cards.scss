@@ -1,18 +1,23 @@
 .card-add {
-    background-color: #f0f0f0;
+    background-color: color('background', $variant: 'primary', $hue: 'dark');
     display: table;
-    border: 1px dashed #ccc;
+    border: 1px dashed color('border', $variant: 'secondary');
     border-radius: 5px;
     padding: 20px;
     height: 250px;
     width: 200px;
     box-sizing: border-box;
     transition: all .2s ease-out;
-}
 
-.card-add:hover {
-    background-color: #f8f8f8;
-    cursor: pointer;
+    &:hover {
+        background-color: color('background', $variant: 'primary', $hue: 'light');
+        cursor: pointer;
+    }
+
+    & .icon-plus-radius-custom {
+        fill: #e9e9e9;
+        color: #d2d8d8;
+    }
 }
 
 .layer-card {
@@ -30,9 +35,7 @@
 .layer-card-text {
     vertical-align: top;
     display: table-cell;
-}
-
-.card-add .icon-plus-radius-custom {
-    fill: #e9e9e9;
-    color: #d2d8d8;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: color('text', $variant: 'tertiary');
 }

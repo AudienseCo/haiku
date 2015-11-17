@@ -2491,9 +2491,9 @@ Navigation usually means list of links. And we have some flavours using distinct
   display: table-cell; }
 
 .card-add {
-  background-color: #f0f0f0;
+  background-color: #f2f2f2;
   display: table;
-  border: 1px dashed #ccc;
+  border: 1px dashed #d6d6d6;
   border-radius: 5px;
   padding: 20px;
   height: 250px;
@@ -2501,10 +2501,12 @@ Navigation usually means list of links. And we have some flavours using distinct
   box-sizing: border-box;
   -webkit-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out; }
-
-.card-add:hover {
-  background-color: #f8f8f8;
-  cursor: pointer; }
+  .card-add:hover {
+    background-color: #ffffff;
+    cursor: pointer; }
+  .card-add .icon-plus-radius-custom {
+    fill: #e9e9e9;
+    color: #d2d8d8; }
 
 .layer-card {
   display: table-row;
@@ -2518,11 +2520,10 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .layer-card-text {
   vertical-align: top;
-  display: table-cell; }
-
-.card-add .icon-plus-radius-custom {
-  fill: #e9e9e9;
-  color: #d2d8d8; }
+  display: table-cell;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #b1b1b1; }
 
 /* 5. Layout */
 /*

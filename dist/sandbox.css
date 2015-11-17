@@ -3311,15 +3311,20 @@ Navigation usually means list of links. And we have some flavours using distinct
     padding: 20px;
     -webkit-transition: all .2s ease-out;
             transition: all .2s ease-out; 
-    border: 1px dashed #ccc;
+    border: 1px dashed #d6d6d6;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
 }
-
 .card-add:hover
 {
     cursor: pointer; 
-    background-color: #f8f8f8;
+    background-color: #fff;
+}
+.card-add .icon-plus-radius-custom
+{
+    color: #d2d8d8; 
+
+    fill: #e9e9e9;
 }
 
 .layer-card
@@ -3338,15 +3343,11 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .layer-card-text
 {
-    display: table-cell; 
+    font-size: 13px;
+    font-weight: bold;
+    display: table-cell;
     vertical-align: top;
-}
-
-.card-add .icon-plus-radius-custom
-{
-    color: #d2d8d8; 
-
-    fill: #e9e9e9;
+    color: #b1b1b1;
 }
 
 /* 5. Layout */
