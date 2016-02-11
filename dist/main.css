@@ -1099,6 +1099,12 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
     .input-base > select:-moz-focusring {
       color: transparent;
       text-shadow: 0 0 0 #000; }
+  .input-base.large {
+    font-size: 1.6rem;
+    height: auto;
+    padding: 1rem; }
+  .input-base.dark {
+    background: #f6f6f6; }
 
 .input-group {
   border-collapse: separate;
@@ -2209,7 +2215,6 @@ Navigation usually means list of links. And we have some flavours using distinct
   height: 2px;
   left: 0;
   position: absolute;
-  top: -webkit-calc(100% - 1px);
   top: calc(100% - 1px);
   width: 100%;
   z-index: 2; }
@@ -2256,7 +2261,6 @@ Navigation usually means list of links. And we have some flavours using distinct
   border-bottom-right-radius: 4px; }
 
 .sb-tabs--block-bottom .sb-tab-active:after {
-  bottom: -webkit-calc(100% - 1px);
   bottom: calc(100% - 1px);
   top: auto; }
 

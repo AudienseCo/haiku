@@ -68,6 +68,16 @@ $input-v-padding: ($input-height - $input-line-height)/2;
             text-shadow: 0 0 0 #000;
         }
     }
+
+    &.large {
+        font-size: 1.6rem;
+        height: auto;
+        padding: 1rem;
+    }
+
+    &.dark {
+        background: color($name: "background");
+    }
 }
 
 // Group of label+input or input+button each with similar style
