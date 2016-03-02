@@ -3025,4 +3025,23 @@ n           Negative (margin only)
     width: 0;
     z-index: 1; }
 
+.with-thin-caret {
+  cursor: pointer; }
+  .with-thin-caret:after {
+    border-bottom-width: 1px;
+    border-color: currentColor;
+    border-left-width: 0;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-width: 0;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    pointer-events: none;
+    -webkit-transform: rotate(45deg) translateY(-50%);
+        -ms-transform: rotate(45deg) translateY(-50%);
+            transform: rotate(45deg) translateY(-50%);
+    width: 4px;
+    z-index: 1; }
+
 /* 7. Vendor */

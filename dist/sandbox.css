@@ -4087,6 +4087,29 @@ n           Negative (margin only)
     border-left: .36em solid transparent;
 }
 
+.with-thin-caret
+{
+    cursor: pointer;
+}
+.with-thin-caret:after
+{
+    z-index: 1; 
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    content: '';
+    -webkit-transform: rotate(45deg) translateY(-50%);
+        -ms-transform: rotate(45deg) translateY(-50%);
+            transform: rotate(45deg) translateY(-50%);
+    pointer-events: none;
+    border-style: solid;
+    border-color: currentColor;
+    border-top-width: 0;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 0;
+}
+
 .capitalize
 {
     text-transform: capitalize;
