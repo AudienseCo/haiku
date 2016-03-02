@@ -1,8 +1,8 @@
 // Menu styling settings
 $menu-border-color:     color($name: "border", $variant: "secondary");
 $bubble-pointer-width:  20px;
-$bubble-lateral-margin: 2.2rem;
-$parity-offset:         0.1rem;
+$bubble-lateral-margin: 22px;
+$parity-offset:         1px;
 
 // Generic wrapper for the menu component
 .sb-menu, %sb-menu {
