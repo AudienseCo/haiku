@@ -934,6 +934,90 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     .btn.btn-icon:hover {
       background: none; }
 
+/* ---------------------------------------------
+                COLOR-FILLED BUTTONS
+----------------------------------------------*/
+.btn.btn-filled {
+  border: none;
+  color: #FFF; }
+
+/*  Blue version */
+.btn.btn-filled.blue {
+  background: #5189b1; }
+  .btn.btn-filled.blue:hover {
+    background: #6797bb; }
+  .btn.btn-filled.blue:active, .btn.btn-filled.blue.active {
+    background-color: #266b9e; }
+
+/*  Orange version */
+.btn.btn-filled.orange {
+  background: #e96751; }
+  .btn.btn-filled.orange:hover {
+    background: #ec7965; }
+  .btn.btn-filled.orange:active, .btn.btn-filled.orange.active {
+    background: #e7573e; }
+
+/*  Tea version */
+.btn.btn-filled.tea {
+  background: #33aba0; }
+  .btn.btn-filled.tea:hover {
+    background: #4cb5ab; }
+  .btn.btn-filled.tea:active, .btn.btn-filled.tea.active {
+    background: #009688; }
+
+/*  Disabled version */
+.btn.btn-filled.disabled {
+  background: #c2c8d2;
+  opacity: 0.5;
+  pointer-events: none; }
+
+/* --------------------------------------------
+                HOLLOW BUTTONS 
+-------------------------------------------- */
+.btn.btn-hollow {
+  background: #fff;
+  border: solid 1px; }
+
+/*  Blue version */
+.btn.btn-hollow.blue {
+  border-color: #5189b1;
+  color: #5189b1; }
+  .btn.btn-hollow.blue:hover {
+    background: #6797bb;
+    color: #fff; }
+  .btn.btn-hollow.blue:active, .btn.btn-hollow.blue.active {
+    background: #266b9e;
+    color: #fff; }
+
+/*  Orange version */
+.btn.btn-hollow.orange {
+  border-color: #e96751;
+  color: #e96751; }
+  .btn.btn-hollow.orange:hover {
+    background: #ec7965;
+    color: #fff; }
+  .btn.btn-hollow.orange:active, .btn.btn-hollow.orange.active {
+    background: #e7573e;
+    color: #fff; }
+
+/*  Tea version  */
+.btn.btn-hollow.tea {
+  border-color: #33aba0;
+  color: #33aba0; }
+  .btn.btn-hollow.tea:hover {
+    background: #4cb5ab;
+    color: #fff; }
+  .btn.btn-hollow.tea:active, .btn.btn-hollow.tea.active {
+    background: #009688;
+    color: #fff; }
+
+/* Disabled version */
+.btn.btn-hollow.disabled {
+  border-color: #c2c8d2;
+  color: #c2c8d2;
+  opacity: 0.5;
+  pointer-events: none; }
+
 .btn-primary {
   background: #f29556;
   border: 1px solid #f18b46;

@@ -1060,6 +1060,140 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     background: none;
 }
 
+/* ---------------------------------------------
+                COLOR-FILLED BUTTONS
+----------------------------------------------*/
+.btn.btn-filled
+{
+    color: #fff; 
+    border: none;
+}
+
+/*  Blue version */
+.btn.btn-filled.blue
+{
+    background: #5189b1;
+}
+.btn.btn-filled.blue:hover
+{
+    background: #6797bb;
+}
+.btn.btn-filled.blue:active,
+.btn.btn-filled.blue.active
+{
+    background-color: #266b9e;
+}
+
+/*  Orange version */
+.btn.btn-filled.orange
+{
+    background: #e96751;
+}
+.btn.btn-filled.orange:hover
+{
+    background: #ec7965;
+}
+.btn.btn-filled.orange:active,
+.btn.btn-filled.orange.active
+{
+    background: #e7573e;
+}
+
+/*  Tea version */
+.btn.btn-filled.tea
+{
+    background: #33aba0;
+}
+.btn.btn-filled.tea:hover
+{
+    background: #4cb5ab;
+}
+.btn.btn-filled.tea:active,
+.btn.btn-filled.tea.active
+{
+    background: #009688;
+}
+
+/*  Disabled version */
+.btn.btn-filled.disabled
+{
+    pointer-events: none; 
+    opacity: .5;
+    background: #c2c8d2;
+}
+
+/* --------------------------------------------
+                HOLLOW BUTTONS 
+-------------------------------------------- */
+.btn.btn-hollow
+{
+    border: solid 1px; 
+    background: #fff;
+}
+
+/*  Blue version */
+.btn.btn-hollow.blue
+{
+    color: #5189b1; 
+    border-color: #5189b1;
+}
+.btn.btn-hollow.blue:hover
+{
+    color: #fff; 
+    background: #6797bb;
+}
+.btn.btn-hollow.blue:active,
+.btn.btn-hollow.blue.active
+{
+    color: #fff; 
+    background: #266b9e;
+}
+
+/*  Orange version */
+.btn.btn-hollow.orange
+{
+    color: #e96751; 
+    border-color: #e96751;
+}
+.btn.btn-hollow.orange:hover
+{
+    color: #fff; 
+    background: #ec7965;
+}
+.btn.btn-hollow.orange:active,
+.btn.btn-hollow.orange.active
+{
+    color: #fff; 
+    background: #e7573e;
+}
+
+/*  Tea version  */
+.btn.btn-hollow.tea
+{
+    color: #33aba0; 
+    border-color: #33aba0;
+}
+.btn.btn-hollow.tea:hover
+{
+    color: #fff; 
+    background: #4cb5ab;
+}
+.btn.btn-hollow.tea:active,
+.btn.btn-hollow.tea.active
+{
+    color: #fff; 
+    background: #009688;
+}
+
+/* Disabled version */
+.btn.btn-hollow.disabled
+{
+    pointer-events: none; 
+    opacity: .5;
+    color: #c2c8d2;
+    border-color: #c2c8d2;
+}
+
 .btn-primary
 {
     color: white; 

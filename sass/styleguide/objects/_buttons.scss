@@ -60,6 +60,128 @@ $btn-base-v-padding:   ($btn-base-height - $btn-base-line-height)/2;
     }
 }
 
+/* ---------------------------------------------
+                COLOR-FILLED BUTTONS
+----------------------------------------------*/
+
+.btn.btn-filled {
+    border: none;
+    color: #FFF;
+}
+
+/*  Blue version */
+.btn.btn-filled.blue { 
+    background: color($name: "button_blue", $variant: "primary"); 
+    
+    &:hover { 
+        background: color($name: "button_blue", $variant: "tertiary"); 
+    }
+
+    &:active, &.active { 
+        background-color: color($name: "button_blue", $variant: "secondary"); 
+    }
+}
+
+/*  Orange version */
+.btn.btn-filled.orange { 
+    background: color($name: "button_orange", $variant: "primary"); 
+    
+    &:hover { 
+        background: color($name: "button_orange", $variant: "tertiary"); 
+    }
+
+    &:active, &.active { 
+        background: color($name: "button_orange", $variant: "secondary"); 
+    }
+}
+
+/*  Tea version */
+.btn.btn-filled.tea { 
+    background: color($name: "button_tea", $variant: "primary"); 
+
+    &:hover { 
+        background: color($name: "button_tea", $variant: "tertiary"); 
+    }
+
+    &:active, &.active { 
+        background: color($name: "button_tea", $variant: "secondary"); 
+    }
+}
+
+/*  Disabled version */
+.btn.btn-filled.disabled {
+    background: color($name: "button_disabled");
+    opacity: 0.5;
+    pointer-events: none;
+}
+/* --------------------------------------------
+                HOLLOW BUTTONS 
+-------------------------------------------- */
+
+.btn.btn-hollow {
+    background: #fff;
+    border: solid 1px;
+}
+
+/*  Blue version */
+.btn.btn-hollow.blue {
+    border-color: color($name: "button_blue", $variant: "primary");
+    color: color($name: "button_blue", $variant: "primary");
+
+    &:hover {
+        background: color($name: "button_blue", $variant: "tertiary");
+        color: #fff;
+    }
+
+    &:active, &.active {
+        background: color($name: "button_blue", $variant: "secondary");
+        color: #fff;
+    }
+}
+
+
+/*  Orange version */
+.btn.btn-hollow.orange {
+    border-color: color($name: "button_orange", $variant: "primary");
+    color: color($name: "button_orange", $variant: "primary");
+
+    &:hover {
+        background: color($name: "button_orange", $variant: "tertiary");
+        color: #fff;
+    }
+
+    &:active, &.active {
+        background: color($name: "button_orange", $variant: "secondary");
+        color: #fff;
+    }
+}
+
+/*  Tea version  */
+.btn.btn-hollow.tea {
+    border-color: color($name: "button_tea", $variant: "primary");
+    color: color($name: "button_tea", $variant: "primary");
+
+    &:hover {
+        background: color($name: "button_tea", $variant: "tertiary");
+        color: #fff;
+    }
+
+    &:active, &.active {
+        background: color($name: "button_tea", $variant: "secondary");
+        color: #fff;
+    }
+}
+
+
+/* Disabled version */
+.btn.btn-hollow.disabled {
+    border-color: color($name: "button_disabled");
+    color: color($name: "button_disabled");
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
 // Generates a button class from some color parameters
 @mixin btn($name, $background, $border, $hover, $text: inherit) {
     .btn-#{$name} {

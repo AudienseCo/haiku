@@ -1,16 +1,20 @@
 // Main colors definition: primary, secondary and tertiary
 $colors:
-  "background"   #f6f6f6,
-  "border"       #CCD1D9 #D6D6D6,
-  "error"        #d60f36 #cc8383 #ffe6e6,
-  "noticeable"   #f24c7c #f89bb6 #fcdae4,
-  "primary"      #f29556 #f0d2bE #f6f3dE,
-  "service"      #00aaf2 #65b0cf #dfeffc,
-  "socialbro"    #29c4d0 #41787c #c1eff3,
-  "succeed"      #72c427 #9fb87d #e1f6de,
-  "text"         #5e5e5e #b9b9b9 #b1b1b1,
-  "titles"       #191919 #8a4fa2,
-  "twitter"      #55acee;
+  "background"        #f6f6f6,
+  "border"            #CCD1D9 #D6D6D6,
+  "error"             #d60f36 #cc8383 #ffe6e6,
+  "noticeable"        #f24c7c #f89bb6 #fcdae4,
+  "primary"           #f29556 #f0d2bE #f6f3dE,
+  "service"           #00aaf2 #65b0cf #dfeffc,
+  "socialbro"         #29c4d0 #41787c #c1eff3,
+  "succeed"           #72c427 #9fb87d #e1f6de,
+  "text"              #5e5e5e #b9b9b9 #b1b1b1,
+  "titles"            #191919 #8a4fa2,
+  "twitter"           #55acee,
+  "button_blue"       #5189b1 #266b9e #6797bb,
+  "button_orange"     #e96751 #e7573e #ec7965,
+  "button_tea"        #33aba0 #009688 #4cb5ab,
+  "button_disabled"   #c2c8d2;
 
 // Colors with hues out of the general rule
 $color-exceptions:
