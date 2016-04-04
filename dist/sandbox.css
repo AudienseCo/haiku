@@ -805,8 +805,7 @@ Drop the files in a folder, update the path and the name and go.
 {
     font-size: 11px;
     display: block;
-    padding: 0 10px; 
-    text-transform: uppercase;
+    padding: 0 10px;
 }
 
 .acc-breadcrumb-item-total
@@ -838,9 +837,8 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item-total-unit
 {
     font-size: 14px;
-    font-weight: normal;
+    font-weight: normal; 
     display: block;
-    text-transform: uppercase;
 }
 
 .acc-breadcrumb-item-wrapper:first-child
