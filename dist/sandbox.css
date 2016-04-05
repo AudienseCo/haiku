@@ -3531,6 +3531,192 @@ Utility class to align inline and inline-blocks elements.
 }
 
 /*
+*   ANIMATIONS NAMES AND DESCRIPTIONS
+*
+*   animation-fade-in:              Animate until opacity get 1
+*   animation-fade-in-from-top:     Element drop from top and gets opacity from 0 to 1
+*   animation-fade-out:             Animate until opacity get 0
+*   animation-fade-out-to-left:     Element move to left and get opacity from 1 to 0
+*   animation-pulse:                Element beats like a heart
+*   animation-spin:                 Element rotates
+*/
+/***************************    FADE IN    ***************************/
+@keyframes animation-fade-in
+{
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes animation-fade-in
+{
+    to
+    {
+        opacity: 1;
+    }
+}
+
+/***************************    FADE IN FROM TOP   ***************************/
+@keyframes animation-fade-in-from-top
+{
+    0%
+    {
+        -webkit-transform: translateY(-20px);
+            -ms-transform: translateY(-20px); 
+                transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100%
+    {
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0); 
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes animation-fade-in-from-top
+{
+    0%
+    {
+        -webkit-transform: translateY(-20px); 
+        opacity: 0;
+    }
+
+    100%
+    {
+        -webkit-transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+/***************************    FADE OUT    ***************************/
+@keyframes animation-fade-out
+{
+    to
+    {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes animation-fade-out
+{
+    to
+    {
+        opacity: 0;
+    }
+}
+
+/***************************    FADE OUT TO LEFT    ***************************/
+@keyframes animation-fade-out-to-left
+{
+    0%
+    {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0); 
+                transform: translateX(0);
+        opacity: 1;
+    }
+
+    100%
+    {
+        -webkit-transform: translateX(-20px);
+            -ms-transform: translateX(-20px); 
+                transform: translateX(-20px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes animation-fade-out-to-left
+{
+    0%
+    {
+        -webkit-transform: translateX(0); 
+        opacity: 1;
+    }
+
+    100%
+    {
+        -webkit-transform: translateX(-20px); 
+        opacity: 0;
+    }
+}
+
+/***************************    PULSE    ***************************/
+@keyframes animation-pulse
+{
+    0%
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+            -ms-transform: scale3d(1, 1, 1); 
+                transform: scale3d(1, 1, 1);
+    }
+
+    20%
+    {
+        -webkit-transform: scale3d(2, 2, 2);
+            -ms-transform: scale3d(2, 2, 2); 
+                transform: scale3d(2, 2, 2);
+    }
+
+    40%
+    {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes animation-pulse
+{
+    0%
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+
+    20%
+    {
+        -webkit-transform: scale3d(2, 2, 2);
+    }
+
+    40%
+    {
+        opacity: 0;
+    }
+}
+
+/***************************   SPIN   ***************************/
+@keyframes animation-spin
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg); 
+                transform: rotate(0deg);
+    }
+
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg); 
+                transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes animation-spin
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/*
 
 Avatar
 ------
