@@ -829,9 +829,8 @@ Drop the files in a folder, update the path and the name and go.
 .acc-breadcrumb-item-total-amount
 {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: bold; 
     display: inline-block;
-    text-align: right;
 }
 
 .acc-breadcrumb-item-total-unit

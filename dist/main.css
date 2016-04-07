@@ -786,8 +786,7 @@ p {
 .acc-breadcrumb-item-total-amount {
   display: inline-block;
   font-size: 2.4rem;
-  font-weight: bold;
-  text-align: right; }
+  font-weight: bold; }
 
 .acc-breadcrumb-item-total-unit {
   display: block;
