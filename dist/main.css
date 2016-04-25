@@ -176,7 +176,6 @@ figure {
 * Address differences between Firefox and other browsers.
 */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -290,8 +289,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -1160,7 +1157,9 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
       position: absolute;
       right: 1.5rem;
       top: 50%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
       width: 0; }
   .input-base > select {
     appearance: none;
@@ -1294,7 +1293,9 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
       left: 0.3rem;
       position: absolute;
       top: 0.3rem;
-      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
       width: 1.1rem; }
 
 .input-radio {
@@ -1474,14 +1475,26 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
   fill: #7ad22a; }
 
 .spin {
-  animation: spin 1s infinite linear; }
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
 
   100% {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 /*
 
@@ -1612,7 +1625,9 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-top:before, .sb-menu-bubble-top:after {
     border-width: 0 10px 10px 10px;
     left: 50%;
-    transform: translateX(-50%); }
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .sb-menu-bubble-top:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -10px; }
@@ -1633,8 +1648,12 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-bottom:before, .sb-menu-bubble-bottom:after {
     border-width: 0 15px 15px 0;
     left: 50%;
-    transform-origin: 0 0;
-    transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -15px;
@@ -1656,7 +1675,9 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     border-width: 0 10px 10px 10px;
     left: 50%;
-    transform: translateX(-50%); }
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .sb-menu-bubble-top-right:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -10px; }
@@ -1666,7 +1687,9 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
     left: auto;
     right: 22px;
-    transform: translateX(50%); }
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%); }
 
 .sb-menu-bubble-top-left {
   position: absolute;
@@ -1681,7 +1704,9 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
     border-width: 0 10px 10px 10px;
     left: 50%;
-    transform: translateX(-50%); }
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .sb-menu-bubble-top-left:before {
     border-color: transparent transparent #d6d6d6 transparent;
     top: -10px; }
@@ -1704,8 +1729,12 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     border-width: 0 15px 15px 0;
     left: 50%;
-    transform-origin: 0 0;
-    transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom-right:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -15px;
@@ -1716,7 +1745,9 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
     left: auto;
     right: 22px;
-    transform: rotate(-45deg) translateX(25%) translateY(25%); }
+    -webkit-transform: rotate(-45deg) translateX(25%) translateY(25%);
+        -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
+            transform: rotate(-45deg) translateX(25%) translateY(25%); }
 
 .sb-menu-bubble-bottom-left {
   position: absolute;
@@ -1731,8 +1762,12 @@ Use this object to show an image and some text rendered in two columns.
   .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
     border-width: 0 15px 15px 0;
     left: 50%;
-    transform-origin: 0 0;
-    transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+            transform: rotate(-45deg) translateX(-50%) translateY(-50%); }
   .sb-menu-bubble-bottom-left:before {
     border-color: transparent transparent #d6d6d6 #d6d6d6;
     bottom: -15px;
@@ -1754,13 +1789,19 @@ Use this object to show an image and some text rendered in two columns.
     bottom: 100%; }
   .sb-menu-align-top > .sb-menu {
     left: 50%;
-    transform: translate(-50%); }
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%); }
   .sb-menu-align-top > .sb-menu-bubble-top-left, .sb-menu-align-top .sb-menu-bubble-bottom-left {
-    transform: translate(-23px); }
+    -webkit-transform: translate(-23px);
+        -ms-transform: translate(-23px);
+            transform: translate(-23px); }
   .sb-menu-align-top > .sb-menu-bubble-top-right, .sb-menu-align-top .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
-    transform: translate(23px); }
+    -webkit-transform: translate(23px);
+        -ms-transform: translate(23px);
+            transform: translate(23px); }
 
 .sb-menu-align-bottom {
   display: inline-block;
@@ -1773,13 +1814,19 @@ Use this object to show an image and some text rendered in two columns.
     top: 100%; }
   .sb-menu-align-bottom > .sb-menu {
     left: 50%;
-    transform: translate(-50%); }
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%); }
   .sb-menu-align-bottom > .sb-menu-bubble-top-left, .sb-menu-align-bottom .sb-menu-bubble-bottom-left {
-    transform: translate(-23px); }
+    -webkit-transform: translate(-23px);
+        -ms-transform: translate(-23px);
+            transform: translate(-23px); }
   .sb-menu-align-bottom > .sb-menu-bubble-top-right, .sb-menu-align-bottom .sb-menu-bubble-bottom-right {
     left: auto;
     right: 50%;
-    transform: translate(23px); }
+    -webkit-transform: translate(23px);
+        -ms-transform: translate(23px);
+            transform: translate(23px); }
 
 .sb-menu-align-bottom-right {
   display: inline-block;
@@ -1979,7 +2026,9 @@ Pagination pattern.
   width: 1.2rem;
   height: 1.2rem; }
 .action-info.active .icon {
-  transform: scaleY(-1); }
+  -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+          transform: scaleY(-1); }
 .action-info.active .action-info-data {
   display: block; }
 
@@ -2486,13 +2535,17 @@ Navigation usually means list of links. And we have some flavours using distinct
   margin-right: -1.5rem; }
 
 .tooltipped-s:after, .tooltipped-n:after {
-  transform: translateX(50%); }
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%); }
 
 .tooltipped-w:after {
   bottom: 50%;
   margin-right: 0.5rem;
   right: 100%;
-  transform: translateY(50%); }
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%); }
 .tooltipped-w:before {
   border-left-color: rgba(0, 0, 0, 0.8);
   bottom: 50%;
@@ -2504,7 +2557,9 @@ Navigation usually means list of links. And we have some flavours using distinct
   bottom: 50%;
   left: 100%;
   margin-left: 0.5rem;
-  transform: translateY(50%); }
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%); }
 .tooltipped-e:before {
   border-right-color: rgba(0, 0, 0, 0.8);
   bottom: 50%;
@@ -2519,7 +2574,9 @@ Navigation usually means list of links. And we have some flavours using distinct
 .tooltipped-multiline.tooltipped-s:after, .tooltipped-multiline.tooltipped-n:after {
   left: 50%;
   right: auto;
-  transform: translateX(-50%); }
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
 .tooltipped-multiline.tooltipped-w:after, .tooltipped-multiline.tooltipped-e:after {
   right: 100%; }
 
@@ -2537,7 +2594,8 @@ Navigation usually means list of links. And we have some flavours using distinct
   height: 250px;
   width: 200px;
   box-sizing: border-box;
-  transition: all 0.2s ease-out; }
+  -webkit-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out; }
   .card-add:hover {
     background-color: #ffffff;
     cursor: pointer; }
@@ -2594,14 +2652,6 @@ Breadcrumb styles for the dashboard.
   to {
     opacity: 1; } }
 
-@-moz-keyframes animation-fade-in {
-  to {
-    opacity: 1; } }
-
-@-o-keyframes animation-fade-in {
-  to {
-    opacity: 1; } }
-
 @-webkit-keyframes animation-fade-in {
   to {
     opacity: 1; } }
@@ -2610,31 +2660,15 @@ Breadcrumb styles for the dashboard.
 @keyframes animation-fade-in-from-top {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
     -ms-transform: translateY(-20px); }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     -ms-transform: translateY(0); } }
-
-@-moz-keyframes animation-fade-in-from-top {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(-20px); }
-
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0); } }
-
-@-o-keyframes animation-fade-in-from-top {
-  0% {
-    opacity: 0;
-    -o-transform: translateY(-20px); }
-
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0); } }
 
 @-webkit-keyframes animation-fade-in-from-top {
   0% {
@@ -2650,14 +2684,6 @@ Breadcrumb styles for the dashboard.
   to {
     opacity: 0; } }
 
-@-moz-keyframes animation-fade-out {
-  to {
-    opacity: 0; } }
-
-@-o-keyframes animation-fade-out {
-  to {
-    opacity: 0; } }
-
 @-webkit-keyframes animation-fade-out {
   to {
     opacity: 0; } }
@@ -2666,31 +2692,15 @@ Breadcrumb styles for the dashboard.
 @keyframes animation-fade-out-to-left {
   0% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     -ms-transform: translateX(0); }
 
   100% {
     opacity: 0;
-    transform: translateX(-20px);
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
     -ms-transform: translateX(-20px); } }
-
-@-moz-keyframes animation-fade-out-to-left {
-  0% {
-    opacity: 1;
-    -moz-transform: translateX(0); }
-
-  100% {
-    opacity: 0;
-    -moz-transform: translateX(-20px); } }
-
-@-o-keyframes animation-fade-out-to-left {
-  0% {
-    opacity: 1;
-    -o-transform: translateX(0); }
-
-  100% {
-    opacity: 0;
-    -o-transform: translateX(-20px); } }
 
 @-webkit-keyframes animation-fade-out-to-left {
   0% {
@@ -2704,32 +2714,14 @@ Breadcrumb styles for the dashboard.
 /***************************    PULSE    ***************************/
 @keyframes animation-pulse {
   0% {
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
     -ms-transform: scale3d(1, 1, 1); }
 
   20% {
-    transform: scale3d(2, 2, 2);
+    -webkit-transform: scale3d(2, 2, 2);
+            transform: scale3d(2, 2, 2);
     -ms-transform: scale3d(2, 2, 2); }
-
-  40% {
-    opacity: 0; } }
-
-@-moz-keyframes animation-pulse {
-  0% {
-    -moz-transform: scale3d(1, 1, 1); }
-
-  20% {
-    -moz-transform: scale3d(2, 2, 2); }
-
-  40% {
-    opacity: 0; } }
-
-@-o-keyframes animation-pulse {
-  0% {
-    -o-transform: scale3d(1, 1, 1); }
-
-  20% {
-    -o-transform: scale3d(2, 2, 2); }
 
   40% {
     opacity: 0; } }
@@ -2747,26 +2739,14 @@ Breadcrumb styles for the dashboard.
 /***************************   SPIN   ***************************/
 @keyframes animation-spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
     -ms-transform: rotate(0deg); }
 
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     -ms-transform: rotate(360deg); } }
-
-@-moz-keyframes animation-spin {
-  0% {
-    -moz-transform: rotate(0deg); }
-
-  100% {
-    -moz-transform: rotate(360deg); } }
-
-@-o-keyframes animation-spin {
-  0% {
-    -o-transform: rotate(0deg); }
-
-  100% {
-    -o-transform: rotate(360deg); } }
 
 @-webkit-keyframes animation-spin {
   0% {
@@ -3248,7 +3228,9 @@ n           Negative (margin only)
     display: inline-block;
     height: 0;
     pointer-events: none;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 0;
     z-index: 1; }
 
@@ -3265,7 +3247,9 @@ n           Negative (margin only)
     display: inline-block;
     height: 4px;
     pointer-events: none;
-    transform: rotate(45deg) translateY(-50%);
+    -webkit-transform: rotate(45deg) translateY(-50%);
+        -ms-transform: rotate(45deg) translateY(-50%);
+            transform: rotate(45deg) translateY(-50%);
     width: 4px;
     z-index: 1; }
 
