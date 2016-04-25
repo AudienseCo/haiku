@@ -69,6 +69,14 @@ $input-v-padding: ($input-height - $input-line-height)/2;
         }
     }
 
+    & > input[type=text] {
+        @include abs-pos(0, 0, 0, 0);
+        padding: $input-v-padding 3rem $input-v-padding 1rem;
+        position: absolute;
+        width: 100%;
+        border: 0;
+    }
+
     &.large {
         font-size: 1.6rem;
         height: auto;

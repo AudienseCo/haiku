@@ -1181,6 +1181,16 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
     .input-base > select:-moz-focusring {
       color: transparent;
       text-shadow: 0 0 0 #000; }
+  .input-base > input[type=text] {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    padding: 0.6rem 3rem 0.6rem 1rem;
+    position: absolute;
+    width: 100%;
+    border: 0; }
   .input-base.large {
     font-size: 1.6rem;
     height: auto;
