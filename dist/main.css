@@ -1175,7 +1175,6 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
     position: absolute;
     cursor: pointer;
     padding: 0.6rem 1rem;
-    position: absolute;
     width: 100%; }
     .input-base > select:-moz-focusring {
       color: transparent;
@@ -1186,8 +1185,8 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
     bottom: 0;
     left: 0;
     position: absolute;
-    padding: 0.6rem 3rem 0.6rem 1rem;
-    position: absolute;
+    padding: 0 3rem 0 1rem;
+    height: 100%;
     width: 100%;
     border: 0; }
   .input-base.large {
