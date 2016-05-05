@@ -8,6 +8,13 @@ Using SVG icons, an image format for vector graphics, we make our CSS more and m
 </svg>
 ```
 
+Or the tpl helper
+```html
+{% raw %}
+<svg class="icon">{{%svg:icon-close}}</svg>
+{% endraw %}
+```
+
 Here we have a list with all the icons we have so far so it's easy to identify and use anyone.
 
 {% include "partial/icons.html" %}
