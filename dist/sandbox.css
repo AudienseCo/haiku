@@ -2459,6 +2459,84 @@ Navigation usually means list of links. And we have some flavours using distinct
     display: block;
 }
 
+/*
+
+Pagination
+----------
+
+Pagination pattern.
+
+*/
+.pagination
+{
+    font-size: 0;
+    text-align: center;
+}
+
+.pagination-item
+{
+    font-size: 14px; 
+    display: inline-block;
+    margin-right: 0;
+    text-align: center;
+}
+
+.pagination-link,
+.pagination-prev,
+.pagination-next
+{
+    display: block;
+    padding: 7px 13px;
+    text-decoration: none;
+}
+
+.pagination-link
+{
+    background-color: white;
+    box-shadow: 0 0 0 1px #ccd1d9;
+}
+.pagination-link:hover,
+.pagination-link:focus,
+.pagination-link.is-active
+{
+    position: relative;
+    z-index: 1; 
+    text-decoration: none;
+    color: white;
+    background-color: #f29556;
+    box-shadow: 0 0 0 1px #f29556;
+}
+
+.pagination-prev,
+.pagination-next
+{
+    position: relative;
+    z-index: 1; 
+    text-transform: uppercase;
+    color: white;
+    background-color: #29c4d0;
+    box-shadow: 0 0 0 1px #29c4d0;
+}
+.pagination-prev:hover,
+.pagination-prev:focus,
+.pagination-next:hover,
+.pagination-next:focus
+{
+    text-decoration: none; 
+    background-color: #26b7c2;
+    box-shadow: 0 0 0 1px #26b7c2;
+}
+
+.pagination-prev
+{
+    border-radius: 4px 0 0 4px;
+}
+
+.pagination-next
+{
+    border-radius: 0 4px 4px 0;
+}
+
 .panel
 {
     display: inline-block; 
