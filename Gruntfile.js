@@ -191,6 +191,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['help']);
   grunt.registerTask('build', ['sass:build', 'pixrem:build', 'autoprefixer:build', 'csscomb:build', 'cssmin:build']);
   grunt.registerTask('sprites', ['sprite']);
-  grunt.registerTask('svg', ['clean', 'svgmin', 'svgstore', 'rename:svg']);
+  grunt.registerTask('svg', ['clean', 'svgmin', 'svgstore', 'rename:svg', 'sass']);
   grunt.registerTask('server', ['sass', 'express', 'watch']);
 };
