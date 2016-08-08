@@ -8,15 +8,19 @@ Pagination pattern.
 */
 
 .pagination {
+    display: inline-block;
     font-size: 0;
     text-align: center;
 }
 
 .pagination-item {
+    border-left: 0;
     display: inline-block;
-    text-align: center;
+    font-size: 1.5rem;
     margin-right: 0;
-    font-size: 1.4rem;
+    min-width: 4rem;
+    text-align: center;
+    vertical-align: top;
 }
 
 .pagination-link,
@@ -29,14 +33,28 @@ Pagination pattern.
 
 .pagination-link {
     background-color: white;
-    box-shadow: 0 0 0 1px color("border");
+    border: 1px solid;
+    border-color: color("text", $hue:"light", $variant:"secondary");
+    border-right: 0;
+    color: color("text", $hue:"dark");
+
+    &:hover,
+    &:focus {
+      background-color: #FBFBFB;
+      cursor: pointer;
+    }
+
+    &.is-active {
+        background-color: color("primary");
+        border-color: color("primary");
+        box-shadow: 1px 0px color("primary");
+        color: white;
+        cursor: default;
+    }
 
     &:hover,
     &:focus,
     &.is-active {
-        background-color: color("primary");
-        box-shadow: 0 0 0 1px color("primary");
-        color: white;
         position: relative;
         text-decoration: none;
         z-index: 1;
@@ -45,25 +63,43 @@ Pagination pattern.
 
 .pagination-prev,
 .pagination-next {
-    background-color: color("socialbro");
-    box-shadow: 0 0 0 1px color("socialbro");
-    color: white;
-    text-transform: uppercase;
+    background-color: #F3F3F3;
+    border: 1px solid color("text", $hue:"light", $variant:"secondary");
+    box-sizing: border-box;
+    color: #333333;
+    cursor: pointer;
     position: relative;
+    text-transform: uppercase;
     z-index: 1;
 
     &:hover,
     &:focus {
-        background-color: color("socialbro", $hue: "dark");
-        box-shadow: 0 0 0 1px color("socialbro", $hue: "dark");
+        background-color: #fbfbfb;
         text-decoration: none;
+    }
+
+    &:active {
+      background: #ebebeb;
+    }
+
+    svg {
+      transform: rotate(90deg);
     }
 }
 
 .pagination-prev {
     border-radius: 4px 0 0 4px;
+    border-right: 0;
+
+    svg {
+      margin-left: 1px;
+    }
 }
 
 .pagination-next {
     border-radius: 0 4px 4px 0;
+
+    svg {
+      margin-left: -1px;
+    }
 }
