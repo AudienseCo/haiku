@@ -28,7 +28,7 @@ $numerals: "first" "second" "third" "fourth" "fifth" "sixth" "seventh" "eigth" "
     display: table-row;
     font-weight: bold;
     line-height: 1;
-    text-transform: uppercase;
+    text-transform: capitalize;
 
     .sb-table-cell {
         border-bottom: 1px solid $border-color;
