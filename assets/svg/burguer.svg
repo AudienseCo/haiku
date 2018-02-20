@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>burguer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="better-sidebar-detail-igram@2x" sketch:type="MSArtboardGroup" transform="translate(-232.000000, -49.000000)" fill="#565656">
+            <g id="Group" sketch:type="MSLayerGroup">
+                <path d="M232,49.9989566 C232,49.4472481 232.444946,49 232.993398,49 L249.006602,49 C249.555241,49 250,49.4426603 250,49.9989566 L250,51.0010434 C250,51.5527519 249.555054,52 249.006602,52 L232.993398,52 C232.444759,52 232,51.5573397 232,51.0010434 L232,49.9989566 Z M232,56.6305355 C232,56.078827 232.444946,55.6315789 232.993398,55.6315789 L249.006602,55.6315789 C249.555241,55.6315789 250,56.0742393 250,56.6305355 L250,57.6326224 C250,58.1843309 249.555054,58.6315789 249.006602,58.6315789 L232.993398,58.6315789 C232.444759,58.6315789 232,58.1889186 232,57.6326224 L232,56.6305355 Z M232,63.2989444 C232,62.7472359 232.444946,62.2999878 232.993398,62.2999878 L249.006602,62.2999878 C249.555241,62.2999878 250,62.7426481 250,63.2989444 L250,64.3010312 C250,64.8527397 249.555054,65.2999878 249.006602,65.2999878 L232.993398,65.2999878 C232.444759,65.2999878 232,64.8573275 232,64.3010312 L232,63.2989444 Z" id="burguer" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

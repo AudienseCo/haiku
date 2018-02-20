@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="container clearfix">
+    <a class="header-logo" href="/">
+      <svg viewBox="0 0 100 100" class="header-logo-icon">
+        <use xlink:href="/svg-defs.svg#icon-socialbro"></use>
+      </svg>
+      <span class="header-logo-text">haiku</span>
+    </a>
+
+    <nav class="header-navigation">
+      <ul>
+        <li class="header-navigation-item {% if page == 'docs' %}active{% endif %}"><a href="/docs/colors">Docs</a></li>
+        <li class="header-navigation-item {% if page == 'guidelines' %}active{% endif %}"><a href="/guidelines">Guidelines</a></li>
+        <li class="header-navigation-item"><a href="https://github.com/socialbro/styleguide" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

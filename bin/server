@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+
+var express      = require('express'),
+    errorhandler = require('errorhandler'),
+    morgan       = require('morgan'),
+    bodyParser   = require('body-parser'),
+    nunjucks     = require("nunjucks"),
+    markdown     = require("nunjucks-markdown")
+    marked       = require("marked"),
+    routes       = require("./routes"),
+    path         = require("path");
+
+var app = express();
+var port = process.env.PORT || 3000;
+var isProduction = process.env.NODE_ENV === 'production'
+
+app.use(errorhandler());
+
+var nunjucksEnv = nunjucks.configure("views", {
+  autoescape: false,
+  express: app
+});
+
+/*
+ * Adds the function `component(partial)` to use globally in all templates
+ * Is an alias for:
+ * {% set component = partial %}
+ * {% include "partial/example.html" %}
+*/
+nunjucksEnv.addGlobal('component', function(component){
+  return nunjucks.render('partial/example.html', {
+    component: component
+  });
+});
+
+markdown.register(nunjucksEnv, marked);
+
+app.set('view engine', 'html');
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '../public')));
+app.use(routes);
+
+if (!process.env.CALLER) {
+  app.listen(port);
+  console.log(`Running at http://localhost:${port}`)
+}
+
+module.exports = app;

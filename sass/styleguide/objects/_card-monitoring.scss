@@ -1,0 +1,72 @@
+.currently-running:not(.currently-deleted) [class$="-running"] {
+    display: block;
+}
+
+.currently-paused:not(.currently-deleted) [class$="-paused"] {
+    display: block;
+}
+
+.data-title, .value-label {
+    display: block;
+    font-size: 1.2rem;
+    color: color($name: "text", $variant: "secondary", $hue: "dark");
+}
+
+.card-data-list {
+    margin: 0;
+}
+
+.data-title {
+    clear: both;
+    float: left;
+}
+
+.data-value {
+    margin: 0 0 1rem 0;
+    float: right;
+    line-height: 1.2;
+
+    & .value-label {
+        display: block;
+        text-align: right;
+    }
+}
+
+.main-data {
+    .data-title {
+        float: none;
+    }
+
+    .data-value {
+        float: none;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.card-actions, .card-status {
+    clear: both;
+}
+
+.card-status {
+    display: none;
+}
+
+.card-actions .action, .card-status {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.card-status.status-running {
+    border-color: color($name:"succeed");
+    color: color($name:"succeed");
+
+    .icon {
+        fill: color($name:"succeed");
+    }
+}
+
+.card-status.status-paused .icon {
+    fill: color($name:"primary");
+}
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="top-right-arrow" sketch:type="MSLayerGroup" transform="translate(-32.000000, -28.000000)" fill="#000000">
+            <path d="M67.081,54.912 L67.081,32.986 C67.081,32.963 67.088,32.942 67.088,32.919 C67.088,32.13 66.85,31.398 66.452,30.777 C66.439,30.756 66.431,30.733 66.417,30.712 C66.269,30.489 66.1,30.281 65.912,30.092 C65.911,30.091 65.911,30.091 65.911,30.09 C65.91,30.089 65.91,30.089 65.909,30.089 C65.72,29.9 65.512,29.732 65.289,29.584 C65.268,29.57 65.245,29.562 65.224,29.549 C64.603,29.151 63.87,28.913 63.082,28.913 C63.059,28.913 63.038,28.919 63.015,28.92 L41.089,28.92 C38.889,28.92 37.089,30.72 37.089,32.92 C37.089,35.12 38.889,36.92 41.089,36.92 L53.425,36.92 L34.09,56.253 C32.534,57.809 32.534,60.354 34.09,61.91 C35.646,63.466 38.191,63.466 39.747,61.91 L59.082,42.575 L59.082,54.911 C59.082,57.111 60.882,58.911 63.082,58.911 C65.281,58.912 67.081,57.112 67.081,54.912 L67.081,54.912 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

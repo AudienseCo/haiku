@@ -1,0 +1,146 @@
+.panel {
+    @include standard-container;
+    display: inline-block;
+}
+
+.panel-header {
+    background-color: color($name: "background");
+    padding: 1.2rem;
+}
+
+.panel-header-title {
+    color: color($name: "titles", $hue: "dark");
+    font-size: 1.8rem;
+    font-weight: normal;
+
+    .subtitle {
+        display: block;
+        font-size: 1.2rem;
+        color: color($name: "text", $variant: "secondary", $hue: "dark");
+    }
+}
+
+.panel-body {
+    padding: 1rem 1.2rem;
+}
+
+.card-split {
+    clear: both;
+    border: 1px solid color($name: "border", $variant:"secondary", $hue: "light");
+    border-width: 1px 0 0;
+    background: none;
+    margin-bottom: 1rem;
+}
+
+/* Optional header menu */
+.panel-header {
+
+    &.with-actions {
+        position: relative;
+        padding-left: 2.4rem;
+        padding-right: 3rem;
+    }
+}
+
+.action-menu-actions {
+    @include standard-container;
+    display: none;
+    padding: 1rem;
+    border-top-left-radius: 0;
+    z-index: 1;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+
+    .action {
+        display: inline-block;
+        padding: 1rem 2rem;
+        height: auto;
+
+        .icon {
+            height: 1.6rem;
+            width: 1.6rem;
+            vertical-align: top;
+            margin-top: .2rem;
+        }
+    }
+}
+
+.action-delete {
+    &, .icon-trash{
+        border-color: color($name:"error");
+        fill: color($name:"error");
+        color: color($name:"error");
+    }
+}
+
+.action-menu {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+
+    .icon-menu-narrow {
+        margin-left: .6rem;
+        fill: #36C4CF;
+    }
+
+    .handle .label {
+        display: none;
+    }
+
+    &.active {
+        .handle {
+            @include standard-container;
+            background: color($name: "background", $hue: "light");
+            padding-right: 1rem;
+            position: relative;
+            border-bottom: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-bottom: -1px;
+            z-index: 2;
+        }
+
+        .label {
+            display: inline;
+        }
+
+        .action-menu-actions {
+            display: block;
+        }
+    }
+}
+
+.action-info {
+
+    .btn {
+        position: absolute;
+        top: .3rem;
+        right: 1rem;
+    }
+
+    .icon {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    &.active {
+        .icon {
+            transform: scaleY(-1);
+        }
+
+        .action-info-data {
+            display:block;
+        }
+    }
+}
+
+.action-info-data {
+    display: none;
+    position: absolute;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    background: color($name: "background");
+    padding: 1.2rem;
+    left: 0;
+    right: 0;
+    max-height: 20rem;
+    overflow: auto;
+}

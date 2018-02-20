@@ -1,0 +1,65 @@
+$base-sizes: 14 16 18 20 30 35 40 45 50 55 60 100;
+
+@each $size in $base-sizes {
+    .icon-size-#{$size} {
+        height: pixel-to-rem($size) * 1rem;
+        width: pixel-to-rem($size) * 1rem;
+    }
+}
+
+[class^="icon"] {
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-text, %icon-text {
+    height: 1.5em;
+    width: 1.3em;
+}
+
+.icon-text-aligned {
+    vertical-align: text-bottom;
+}
+
+.icon-twitter {
+    fill: color($name: "twitter");
+}
+
+.icon-socialbro {
+    fill: color($name: "socialbro");
+}
+
+%icon-file {
+    border-radius: 4px;
+    fill: color($name: "background", $hue: "light");
+}
+
+.icon-pdf {
+    @extend %icon-file;
+    background: color($name: "error", $hue: "light");
+    border-radius: 3px;
+}
+
+.icon-ads {
+    @extend %icon-file;
+    background: color($name: "service");
+}
+
+.icon-xls {
+    @extend %icon-file;
+    background: color($name: "succeed", $hue: "light");
+}
+
+.icon-learn {
+    @extend %icon-file;
+    fill: color($name: "succeed", $hue: "light");
+}
+
+.spin {
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    0%   {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}

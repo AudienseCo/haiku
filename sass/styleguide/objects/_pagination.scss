@@ -1,0 +1,105 @@
+/*
+
+Pagination
+----------
+
+Pagination pattern.
+
+*/
+
+.pagination {
+    display: inline-block;
+    font-size: 0;
+    text-align: center;
+}
+
+.pagination-item {
+    border-left: 0;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 0;
+    min-width: 4rem;
+    text-align: center;
+    vertical-align: top;
+}
+
+.pagination-link,
+.pagination-prev,
+.pagination-next {
+    display: block;
+    padding: 0.7rem 1.35rem;
+    text-decoration: none;
+}
+
+.pagination-link {
+    background-color: white;
+    border: 1px solid;
+    border-color: color("text", $hue:"light", $variant:"secondary");
+    border-right: 0;
+    color: color("text", $hue:"dark");
+
+    &:hover,
+    &:focus {
+      background-color: #FBFBFB;
+      cursor: pointer;
+    }
+
+    &.is-active {
+        background-color: color("primary");
+        border-color: color("primary");
+        box-shadow: 1px 0px color("primary");
+        color: white;
+        cursor: default;
+    }
+
+    &:hover,
+    &:focus,
+    &.is-active {
+        position: relative;
+        text-decoration: none;
+        z-index: 1;
+    }
+}
+
+.pagination-prev,
+.pagination-next {
+    background-color: #F3F3F3;
+    border: 1px solid color("text", $hue:"light", $variant:"secondary");
+    box-sizing: border-box;
+    color: #333333;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+        background-color: #fbfbfb;
+        text-decoration: none;
+    }
+
+    &:active {
+      background: #ebebeb;
+    }
+
+    svg {
+      transform: rotate(90deg);
+    }
+}
+
+.pagination-prev {
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+
+    svg {
+      margin-left: 1px;
+    }
+}
+
+.pagination-next {
+    border-radius: 0 4px 4px 0;
+
+    svg {
+      margin-left: -1px;
+    }
+}

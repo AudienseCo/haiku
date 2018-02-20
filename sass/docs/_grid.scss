@@ -1,0 +1,11 @@
+.docs-sample .grid-row {
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.docs-sample .grid-column > * {
+    background: color($name: "succeed", $variant: "tertiary", $hue: "light");
+    border: 1px solid color($name: "succeed", $variant: "tertiary", $hue: "dark");
+    padding: 1rem;
+}

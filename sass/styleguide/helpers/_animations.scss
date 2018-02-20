@@ -1,0 +1,167 @@
+/*
+*   ANIMATIONS NAMES AND DESCRIPTIONS
+*
+*   animation-fade-in:              Animate until opacity get 1
+*   animation-fade-in-from-top:     Element drop from top and gets opacity from 0 to 1
+*   animation-fade-out:             Animate until opacity get 0
+*   animation-fade-out-to-left:     Element move to left and get opacity from 1 to 0
+*   animation-pulse:                Element beats like a heart
+*   animation-spin:                 Element rotates
+*/
+
+
+
+/***************************    FADE IN    ***************************/
+@keyframes animation-fade-in { to { opacity: 1; } }
+@-moz-keyframes animation-fade-in { to { opacity: 1; } }
+@-o-keyframes animation-fade-in { to { opacity: 1; } }
+@-webkit-keyframes animation-fade-in { to { opacity: 1; } }
+
+/***************************    FADE IN FROM TOP   ***************************/
+@keyframes animation-fade-in-from-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -ms-transform: translateY(0);
+    }
+}
+@-moz-keyframes animation-fade-in-from-top {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+@-o-keyframes animation-fade-in-from-top {
+    0% {
+        opacity: 0;
+        -o-transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+}
+@-webkit-keyframes animation-fade-in-from-top {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+/***************************    FADE OUT    ***************************/
+@keyframes animation-fade-out { to { opacity: 0; } }
+@-moz-keyframes animation-fade-out { to { opacity: 0; } }
+@-o-keyframes animation-fade-out { to { opacity: 0; } }
+@-webkit-keyframes animation-fade-out { to { opacity: 0; } }
+
+
+/***************************    FADE OUT TO LEFT    ***************************/
+@keyframes animation-fade-out-to-left {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+        -ms-transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+    }
+}
+@-moz-keyframes animation-fade-out-to-left {
+    0% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: translateX(-20px);
+    }
+}
+@-o-keyframes animation-fade-out-to-left {
+    0% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        -o-transform: translateX(-20px);
+    }
+}
+@-webkit-keyframes animation-fade-out-to-left {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+}
+
+
+/***************************    PULSE    ***************************/
+@keyframes animation-pulse {
+    0% {
+        transform: scale3d(1, 1, 1);
+        -ms-transform: scale3d(1, 1, 1);
+    }
+
+    20% {
+        transform: scale3d(2, 2, 2);
+        -ms-transform: scale3d(2, 2, 2);
+    }
+    40% { opacity: 0;}
+}
+@-moz-keyframes animation-pulse {
+    0% { -moz-transform: scale3d(1, 1, 1);}
+    20% { -moz-transform: scale3d(2, 2, 2);}
+    40% { opacity: 0;}
+}
+@-o-keyframes animation-pulse {
+    0% { -o-transform: scale3d(1, 1, 1);}
+    20% { -o-transform: scale3d(2, 2, 2);}
+    40% { opacity: 0;}
+}
+@-webkit-keyframes animation-pulse {
+    0% { -webkit-transform: scale3d(1, 1, 1);}
+    20% { -webkit-transform: scale3d(2, 2, 2);}
+    40% { opacity: 0;}
+}
+
+/***************************   SPIN   ***************************/
+@keyframes animation-spin {
+    0% {
+    	transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+    	transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes animation-spin {
+	0% { -moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(360deg);}
+}
+@-o-keyframes animation-spin {
+	0% { -o-transform: rotate(0deg);}
+    100% { -o-transform: rotate(360deg);}
+}
+@-webkit-keyframes animation-spin {
+	0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}

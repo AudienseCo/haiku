@@ -1,0 +1,6 @@
+*.DS_Store
+/node_modules/*
+/assets/svg/compressed/*
+.idea
+*.sublime-project
+*.sublime-workspace

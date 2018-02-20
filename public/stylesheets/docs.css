@@ -1,0 +1,799 @@
+/*
+
+Functions
+---------
+
+Calculations used by other SCSS files. If you need to DRY-up some CSS properties
+put that code in `core/_mixins.scss`, this is only for functions.
+
+*/
+.markdown-content > .color-samples {
+  margin: 0 -1.6666666667% 1rem;
+  padding: 0;
+}
+
+.color-sample {
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  color: #676767;
+  display: block;
+  float: left;
+  font-size: 1.1rem;
+  margin: 1.6666666667%;
+  width: 30%;
+}
+
+.color-sample.dark-text > .color-sample-color {
+  color: #676767;
+}
+
+.color-sample-description {
+  display: block;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.color-sample-color {
+  color: white;
+  display: block;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  text-align: center;
+}
+
+.color-background-primary-regular {
+  background-color: #f6f6f6;
+}
+
+.color-border-primary-regular {
+  background-color: #ccd1d9;
+}
+
+.color-error-primary-regular {
+  background-color: #d60f36;
+}
+
+.color-noticeable-primary-regular {
+  background-color: #f24c7c;
+}
+
+.color-primary-primary-regular {
+  background-color: #f29556;
+}
+
+.color-service-primary-regular {
+  background-color: #00aaf2;
+}
+
+.color-socialbro-primary-regular {
+  background-color: #29c4d0;
+}
+
+.color-succeed-primary-regular {
+  background-color: #72c427;
+}
+
+.color-text-primary-regular {
+  background-color: #5e5e5e;
+}
+
+.color-titles-primary-regular {
+  background-color: #191919;
+}
+
+.color-twitter-primary-regular {
+  background-color: #55acee;
+}
+
+.color-button_blue-primary-regular {
+  background-color: #5189b1;
+}
+
+.color-button_orange-primary-regular {
+  background-color: #e96751;
+}
+
+.color-button_tea-primary-regular {
+  background-color: #33aba0;
+}
+
+.color-button_disabled-primary-regular {
+  background-color: #c2c8d2;
+}
+
+.color-border-secondary-regular {
+  background-color: #d6d6d6;
+}
+
+.color-error-secondary-regular {
+  background-color: #cc8383;
+}
+
+.color-noticeable-secondary-regular {
+  background-color: #f89bb6;
+}
+
+.color-primary-secondary-regular {
+  background-color: #f0d2be;
+}
+
+.color-service-secondary-regular {
+  background-color: #65b0cf;
+}
+
+.color-socialbro-secondary-regular {
+  background-color: #41787c;
+}
+
+.color-succeed-secondary-regular {
+  background-color: #9fb87d;
+}
+
+.color-text-secondary-regular {
+  background-color: #b9b9b9;
+}
+
+.color-titles-secondary-regular {
+  background-color: #8a4fa2;
+}
+
+.color-button_blue-secondary-regular {
+  background-color: #266b9e;
+}
+
+.color-button_orange-secondary-regular {
+  background-color: #e7573e;
+}
+
+.color-button_tea-secondary-regular {
+  background-color: #009688;
+}
+
+.color-error-tertiary-regular {
+  background-color: #ffe6e6;
+}
+
+.color-noticeable-tertiary-regular {
+  background-color: #fcdae4;
+}
+
+.color-primary-tertiary-regular {
+  background-color: #f6f3de;
+}
+
+.color-service-tertiary-regular {
+  background-color: #dfeffc;
+}
+
+.color-socialbro-tertiary-regular {
+  background-color: #c1eff3;
+}
+
+.color-succeed-tertiary-regular {
+  background-color: #e1f6de;
+}
+
+.color-text-tertiary-regular {
+  background-color: #b1b1b1;
+}
+
+.color-button_blue-tertiary-regular {
+  background-color: #6797bb;
+}
+
+.color-button_orange-tertiary-regular {
+  background-color: #ec7965;
+}
+
+.color-button_tea-tertiary-regular {
+  background-color: #4cb5ab;
+}
+
+.color-background-primary-light {
+  background-color: #ffffff;
+}
+
+.color-border-primary-light {
+  background-color: #d6dae0;
+}
+
+.color-error-primary-light {
+  background-color: #e6103a;
+}
+
+.color-noticeable-primary-light {
+  background-color: #f35c88;
+}
+
+.color-primary-primary-light {
+  background-color: #f39f66;
+}
+
+.color-service-primary-light {
+  background-color: #04b4ff;
+}
+
+.color-socialbro-primary-light {
+  background-color: #33cbd7;
+}
+
+.color-succeed-primary-light {
+  background-color: #7ad22a;
+}
+
+.color-text-primary-light {
+  background-color: #676767;
+}
+
+.color-titles-primary-light {
+  background-color: #333333;
+}
+
+.color-twitter-primary-light {
+  background-color: #64b4f0;
+}
+
+.color-button_blue-primary-light {
+  background-color: #5d91b6;
+}
+
+.color-button_orange-primary-light {
+  background-color: #eb7460;
+}
+
+.color-button_tea-primary-light {
+  background-color: #37b8ac;
+}
+
+.color-button_disabled-primary-light {
+  background-color: #ccd1d9;
+}
+
+.color-border-secondary-light {
+  background-color: #dfdede;
+}
+
+.color-error-secondary-light {
+  background-color: #d18f8f;
+}
+
+.color-noticeable-secondary-light {
+  background-color: #f9abc2;
+}
+
+.color-primary-secondary-light {
+  background-color: #f3dccc;
+}
+
+.color-service-secondary-light {
+  background-color: #72b7d3;
+}
+
+.color-socialbro-secondary-light {
+  background-color: #478387;
+}
+
+.color-succeed-secondary-light {
+  background-color: #a7be88;
+}
+
+.color-text-secondary-light {
+  background-color: #d6d6d6;
+}
+
+.color-titles-secondary-light {
+  background-color: #9356ac;
+}
+
+.color-button_blue-secondary-light {
+  background-color: #2974ac;
+}
+
+.color-button_orange-secondary-light {
+  background-color: #e9644d;
+}
+
+.color-button_tea-secondary-light {
+  background-color: #00a797;
+}
+
+.color-error-tertiary-light {
+  background-color: #fff7f7;
+}
+
+.color-noticeable-tertiary-light {
+  background-color: #fdeaef;
+}
+
+.color-primary-tertiary-light {
+  background-color: #faf8eb;
+}
+
+.color-service-tertiary-light {
+  background-color: #eff7fd;
+}
+
+.color-socialbro-tertiary-light {
+  background-color: #DDF7F8;
+}
+
+.color-succeed-tertiary-light {
+  background-color: #edfaeb;
+}
+
+.color-text-tertiary-light {
+  background-color: #bab9b9;
+}
+
+.color-button_blue-tertiary-light {
+  background-color: #739fc0;
+}
+
+.color-button_orange-tertiary-light {
+  background-color: #ee8674;
+}
+
+.color-button_tea-tertiary-light {
+  background-color: #58bab1;
+}
+
+.color-background-primary-dark {
+  background-color: #f2f2f2;
+}
+
+.color-border-primary-dark {
+  background-color: #c2c8d2;
+}
+
+.color-error-primary-dark {
+  background-color: #c60e32;
+}
+
+.color-noticeable-primary-dark {
+  background-color: #f13c70;
+}
+
+.color-primary-primary-dark {
+  background-color: #f18b46;
+}
+
+.color-service-primary-dark {
+  background-color: #009ee1;
+}
+
+.color-socialbro-primary-dark {
+  background-color: #26b7c2;
+}
+
+.color-succeed-primary-dark {
+  background-color: #6ab624;
+}
+
+.color-text-primary-dark {
+  background-color: #565656;
+}
+
+.color-titles-primary-dark {
+  background-color: #000000;
+}
+
+.color-twitter-primary-dark {
+  background-color: #46a4ec;
+}
+
+.color-button_blue-primary-dark {
+  background-color: #4b80a6;
+}
+
+.color-button_orange-primary-dark {
+  background-color: #e75a42;
+}
+
+.color-button_tea-primary-dark {
+  background-color: #2f9e94;
+}
+
+.color-button_disabled-primary-dark {
+  background-color: #b8bfcb;
+}
+
+.color-border-secondary-dark {
+  background-color: #cecdcd;
+}
+
+.color-error-secondary-dark {
+  background-color: #c77777;
+}
+
+.color-noticeable-secondary-dark {
+  background-color: #f78baa;
+}
+
+.color-primary-secondary-dark {
+  background-color: #edc8b0;
+}
+
+.color-service-secondary-dark {
+  background-color: #58a9cb;
+}
+
+.color-socialbro-secondary-dark {
+  background-color: #3b6d71;
+}
+
+.color-succeed-secondary-dark {
+  background-color: #97b272;
+}
+
+.color-text-secondary-dark {
+  background-color: #b1b0b0;
+}
+
+.color-titles-secondary-dark {
+  background-color: #804997;
+}
+
+.color-button_blue-secondary-dark {
+  background-color: #236290;
+}
+
+.color-button_orange-secondary-dark {
+  background-color: #e54a2f;
+}
+
+.color-button_tea-secondary-dark {
+  background-color: #008579;
+}
+
+.color-error-tertiary-dark {
+  background-color: #ffd5d5;
+}
+
+.color-noticeable-tertiary-dark {
+  background-color: #fbcad9;
+}
+
+.color-primary-tertiary-dark {
+  background-color: #f2eed1;
+}
+
+.color-service-tertiary-dark {
+  background-color: #cfe7fb;
+}
+
+.color-socialbro-tertiary-dark {
+  background-color: #b3ebf0;
+}
+
+.color-succeed-tertiary-dark {
+  background-color: #d5f2d1;
+}
+
+.color-text-tertiary-dark {
+  background-color: #a9a8a8;
+}
+
+.color-button_blue-tertiary-dark {
+  background-color: #5b8fb6;
+}
+
+.color-button_orange-tertiary-dark {
+  background-color: #ea6c56;
+}
+
+.color-button_tea-tertiary-dark {
+  background-color: #46aaa0;
+}
+
+.docs-sample .grid-row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.docs-sample .grid-column > * {
+  background: #edfaeb;
+  border: 1px solid #d5f2d1;
+  padding: 1rem;
+}
+
+.header {
+  background-color: #29c4d0;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  padding: 1.3rem 0;
+}
+
+.header-logo {
+  color: white;
+  display: inline-block;
+}
+
+.header-logo-icon {
+  fill: white;
+  height: 3.4rem;
+  vertical-align: middle;
+  width: 3.4rem;
+}
+
+.header-logo-text {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  line-height: 3.4rem;
+  padding-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.header-navigation {
+  float: right;
+}
+
+.header-navigation-item {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+
+.header-navigation-item > a {
+  color: #c1eff3;
+  display: inline-block;
+  line-height: 3.4rem;
+}
+
+.header-navigation-item > a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.header-navigation-item.active > a {
+  color: white;
+}
+
+.icons-holder {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.icon-container {
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #d6d6d6;
+  flex-shrink: 1;
+  height: 12.5rem;
+  margin: 1rem 1rem 3.8rem 1rem;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  width: 12.5rem;
+}
+
+.icon-container > [class^="icon"]:not([class^="icon-container"]) {
+  height: 100%;
+  width: 100%;
+}
+
+.icon-container-name {
+  background-color: #f6f6f6;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #d6d6d6;
+  bottom: -2.8rem;
+  color: #676767;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 2.8rem;
+  left: -1px;
+  line-height: 2.8rem;
+  position: absolute;
+  right: -1px;
+  text-align: center;
+}
+
+.icon-pdf {
+  padding: 6px;
+}
+
+.icon-ads {
+  padding: 10px;
+}
+
+.icon-xls {
+  padding: 10px;
+}
+
+.landing-cover {
+  background-image: url("/images/zengarden.jpg");
+  background-position: center;
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.8);
+  display: table;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+}
+
+.landing-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.landing-cover-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6rem;
+}
+
+.landing-cover-subtitle {
+  font-size: 2rem;
+}
+
+.landing-logo {
+  fill: rgba(255, 255, 255, 0.8);
+  height: 15rem;
+  margin-top: -5rem;
+  width: 15rem;
+}
+
+.landing-read-docs {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid white;
+  color: white;
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 2.5rem;
+  padding: 0.8rem 1.5rem;
+}
+
+.landing-read-docs:hover {
+  background-color: white;
+  color: #5e5e5e;
+  text-decoration: none;
+}
+
+.landing-copyright {
+  bottom: 2rem;
+  font-weight: bold;
+  left: 2rem;
+  position: absolute;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 102rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: auto;
+}
+
+.docs-sample {
+  border-radius: .5rem .5rem 0 0;
+  border: 1px solid #e5e5e5;
+  font-size: 1.4rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.panel.card {
+  width: 33%;
+}
+
+.markdown-content > ul {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  list-style: initial;
+  margin-bottom: 1.5rem;
+  padding-left: 3rem;
+}
+
+.markdown-content > p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-content > h1 {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+.markdown-content > h2 {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-content > h3 {
+  margin-bottom: 1.3rem;
+}
+
+.markdown-content pre {
+  border-radius: 0 0 .5rem .5rem;
+  border: 1px solid #e5e5e5;
+  margin-top: -1px;
+}
+
+.markdown-content code {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.markdown-content code:before,
+.markdown-content code:after {
+  letter-spacing: -0.2em;
+  content: normal;
+}
+
+.markdown-content pre > code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-content .highlight pre,
+.markdown-content pre {
+  background-color: #f7f7f7;
+  font-size: 85%;
+  line-height: 1.45;
+  margin-bottom: 1.5rem;
+  overflow: auto;
+  padding: 16px;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+.docs-menu {
+  border-radius: 3px;
+  border: 1px solid #d8d8d8;
+  font-size: 1.5rem;
+}
+
+.docs-menu-item {
+  border-bottom: 1px solid #eee;
+  display: block;
+  padding: .6rem 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.docs-menu-item:hover {
+  background-color: #DDF7F8;
+  text-decoration: none;
+}
+
+.docs-menu-item:last-child {
+  border-bottom: 0;
+}
+
+.docs-menu-item.selected {
+  color: #5e5e5e;
+  cursor: default;
+  font-weight: bold;
+}
+
+.docs-menu-item.selected:hover {
+  background-color: white;
+}
+
+.docs-menu-item.selected:before {
+  background-color: #26b7c2;
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: .3rem;
+}

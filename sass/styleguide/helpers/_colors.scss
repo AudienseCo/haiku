@@ -1,0 +1,32 @@
+.color-error {
+    color: color($name: "error");
+}
+
+.color-text {
+    color: color($name: "text");
+}
+
+.color-text-l {
+    color: color($name: "text", $hue: "light");
+}
+
+
+.color-text-sd {
+    color: color($name: "text", $variant: "secondary", $hue: "dark");
+}
+
+.color-titles {
+    color: color($name: "titles");
+}
+
+.color-titles-s {
+    color: color($name: "titles", $variant: "secondary");
+}
+
+.color-link {
+    color: color($name: "service", $hue: "light")
+}
+
+.color-noticeable {
+    color: color($name: "noticeable");
+}

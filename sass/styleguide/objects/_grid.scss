@@ -1,0 +1,66 @@
+$gutter-width: 2rem !default;
+
+// Grid definition
+@mixin grid-gutter($size) {
+    margin-left:  -$size/2;
+    margin-right: -$size/2;
+
+    > .grid-column, .grid-columns {
+        padding: 0 $size/2;
+    }
+}
+
+.grid-row {
+    @extend  %clearfix;
+    @include grid-gutter($gutter-width);
+
+    &.full   { @include grid-gutter(0); }
+    &.narrow { @include grid-gutter($gutter-width/2); }
+    &.wide   { @include grid-gutter($gutter-width*2); }
+}
+
+.grid-column, .grid-columns {
+   float: left;
+   width: 100%;
+ }
+
+// Widhts
+.one.grid-column {
+    width: 12.5%;
+}
+
+.two.grid-columns, .one-quarter {
+    width: 25%;
+}
+
+.three.grid-columns {
+    width: 37.5%;
+}
+
+.one-third {
+    width: 33.33%;
+}
+
+.four.grid-columns, .one-half {
+    width: 50%;
+}
+
+.five.grid-columns {
+    width: 62.5%;
+}
+
+.two-thirds {
+    width: 66.66%;
+}
+
+.six.grid-columns, .three-quarters {
+    width: 75%;
+}
+
+.seven.grid-columns {
+    width: 87.5%;
+}
+
+.eight.grid-columns, .one-whole {
+    width: 100%;
+}

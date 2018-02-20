@@ -1,0 +1,247 @@
+// Base button definition
+$btn-base-height:      3.6rem;
+$btn-base-line-height: 2.4rem;
+$btn-base-h-padding:   1rem;
+$btn-base-v-padding:   ($btn-base-height - $btn-base-line-height)/2;
+
+.btn {
+    background-color: color($name: "background");
+    border-radius: 3px;
+    border: .1rem solid color($name: "border", $variant: "secondary");
+    color: color($name: "text", $hue: "dark");
+    cursor: pointer;
+    display: inline-block;
+    height: $btn-base-height;
+    line-height: $btn-base-line-height - .2rem;
+    padding: $btn-base-v-padding $btn-base-h-padding;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: color($name: "background", $hue: "light");
+    }
+
+    &:active, &.active {
+        background: color($name: "border", $variant: "secondary");
+    }
+
+    &:disabled, &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    & > [class^="icon"] {
+        height: $btn-base-line-height - .2rem;
+        margin-right: .3rem;
+        vertical-align: bottom;
+        width: 1.3em;
+    }
+
+    &.with-caret:after {
+        margin-left: .3rem;
+    }
+
+    &.btn-icon {
+        border: 0;
+        padding: 0;
+        text-align: center;
+        background: none;
+
+        & > [class^="icon"] {
+            margin-right: 0;
+        }
+
+        &:hover {
+            background: none;
+        }
+    }
+}
+
+/* ---------------------------------------------
+                COLOR-FILLED BUTTONS
+----------------------------------------------*/
+
+.btn.btn-filled {
+    border: none;
+    color: #FFF;
+}
+
+/*  Blue version */
+.btn.btn-filled.blue { 
+    background: color($name: "button_blue", $variant: "primary"); 
+    
+    &:hover { 
+        background: color($name: "button_blue", $variant: "tertiary"); 
+    }
+
+    &:active, &.active { 
+        background-color: color($name: "button_blue", $variant: "secondary"); 
+    }
+}
+
+/*  Orange version */
+.btn.btn-filled.orange { 
+    background: color($name: "button_orange", $variant: "primary"); 
+    
+    &:hover { 
+        background: color($name: "button_orange", $variant: "tertiary"); 
+    }
+
+    &:active, &.active { 
+        background: color($name: "button_orange", $variant: "secondary"); 
+    }
+}
+
+/*  Tea version */
+.btn.btn-filled.tea { 
+    background: color($name: "button_tea", $variant: "primary"); 
+
+    &:hover { 
+        background: color($name: "button_tea", $variant: "tertiary"); 
+    }
+
+    &:active, &.active { 
+        background: color($name: "button_tea", $variant: "secondary"); 
+    }
+}
+
+/*  Disabled version */
+.btn.btn-filled.disabled {
+    background: color($name: "button_disabled");
+    opacity: 0.5;
+    pointer-events: none;
+}
+/* --------------------------------------------
+                HOLLOW BUTTONS 
+-------------------------------------------- */
+
+.btn.btn-hollow {
+    background: #fff;
+    border: solid 1px;
+}
+
+/*  Blue version */
+.btn.btn-hollow.blue {
+    border-color: color($name: "button_blue", $variant: "primary");
+    color: color($name: "button_blue", $variant: "primary");
+
+    &:hover {
+        background: color($name: "button_blue", $variant: "tertiary");
+        color: #fff;
+    }
+
+    &:active, &.active {
+        background: color($name: "button_blue", $variant: "secondary");
+        color: #fff;
+    }
+}
+
+
+/*  Orange version */
+.btn.btn-hollow.orange {
+    border-color: color($name: "button_orange", $variant: "primary");
+    color: color($name: "button_orange", $variant: "primary");
+
+    &:hover {
+        background: color($name: "button_orange", $variant: "tertiary");
+        color: #fff;
+    }
+
+    &:active, &.active {
+        background: color($name: "button_orange", $variant: "secondary");
+        color: #fff;
+    }
+}
+
+/*  Tea version  */
+.btn.btn-hollow.tea {
+    border-color: color($name: "button_tea", $variant: "primary");
+    color: color($name: "button_tea", $variant: "primary");
+
+    &:hover {
+        background: color($name: "button_tea", $variant: "tertiary");
+        color: #fff;
+    }
+
+    &:active, &.active {
+        background: color($name: "button_tea", $variant: "secondary");
+        color: #fff;
+    }
+}
+
+
+/* Disabled version */
+.btn.btn-hollow.disabled {
+    border-color: color($name: "button_disabled");
+    color: color($name: "button_disabled");
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+// Generates a button class from some color parameters
+@mixin btn($name, $background, $border, $hover, $text: inherit) {
+    .btn-#{$name} {
+        background: $background;
+        border: 1px solid $border;
+        color: $text;
+
+        &:hover {
+            background: $hover;
+        }
+
+        &:active, &.active {
+            background: $border;
+        }
+    }
+}
+
+// Generates a button class from a color of the palette
+@mixin btn-from-color($name, $color, $text: white) {
+    $background: color($name: $color);
+    $border:     color($name: $color, $hue: "dark");
+    $hover:      color($name: $color, $hue: "light");
+
+    @include btn($name, $background, $border, $hover, $text);
+}
+
+// Generate palette buttons
+@include btn-from-color($name: "primary", $color: "primary");
+@include btn-from-color($name: "success", $color: "succeed");
+@include btn-from-color($name: "service", $color: "service");
+@include btn-from-color($name: "danger",  $color: "error");
+
+// Generate exception buttons
+@include btn($name: "contrast", $background: color("background", $hue: "light"), $border: color("border"), $hover: color("background"));
+@include btn($name: "skip", $background: color("text", $variant: "secondary"), $border: darken(color("text", $variant: "secondary"), 5%), $hover: lighten(color("text", $variant: "secondary"), 5%), $text: white);
+
+// Button grouping
+
+.btn-group .btn {
+    float:left;
+}
+
+.btn-group > .btn:first-child {
+    margin-left: 0;
+}
+
+.btn-group > .btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group .btn + .btn {
+    margin-left: -1px;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.btn-group > .btn:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

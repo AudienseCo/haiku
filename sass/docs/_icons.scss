@@ -1,0 +1,53 @@
+$icon-label-height: 2.8rem;
+
+.icons-holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.icon-container {
+    border-radius: 4px 4px 0 0;
+    border: 1px solid color($name: "border", $variant: "secondary");
+    flex-shrink: 1;
+    height: 12.5rem;
+    margin: 1rem 1rem (1rem + $icon-label-height) 1rem;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    width: 12.5rem;
+
+    & > [class^="icon"]:not([class^="icon-container"]) {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.icon-container-name {
+    background-color: color($name: "background");
+    border-radius: 0 0 4px 4px;
+    border: 1px solid color($name: "border", $variant: "secondary");
+    bottom: -$icon-label-height;
+    color: color($name: "text", $hue: "light");
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: $icon-label-height;
+    left: -1px;
+    line-height: $icon-label-height;
+    position: absolute;
+    right: -1px;
+    text-align: center;
+}
+
+.icon-pdf {
+    padding: 6px;
+}
+
+.icon-ads {
+    padding: 10px;
+}
+
+.icon-xls {
+    padding: 10px;
+}

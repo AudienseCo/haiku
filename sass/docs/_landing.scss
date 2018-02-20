@@ -1,0 +1,59 @@
+.landing-cover {
+    background-image: url("/images/zengarden.jpg");
+    background-position: center;
+    background-size: cover;
+    color: rgba(255,255,255,.8);
+    display: table;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100vw;
+}
+
+.landing-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.landing-cover-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6rem;
+}
+
+.landing-cover-subtitle {
+    font-size: 2rem;
+}
+
+.landing-logo {
+    fill: rgba(255,255,255,.8);
+    height: 15rem;
+    margin-top: -5rem;
+    width: 15rem;
+}
+
+.landing-read-docs {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    color: white;
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 2.5rem;
+    padding: 0.8rem 1.5rem;
+
+    &:hover {
+        background-color: white;
+        color: color("text");
+        text-decoration: none;
+    }
+}
+
+.landing-copyright {
+    bottom: 2rem;
+    font-weight: bold;
+    left: 2rem;
+    position: absolute;
+}

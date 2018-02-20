@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 38</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="calendar@2x" transform="translate(-1073.000000, -206.000000)" fill="#C2C8D2">
+            <g id="Group-2" transform="translate(326.000000, 195.000000)">
+                <g id="calendar">
+                    <g id="input-calendar-+-Line-+-input-calendar-+-Line-+-Rectangle-110">
+                        <g id="input-calendar-+-Line" transform="translate(513.000000, 0.000000)">
+                            <g id="input-calendar">
+                                <g id="Next" transform="translate(233.486607, 17.954042) rotate(-180.000000) translate(-233.486607, -17.954042) translate(220.986607, 5.454042)">
+                                    <path d="M11.5534137,17.5424211 L6.13775211,11.2389576 L6.14152609,13.1895619 L11.4407694,6.97309722 L9.15771721,5.02690278 L3.85847391,11.2433675 L3.02569815,12.2202845 L3.86224789,13.1939718 L9.27790949,19.4974353 L11.5534137,17.5424211 L11.5534137,17.5424211 Z" id="Path-38"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

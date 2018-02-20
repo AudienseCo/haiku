@@ -1,0 +1,24 @@
+files:
+  - package.json
+plugins:
+  prerelease:
+    Linting config files:
+      plugin: bumped-finepack
+  postrelease:
+    Generating CHANGELOG file:
+      plugin: bumped-changelog
+    Generating build:
+      plugin: bumped-terminal
+      command: 'npm run build'
+    Committing new version:
+      plugin: bumped-terminal
+      command: 'git add CHANGELOG.md package.json public && git commit -m "Release $newVersion"'
+    Detecting problems before publish:
+      plugin: bumped-terminal
+      command: 'git-dirty && npm test'
+    Publishing tag to GitHub:
+      plugin: bumped-terminal
+      command: 'git tag $newVersion && git push && git push --tags'
+    Publishing to NPM:
+      plugin: bumped-terminal
+      command: npm publish
