@@ -1,4 +1,4 @@
-$base-sizes: 14 16 18 20 30 35 40 45 50 55 60 100;
+$base-sizes: 14 16 18 20 24 30 35 40 45 50 55 60 100;
 
 @each $size in $base-sizes {
     .icon-size-#{$size} {

@@ -1824,6 +1824,12 @@ Breadcrumb in two flavours: normal with arrow shapes and simple.
     height: 20px;
 }
 
+.icon-size-24
+{
+    width: 24px;
+    height: 24px;
+}
+
 .icon-size-30
 {
     width: 30px;
