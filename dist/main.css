@@ -215,6 +215,7 @@ figure {
 * Address differences between Firefox and other browsers.
 */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -355,6 +356,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -1428,8 +1431,7 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
   position: absolute;
   right: 1.5rem;
   top: 50%;
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 0;
 }
 
@@ -1606,8 +1608,7 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
   left: .3rem;
   position: absolute;
   top: .3rem;
-  -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
+  transform: rotate(-45deg);
   width: 1.1rem;
 }
 
@@ -2033,8 +2034,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-top:before, .sb-menu-bubble-top:after {
   border-width: 0 10px 10px 10px;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .sb-menu-bubble-top:before {
@@ -2064,10 +2064,8 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-bottom:before, .sb-menu-bubble-bottom:after {
   border-width: 0 15px 15px 0;
   left: 50%;
-  -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-  -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-      transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+  transform-origin: 0 0;
+  transform: rotate(-45deg) translateX(-50%) translateY(-50%);
 }
 
 .sb-menu-bubble-bottom:before {
@@ -2098,8 +2096,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
   border-width: 0 10px 10px 10px;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .sb-menu-bubble-top-right:before {
@@ -2115,8 +2112,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-top-right:before, .sb-menu-bubble-top-right:after {
   left: auto;
   right: 22px;
-  -ms-transform: translateX(50%);
-      transform: translateX(50%);
+  transform: translateX(50%);
 }
 
 .sb-menu-bubble-top-left {
@@ -2136,8 +2132,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-top-left:before, .sb-menu-bubble-top-left:after {
   border-width: 0 10px 10px 10px;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .sb-menu-bubble-top-left:before {
@@ -2171,10 +2166,8 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
   border-width: 0 15px 15px 0;
   left: 50%;
-  -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-  -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-      transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+  transform-origin: 0 0;
+  transform: rotate(-45deg) translateX(-50%) translateY(-50%);
 }
 
 .sb-menu-bubble-bottom-right:before {
@@ -2191,8 +2184,7 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-bottom-right:before, .sb-menu-bubble-bottom-right:after {
   left: auto;
   right: 22px;
-  -ms-transform: rotate(-45deg) translateX(25%) translateY(25%);
-      transform: rotate(-45deg) translateX(25%) translateY(25%);
+  transform: rotate(-45deg) translateX(25%) translateY(25%);
 }
 
 .sb-menu-bubble-bottom-left {
@@ -2212,10 +2204,8 @@ Use this object to show an image and some text rendered in two columns.
 .sb-menu-bubble-bottom-left:before, .sb-menu-bubble-bottom-left:after {
   border-width: 0 15px 15px 0;
   left: 50%;
-  -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-  -ms-transform: rotate(-45deg) translateX(-50%) translateY(-50%);
-      transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+  transform-origin: 0 0;
+  transform: rotate(-45deg) translateX(-50%) translateY(-50%);
 }
 
 .sb-menu-bubble-bottom-left:before {
@@ -2253,20 +2243,17 @@ Use this object to show an image and some text rendered in two columns.
 
 .sb-menu-align-top > .sb-menu {
   left: 50%;
-  -ms-transform: translate(-50%);
-      transform: translate(-50%);
+  transform: translate(-50%);
 }
 
 .sb-menu-align-top > .sb-menu-bubble-top-left, .sb-menu-align-top .sb-menu-bubble-bottom-left {
-  -ms-transform: translate(-23px);
-      transform: translate(-23px);
+  transform: translate(-23px);
 }
 
 .sb-menu-align-top > .sb-menu-bubble-top-right, .sb-menu-align-top .sb-menu-bubble-bottom-right {
   left: auto;
   right: 50%;
-  -ms-transform: translate(23px);
-      transform: translate(23px);
+  transform: translate(23px);
 }
 
 .sb-menu-align-bottom {
@@ -2289,20 +2276,17 @@ Use this object to show an image and some text rendered in two columns.
 
 .sb-menu-align-bottom > .sb-menu {
   left: 50%;
-  -ms-transform: translate(-50%);
-      transform: translate(-50%);
+  transform: translate(-50%);
 }
 
 .sb-menu-align-bottom > .sb-menu-bubble-top-left, .sb-menu-align-bottom .sb-menu-bubble-bottom-left {
-  -ms-transform: translate(-23px);
-      transform: translate(-23px);
+  transform: translate(-23px);
 }
 
 .sb-menu-align-bottom > .sb-menu-bubble-top-right, .sb-menu-align-bottom .sb-menu-bubble-bottom-right {
   left: auto;
   right: 50%;
-  -ms-transform: translate(23px);
-      transform: translate(23px);
+  transform: translate(23px);
 }
 
 .sb-menu-align-bottom-right {
@@ -2470,8 +2454,7 @@ Pagination pattern.
 
 .pagination-prev svg,
 .pagination-next svg {
-  -ms-transform: rotate(90deg);
-      transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .pagination-prev {
@@ -2613,8 +2596,7 @@ Pagination pattern.
 }
 
 .action-info.active .icon {
-  -ms-transform: scaleY(-1);
-      transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
 .action-info.active .action-info-data {
@@ -3303,16 +3285,14 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 .tooltipped-s:after,
 .tooltipped-n:after {
-  -ms-transform: translateX(50%);
-      transform: translateX(50%);
+  transform: translateX(50%);
 }
 
 .tooltipped-w:after {
   bottom: 50%;
   margin-right: .5rem;
   right: 100%;
-  -ms-transform: translateY(50%);
-      transform: translateY(50%);
+  transform: translateY(50%);
 }
 
 .tooltipped-w:before {
@@ -3327,8 +3307,7 @@ Navigation usually means list of links. And we have some flavours using distinct
   bottom: 50%;
   left: 100%;
   margin-left: .5rem;
-  -ms-transform: translateY(50%);
-      transform: translateY(50%);
+  transform: translateY(50%);
 }
 
 .tooltipped-e:before {
@@ -3348,8 +3327,7 @@ Navigation usually means list of links. And we have some flavours using distinct
 .tooltipped-multiline.tooltipped-s:after, .tooltipped-multiline.tooltipped-n:after {
   left: 50%;
   right: auto;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .tooltipped-multiline.tooltipped-w:after, .tooltipped-multiline.tooltipped-e:after {
@@ -3445,6 +3423,24 @@ Breadcrumb styles for the dashboard.
   }
 }
 
+@-moz-keyframes animation-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes animation-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animation-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
 /***************************    FADE IN FROM TOP   ***************************/
 @keyframes animation-fade-in-from-top {
   0% {
@@ -3459,8 +3455,59 @@ Breadcrumb styles for the dashboard.
   }
 }
 
+@-moz-keyframes animation-fade-in-from-top {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes animation-fade-in-from-top {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes animation-fade-in-from-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
 /***************************    FADE OUT    ***************************/
 @keyframes animation-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes animation-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes animation-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animation-fade-out {
   to {
     opacity: 0;
   }
@@ -3480,6 +3527,39 @@ Breadcrumb styles for the dashboard.
   }
 }
 
+@-moz-keyframes animation-fade-out-to-left {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-20px);
+  }
+}
+
+@-o-keyframes animation-fade-out-to-left {
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-20px);
+  }
+}
+
+@-webkit-keyframes animation-fade-out-to-left {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+
 /***************************    PULSE    ***************************/
 @keyframes animation-pulse {
   0% {
@@ -3495,6 +3575,42 @@ Breadcrumb styles for the dashboard.
   }
 }
 
+@-moz-keyframes animation-pulse {
+  0% {
+    -moz-transform: scale3d(1, 1, 1);
+  }
+  20% {
+    -moz-transform: scale3d(2, 2, 2);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes animation-pulse {
+  0% {
+    -o-transform: scale3d(1, 1, 1);
+  }
+  20% {
+    -o-transform: scale3d(2, 2, 2);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animation-pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+  20% {
+    -webkit-transform: scale3d(2, 2, 2);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
 /***************************   SPIN   ***************************/
 @keyframes animation-spin {
   0% {
@@ -3504,6 +3620,33 @@ Breadcrumb styles for the dashboard.
   100% {
     transform: rotate(360deg);
     -ms-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes animation-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes animation-spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes animation-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
 
@@ -4119,8 +4262,7 @@ n           Negative (margin only)
   display: inline-block;
   height: 0;
   pointer-events: none;
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 0;
   z-index: 1;
 }
@@ -4140,8 +4282,7 @@ n           Negative (margin only)
   display: inline-block;
   height: 4px;
   pointer-events: none;
-  -ms-transform: rotate(45deg) translateY(-50%);
-      transform: rotate(45deg) translateY(-50%);
+  transform: rotate(45deg) translateY(-50%);
   width: 4px;
   z-index: 1;
 }
